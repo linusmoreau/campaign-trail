@@ -1,0 +1,746 @@
+[
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44322,
+        "fields": {
+            "question": 44052,
+            "description": "Have Wilfrid Dufresne second me. It is traditional for at least one of the nominator and seconder to be from Québec."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44323,
+        "fields": {
+            "question": 44052,
+            "description": "Have General George R. Pearkes of British Columbia second me, \"... in recognition of the fact that this party extends from the Atlantic to the Pacific.\""
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44337,
+        "fields": {
+            "question": 44325,
+            "description": "Attack the government's excessive taxation - Harris' budget has crushed the Canadian populace with a burden nearly three hundred million dollars greater than necessary, and intends to return only one hundred million dollars to the people.\n\"We believe there can be no justification for Canadians being overtaxed to the extent of approximately $120 for every four-member family in this nation over and above what the Government requires for all the costs of defence and civil administration. \""
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44338,
+        "fields": {
+            "question": 44325,
+            "description": "Criticise the scant increase in old-age pensioners monthly payouts and demand an increase of $10/month in the pensions, rather than the $6/month increase, \"Which leaves them [pensioners] in a position where they have less purchasing power than they had in 1951.\""
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44351,
+        "fields": {
+            "question": 44350,
+            "description": "Ignore the issue - there is nothing to be gained by trying to profit from a good man's death. It would show an alarming lack of dignity on our part."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44352,
+        "fields": {
+            "question": 44350,
+            "description": "Attack Mike Pearson and the Liberal government on their secrecy and evasion on the question of how the Senate subcommittee was able to access gossip on Mr. Norman's possible communist connections."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44353,
+        "fields": {
+            "question": 44350,
+            "description": "Criticise the Liberal government on their appointment of a possible communist to such an important ambassadorship, and by extension, his and his government's shameful actions during the Suez Crisis."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44394,
+        "fields": {
+            "question": 44362,
+            "description": "\"It's time for a Diefenbaker Government!\""
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44396,
+        "fields": {
+            "question": 44363,
+            "description": "Such a policy would provide too great of a target for attacks from the Liberals and CCF, despite my personal inclination towards it. We should run on a more modest economic platform, as to not alienate our Toronto MPs and urban voters."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44397,
+        "fields": {
+            "question": 44363,
+            "description": "We cannot afford to go as far as Menzies would have us, but Hamilton's Declaration of Principles seems a solid middle ground, neither alienating our urban or rural voters by a great degree."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44398,
+        "fields": {
+            "question": 44363,
+            "description": "These policies are the vision upon which I shall campaign this summer! MacDonald built this nation to the west, and we shall build it to the north!"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44399,
+        "fields": {
+            "question": 44364,
+            "description": "I agree with Churchill - for too long we have ignored the West and the rural parts of our country for a misplaced focus on fortress Québec. I will direct Grosart to split the funds equally amongst each of our constituency organisations."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44400,
+        "fields": {
+            "question": 44364,
+            "description": "Churchill is correct, but we cannot leave our Québec districts to bleed out amidst a sea of red. I will direct Grosart to give a more proportional share of funds to other ridings, but still a higher share should end up in Québec."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44401,
+        "fields": {
+            "question": 44364,
+            "description": "It might be that Churchill's analysis is correct, but this party has spent years of effort in Québec, and we must continue the effort to break through. The west will follow me regardless. I will direct Grosart to continue with George Drew's policy of directing half our funds to Québec."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44402,
+        "fields": {
+            "question": 44365,
+            "description": "Centre my image for the campaign - my polling numbers run well ahead of our party. The nation must know - this is not the same old PC party."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44403,
+        "fields": {
+            "question": 44365,
+            "description": "We can put some more emphasis onto my image, but still leave a significant amount of room for the party. Voters will not be electing candidates on the basis of the party leader here, we are not America!"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44404,
+        "fields": {
+            "question": 44366,
+            "description": "I will spend this week campaigning in Prince Albert, to head off challenges from the Liberals at home."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44405,
+        "fields": {
+            "question": 44366,
+            "description": "I will head west and campaign in Calgary and Edmonton for this week, to strike at the heart of Social Credit."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44406,
+        "fields": {
+            "question": 44366,
+            "description": "I will begin my campaign in the Maritimes, breaking the Liberal hold on those provinces will be critical to winning this election."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44407,
+        "fields": {
+            "question": 44366,
+            "description": "I will start my campaign in Montreal, to strike a blow at the heart of the Liberals fortress in Québec."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44408,
+        "fields": {
+            "question": 44367,
+            "description": "It would not be proper to make assurances to Premier Frost ahead of the election, if he wishes to support us he may, but I will not beg for it."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44409,
+        "fields": {
+            "question": 44367,
+            "description": "We must mend our fences with Premier Frost by assuring him of our commitment to correcting provincial transfer payments during our premiership."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44410,
+        "fields": {
+            "question": 44368,
+            "description": "\"...the present unjustifiable and excessive rates of taxation must end -- that taxation must be reduced and that it is time to take the unrepentant Tax Masters at Ottawa off the backs of the Canadian people.\""
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44411,
+        "fields": {
+            "question": 44368,
+            "description": "\"...how many of you have been sat in the Gallery of the House of Commons? If you have been there, you will have seen that great institution treated with shocking contempt, sorely wounded, robbed of its rights, its independence gone, usurped by a few Ministers who treat the rest of the Cabinet as juniors, and members of all Parties as though they were not entitled to be there.\""
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44412,
+        "fields": {
+            "question": 44368,
+            "description": "\"Internationally, we must retain a close relationship with the commonwealth. In the tradition of this Party, we did resent, and we do resent the British people being castigated and derisively condemned as those 'supermen' whose days are about over.\""
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44413,
+        "fields": {
+            "question": 44369,
+            "description": "We should not put too much emphasis into television - in-person campaigning and speeches will still carry the day here. However, I will consent to filming some short presentations for our free-time political broadcasts."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44414,
+        "fields": {
+            "question": 44369,
+            "description": "We should be taking full advantage of this avenue of advertising - I will throw myself fully into the broadcasts we will record, including the use of make-up."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44415,
+        "fields": {
+            "question": 44370,
+            "description": "We should focus our efforts in Manitoba and Saskatchewan, where we can focus on consolidating the CCF vote against the Liberals."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44416,
+        "fields": {
+            "question": 44370,
+            "description": "We should focus our efforts in Alberta and focus on consolidating the Social Credit vote against the Liberals."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44417,
+        "fields": {
+            "question": 44370,
+            "description": "We should focus our efforts in British Columbia to claw out of fourth place and focus fire on both the CCF and Social Credit."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44418,
+        "fields": {
+            "question": 44370,
+            "description": "The west will vote for me, solely by virtue of being from Saskatchewan. We are better served focusing on our target ridings in Québec."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44419,
+        "fields": {
+            "question": 44371,
+            "description": "We should stay silent on this issue. It would alienate Québec to pursue an aggressive line on Pearson's resolution to this issue, despite my personal opposition."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44420,
+        "fields": {
+            "question": 44371,
+            "description": "We should press our attack against Pearson here! We have the upper hand with most Canadians and should not hesitate; \"It is high time that Canada had a government which will not knife Canada's best friends in the back.\""
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44422,
+        "fields": {
+            "question": 44372,
+            "description": "I shall focus my efforts in the Maritimes during this week. Nova Scotia should be fertile ground for my message."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44423,
+        "fields": {
+            "question": 44372,
+            "description": "Québec proves elusive still, I shall visit that province this week, mostly the Bas-Saint-Laurent and Gaspé."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44424,
+        "fields": {
+            "question": 44372,
+            "description": "Ontario is the grand prize, so I will focus my efforts there, especially in the rural Midwest."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44425,
+        "fields": {
+            "question": 44372,
+            "description": "The two territories are sparsely populated, but a single visit may swing them both."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44426,
+        "fields": {
+            "question": 44373,
+            "description": "We need to display our strength and momentum on the trail to the utmost degree - I want every rally, every campaign speech filled to the brim, ensure the media captures everything."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44427,
+        "fields": {
+            "question": 44373,
+            "description": "We cannot risk having our momentum stunted by poor attendance at even a single rally being reported upon by the press. Tightly control appearances, even if it requires smaller crowds."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44428,
+        "fields": {
+            "question": 44374,
+            "description": "We can start to rest a bit - too quick of a pace increases the chance of a gaffe, which we can ill-afford so far down in the polls."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44429,
+        "fields": {
+            "question": 44374,
+            "description": "Let's keep going, but space out our rallies a bit, and do fewer stops, focusing on the bigger cities. We can ill-afford any gaffes at this crucial stage in the campaign."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44430,
+        "fields": {
+            "question": 44374,
+            "description": "No! I am fine with my current pace, and we need to get the message out to the people of Canada that there needs to be a new government in this country!"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44431,
+        "fields": {
+            "question": 44375,
+            "description": "Let's let demons of the past lie in peace. We have better issues to focus on as we campaign."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44432,
+        "fields": {
+            "question": 44375,
+            "description": "This is, perhaps, the one issue which will win us the election! We must hammer on it at every opportunity."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44433,
+        "fields": {
+            "question": 44376,
+            "description": "We should campaign in the West! Securing Saskatchewan will be critical for our party's future!"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44434,
+        "fields": {
+            "question": 44376,
+            "description": "Let us focus our efforts on Québec, and her Eastern Townships!"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44435,
+        "fields": {
+            "question": 44376,
+            "description": "We should focus our efforts broadly and try to hit each part of the country over this week!"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44437,
+        "fields": {
+            "question": 44377,
+            "description": "Trade policy is not a significant issue in this election. We should focus on more pressing concerns like the increasing disdain that the Liberals have for parliamentary democracy."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44438,
+        "fields": {
+            "question": 44377,
+            "description": "We should launch a full-throated attack on increasing economic integration on the continent with the United States, and the abandonment of trade with the United Kingdom and the Commonwealth."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44440,
+        "fields": {
+            "question": 44378,
+            "description": "We should avoid alienating our base in Ontario and in Québec - tell our candidates to avoid ethnic politicking in their ridings."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44441,
+        "fields": {
+            "question": 44378,
+            "description": "We have, for too long, been the part of the upper class Anglo-Saxons of Toronto - it is time we brought into the fold all those peoples who have fled Soviet oppression in Europe!"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44444,
+        "fields": {
+            "question": 44379,
+            "description": "We cannot afford to come off as angry or attacking out of false senses of grievance. Keep our attacks of St. Laurent and focus on the party and unpopular figures like C.D. Howe."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44445,
+        "fields": {
+            "question": 44379,
+            "description": "Put in a healthy amount of attacks on the man, but don't go overboard. Intersperse them with attacks on arrogant cabinet ministers like C.D. Howe."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44446,
+        "fields": {
+            "question": 44379,
+            "description": "His own party has said of him, that they'd need him, even if they had to 'run him stuffed'. He is an absolute liability, attack on every conceivable ground, including mental fortitude and personality."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44447,
+        "fields": {
+            "question": 44380,
+            "description": "The focus of our efforts this week should be the cities of Alberta - Calgary, Edmonton, and their respective suburbs."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44448,
+        "fields": {
+            "question": 44380,
+            "description": "Put our efforts into Québec City and its suburbs - a breakthrough there will be crucial."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44449,
+        "fields": {
+            "question": 44381,
+            "description": "Use the moment to press for protectionism - include a pledge in our campaign to protect Canadian farmers from 'unwarranted importations of agricultural products.'"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44450,
+        "fields": {
+            "question": 44381,
+            "description": "Push a populist line on the issue, with a price support programme, to ensure 'adequate parity for agricultural producers, based on a fair price-cost relationship.'"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44451,
+        "fields": {
+            "question": 44381,
+            "description": "We can allow our western candidates to naturally direct whichever policies they wish on agricultural issues. However, we should redouble our efforts in urban areas."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44452,
+        "fields": {
+            "question": 44380,
+            "description": "Put our efforts into Winnipeg and its suburbs - we need to crack the Liberals and CCF there."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44454,
+        "fields": {
+            "question": 44382,
+            "description": "Have Premiers Stanfield and Flemming use their roles in Nova Scotia and New Brunswick, respectively, to convince Maritime voters that a Conservative government would provide more aid to them in terms of development and infrastructure."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44455,
+        "fields": {
+            "question": 44382,
+            "description": "Make public our promise to aid Premier Douglas in the construction of the South Saskatchewan Dam if we are elected."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44456,
+        "fields": {
+            "question": 44383,
+            "description": "Invite just our candidates in our target Vancouver ridings to speak at the rally."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44457,
+        "fields": {
+            "question": 44383,
+            "description": "Invite all of our candidates in Vancouver to speak at the rally."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44458,
+        "fields": {
+            "question": 44383,
+            "description": "Invite all of our candidates in the Lower Mainland to speak at the rally."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44459,
+        "fields": {
+            "question": 44384,
+            "description": "This issue is not particularly relevant anymore, and besides, any pledge to democratise the manner of our government's functioning would only impede our ability to govern if we win this election."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44460,
+        "fields": {
+            "question": 44384,
+            "description": "We need to press firmly on this issue, with all possible haste. This will include pledges to abolish closure, introduce a permanent speaker, and an independent redistricting commission."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44461,
+        "fields": {
+            "question": 44385,
+            "description": "Let his own comments sink him, there is no need to pursue the attack further here."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44462,
+        "fields": {
+            "question": 44385,
+            "description": "We should go after him aggressively and make major efforts in his riding. He asked, \"If we wanted to get away with it, who would stop us?\". The answer, \"We will!\""
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44463,
+        "fields": {
+            "question": 44385,
+            "description": "We should go after him aggressively, but let the CCF take the lead in his riding. "
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44464,
+        "fields": {
+            "question": 44386,
+            "description": "We should put our full efforts into appealing to M. Duplessis - promise significant support for his provincial government, and the Union Nationale, as well as pledges to work with him on provincial matters in exchange for political support."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44465,
+        "fields": {
+            "question": 44386,
+            "description": "We should put our full efforts into appealing to M. Duplessis - promise significant support for his provincial government, and the Union Nationale, as well as pledges to work with him on provincial matters in exchange for political support."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44466,
+        "fields": {
+            "question": 44386,
+            "description": "We should make some minor efforts to appeal to M. Duplessis - doing too much could jeopardise our chances in English-speaking ridings. Instead, just let a few of our Québec candidates be hand-picked by him."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44467,
+        "fields": {
+            "question": 44386,
+            "description": "Ignore M. Duplessis, and instead redouble our efforts on Anglophone Canada - it is essential to win those seats. His are just a distraction."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44468,
+        "fields": {
+            "question": 44387,
+            "description": "We should secure the core ridings that we'll need to win - I will make a run into rural Ontario to bring on board their crucial swing voters."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44469,
+        "fields": {
+            "question": 44387,
+            "description": "We need to extend our reach westwards - I will foray into the northern Prairies to establish our party's permanent presence there."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44470,
+        "fields": {
+            "question": 44387,
+            "description": "Québec is still, ever-elusive. I will focus my efforts on the east end of Montréal and crack the Liberal fortress there."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44471,
+        "fields": {
+            "question": 44387,
+            "description": "The Liberals are far too secure in Newfoundland and Labrador - I will make the effort to venture to these oft-forgotten ridings and break through."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44472,
+        "fields": {
+            "question": 44388,
+            "description": "Grosart risks too much - keep to our standard campaign messaging and ignore this near-sabotage."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44473,
+        "fields": {
+            "question": 44388,
+            "description": "He who dares, wins. Listen to Grosart."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44474,
+        "fields": {
+            "question": 44389,
+            "description": "We should stay silent on the issue for the most part, no good can come out of trying hard for the ethnic vote, and empty pandering on the refugee issue."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44475,
+        "fields": {
+            "question": 44389,
+            "description": "This is an excellent opportunity to burnish our anti-communist credentials, and we should express support for bringing over more refugees."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44476,
+        "fields": {
+            "question": 44390,
+            "description": "Edmonton is the most important city to get our efforts focus in on, and we can bring significant political firepower to bear."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44477,
+        "fields": {
+            "question": 44390,
+            "description": "We need to put efforts into Hamilton this week - the three ridings in the city will be crucial for forming government."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44478,
+        "fields": {
+            "question": 44390,
+            "description": "Renfrew County is home to two critical ridings, and a visit from a party leader would certainly provide an enormous swing."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44480,
+        "fields": {
+            "question": 44391,
+            "description": "Keep quiet on the episode - let the Liberals shoot themselves in the foot here."
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44481,
+        "fields": {
+            "question": 44391,
+            "description": "The Liberals appear to have come up with yet another method of silencing their opposition - \"Shove them off the platform. If they break their necks, that's just too bad.\""
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44483,
+        "fields": {
+            "question": 44392,
+            "description": "Finish the campaign with a major rally in Regina!"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44484,
+        "fields": {
+            "question": 44392,
+            "description": "Finish the campaign with a major rally in Saskatoon!"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44485,
+        "fields": {
+            "question": 44392,
+            "description": "Finish the campaign with a series of stops in eastern Saskatchewan!"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44486,
+        "fields": {
+            "question": 44392,
+            "description": "Finish the campaign with a series of stops in western Saskatchewan!"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44487,
+        "fields": {
+            "question": 44393,
+            "description": "\"On Monday, I'll be Prime Minister.\""
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44925,
+        "fields": {
+            "question": 44382,
+            "description": "Emphasise our 'New Frontier' policy, to ensure that those living in Canada's north are made aware of our plans to develop that part of the country."
+        }
+    }
+]

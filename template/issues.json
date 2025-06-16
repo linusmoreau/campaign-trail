@@ -1,0 +1,117 @@
+[
+    {
+        "model": "campaign_trail.issue",
+        "pk": 110,
+        "fields": {
+            "name": "French",
+            "description": 0,
+            "stance_1": "Entirely Anglophone",
+            "stance_desc_1": 0,
+            "stance_2": "Mostly Anglophone",
+            "stance_desc_2": 0,
+            "stance_3": "Slightly Anglophone",
+            "stance_desc_3": 0,
+            "stance_4": "Bilingual",
+            "stance_desc_4": 0,
+            "stance_5": "Slightly Francophone",
+            "stance_desc_5": 0,
+            "stance_6": "Mostly Francophone",
+            "stance_desc_6": 0,
+            "stance_7": "Entirely Francophone",
+            "stance_desc_7": 0,
+            "election": 21
+        }
+    },
+    {
+        "model": "campaign_trail.issue",
+        "pk": 111,
+        "fields": {
+            "name": "Welfare Spending",
+            "description": 0,
+            "stance_1": "Much More",
+            "stance_desc_1": 0,
+            "stance_2": "More",
+            "stance_desc_2": 0,
+            "stance_3": "Slightly More",
+            "stance_desc_3": 0,
+            "stance_4": "No Change",
+            "stance_desc_4": 0,
+            "stance_5": "Slightly Less",
+            "stance_desc_5": 0,
+            "stance_6": "Less",
+            "stance_desc_6": 0,
+            "stance_7": "Much Less",
+            "stance_desc_7": 0,
+            "election": 21
+        }
+    },
+    {
+        "model": "campaign_trail.issue",
+        "pk": 112,
+        "fields": {
+            "name": "Authoritarianism",
+            "description": 0,
+            "stance_1": "Very Concerned",
+            "stance_desc_1": 0,
+            "stance_2": "Concerned",
+            "stance_desc_2": 0,
+            "stance_3": "Slightly Concerned",
+            "stance_desc_3": 0,
+            "stance_4": "Unsure",
+            "stance_desc_4": 0,
+            "stance_5": "Unconcerned",
+            "stance_desc_5": 0,
+            "stance_6": "Unconcerned",
+            "stance_desc_6": 0,
+            "stance_7": "Unconcerned",
+            "stance_desc_7": 0,
+            "election": 21
+        }
+    },
+    {
+        "model": "campaign_trail.issue",
+        "pk": 113,
+        "fields": {
+            "name": "Foreign Policy",
+            "description": 0,
+            "stance_1": "Strongly Pro-British",
+            "stance_desc_1": 0,
+            "stance_2": "Pro-British",
+            "stance_desc_2": 0,
+            "stance_3": "Slightly Pro-British",
+            "stance_desc_3": 0,
+            "stance_4": "Moderate",
+            "stance_desc_4": 0,
+            "stance_5": "Slightly Anti-British",
+            "stance_desc_5": 0,
+            "stance_6": "Anti-British",
+            "stance_desc_6": 0,
+            "stance_7": "Strongly Anti-British",
+            "stance_desc_7": 0,
+            "election": 21
+        }
+    },
+    {
+        "model": "campaign_trail.issue",
+        "pk": 114,
+        "fields": {
+            "name": "Rural-Urban",
+            "description": 0,
+            "stance_1": "Very Rural",
+            "stance_desc_1": 0,
+            "stance_2": "Rural",
+            "stance_desc_2": 0,
+            "stance_3": "Slightly Rural",
+            "stance_desc_3": 0,
+            "stance_4": "Small Town",
+            "stance_desc_4": 0,
+            "stance_5": "Suburban",
+            "stance_desc_5": 0,
+            "stance_6": "Medium City",
+            "stance_desc_6": 0,
+            "stance_7": "Urban Centre",
+            "stance_desc_7": 0,
+            "election": 21
+        }
+    }
+]

@@ -1,0 +1,839 @@
+[
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44324,
+        "fields": {
+            "answer": 44322,
+            "candidate": 300,
+            "answer_feedback": "Québec Conservatives, especially those in Dufresne's riding are pleased by this concession to their province, but some westerners are somewhat disappointed by a perceived slight. Meanwhile, as parliament dissolves, you start 14 points back of the Liberals."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44326,
+        "fields": {
+            "answer": 44323,
+            "candidate": 300,
+            "answer_feedback": "Westerners are pleased at the outreach, but Léon Balcer leads a walkout of the Québec delegation, which will certainly harm you in that province during the election. Meanwhile, as parliament dissolves, you start 14 points back of the Liberals."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44346,
+        "fields": {
+            "answer": 44337,
+            "candidate": 300,
+            "answer_feedback": "Donald Fleming and your conservative Toronto MPs are pleased by this line of attack, taking the attack to high taxation instead of low levels of welfare spending, and Harris' opponent in Grey--Bruce, Hanover mayor Eric Winkler, is sure to appreciate the attack against the Minister of Finance."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44347,
+        "fields": {
+            "answer": 44338,
+            "candidate": 300,
+            "answer_feedback": "The progressive, populist candidates of your party across the West are glad for the ammunition you've given them to attack Prairie Liberals on this issue. \"Six-Buck Harris'\" opponent in Grey--Bruce, Hanover mayor Eric Winkler, is sure to appreciate the attack against the Minister of Finance as well."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44354,
+        "fields": {
+            "answer": 44351,
+            "candidate": 300,
+            "answer_feedback": "No harm, no foul. Though some anti-communist hawks in your party are disappointed in your refusal to engage, they reluctantly admit your point of view."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44359,
+        "fields": {
+            "answer": 44352,
+            "candidate": 300,
+            "answer_feedback": "Your line of questioning has put the government on the backfoot, hammering on the argument of the arrogance that has permeated the party. Meanwhile, Mr. Pearson has begun evading such questions."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44361,
+        "fields": {
+            "answer": 44353,
+            "candidate": 300,
+            "answer_feedback": "To many Canadians, attacking a dead man's political inclinations seems a step too far. However, for those committed to either the anti-communist crusade or those many opposed to Pearson's actions during the Suez, your statement has a certain panache."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44490,
+        "fields": {
+            "answer": 44394,
+            "candidate": 300,
+            "answer_feedback": "The rallying cry goes out to your party's candidates across the nation. The election has officially begun!"
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44501,
+        "fields": {
+            "answer": 44396,
+            "candidate": 300,
+            "answer_feedback": "Hamilton and Menzies are dismayed by your rejection of their progressive pitch, and the seeming playing down of your populist appeal. But if you intend to make a play for more urban ridings, this might work."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44505,
+        "fields": {
+            "answer": 44398,
+            "candidate": 300,
+            "answer_feedback": "Hamilton and Menzies are delighted by your approval of their economic ideas, and western and rural voters will certainly be thrilled to hear you campaign on them, despite some vague grumbling from Bay Street."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44527,
+        "fields": {
+            "answer": 44399,
+            "candidate": 300,
+            "answer_feedback": "Your party's riding associations outside Québec rejoice - and those inside La Belle Province fume. It's a dangerous risk to shuffle more funds to English Canada, and could be the wrong choice. But down 14 points, perhaps you need to take bold actions."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44528,
+        "fields": {
+            "answer": 44400,
+            "candidate": 300,
+            "answer_feedback": "This is largely an acceptable compromise for Grosart and Churchill, though you sense some discontent in the latter's expression. You won't rock the boat much with this plan though."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44529,
+        "fields": {
+            "answer": 44401,
+            "candidate": 300,
+            "answer_feedback": "Churchill is furious, but he holds back his anger out of respect for your leadership. You sense Grosart is aghast at your direction, but he obeys. You've put your whole career on Québec, and for your sake you better hope it succeeds."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44530,
+        "fields": {
+            "answer": 44397,
+            "candidate": 300,
+            "answer_feedback": "Hamilton and Menzies feel this to be an acceptable middle ground, though some scant disappointment is felt, and the Prairie provinces will continue looking towards the CCF and Social Credit."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44535,
+        "fields": {
+            "answer": 44403,
+            "candidate": 300,
+            "answer_feedback": "The troika at the head of your campaign disagrees with your decision not to adopt a fully Diefenbaker-centric campaign. You see the first print advertisement they produce - your photo twinned with the party's, the text reading \"It's time for a Progressive Conservative government!\""
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44545,
+        "fields": {
+            "answer": 44402,
+            "candidate": 300,
+            "answer_feedback": "The troika at the head of your campaign is thrilled at your agreement with their ideas, and candidates in Saskatchewan are pleased. You see the first print advertisement they produce - your own image blown up, accompanied with the text, \"It's time for a Diefenbaker Government!\" The party logo is nowhere to be seen."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44546,
+        "fields": {
+            "answer": 44404,
+            "candidate": 300,
+            "answer_feedback": "Your time was well spent in Prince Albert, holding back the Liberal's star candidate, former Saskatchewan Liberal president, Dr. Russ Partridge. You took the time to venture into nearby ridings as well, as St. Laurent continued to settle matters in Ottawa before campaigning."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44554,
+        "fields": {
+            "answer": 44405,
+            "candidate": 300,
+            "answer_feedback": "You are greeted by cheering crowds in both cities, your revivalist style lighting them up. Meanwhile, the Liberal's star candidate in Prince Albert, former Saskatchewan Liberal president, Dr. Russ Partridge took advantage of your absence."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44562,
+        "fields": {
+            "answer": 44406,
+            "candidate": 300,
+            "answer_feedback": "Your rallies gather large audiences in Halifax and Charlottetown. Meanwhile, the Liberal's star candidate in Prince Albert, former Saskatchewan Liberal president, Dr. Russ Partridge took advantage of your absence."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44572,
+        "fields": {
+            "answer": 44407,
+            "candidate": 300,
+            "answer_feedback": "The trumpets and drums do not precede you on the trail here, your crowds showing a significantly muted enthusiasm. Meanwhile, the Liberal's star candidate in Prince Albert, former Saskatchewan Liberal president, Dr. Russ Partridge took advantage of your absence."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44582,
+        "fields": {
+            "answer": 44408,
+            "candidate": 300,
+            "answer_feedback": "As you expected, Frost decides not to endorse you, much like his refusal to campaign in past Progressive Conservative defeats. As you head to Massey Hall for a campaign opening speech, Donald Fleming introduces you to an enthusiastic crowd."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44583,
+        "fields": {
+            "answer": 44409,
+            "candidate": 300,
+            "answer_feedback": "'Old Man Ontario' is, as you expected, receptive to your pitch, enthusiastically throwing his full support behind you, as well as his Ontario machine. He introduces you to a raucous Massey Hall crowd for a campaign-opening speech."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44600,
+        "fields": {
+            "answer": 44410,
+            "candidate": 300,
+            "answer_feedback": "The crowd erupts into cheers at your words."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44601,
+        "fields": {
+            "answer": 44411,
+            "candidate": 300,
+            "answer_feedback": "The crowd erupts into cheers at your words."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44602,
+        "fields": {
+            "answer": 44412,
+            "candidate": 300,
+            "answer_feedback": "The crowd erupts into cheers at your words."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44613,
+        "fields": {
+            "answer": 44413,
+            "candidate": 300,
+            "answer_feedback": "Your television broadcasts are acceptable, and tend to leave a slightly positive impact on the voters, especially compared to Louis St. Laurent, who insisted on using notes instead of teleprompters and refusing to wear make-up."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44616,
+        "fields": {
+            "answer": 44414,
+            "candidate": 300,
+            "answer_feedback": "Your television broadcasts are well-received, and tend to leave a very positive impact on the voters, especially compared to Louis St. Laurent, who insisted on using notes instead of teleprompters and refusing to wear make-up."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44620,
+        "fields": {
+            "answer": 44415,
+            "candidate": 300,
+            "answer_feedback": "The prairie factions of your party are thrilled by your focus on their provinces, and it will certainly be rewarded by the voters as well."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44621,
+        "fields": {
+            "answer": 44416,
+            "candidate": 300,
+            "answer_feedback": "The Alberta faction of your party are thrilled by your focus on their provinces, and it will certainly be rewarded by the voters as well."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44622,
+        "fields": {
+            "answer": 44417,
+            "candidate": 300,
+            "answer_feedback": "The B.C. faction of your party are thrilled by your focus on their provinces, and it will certainly be rewarded by the voters as well."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44623,
+        "fields": {
+            "answer": 44418,
+            "candidate": 300,
+            "answer_feedback": "The western base of your party is sorely disappointed by this focus on Québec, but francophone voters are enthused by a renewed focus on their province."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44696,
+        "fields": {
+            "answer": 44419,
+            "candidate": 300,
+            "answer_feedback": "Many of your anglophone MPs are furious that you have left this angle untouched during this election, especially Howard Green, who was perhaps the only man more committed to the attack than you. However, many of your Québec candidates are grateful for silence on this issue."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44703,
+        "fields": {
+            "answer": 44420,
+            "candidate": 300,
+            "answer_feedback": "Most of your MPs are pleased with this stance, especially Howard Green, whose speech in Parliament you've quoted. While there is some grumbling from anti-anglophiles in Québec, you've gained most everywhere else."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44705,
+        "fields": {
+            "answer": 44425,
+            "candidate": 300,
+            "answer_feedback": "You are greeted by bewildered northerners, never having seen a Cabinet minister, let alone a party leader. And yet you seem to swing them to your side. Just watch the march the other parties have stolen on you across Canada."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44712,
+        "fields": {
+            "answer": 44424,
+            "candidate": 300,
+            "answer_feedback": "Your swing through Grey, Bruce, Huron, and Wellington counties is well-received by farmers and small businessmen in the area."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44713,
+        "fields": {
+            "answer": 44423,
+            "candidate": 300,
+            "answer_feedback": "As you head through rural eastern Québec, struggling through with your poor French, you feel, for the first time, the changing tide of this election."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44719,
+        "fields": {
+            "answer": 44422,
+            "candidate": 300,
+            "answer_feedback": "Dalton Camp accompanies you to Amherst Nova Scotia. '...they [his audience] believe in him as they have not believed in anyone in a long, long time, if even then.'"
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44730,
+        "fields": {
+            "answer": 44487,
+            "candidate": 300,
+            "answer_feedback": "Though privately you've told reporters you expect to win just under 100 seats (and they expect even fewer), as results filter in from Sable Island, it's clear the polls have missed something major across Canada."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44733,
+        "fields": {
+            "answer": 44427,
+            "candidate": 300,
+            "answer_feedback": "Your pragmatic approach has kept any unforeseen campaign trail disasters from coming up, but has also potentially detracted from the appearance of Big Mo' in national papers."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44736,
+        "fields": {
+            "answer": 44426,
+            "candidate": 300,
+            "answer_feedback": "Wow! Your plan has paid off, as voters all across Canada see and hear stories of your enthusiastic crowds, especially compared to those lackluster ones at the Liberal rallies."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44739,
+        "fields": {
+            "answer": 44428,
+            "candidate": 300,
+            "answer_feedback": "You rest in Prince Albert for a few days before resuming your cross-country tour, shoring up your support at home."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44741,
+        "fields": {
+            "answer": 44429,
+            "candidate": 300,
+            "answer_feedback": "You push more appearances into Toronto and Montreal, to the detriment of rural areas, but your frantic momentum fuels a continued rise in the polls."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44744,
+        "fields": {
+            "answer": 44430,
+            "candidate": 300,
+            "answer_feedback": "You continue your campaign apace, with even more stops in the next few days, and your momentum seems to increase ever faster as the campaign speeds to its conclusion."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44750,
+        "fields": {
+            "answer": 44431,
+            "candidate": 300,
+            "answer_feedback": "Your advisors feel as though you have left a major chunk of votes on the table here, and even the CCF and Social Credit have begun outflanking you here to claim chunks of a falling Liberal vote."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44751,
+        "fields": {
+            "answer": 44432,
+            "candidate": 300,
+            "answer_feedback": "You feel vindicated in your decision to campaign on the issue of the Pipeline Debate as you are greeted by screaming crowds whenever you attack Liberal arrogance and authoritarianism."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44755,
+        "fields": {
+            "answer": 44433,
+            "candidate": 300,
+            "answer_feedback": "Overflowing crowds cheer you at every stop on your campaign!"
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44778,
+        "fields": {
+            "answer": 44434,
+            "candidate": 300,
+            "answer_feedback": "For the first time whilst campaigning, you begin to feel French-Canadians come over to your side."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44792,
+        "fields": {
+            "answer": 44435,
+            "candidate": 300,
+            "answer_feedback": "Overflowing crowds cheer you at every stop on your campaign!"
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44795,
+        "fields": {
+            "answer": 44437,
+            "candidate": 300,
+            "answer_feedback": "No harm in not taking the attack on the trade issue - just keep hammering on the Pipeline Debate, it'll break through eventually."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44798,
+        "fields": {
+            "answer": 44438,
+            "candidate": 300,
+            "answer_feedback": "A commonwealth man, through and through!"
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44799,
+        "fields": {
+            "answer": 44440,
+            "candidate": 300,
+            "answer_feedback": "You may have appeased the powerful Toronto faction of your party, but numerous ethnic groups, especially Eastern Europeans, such as Ukrainians, Croats, and Latvians are upset."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44805,
+        "fields": {
+            "answer": 44441,
+            "candidate": 300,
+            "answer_feedback": "In Parkdale, Arthur Maloney runs a campaign heavy on ethnic appeal, emphasising Ukrainians and Poles. In High Park, John Kucherepa uses his standing as President of the Ukrainian Council of Canada to run up his vote totals."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44820,
+        "fields": {
+            "answer": 44461,
+            "candidate": 300,
+            "answer_feedback": "C.D. Howe's comments come up in national news and the local news in Morris, Manitoba, but soon fade out of view, leaving many wishing you had pressed a harder line."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44821,
+        "fields": {
+            "answer": 44462,
+            "candidate": 300,
+            "answer_feedback": "C.D. Howe is largely forced off the campaign trail by St. Laurent and confined back to his own riding of Port Arthur. Though, with his gaffes, this might not be much of a relief. Meanwhile, your party collects anti-Liberal votes in his riding."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44822,
+        "fields": {
+            "answer": 44463,
+            "candidate": 300,
+            "answer_feedback": "C.D. Howe is largely forced off the campaign trail by St. Laurent and confined back to his own riding of Port Arthur. Though, with his gaffes, this might not be much of a relief. Meanwhile, the CCF collects anti-Liberal votes in his riding."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44823,
+        "fields": {
+            "answer": 44464,
+            "candidate": 300,
+            "answer_feedback": "You've won 'Le Chef' over! He's agreed to fully staff your vacant ridings with hand-picked candidates and to bring the full weight of his machine to your aid. However, much of English Canada resents this, and your anti-authoritarian stomping grounds feel betrayed."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44824,
+        "fields": {
+            "answer": 44465,
+            "candidate": 300,
+            "answer_feedback": "You've failed to win 'Le Chef' over! You don't suffer much backlash in Québec, but much of English Canada resents the efforts you made, and your anti-authoritarian stomping grounds feel betrayed."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44825,
+        "fields": {
+            "answer": 44466,
+            "candidate": 300,
+            "answer_feedback": "You've won over 'Le Chef' slightly, and he has agreed to help put up candidates in a few key ridings, without much harm done to your candidates in other provinces."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44826,
+        "fields": {
+            "answer": 44467,
+            "candidate": 300,
+            "answer_feedback": "Duplessis is furious, and you can certainly expect his retribution to be felt across your Francophone seats. On the other hand, much of English Canada respects you standing up to him."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44827,
+        "fields": {
+            "answer": 44472,
+            "candidate": 300,
+            "answer_feedback": "No harm, no foul."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44828,
+        "fields": {
+            "answer": 44473,
+            "candidate": 300,
+            "answer_feedback": "Grosart's advice pays off - Liberal candidates increasingly shun attacks on the Conservative banner for complaints about the messaging, easily elevating your position in the polls."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44831,
+        "fields": {
+            "answer": 44446,
+            "candidate": 300,
+            "answer_feedback": "Your attacks have backfired catastrophically, with mass groundswells of sympathy for the embattles Prime Minister. You may have just lost the election."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44833,
+        "fields": {
+            "answer": 44444,
+            "candidate": 300,
+            "answer_feedback": "The attacks on C.D Howe play well with most of the population, though some insiders feel as though you're leaving something on the table here."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44835,
+        "fields": {
+            "answer": 44445,
+            "candidate": 300,
+            "answer_feedback": "Partisans of all stripes (except Liberal) are pleased by your attacks on St. Laurent, but there is a significant sympathy effect blunting the positive effects of these attacks."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44843,
+        "fields": {
+            "answer": 44447,
+            "candidate": 300,
+            "answer_feedback": "Momentum continues to build on the campaign trail as you hit five crucial ridings over the course of the week."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44844,
+        "fields": {
+            "answer": 44448,
+            "candidate": 300,
+            "answer_feedback": "Momentum continues to build on the campaign trail as you hit four crucial ridings over the course of the week."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44851,
+        "fields": {
+            "answer": 44452,
+            "candidate": 300,
+            "answer_feedback": "Momentum continues to build on the campaign trail as you hit five crucial ridings over the course of the week."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44922,
+        "fields": {
+            "answer": 44449,
+            "candidate": 300,
+            "answer_feedback": "The Manitoba Farmers' Union is buoyed by your support for this policy and redoubles its support for non-Liberal candidates in that province. Meanwhile, Canadian nationalists and rural voters also love this policy."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44923,
+        "fields": {
+            "answer": 44450,
+            "candidate": 300,
+            "answer_feedback": "The Manitoba Farmers' Union is buoyed by your support for this policy and redoubles its support for non-Liberal candidates in that province. Meanwhile, impoverished and rural voters also love this policy."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44924,
+        "fields": {
+            "answer": 44451,
+            "candidate": 300,
+            "answer_feedback": "The Manitoba Farmers' Union is perplexed by your refusal to support agricultural aid, and fixes its support for the CCF exclusively."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44936,
+        "fields": {
+            "answer": 44455,
+            "candidate": 300,
+            "answer_feedback": "Your pledge is received well by those living in the ridings that would be effected, as well as by rural voters who are reassured you will be fighting for them."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44954,
+        "fields": {
+            "answer": 44925,
+            "candidate": 300,
+            "answer_feedback": "This pledge is well received by Canadians in some of Canada's northernmost ridings, buoyed by the promise to focus on development in these oft-ignored areas."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44957,
+        "fields": {
+            "answer": 44454,
+            "candidate": 300,
+            "answer_feedback": "Maritime voters are convinced by the notion that your government would provide the developmental aid that St. Laurent's has not (or that they have been convinced he has not given them)."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44969,
+        "fields": {
+            "answer": 44459,
+            "candidate": 300,
+            "answer_feedback": "Those opposed to the flouting of parliament's rights increasingly flock to the CCF and Social Credit in the wake of your abandonment of the cause."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44975,
+        "fields": {
+            "answer": 44460,
+            "candidate": 300,
+            "answer_feedback": "Supporters of democracy are emboldened by your pledges and redouble their support for your party and for Mr. Diefenbaker in particular."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44979,
+        "fields": {
+            "answer": 44474,
+            "candidate": 300,
+            "answer_feedback": "Hungarian communities in Canada are disappointed by this response, and you can expect a downturn in their support."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 44985,
+        "fields": {
+            "answer": 44475,
+            "candidate": 300,
+            "answer_feedback": "Hungarian voters are pleased, and so are those voters in Charlottetown who benefited from the most recent wave of Hungarian immigration."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 45014,
+        "fields": {
+            "answer": 44456,
+            "candidate": 300,
+            "answer_feedback": "Ernest Broome, Howard Green, and John Taylor all speak, but the star is perhaps, Vancouver Centre candidate, Douglas Jung, a Chinese-Canadian WWII veteran. Meanwhile, the media spreads word of the cheering, 5000 strong crowd across Canada."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 45015,
+        "fields": {
+            "answer": 44457,
+            "candidate": 300,
+            "answer_feedback": "Six Vancouver candidates speak, but the star is perhaps, Vancouver Centre candidate, Douglas Jung, a Chinese-Canadian WWII veteran. Meanwhile, the media spreads word of the cheering, 5000 strong crowd across Canada."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 45016,
+        "fields": {
+            "answer": 44458,
+            "candidate": 300,
+            "answer_feedback": "Eleven West Coast candidates speak, but the star is perhaps, Vancouver Centre candidate, Douglas Jung, a Chinese-Canadian WWII veteran. Meanwhile, the media spreads word of the cheering, 5000 strong crowd across Canada."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 45017,
+        "fields": {
+            "answer": 44468,
+            "candidate": 300,
+            "answer_feedback": "In Bruce County, speaking to an audience of 2100 voters, you tell them, \"If you send this government back to office, don't ask Her Majesty's loyal Opposition to stand up for your rights. For you no longer will have any rights.\" They cheer wildly."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 45018,
+        "fields": {
+            "answer": 44469,
+            "candidate": 300,
+            "answer_feedback": "\"'Near the end, he was in ... and he made a speech that was absolutely incomprehensible. It was gibberish.' The crowd cheered wildly just the same.\" - Fights of our Lives, John Duffy."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 45019,
+        "fields": {
+            "answer": 44470,
+            "candidate": 300,
+            "answer_feedback": "You encounter fairly calm crowds on the island - but despite their strong Liberal inclination, it seems as though you might be breaking through."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 45020,
+        "fields": {
+            "answer": 44471,
+            "candidate": 300,
+            "answer_feedback": "Your time spent in St. John's seems as though it has paid off, but the rest of your visits through the province seem to be nothing more than wasted time."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 45043,
+        "fields": {
+            "answer": 44478,
+            "candidate": 300,
+            "answer_feedback": "Wallace Fraser and James Baskin are pleased by your visit, hoping that having the party leader will provide them the edge necessary to displace James Forgie and James Mccann, respectively."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 45046,
+        "fields": {
+            "answer": 44477,
+            "candidate": 300,
+            "answer_feedback": "The working-class city greatly appreciates the visit, with the voters themselves coming over in droves to the Conservative Party candidates: Ellen Fairclough, Quinto Martini, and Robert McDonald."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 45050,
+        "fields": {
+            "answer": 44476,
+            "candidate": 300,
+            "answer_feedback": "The west is yours - that much is something you feel certain of after speaking with and walking through the wild, cheering crowds in Edmonton. The candidates - Marcel Lambert, John Bowie-Reed, and Terry Nugent - feel buoyed by your personal support."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 45054,
+        "fields": {
+            "answer": 44483,
+            "candidate": 300,
+            "answer_feedback": "A cheering crowd greets you in Regina, as you finish off with a last, major speech."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 45056,
+        "fields": {
+            "answer": 44484,
+            "candidate": 300,
+            "answer_feedback": "A cheering crowd greets you in Saskatoon, as you finish off with a last, major speech."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 45058,
+        "fields": {
+            "answer": 44485,
+            "candidate": 300,
+            "answer_feedback": "You make stops in small towns along the Saskatchewan-Manitoba border, hitting the four southern ridings in the area, greeted everywhere by cheers."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 45063,
+        "fields": {
+            "answer": 44486,
+            "candidate": 300,
+            "answer_feedback": "You make stops in small towns along the Saskatchewan-Alberta border, hitting the three southern ridings in the area, greeted everywhere by cheers."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 45067,
+        "fields": {
+            "answer": 44480,
+            "candidate": 300,
+            "answer_feedback": "The episode is bad enough on its own to drag down Liberal fortunes, especially given St. Laurent's bewildered response to the incident."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 45069,
+        "fields": {
+            "answer": 44481,
+            "candidate": 300,
+            "answer_feedback": "You've managed to connect the issue to the authoritarian tendencies of the Liberal Party, especially on their shambolic use of closure during the Pipeline Debate, harming their polling significantly."
+        }
+    }
+]
