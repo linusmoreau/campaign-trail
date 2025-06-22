@@ -1,0 +1,156 @@
+campaignTrail_temp.global_parameter_json = [
+    {
+        "model": "campaign_trail.global_parameter",
+        "pk": 1,
+        "fields": {
+            "vote_variable": 1.125,
+            "max_swing": 0.12,
+            "start_point": 0.94,
+            "candidate_issue_weight": 10,
+            "running_mate_issue_weight": 3,
+            "issue_stance_1_max": -0.71,
+            "issue_stance_2_max": -0.3,
+            "issue_stance_3_max": -0.125,
+            "issue_stance_4_max": 0.125,
+            "issue_stance_5_max": 0.3,
+            "issue_stance_6_max": 0.71,
+            "global_variance": 0.01,
+            "state_variance": 0.005,
+            "question_count": 35,
+            "default_map_color_hex": "#C9C9C9",
+            "no_state_map_color_hex": "#999999"
+        }
+    }
+]
+
+campaignTrail_temp.election_json = [
+    {
+        "model": "campaign_trail.election",
+        "pk": 20,
+        "fields": {
+            "year": 2025,
+            "display_year": "2025",
+            "summary": "TODO: election summary",
+            "image_url": "https://i.imgur.com/rFGAjhU.jpeg",
+            "winning_electoral_vote_number": 172,
+            "advisor_url": "TODO: add advisors (perhaps Andrew Bevan and Marjorie Michel)",
+            "recommended_reading": "",
+            "has_visits": 0,
+            "no_electoral_majority_image": "https://i.imgur.com/ARiUiSV.jpeg"
+        }
+    }
+]
+
+campaignTrail_temp.temp_election_list = [
+    {
+        "id": 20,
+        "year": 2025,
+        "is_premium": 0,
+        "display_year": "2025"
+    }
+]
+
+campaignTrail_temp.credits = "<p>rbaldwin#4567</p><p>Thanks to Wikipedia user Eric0892 for the the excellent election results map from which the riding boundaries were taken.</p>"
+
+RecReading=true
+
+campaignTrail_temp.candidate_json = [
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 300,
+        "fields": {
+            "first_name": "Liberal Party",
+            "last_name": "of Canada",
+            "election": 20,
+            "party": "Liberal",
+            "state": "Canada",
+            "priority": 1,
+            "description": "TODO: Liberal Party description",
+            "color_hex": "#EA6D6A",
+            "secondary_color_hex": null,
+            "is_active": 1,
+            "image_url": "https://i.imgur.com/InnQxJN.png",
+            "electoral_victory_message": "TODO Liberal victory message",
+            "electoral_loss_message": "TODO Liberal loss message",
+            "no_electoral_majority_message": "",
+            "description_as_running_mate": null,
+            "candidate_score": 1,
+            "running_mate": false
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 306,
+        "fields": {
+            "first_name": "Mark",
+            "last_name": "Carney",
+            "election": 20,
+            "party": "Liberal",
+            "state": "Nepean",
+            "priority": 1,
+            "description": "",
+            "color_hex": "#EA6D6A",
+            "secondary_color_hex": null,
+            "is_active": 0,
+            "image_url": "https://i.imgur.com/MVBYnzH.jpeg",
+            "description_as_running_mate": "TODO: Carney description",
+            "candidate_score": 1,
+            "running_mate": true
+        }
+    }
+]
+
+campaignTrail_temp.running_mate_json = [
+    {
+        "model": "campaign_trail.running_mate",
+        "pk": 172512,
+        "fields": {
+            "candidate": 300,
+            "running_mate": 306
+        }
+    }
+]
+
+campaignTrail_temp.opponents_default_json = [
+    {
+        "election": 20,
+        "candidates": [
+            300
+        ]
+    }
+]
+
+campaignTrail_temp.opponents_weighted_json = [
+    {
+        "election": 20,
+        "candidates": [
+            300
+        ]
+    }
+]
+
+jet_data = {
+    "headerColor": "#9999ff",
+    "windowColor": "#9999ff",
+    "containerColor": "#FFFFFF",
+    "innerWindowColor": "#e1e0ff",
+    "bannerImageUrl": "https://i.imgur.com/fsBPMmn.jpeg",
+    "backgroundImageUrl": "https://i.imgur.com/1Xlpptk.jpeg",
+    "endingTextColor": "#000000"
+}
+
+//#startcode
+
+document.getElementsByClassName("game_header")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_title;
+
+$("#game_window")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_window;
+
+$(".container")[0].style.backgroundColor = "#FFFFFF";
+
+document.getElementById("header").src = "https://i.imgur.com/fsBPMmn.jpeg";
+
+document.body.background = "https://i.imgur.com/1Xlpptk.jpeg";
+
+document.head.innerHTML += "<style>#results_container {color:#000000;}</style>";
+
+//#endcode
