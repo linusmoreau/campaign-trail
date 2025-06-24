@@ -1,0 +1,10 @@
+[
+    {
+        "model": "campaign_trail.answer",
+        "pk": 44322,
+        "fields": {
+            "question": 44052,
+            "description": "Yes."
+        }
+    }
+]

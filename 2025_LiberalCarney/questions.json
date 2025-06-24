@@ -1,0 +1,11 @@
+[
+    {
+        "model": "campaign_trail.question",
+        "pk": 44052,
+        "fields": {
+            "priority": 0,
+            "description": "Do you run for Liberal leadership?",
+            "likelihood": 1
+        }
+    }
+]

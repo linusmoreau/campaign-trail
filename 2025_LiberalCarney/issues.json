@@ -1,0 +1,117 @@
+[
+    {
+        "model": "campaign_trail.issue",
+        "pk": 110,
+        "fields": {
+            "name": "French",
+            "description": 0,
+            "stance_1": "Entirely Anglophone",
+            "stance_desc_1": 0,
+            "stance_2": "Mostly Anglophone",
+            "stance_desc_2": 0,
+            "stance_3": "Slightly Anglophone",
+            "stance_desc_3": 0,
+            "stance_4": "Bilingual",
+            "stance_desc_4": 0,
+            "stance_5": "Slightly Francophone",
+            "stance_desc_5": 0,
+            "stance_6": "Mostly Francophone",
+            "stance_desc_6": 0,
+            "stance_7": "Entirely Francophone",
+            "stance_desc_7": 0,
+            "election": 20
+        }
+    },
+    {
+        "model": "campaign_trail.issue",
+        "pk": 111,
+        "fields": {
+            "name": "Trump",
+            "description": 0,
+            "stance_1": "Strongly Opposes",
+            "stance_desc_1": 0,
+            "stance_2": "Opposes",
+            "stance_desc_2": 0,
+            "stance_3": "Slightly Opposes",
+            "stance_desc_3": 0,
+            "stance_4": "Neutral",
+            "stance_desc_4": 0,
+            "stance_5": "Slightly Supports",
+            "stance_desc_5": 0,
+            "stance_6": "Supports",
+            "stance_desc_6": 0,
+            "stance_7": "Strongly Supports",
+            "stance_desc_7": 0,
+            "election": 20
+        }
+    },
+    {
+        "model": "campaign_trail.issue",
+        "pk": 112,
+        "fields": {
+            "name": "Cost of living",
+            "description": 0,
+            "stance_1": "Very Concerned",
+            "stance_desc_1": 0,
+            "stance_2": "Concerned",
+            "stance_desc_2": 0,
+            "stance_3": "Slightly Concerned",
+            "stance_desc_3": 0,
+            "stance_4": "Unsure",
+            "stance_desc_4": 0,
+            "stance_5": "Unconcerned",
+            "stance_desc_5": 0,
+            "stance_6": "Unconcerned",
+            "stance_desc_6": 0,
+            "stance_7": "Unconcerned",
+            "stance_desc_7": 0,
+            "election": 20
+        }
+    },
+    {
+        "model": "campaign_trail.issue",
+        "pk": 113,
+        "fields": {
+            "name": "Economy",
+            "description": 0,
+            "stance_1": "Pro-Growth",
+            "stance_desc_1": 0,
+            "stance_2": "Pro-Growth",
+            "stance_desc_2": 0,
+            "stance_3": "Pro-Growth",
+            "stance_desc_3": 0,
+            "stance_4": "Moderate",
+            "stance_desc_4": 0,
+            "stance_5": "Pro-Redistribution",
+            "stance_desc_5": 0,
+            "stance_6": "Pro-Redistribution",
+            "stance_desc_6": 0,
+            "stance_7": "Pro-Redistribution",
+            "stance_desc_7": 0,
+            "election": 20
+        }
+    },
+    {
+        "model": "campaign_trail.issue",
+        "pk": 114,
+        "fields": {
+            "name": "Environmental Protection",
+            "description": 0,
+            "stance_1": "Far Less",
+            "stance_desc_1": 0,
+            "stance_2": "Much Less",
+            "stance_desc_2": 0,
+            "stance_3": "Somewhat Less",
+            "stance_desc_3": 0,
+            "stance_4": "Maintain",
+            "stance_desc_4": 0,
+            "stance_5": "Somewhat More",
+            "stance_desc_5": 0,
+            "stance_6": "Much More",
+            "stance_desc_6": 0,
+            "stance_7": "Far More",
+            "stance_desc_7": 0,
+            "election": 20
+        }
+    }
+]
