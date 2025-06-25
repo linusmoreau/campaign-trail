@@ -1,0 +1,52 @@
+[
+    {
+        "model": "campaign_trail.state_issue_score",
+        "pk": 41426,
+        "fields": {
+            "state": 41421,
+            "issue": 110,
+            "state_issue_score": -1,
+            "weight": 0.5
+        }
+    },
+    {
+        "model": "campaign_trail.state_issue_score",
+        "pk": 41427,
+        "fields": {
+            "state": 41421,
+            "issue": 111,
+            "state_issue_score": -0.167,
+            "weight": 0.25
+        }
+    },
+    {
+        "model": "campaign_trail.state_issue_score",
+        "pk": 41428,
+        "fields": {
+            "state": 41421,
+            "issue": 112,
+            "state_issue_score": -0.33,
+            "weight": 0.25
+        }
+    },
+    {
+        "model": "campaign_trail.state_issue_score",
+        "pk": 41429,
+        "fields": {
+            "state": 41421,
+            "issue": 113,
+            "state_issue_score": -0.33,
+            "weight": 0.25
+        }
+    },
+    {
+        "model": "campaign_trail.state_issue_score",
+        "pk": 41430,
+        "fields": {
+            "state": 41421,
+            "issue": 114,
+            "state_issue_score": 0,
+            "weight": 0.5
+        }
+    }
+]

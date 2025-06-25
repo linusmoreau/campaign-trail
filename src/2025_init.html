@@ -16,7 +16,7 @@ campaignTrail_temp.global_parameter_json = [
             "issue_stance_6_max": 0.71,
             "global_variance": 0.01,
             "state_variance": 0.005,
-            "question_count": 35,
+            "question_count": 1,
             "default_map_color_hex": "#C9C9C9",
             "no_state_map_color_hex": "#999999"
         }
@@ -59,8 +59,8 @@ campaignTrail_temp.candidate_json = [
         "model": "campaign_trail.candidate",
         "pk": 300,
         "fields": {
-            "first_name": "Liberal Party",
-            "last_name": "of Canada",
+            "first_name": "",
+            "last_name": "Liberal Party",
             "election": 20,
             "party": "Liberal",
             "state": "Canada",
@@ -97,6 +97,92 @@ campaignTrail_temp.candidate_json = [
             "candidate_score": 1,
             "running_mate": true
         }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 301,
+        "fields": {
+            "first_name": "",
+            "last_name": "Conservative Party",
+            "election": 20,
+            "party": "Conservative",
+            "state": "Canada",
+            "priority": 1,
+            "description": "TODO: Conservative Party description",
+            "color_hex": "#6495ED",
+            "secondary_color_hex": null,
+            "is_active": 0,
+            "image_url": "https://i.imgur.com/InnQxJN.png",
+            "electoral_victory_message": "TODO Conservative victory message",
+            "electoral_loss_message": "TODO Conservative loss message",
+            "no_electoral_majority_message": "",
+            "description_as_running_mate": null,
+            "candidate_score": 1,
+            "running_mate": false
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 307,
+        "fields": {
+            "first_name": "Pierre",
+            "last_name": "Poilievre",
+            "election": 20,
+            "party": "Conservative",
+            "state": "Carleton",
+            "priority": 1,
+            "description": "",
+            "color_hex": "#6495ED",
+            "secondary_color_hex": null,
+            "is_active": 0,
+            "image_url": "https://i.imgur.com/MVBYnzH.jpeg",
+            "description_as_running_mate": "TODO: Poilievre description",
+            "candidate_score": 1,
+            "running_mate": true
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 302,
+        "fields": {
+            "first_name": "",
+            "last_name": "NDP",
+            "election": 20,
+            "party": "NDP",
+            "state": "Canada",
+            "priority": 1,
+            "description": "TODO: NDP description",
+            "color_hex": "#F4A460",
+            "secondary_color_hex": null,
+            "is_active": 0,
+            "image_url": "https://i.imgur.com/InnQxJN.png",
+            "electoral_victory_message": "TODO NDP victory message",
+            "electoral_loss_message": "TODO NDP loss message",
+            "no_electoral_majority_message": "",
+            "description_as_running_mate": null,
+            "candidate_score": 1,
+            "running_mate": false
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 308,
+        "fields": {
+            "first_name": "Jagmeet",
+            "last_name": "Singh",
+            "election": 20,
+            "party": "NDP",
+            "state": "Burnaby Central",
+            "priority": 1,
+            "description": "",
+            "color_hex": "#F4A460",
+            "secondary_color_hex": null,
+            "is_active": 0,
+            "image_url": "https://i.imgur.com/MVBYnzH.jpeg",
+            "description_as_running_mate": "TODO: Singh description",
+            "candidate_score": 1,
+            "running_mate": true
+        }
     }
 ]
 
@@ -108,6 +194,22 @@ campaignTrail_temp.running_mate_json = [
             "candidate": 300,
             "running_mate": 306
         }
+    },
+    {
+        "model": "campaign_trail.running_mate",
+        "pk": 172513,
+        "fields": {
+            "candidate": 301,
+            "running_mate": 307
+        }
+    },
+    {
+        "model": "campaign_trail.running_mate",
+        "pk": 172514,
+        "fields": {
+            "candidate": 302,
+            "running_mate": 308
+        }
     }
 ]
 
@@ -115,19 +217,14 @@ campaignTrail_temp.opponents_default_json = [
     {
         "election": 20,
         "candidates": [
-            300
+            300,
+            301,
+            302
         ]
     }
 ]
 
-campaignTrail_temp.opponents_weighted_json = [
-    {
-        "election": 20,
-        "candidates": [
-            300
-        ]
-    }
-]
+campaignTrail_temp.opponents_weighted_json = campaignTrail_temp.opponents_default_json
 
 jet_data = {
     "headerColor": "#9999ff",

@@ -1,5 +1,7 @@
 import os
 import json
+from collections import OrderedDict
+from xml.dom import minidom
 
 class Code2Generator:
     SECTION_VARIABLE_NAMES = (
@@ -17,22 +19,24 @@ class Code2Generator:
         "answer_feedback_json",
     )
     
-    def __init__(self, scenario_name: str):
+    def __init__(self, election_name: str, scenario_name: str):
+        self.election_name = election_name
         self.scenario_name = scenario_name
+        self.election_dir = os.path.join(os.pardir, election_name)
         self.scenario_dir = os.path.join(os.pardir, scenario_name)
 
     def complete_map(self) -> str:
         with open(os.path.join(self.scenario_dir, "states.json"), "r") as f:
             ridings = json.load(f)
-        print(ridings)
+        full_map = OrderedDict()
         for riding in ridings:
-            pass
-        return ""
+            full_map[riding["fields"]["abbr"]] = riding["d"]
+        return json.dumps(full_map)
 
     def mapping_code(self) -> str:
         with open("mapping_code.txt", "r") as f:
-            mapping_code_1 = f.readline()
-            mapping_code_2 = f.readline()
+            mapping_code_1 = f.readline().strip()
+            mapping_code_2 = f.readline().strip()
         return mapping_code_1 + self.complete_map() + mapping_code_2
 
     def join_sections(self) -> str:
@@ -63,8 +67,20 @@ class Code2Generator:
     def generate(self):
         code2 = self.join_sections()
         self.save_to_file(code2)
+        
+    def extract_geometry(self):
+        doc = minidom.parse(os.path.join(self.election_dir, "election_map.svg"))
+        path_geometries = [
+            {
+                "name": path.getAttribute("inkscape:label"),
+                "d": path.getAttribute("d")
+            }
+            for path in doc.getElementsByTagName('path')
+        ]
+        return path_geometries[:343]
 
 if __name__ == "__main__":
+    election_name = "2025_Canada"
     scenario_name = "2025_LiberalCarney"
-    generator = Code2Generator(scenario_name)
+    generator = Code2Generator(election_name, scenario_name)
     generator.generate()

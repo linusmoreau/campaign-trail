@@ -1,0 +1,29 @@
+[
+    {
+        "model": "campaign_trail.candidate_state_multiplier",
+        "pk": 41422,
+        "fields": {
+            "candidate": 300,
+            "state": 41421,
+            "state_multiplier": 0.367
+        }
+    },
+    {
+        "model": "campaign_trail.candidate_state_multiplier",
+        "pk": 41423,
+        "fields": {
+            "candidate": 301,
+            "state": 41421,
+            "state_multiplier": 0.260
+        }
+    },
+    {
+        "model": "campaign_trail.candidate_state_multiplier",
+        "pk": 41424,
+        "fields": {
+            "candidate": 302,
+            "state": 41421,
+            "state_multiplier": 0.373
+        }
+    }
+]
