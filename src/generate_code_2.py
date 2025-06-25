@@ -1,18 +1,21 @@
 import os
 import json
+import pandas as pd
 from collections import OrderedDict
 from xml.dom import minidom
 
 class Code2Generator:
-    SECTION_VARIABLE_NAMES = (
-        "questions_json",
-        "answers_json",
+    ELECTION_VARIABLE_NAMES = (
         "states_json",
         "issues_json",
         "state_issue_score_json",
+        "candidate_state_multiplier_json",
         "candidate_issue_score_json",
         "running_mate_issue_score_json",
-        "candidate_state_multiplier_json",
+    )
+    SCENARIO_VARIABLE_NAMES = (
+        "questions_json",
+        "answers_json",
         "answer_score_global_json",
         "answer_score_issue_json",
         "answer_score_state_json",
@@ -26,7 +29,7 @@ class Code2Generator:
         self.scenario_dir = os.path.join(os.pardir, scenario_name)
 
     def complete_map(self) -> str:
-        with open(os.path.join(self.scenario_dir, "states.json"), "r") as f:
+        with open(os.path.join(self.election_dir, "states.json"), "r") as f:
             ridings = json.load(f)
         full_map = OrderedDict()
         for riding in ridings:
@@ -34,25 +37,29 @@ class Code2Generator:
         return json.dumps(full_map)
 
     def mapping_code(self) -> str:
-        with open("mapping_code.txt", "r") as f:
+        with open(os.path.join(self.election_dir, "mapping_code.txt"), "r") as f:
             mapping_code_1 = f.readline().strip()
             mapping_code_2 = f.readline().strip()
         return mapping_code_1 + self.complete_map() + mapping_code_2
+    
+    def format_section(self, section: str, dir: str) -> str:
+        section_name = section[:-5]
+        section_filename = section_name + ".json"
+        filepath = os.path.join(dir, section_filename)
+        declaration = "campaignTrail_temp." + section + " = "
+        try:
+            with open(filepath, "r") as f:
+                s = declaration + f.read().strip()
+        except FileNotFoundError:
+            s = declaration + "[]"
+        return s
 
     def join_sections(self) -> str:
         sections = [self.mapping_code()]
-        for section in self.SECTION_VARIABLE_NAMES:
-            section_name = section[:-5]
-            section_filename = section_name + ".json"
-            filepath = os.path.join(self.scenario_dir, section_filename)
-            declaration = "campaignTrail_temp." + section + " = "
-            try:
-                with open(filepath, "r") as f:
-                    s = declaration + f.read().strip()
-            except FileNotFoundError:
-                s = declaration + "[]"
-            finally:
-                sections.append(s)
+        for section in self.ELECTION_VARIABLE_NAMES:
+            sections.append(self.format_section(section, self.election_dir))
+        for section in self.SCENARIO_VARIABLE_NAMES:
+            sections.append(self.format_section(section, self.scenario_dir))
         end_code_filepath = os.path.join(self.scenario_dir, "end_code.txt")
         with open(end_code_filepath, "r") as f:
             sections.append(f.read())
@@ -78,9 +85,20 @@ class Code2Generator:
             for path in doc.getElementsByTagName('path')
         ]
         return path_geometries[:343]
+    
+    def extract_historical_results(self):
+        path = os.path.join(self.election_dir, "election_results.txt")
+        df = pd.read_csv(path, sep='\t', header=1)
+        print(len(df))
+        df = df[df["Type of results*"] == "validated"]
+        print(len(df))
+        df = df[df["Political affiliation"] == "NDP-New Democratic Party"]
+        print(len(df))
+        pass
 
 if __name__ == "__main__":
     election_name = "2025_Canada"
     scenario_name = "2025_LiberalCarney"
     generator = Code2Generator(election_name, scenario_name)
     generator.generate()
+    # generator.extract_historical_results()
