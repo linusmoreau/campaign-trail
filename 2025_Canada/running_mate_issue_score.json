@@ -1,7 +1,7 @@
 [
     {
         "model": "campaign_trail.candidate_issue_score",
-        "pk": 1120,
+        "pk": 2120,
         "fields": {
             "candidate": 304,
             "issue": 110,
@@ -10,7 +10,7 @@
     },
     {
         "model": "campaign_trail.candidate_issue_score",
-        "pk": 1121,
+        "pk": 2121,
         "fields": {
             "candidate": 304,
             "issue": 111,
@@ -19,7 +19,7 @@
     },
     {
         "model": "campaign_trail.candidate_issue_score",
-        "pk": 1122,
+        "pk": 2122,
         "fields": {
             "candidate": 304,
             "issue": 112,
@@ -28,7 +28,7 @@
     },
     {
         "model": "campaign_trail.candidate_issue_score",
-        "pk": 1123,
+        "pk": 2123,
         "fields": {
             "candidate": 304,
             "issue": 113,
@@ -37,7 +37,7 @@
     },
     {
         "model": "campaign_trail.candidate_issue_score",
-        "pk": 1124,
+        "pk": 2124,
         "fields": {
             "candidate": 304,
             "issue": 114,

@@ -31,11 +31,12 @@ class Code2Generator:
         self.scenario_dir = os.path.join(os.pardir, scenario_name)
         
     def generate(self):
+        self.process_riding_data()
         code2 = self.join_sections()
         self.save_to_file(code2)
 
     def complete_map(self) -> str:
-        with open(os.path.join(self.election_dir, "states.json"), "r") as f:
+        with open(os.path.join(self.election_dir, "states.json"), "r", encoding="utf-8") as f:
             ridings = json.load(f)
         full_map = OrderedDict()
         for riding in ridings:
@@ -95,10 +96,10 @@ class Code2Generator:
         df = df.rename(columns={
             "Electoral district name": "name",
             "Political affiliation": "party",
-            "Votes obtained - Votes obtenus": "votes",
-            "Total number of ballots cast - Nombre total de votes déposés": "total"
+            "% Votes obtained - Votes obtenus %": "share",
+            "Total number of ballots cast - Nombre total de votes déposés": "votes",
         })
-        df = df[["name", "party", "votes", "total"]]
+        df = df[["name", "party", "share", "votes"]]
         return df
     
     def check_ridings_match(self, results, geometry):
@@ -108,21 +109,70 @@ class Code2Generator:
         if len(mismatch) > 0:
             print("Warning: mismatch in ridings named in election results and map:", mismatch)
     
-    def get_riding_data(self):
+    def process_riding_data(self):
         results = self.extract_historical_results()
         geometry = self.extract_geometry()
         self.check_ridings_match(results, geometry)
+        vote_totals = results.groupby(["name"])["votes"].first()
+        df = geometry.join(vote_totals, "name")
+        df["state_pk"] = df.index + 343000
+        self.generate_states_json(df)
         
+        path = os.path.join(self.election_dir, "parties.json")
+        with open(path, "r", encoding="utf-8") as f:
+            parties = json.load(f)
+        index = []
+        for party in parties.values():
+            for state_pk in df["state_pk"]:
+                index.append((state_pk, party))
+        df = df[["name", "state_pk"]]
+        df = df.set_index("name")
+        df = results.join(df, "name")
+        df["party_pk"] = df.apply(lambda row: parties[row["party"]] if row["party"] in parties else parties["Others"], axis=1)
+        df = df.groupby(["state_pk", "party_pk"])["share"].sum().reindex(index, fill_value=0).reset_index()
+        self.generate_candidate_state_multiplier_json(df)
         
-        
-        
-        
+    def generate_states_json(self, df: pd.DataFrame):
+        states = [
+            {
+                "model": "campaign_trail.state",
+                "pk": row["state_pk"],
+                "fields": {
+                    "name": row["name"],
+                    "abbr": row["name"],
+                    "electoral_votes": 1,
+                    "popular_votes": int(row["votes"]),
+                    "poll_closing_time": 30,
+                    "winner_take_all_flg": 1,
+                    "election": 20
+                },
+                "d": row["d"]
+            }
+            for _, row in df.iterrows()
+        ]
+        path = os.path.join(self.election_dir, "states.json")
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(states, f, indent=4, ensure_ascii=False)
+            
+    def generate_candidate_state_multiplier_json(self, df: pd.DataFrame):
+        states = [
+            {
+                "model": "campaign_trail.candidate_state_multiplier",
+                "pk": int(row["state_pk"] + 1000000 * row["party_pk"]),
+                "fields": {
+                    "candidate": int(row["party_pk"]),
+                    "state": int(row["state_pk"]),
+                    "state_multipler": round(row["share"] / 100, 3)
+                }
+            }
+            for _, row in df.iterrows()
+        ]
+        path = os.path.join(self.election_dir, "candidate_state_multiplier.json")
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(states, f, indent=4, ensure_ascii=False)
 
 if __name__ == "__main__":
     election_name = "2025_Canada"
     scenario_name = "2025_LiberalCarney"
     generator = Code2Generator(election_name, scenario_name)
-    print(generator.get_riding_data())
-    # generator.generate()
-    # generator.extract_historical_results()
-    # print(generator.extract_geometry())
+    generator.generate()

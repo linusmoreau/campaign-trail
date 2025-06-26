@@ -178,5 +178,95 @@
             "issue": 114,
             "issue_score": -1
         }
+    },
+    {
+        "model": "campaign_trail.candidate_issue_score",
+        "pk": 1120,
+        "fields": {
+            "candidate": 304,
+            "issue": 110,
+            "issue_score": -0.33
+        }
+    },
+    {
+        "model": "campaign_trail.candidate_issue_score",
+        "pk": 1121,
+        "fields": {
+            "candidate": 304,
+            "issue": 111,
+            "issue_score": -0.33
+        }
+    },
+    {
+        "model": "campaign_trail.candidate_issue_score",
+        "pk": 1122,
+        "fields": {
+            "candidate": 304,
+            "issue": 112,
+            "issue_score": 0
+        }
+    },
+    {
+        "model": "campaign_trail.candidate_issue_score",
+        "pk": 1123,
+        "fields": {
+            "candidate": 304,
+            "issue": 113,
+            "issue_score": 0.33
+        }
+    },
+    {
+        "model": "campaign_trail.candidate_issue_score",
+        "pk": 1124,
+        "fields": {
+            "candidate": 304,
+            "issue": 114,
+            "issue_score": -1
+        }
+    },
+        {
+        "model": "campaign_trail.candidate_issue_score",
+        "pk": 1125,
+        "fields": {
+            "candidate": 305,
+            "issue": 110,
+            "issue_score": -0.33
+        }
+    },
+    {
+        "model": "campaign_trail.candidate_issue_score",
+        "pk": 1126,
+        "fields": {
+            "candidate": 305,
+            "issue": 111,
+            "issue_score": -0.33
+        }
+    },
+    {
+        "model": "campaign_trail.candidate_issue_score",
+        "pk": 1127,
+        "fields": {
+            "candidate": 305,
+            "issue": 112,
+            "issue_score": 0
+        }
+    },
+    {
+        "model": "campaign_trail.candidate_issue_score",
+        "pk": 1128,
+        "fields": {
+            "candidate": 305,
+            "issue": 113,
+            "issue_score": 0.33
+        }
+    },
+    {
+        "model": "campaign_trail.candidate_issue_score",
+        "pk": 1129,
+        "fields": {
+            "candidate": 305,
+            "issue": 114,
+            "issue_score": -1
+        }
     }
 ]
