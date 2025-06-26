@@ -535,20 +535,20 @@ Electoral district number - Numéro de la circonscription	Electoral district nam
 24019	Compton--Stanstead	Compton--Stanstead	validated	validés	Lehmann		Paul	People's Party - PPC	Parti populaire - PPC	787	1.2	849	66469
 24019	Compton--Stanstead	Compton--Stanstead	validated	validés	Painchaud		Jacques	Conservative	Conservateur	14292	21.8	849	66469
 24019	Compton--Stanstead	Compton--Stanstead	validated	validés	Tremblay		Sébastien	Green Party	Parti Vert	1161	1.8	849	66469
-24020	Côte-du-Sud-Rivière-du-Loup-Kataskomiq-Témiscouata	Côte-du-Sud-Rivière-du-Loup-Kataskomiq-Témiscouata	preliminary	préliminaires	Généreux		Bernard	Conservative	Conservateur	28775	45.7	0	62945
-24020	Côte-du-Sud-Rivière-du-Loup-Kataskomiq-Témiscouata	Côte-du-Sud-Rivière-du-Loup-Kataskomiq-Témiscouata	preliminary	préliminaires	L'Heureux Hubert		Iseult	NDP-New Democratic Party	NPD-Nouveau Parti démocratique	1156	1.8	0	62945
-24020	Côte-du-Sud-Rivière-du-Loup-Kataskomiq-Témiscouata	Côte-du-Sud-Rivière-du-Loup-Kataskomiq-Témiscouata	preliminary	préliminaires	Massé		Rémi	Liberal	Libéral	19074	30.3	0	62945
-24020	Côte-du-Sud-Rivière-du-Loup-Kataskomiq-Témiscouata	Côte-du-Sud-Rivière-du-Loup-Kataskomiq-Témiscouata	preliminary	préliminaires	Mony		Thibaud	Parti Rhinocéros Party	Parti Rhinocéros Party	212	.3	0	62945
-24020	Côte-du-Sud-Rivière-du-Loup-Kataskomiq-Témiscouata	Côte-du-Sud-Rivière-du-Loup-Kataskomiq-Témiscouata	preliminary	préliminaires	Morin		Jean-François	People's Party - PPC	Parti populaire - PPC	473	.8	0	62945
-24020	Côte-du-Sud-Rivière-du-Loup-Kataskomiq-Témiscouata	Côte-du-Sud-Rivière-du-Loup-Kataskomiq-Témiscouata	preliminary	préliminaires	Plourde		Alexie	Green Party	Parti Vert	692	1.1	0	62945
-24020	Côte-du-Sud-Rivière-du-Loup-Kataskomiq-Témiscouata	Côte-du-Sud-Rivière-du-Loup-Kataskomiq-Témiscouata	preliminary	préliminaires	Sénécal		Diane	Bloc Québécois	Bloc Québécois	12563	20	0	62945
-24020	Côte-du-Sud-Rivière-du-Loup-Kataskomiq-Témiscouata	Côte-du-Sud-Rivière-du-Loup-Kataskomiq-Témiscouata	validated	validés	Généreux		Bernard	Conservative	Conservateur	28873	45.8	967	63959
-24020	Côte-du-Sud-Rivière-du-Loup-Kataskomiq-Témiscouata	Côte-du-Sud-Rivière-du-Loup-Kataskomiq-Témiscouata	validated	validés	L'Heureux Hubert		Iseult	NDP-New Democratic Party	NPD-Nouveau Parti démocratique	1072	1.7	967	63959
-24020	Côte-du-Sud-Rivière-du-Loup-Kataskomiq-Témiscouata	Côte-du-Sud-Rivière-du-Loup-Kataskomiq-Témiscouata	validated	validés	Massé		Rémi	Liberal	Libéral	19097	30.3	967	63959
-24020	Côte-du-Sud-Rivière-du-Loup-Kataskomiq-Témiscouata	Côte-du-Sud-Rivière-du-Loup-Kataskomiq-Témiscouata	validated	validés	Mony		Thibaud	Parti Rhinocéros Party	Parti Rhinocéros Party	206	.3	967	63959
-24020	Côte-du-Sud-Rivière-du-Loup-Kataskomiq-Témiscouata	Côte-du-Sud-Rivière-du-Loup-Kataskomiq-Témiscouata	validated	validés	Morin		Jean-François	People's Party - PPC	Parti populaire - PPC	464	.7	967	63959
-24020	Côte-du-Sud-Rivière-du-Loup-Kataskomiq-Témiscouata	Côte-du-Sud-Rivière-du-Loup-Kataskomiq-Témiscouata	validated	validés	Plourde		Alexie	Green Party	Parti Vert	682	1.1	967	63959
-24020	Côte-du-Sud-Rivière-du-Loup-Kataskomiq-Témiscouata	Côte-du-Sud-Rivière-du-Loup-Kataskomiq-Témiscouata	validated	validés	Sénécal		Diane	Bloc Québécois	Bloc Québécois	12598	20	967	63959
+24020	Côte-du-Sud--Rivière-du-Loup--Kataskomiq--Témiscouata	Côte-du-Sud--Rivière-du-Loup--Kataskomiq--Témiscouata	preliminary	préliminaires	Généreux		Bernard	Conservative	Conservateur	28775	45.7	0	62945
+24020	Côte-du-Sud--Rivière-du-Loup--Kataskomiq--Témiscouata	Côte-du-Sud--Rivière-du-Loup--Kataskomiq--Témiscouata	preliminary	préliminaires	L'Heureux Hubert		Iseult	NDP-New Democratic Party	NPD-Nouveau Parti démocratique	1156	1.8	0	62945
+24020	Côte-du-Sud--Rivière-du-Loup--Kataskomiq--Témiscouata	Côte-du-Sud--Rivière-du-Loup--Kataskomiq--Témiscouata	preliminary	préliminaires	Massé		Rémi	Liberal	Libéral	19074	30.3	0	62945
+24020	Côte-du-Sud--Rivière-du-Loup--Kataskomiq--Témiscouata	Côte-du-Sud--Rivière-du-Loup--Kataskomiq--Témiscouata	preliminary	préliminaires	Mony		Thibaud	Parti Rhinocéros Party	Parti Rhinocéros Party	212	.3	0	62945
+24020	Côte-du-Sud--Rivière-du-Loup--Kataskomiq--Témiscouata	Côte-du-Sud--Rivière-du-Loup--Kataskomiq--Témiscouata	preliminary	préliminaires	Morin		Jean-François	People's Party - PPC	Parti populaire - PPC	473	.8	0	62945
+24020	Côte-du-Sud--Rivière-du-Loup--Kataskomiq--Témiscouata	Côte-du-Sud--Rivière-du-Loup--Kataskomiq--Témiscouata	preliminary	préliminaires	Plourde		Alexie	Green Party	Parti Vert	692	1.1	0	62945
+24020	Côte-du-Sud--Rivière-du-Loup--Kataskomiq--Témiscouata	Côte-du-Sud--Rivière-du-Loup--Kataskomiq--Témiscouata	preliminary	préliminaires	Sénécal		Diane	Bloc Québécois	Bloc Québécois	12563	20	0	62945
+24020	Côte-du-Sud--Rivière-du-Loup--Kataskomiq--Témiscouata	Côte-du-Sud--Rivière-du-Loup--Kataskomiq--Témiscouata	validated	validés	Généreux		Bernard	Conservative	Conservateur	28873	45.8	967	63959
+24020	Côte-du-Sud--Rivière-du-Loup--Kataskomiq--Témiscouata	Côte-du-Sud--Rivière-du-Loup--Kataskomiq--Témiscouata	validated	validés	L'Heureux Hubert		Iseult	NDP-New Democratic Party	NPD-Nouveau Parti démocratique	1072	1.7	967	63959
+24020	Côte-du-Sud--Rivière-du-Loup--Kataskomiq--Témiscouata	Côte-du-Sud--Rivière-du-Loup--Kataskomiq--Témiscouata	validated	validés	Massé		Rémi	Liberal	Libéral	19097	30.3	967	63959
+24020	Côte-du-Sud--Rivière-du-Loup--Kataskomiq--Témiscouata	Côte-du-Sud--Rivière-du-Loup--Kataskomiq--Témiscouata	validated	validés	Mony		Thibaud	Parti Rhinocéros Party	Parti Rhinocéros Party	206	.3	967	63959
+24020	Côte-du-Sud--Rivière-du-Loup--Kataskomiq--Témiscouata	Côte-du-Sud--Rivière-du-Loup--Kataskomiq--Témiscouata	validated	validés	Morin		Jean-François	People's Party - PPC	Parti populaire - PPC	464	.7	967	63959
+24020	Côte-du-Sud--Rivière-du-Loup--Kataskomiq--Témiscouata	Côte-du-Sud--Rivière-du-Loup--Kataskomiq--Témiscouata	validated	validés	Plourde		Alexie	Green Party	Parti Vert	682	1.1	967	63959
+24020	Côte-du-Sud--Rivière-du-Loup--Kataskomiq--Témiscouata	Côte-du-Sud--Rivière-du-Loup--Kataskomiq--Témiscouata	validated	validés	Sénécal		Diane	Bloc Québécois	Bloc Québécois	12598	20	967	63959
 24021	Côte-Nord--Kawawachikamach--Nitassinan	Côte-Nord--Kawawachikamach--Nitassinan	preliminary	préliminaires	Babin		Gilles	No Affiliation	Aucune appartenance	189	.5	0	36317
 24021	Côte-Nord--Kawawachikamach--Nitassinan	Côte-Nord--Kawawachikamach--Nitassinan	preliminary	préliminaires	Beaulieu		Sébastien	Parti Rhinocéros Party	Parti Rhinocéros Party	555	1.5	0	36317
 24021	Côte-Nord--Kawawachikamach--Nitassinan	Côte-Nord--Kawawachikamach--Nitassinan	preliminary	préliminaires	Coutu		Kevin	Liberal	Libéral	9868	27.2	0	36317
