@@ -162,7 +162,7 @@ class Code2Generator:
                 "fields": {
                     "candidate": int(row["party_pk"]),
                     "state": int(row["state_pk"]),
-                    "state_multipler": round(row["share"] / 100, 3)
+                    "state_multiplier": round(row["share"] / 100, 3)
                 }
             }
             for _, row in df.iterrows()
