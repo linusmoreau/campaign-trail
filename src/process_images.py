@@ -20,7 +20,10 @@ def process(f, crop=False, ratio=7/8):
         right = w - margin
         img = img.crop((left, 0, right, h))
     if img.mode != "RGB":
-        img = img.convert("RGB")
+        img = img.convert("RGBA")
+        canvas = Image.new("RGBA", img.size, "WHITE")
+        canvas.paste(img, mask=img)
+        img = canvas.convert("RGB") 
     return img
     
 def process_and_save(f, crop=False, ratio=7/8):
