@@ -79,15 +79,15 @@ class Code2Generator:
             f.write(s)
         
     def extract_geometry(self) -> pd.DataFrame:
-        doc = minidom.parse(os.path.join(self.election_dir, "election_map.svg"))
+        doc = minidom.parse(os.path.join(self.election_dir, "election_map_compressed.svg"))
         path_geometries = [
             (
                 path.getAttribute("inkscape:label"),
                 path.getAttribute("d"),
             )
-            for path in doc.getElementsByTagName('path')
+            for path in doc.getElementsByTagName('path')[:343]
         ]
-        return pd.DataFrame(path_geometries[:343], columns=("name", "d"))
+        return pd.DataFrame(path_geometries, columns=("name", "d"))
     
     def extract_historical_results(self) -> pd.DataFrame:
         path = os.path.join(self.election_dir, "election_results.txt")
@@ -142,7 +142,7 @@ class Code2Generator:
                     "abbr": row["name"],
                     "electoral_votes": 1,
                     "popular_votes": int(row["votes"]),
-                    "poll_closing_time": 30,
+                    "poll_closing_time": 30,    # TODO: Map ridings to provinces for setting poll closing time
                     "winner_take_all_flg": 1,
                     "election": 20
                 },
