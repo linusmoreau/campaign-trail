@@ -1,4 +1,4 @@
-campaignTrail_temp.candidate_image_url = "https://i.imgur.com/InnQxJN.png";
+campaignTrail_temp.candidate_image_url = "https://i.imgur.com/Fcsxxji.jpeg";
 campaignTrail_temp.running_mate_image_url = "https://i.imgur.com/MVBYnzH.jpeg";
 campaignTrail_temp.candidate_last_name = "Liberal";
 campaignTrail_temp.running_mate_last_name = "Carney";
