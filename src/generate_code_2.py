@@ -67,7 +67,7 @@ class Code2Generator:
             sections.append(self.format_section(section, self.election_dir))
         for section in self.SCENARIO_VARIABLE_NAMES:
             sections.append(self.format_section(section, self.scenario_dir))
-        end_code_filepath = os.path.join(self.scenario_dir, "end_code.txt")
+        end_code_filepath = os.path.join(self.scenario_dir, "end_code.js")
         with open(end_code_filepath, "r") as f:
             sections.append(f.read())
         code2 = "\n\n".join(sections) + "\n"
