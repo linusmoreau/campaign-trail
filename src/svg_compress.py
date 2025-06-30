@@ -59,7 +59,7 @@ def compress_svg_file(f_in: str, f_out: str | None = None, first: int = 0, count
         paths = paths[:count]
     for path in paths:
         d = path.getAttribute("d")
-        d = compress_svg_path(d, epsilon=epsilon, scale_epsilon=True, min_length=min_length)
+        d = compress_svg_path(d, epsilon=epsilon, scale_epsilon=scale_epsilon, min_length=min_length)
         path.setAttribute("d", d)
     if f_out is None:
         fname, ext = os.path.splitext(f_in)
