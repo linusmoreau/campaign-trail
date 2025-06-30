@@ -5,7 +5,7 @@ campaignTrail_temp.running_mate_last_name = "Carney";
 
 let observerRunning = false;
 let processedNodes = new Set();
-const scrollableElementIds = ["overall_result", "state_result"];
+const scrollableElementIds = ["overall_result", "state_result", "state_info"];
 
 async function handleMutations(mutationsList, observer) {
     if (observerRunning) return;
