@@ -164,7 +164,7 @@ class Code2Generator:
                 "model": "campaign_trail.state",
                 "pk": row["state_pk"],
                 "fields": {
-                    "name": row["name"],
+                    "name": row["name"].replace("--", "—"),
                     "abbr": row["name"],
                     "electoral_votes": 1,
                     "popular_votes": int(row["votes"]),
@@ -179,6 +179,7 @@ class Code2Generator:
         self.dump_json(self.election_dir, "states.json", states)
             
     def generate_candidate_state_multiplier_json(self, df: pd.DataFrame):
+        df = self.calculate_state_multiplier(df)
         states = [
             {
                 "model": "campaign_trail.candidate_state_multiplier",
@@ -186,7 +187,7 @@ class Code2Generator:
                 "fields": {
                     "candidate": int(row["party_pk"]),
                     "state": int(row["state_pk"]),
-                    "state_multiplier": round(row["share"] / 100, 3)
+                    "state_multiplier": row["state_multiplier"]
                 }
             }
             for _, row in df.iterrows()
@@ -194,7 +195,7 @@ class Code2Generator:
         self.dump_json(self.election_dir, "candidate_state_multiplier.json", states)
 
 
-    def calculate_state_multiplier(self):
+    def calculate_state_multiplier(self, df: pd.DataFrame):
         # TODO Hard-coded for now. Eventually put in a config and automate Code 1 creation.
         vote_variable = 1.125
         player_candidate = 300
@@ -261,6 +262,18 @@ class Code2Generator:
                 key = (candidate, state)
                 delta = vote_variable - abs(issue_score**2 - issue_scores[(candidate, issue)]**2) * weight
                 issue_state_multipliers[key] = issue_state_multipliers.get(key, 0) + delta
+                
+        def state_multiplier_formula(row):
+            state = int(row["state_pk"])
+            candidate = int(row["party_pk"])
+            share = row["share"]
+            global_multiplier = global_multipliers[candidate]
+            answer_state_multiplier = state_multipliers.get((candidate, state), 0)
+            issue_state_multiplier = issue_state_multipliers[(candidate, state)]
+            return (share / issue_state_multiplier - answer_state_multiplier) / global_multiplier
+
+        df["state_multiplier"] = df.apply(lambda row: state_multiplier_formula(row), axis=1)
+        return df
         
         
 
