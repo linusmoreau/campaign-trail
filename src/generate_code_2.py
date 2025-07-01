@@ -34,10 +34,17 @@ class Code2Generator:
         self.process_riding_data()
         code2 = self.join_sections()
         self.save_to_file(code2)
+        
+    def load_json(self, dir: str, fname: str):
+        with open(os.path.join(dir, fname), "r", encoding="utf-8") as f:
+            return json.load(f)
+        
+    def dump_json(self, dir: str, fname: str, contents):
+        with open(os.path.join(dir, fname), "w+", encoding="utf-8") as f:
+            json.dump(contents, f, indent=4, ensure_ascii=False)
 
     def complete_map(self) -> str:
-        with open(os.path.join(self.election_dir, "states.json"), "r", encoding="utf-8") as f:
-            ridings = json.load(f)
+        ridings = self.load_json(self.election_dir, "states.json")
         full_map = OrderedDict()
         for riding in ridings:
             full_map[riding["fields"]["abbr"]] = riding["d"]
@@ -117,10 +124,9 @@ class Code2Generator:
         df = geometry.join(vote_totals, "name")
         df["state_pk"] = df.index + 343000
         self.generate_states_json(df)
+        self.generate_state_issue_score_json(df)
         
-        path = os.path.join(self.election_dir, "parties.json")
-        with open(path, "r", encoding="utf-8") as f:
-            parties = json.load(f)
+        parties = self.load_json(self.election_dir, "candidates.json")
         index = []
         for party in parties.values():
             for state_pk in df["state_pk"]:
@@ -131,6 +137,26 @@ class Code2Generator:
         df["party_pk"] = df.apply(lambda row: parties[row["party"]] if row["party"] in parties else parties["Others"], axis=1)
         df = df.groupby(["state_pk", "party_pk"])["share"].sum().reindex(index, fill_value=0).reset_index()
         self.generate_candidate_state_multiplier_json(df)
+        
+    def generate_state_issue_score_json(self, df: pd.DataFrame):
+        state_issue_scores = []
+        for issue in range(110, 115):
+            state_issue_scores.extend([
+                {
+                    "model": "campaign_trail.state_issue_score",
+                    "pk": int(issue * 1000 + row["state_pk"] % 1000),
+                    "fields": {
+                        "state": int(row["state_pk"]),
+                        "issue": issue,
+                        "state_issue_score": 0,
+                        "weight": 1
+                    }
+                }
+                for _, row in df.iterrows()
+            ])
+        path = os.path.join(self.election_dir, "state_issue_score.json")
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(state_issue_scores, f, indent=4, ensure_ascii=False)
         
     def generate_states_json(self, df: pd.DataFrame):
         states = [
@@ -150,9 +176,7 @@ class Code2Generator:
             }
             for _, row in df.iterrows()
         ]
-        path = os.path.join(self.election_dir, "states.json")
-        with open(path, "w", encoding="utf-8") as f:
-            json.dump(states, f, indent=4, ensure_ascii=False)
+        self.dump_json(self.election_dir, "states.json", states)
             
     def generate_candidate_state_multiplier_json(self, df: pd.DataFrame):
         states = [
@@ -167,9 +191,78 @@ class Code2Generator:
             }
             for _, row in df.iterrows()
         ]
-        path = os.path.join(self.election_dir, "candidate_state_multiplier.json")
-        with open(path, "w", encoding="utf-8") as f:
-            json.dump(states, f, indent=4, ensure_ascii=False)
+        self.dump_json(self.election_dir, "candidate_state_multiplier.json", states)
+
+
+    def calculate_state_multiplier(self):
+        # TODO Hard-coded for now. Eventually put in a config and automate Code 1 creation.
+        vote_variable = 1.125
+        player_candidate = 300
+        candidate_issue_weight = 10
+        
+        candidates = tuple(self.load_json(self.election_dir, "candidates.json").values())
+        candidate_issue_score_json = self.load_json(self.election_dir, "candidate_issue_score.json")
+        answers_historical = self.load_json(self.scenario_dir, "answer_historical.json")
+        answer_score_global_json = self.load_json(self.scenario_dir, "answer_score_global.json")
+        answer_score_issue_json = self.load_json(self.scenario_dir, "answer_score_issue.json")
+        answer_score_state_json = self.load_json(self.scenario_dir, "answer_score_state.json")
+        state_issue_score_json = self.load_json(self.election_dir, "state_issue_score.json")
+        issues_json = self.load_json(self.election_dir, "issues.json")
+        
+        issues = []
+        issue_scores = {}
+        issue_score_normalizers = {}
+        global_multipliers = {}
+        state_multipliers = {}
+        issue_state_multipliers = {}
+        
+        for issue_obj in issues_json:
+            issues.append(issue_obj["pk"])
+        for candidate in candidates:
+            global_multipliers[candidate] = 1
+            for issue in issues:
+                issue_scores[(candidate, issue)] = 0
+                issue_score_normalizers[(candidate, issue)] = 0
+        for score_obj in answer_score_global_json:
+            if score_obj["fields"]["answer"] not in answers_historical:
+                continue
+            candidate = score_obj["fields"]["affected_candidate"]
+            multiplier = score_obj["fields"]["global_multiplier"]
+            global_multipliers[candidate] += multiplier
+        for score_obj in answer_score_state_json:
+            if score_obj["fields"]["answer"] not in answers_historical:
+                continue
+            state = score_obj["fields"]["state"]
+            multiplier = score_obj["fields"]["state_multiplier"]
+            candidate = score_obj["fields"]["affected_candidate"]
+            state_multipliers[(candidate, state)] = state_multipliers.get((candidate, state), 0) + multiplier
+        for score_obj in answer_score_issue_json:
+            if score_obj["fields"]["answer"] not in answers_historical:
+                continue
+            issue = score_obj["fields"]["issue"]
+            issue_score = score_obj["fields"]["issue_score"]
+            issue_importance = score_obj["fields"]["issue_importance"]
+            issue_scores[(player_candidate, issue)] += issue_score * issue_importance
+            issue_score_normalizers[(player_candidate, issue)] += issue_importance
+        for score_obj in candidate_issue_score_json:
+            candidate = score_obj["fields"]["candidate"]
+            issue = score_obj["fields"]["issue"]
+            issue_score = score_obj["fields"]["issue_score"]
+            issue_scores[(candidate, issue)] += issue_score
+            issue_score_normalizers[(candidate, issue)] += candidate_issue_weight
+        for candidate_issue in issue_scores:
+            issue_scores[candidate_issue] /= issue_score_normalizers[candidate_issue]
+        for score_obj in state_issue_score_json:
+            state = score_obj["fields"]["state"]
+            issue = score_obj["fields"]["issue"]
+            issue_score = score_obj["fields"]["state_issue_score"]
+            weight = score_obj["fields"]["weight"]
+            for candidate in candidates:
+                key = (candidate, state)
+                delta = vote_variable - abs(issue_score**2 - issue_scores[(candidate, issue)]**2) * weight
+                issue_state_multipliers[key] = issue_state_multipliers.get(key, 0) + delta
+        
+        
 
 if __name__ == "__main__":
     election_name = "2025_Canada"
