@@ -123,8 +123,6 @@ class Code2Generator:
         vote_totals = results.groupby(["name"])["votes"].first()
         df = geometry.join(vote_totals, "name")
         df["state_pk"] = df.index + 343000
-        self.generate_states_json(df)
-        self.generate_state_issue_score_json(df)
         
         parties = self.load_json(self.election_dir, "candidates.json")
         parties_pks = {}
@@ -134,6 +132,10 @@ class Code2Generator:
         for party in parties:
             for state_pk in df["state_pk"]:
                 index.append((state_pk, party["pk"]))
+                
+        self.generate_states_json(df)
+        self.generate_state_issue_score_json(df, results, parties)        
+        
         df = df[["name", "state_pk"]]
         df = df.set_index("name")
         df = results.join(df, "name")
@@ -141,9 +143,13 @@ class Code2Generator:
         df = df.groupby(["state_pk", "party_pk"])["share"].sum().reindex(index, fill_value=0).reset_index()
         self.generate_candidate_state_multiplier_json(df)
         
-    def generate_state_issue_score_json(self, df: pd.DataFrame):
+    def generate_state_issue_score_json(self, df: pd.DataFrame, results: pd.DataFrame, parties: list):   
         state_issue_scores = []
         for issue in range(110, 115):
+            results["issue_score"] = 0
+            for party in parties:
+                results["issue_score"] += (results["party"] == party["name"]).astype(int) * results["share"] / 100 * party["issues"][str(issue)]
+            grouped = results.groupby(["name"])["issue_score"].sum()
             state_issue_scores.extend([
                 {
                     "model": "campaign_trail.state_issue_score",
@@ -151,12 +157,13 @@ class Code2Generator:
                     "fields": {
                         "state": int(row["state_pk"]),
                         "issue": issue,
-                        "state_issue_score": 0,
+                        "state_issue_score": grouped[row["name"]],
                         "weight": 1
                     }
                 }
                 for _, row in df.iterrows()
             ])
+        results.drop("issue_score", axis=1)
         path = os.path.join(self.election_dir, "state_issue_score.json")
         with open(path, "w", encoding="utf-8") as f:
             json.dump(state_issue_scores, f, indent=4, ensure_ascii=False)
@@ -257,7 +264,6 @@ class Code2Generator:
             issue_score_normalizers[(candidate, issue)] += candidate_issue_weight
         for candidate_issue in issue_scores:
             issue_scores[candidate_issue] /= issue_score_normalizers[candidate_issue]
-        print(issue_scores)
         for score_obj in state_issue_score_json:
             state = score_obj["fields"]["state"]
             issue = score_obj["fields"]["issue"]
@@ -265,7 +271,7 @@ class Code2Generator:
             weight = score_obj["fields"]["weight"]
             for candidate in candidates_pks:
                 key = (candidate, state)
-                delta = vote_variable - abs(issue_score**2 - issue_scores[(candidate, issue)]**2) * weight
+                delta = vote_variable - abs(issue_score * abs(issue_score) - issue_scores[(candidate, issue)] * abs(issue_scores[(candidate, issue)])) * weight
                 issue_state_multipliers[key] = issue_state_multipliers.get(key, 0) + delta
                 
         def state_multiplier_formula(row):
