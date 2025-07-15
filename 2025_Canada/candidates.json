@@ -1,8 +1,67 @@
-{
-    "Liberal": 300,
-    "Conservative": 301,
-    "NDP-New Democratic Party": 302,
-    "Green Party": 303,
-    "Bloc Québécois": 304,
-    "Others": 305
-}
+[
+    {
+        "pk": 300,
+        "name": "Liberal",
+        "short_name": "LPC",
+        "issues": {
+            "110": -1,
+            "111": 0.5,
+            "112": 0.3,
+            "113": -1,
+            "114": -0.5
+        }
+    },
+    {
+        "pk": 301,
+        "name": "Conservative",
+        "short_name": "CPC",
+        "issues": {
+            "110": 0,
+            "111": -1,
+            "112": 1,
+            "113": 0.8,
+            "114": 1
+        }
+    },
+    {
+        "pk": 302,
+        "name": "NDP-New Democratic Party",
+        "short_name": "NDP",
+        "issues": {
+            "110": -1,
+            "111": -0.5,
+            "112": -1,
+            "113": -1,
+            "114": -0.5
+        }
+    },
+    {
+        "pk": 303,
+        "name": "Green Party",
+        "short_name": "GPC",
+        "issues": {
+            "110": -1,
+            "111": 0,
+            "112": -1,
+            "113": -1,
+            "114": -1
+        }
+    },
+    {
+        "pk": 304,
+        "name": "Bloc Québécois",
+        "short_name": "BQ",
+        "issues": {
+            "110": -1,
+            "111": -0.5,
+            "112": -0.5,
+            "113": -0.2,
+            "114": -0.5
+        }
+    },
+    {
+        "pk": 305,
+        "name": "Others",
+        "short_name": "Others"
+    }
+]

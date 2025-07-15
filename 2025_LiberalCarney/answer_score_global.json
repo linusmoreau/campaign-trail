@@ -1,12 +1,2 @@
 [
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 44333,
-        "fields": {
-            "answer": 44322,
-            "candidate": 300,
-            "affected_candidate": 300,
-            "global_multiplier": 0.01
-        }
-    }
 ]

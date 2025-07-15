@@ -127,14 +127,17 @@ class Code2Generator:
         self.generate_state_issue_score_json(df)
         
         parties = self.load_json(self.election_dir, "candidates.json")
+        parties_pks = {}
+        for party in parties:
+            parties_pks[party["name"]] = party["pk"]
         index = []
-        for party in parties.values():
+        for party in parties:
             for state_pk in df["state_pk"]:
-                index.append((state_pk, party))
+                index.append((state_pk, party["pk"]))
         df = df[["name", "state_pk"]]
         df = df.set_index("name")
         df = results.join(df, "name")
-        df["party_pk"] = df.apply(lambda row: parties[row["party"]] if row["party"] in parties else parties["Others"], axis=1)
+        df["party_pk"] = df.apply(lambda row: parties_pks[row["party"]] if row["party"] in parties_pks else parties_pks["Others"], axis=1)
         df = df.groupby(["state_pk", "party_pk"])["share"].sum().reindex(index, fill_value=0).reset_index()
         self.generate_candidate_state_multiplier_json(df)
         
@@ -201,7 +204,8 @@ class Code2Generator:
         player_candidate = 300
         candidate_issue_weight = 10
         
-        candidates = tuple(self.load_json(self.election_dir, "candidates.json").values())
+        candidates = self.load_json(self.election_dir, "candidates.json")
+        candidates_pks = tuple(map(lambda candidate: candidate["pk"], candidates))
         candidate_issue_score_json = self.load_json(self.election_dir, "candidate_issue_score.json")
         answers_historical = self.load_json(self.scenario_dir, "answer_historical.json")
         answer_score_global_json = self.load_json(self.scenario_dir, "answer_score_global.json")
@@ -219,7 +223,7 @@ class Code2Generator:
         
         for issue_obj in issues_json:
             issues.append(issue_obj["pk"])
-        for candidate in candidates:
+        for candidate in candidates_pks:
             global_multipliers[candidate] = 1
             for issue in issues:
                 issue_scores[(candidate, issue)] = 0
@@ -249,16 +253,17 @@ class Code2Generator:
             candidate = score_obj["fields"]["candidate"]
             issue = score_obj["fields"]["issue"]
             issue_score = score_obj["fields"]["issue_score"]
-            issue_scores[(candidate, issue)] += issue_score
+            issue_scores[(candidate, issue)] += issue_score * candidate_issue_weight
             issue_score_normalizers[(candidate, issue)] += candidate_issue_weight
         for candidate_issue in issue_scores:
             issue_scores[candidate_issue] /= issue_score_normalizers[candidate_issue]
+        print(issue_scores)
         for score_obj in state_issue_score_json:
             state = score_obj["fields"]["state"]
             issue = score_obj["fields"]["issue"]
             issue_score = score_obj["fields"]["state_issue_score"]
             weight = score_obj["fields"]["weight"]
-            for candidate in candidates:
+            for candidate in candidates_pks:
                 key = (candidate, state)
                 delta = vote_variable - abs(issue_score**2 - issue_scores[(candidate, issue)]**2) * weight
                 issue_state_multipliers[key] = issue_state_multipliers.get(key, 0) + delta
