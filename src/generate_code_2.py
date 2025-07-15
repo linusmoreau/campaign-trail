@@ -5,6 +5,7 @@ from collections import OrderedDict
 from xml.dom import minidom
 import sys
 sys.stdout.reconfigure(encoding='utf-8') # type: ignore
+from file_manager import FileManager
 
 class Code2Generator:
     ELECTION_VARIABLE_NAMES = (
@@ -29,22 +30,15 @@ class Code2Generator:
         self.scenario_name = scenario_name
         self.election_dir = os.path.join(os.pardir, election_name)
         self.scenario_dir = os.path.join(os.pardir, scenario_name)
+        self.file_manager = FileManager()
         
     def generate(self):
         self.process_riding_data()
         code2 = self.join_sections()
         self.save_to_file(code2)
-        
-    def load_json(self, dir: str, fname: str):
-        with open(os.path.join(dir, fname), "r", encoding="utf-8") as f:
-            return json.load(f)
-        
-    def dump_json(self, dir: str, fname: str, contents):
-        with open(os.path.join(dir, fname), "w+", encoding="utf-8") as f:
-            json.dump(contents, f, indent=4, ensure_ascii=False)
 
     def complete_map(self) -> str:
-        ridings = self.load_json(self.election_dir, "states.json")
+        ridings = self.file_manager.load_json(self.election_dir, "states.json")
         full_map = OrderedDict()
         for riding in ridings:
             full_map[riding["fields"]["abbr"]] = riding["d"]
@@ -124,7 +118,7 @@ class Code2Generator:
         df = geometry.join(vote_totals, "name")
         df["state_pk"] = df.index + 343000
         
-        parties = self.load_json(self.election_dir, "candidates.json")
+        parties = self.file_manager.load_json(self.election_dir, "candidates.json")
         parties_pks = {}
         for party in parties:
             parties_pks[party["name"]] = party["pk"]
@@ -186,7 +180,7 @@ class Code2Generator:
             }
             for _, row in df.iterrows()
         ]
-        self.dump_json(self.election_dir, "states.json", states)
+        self.file_manager.dump_json(self.election_dir, "states.json", states)
             
     def generate_candidate_state_multiplier_json(self, df: pd.DataFrame):
         df = self.calculate_state_multiplier(df)
@@ -202,7 +196,7 @@ class Code2Generator:
             }
             for _, row in df.iterrows()
         ]
-        self.dump_json(self.election_dir, "candidate_state_multiplier.json", states)
+        self.file_manager.dump_json(self.election_dir, "candidate_state_multiplier.json", states)
 
 
     def calculate_state_multiplier(self, df: pd.DataFrame):
@@ -211,15 +205,15 @@ class Code2Generator:
         player_candidate = 300
         candidate_issue_weight = 10
         
-        candidates = self.load_json(self.election_dir, "candidates.json")
+        candidates = self.file_manager.load_json(self.election_dir, "candidates.json")
         candidates_pks = tuple(map(lambda candidate: candidate["pk"], candidates))
-        candidate_issue_score_json = self.load_json(self.election_dir, "candidate_issue_score.json")
-        answers_historical = self.load_json(self.scenario_dir, "answer_historical.json")
-        answer_score_global_json = self.load_json(self.scenario_dir, "answer_score_global.json")
-        answer_score_issue_json = self.load_json(self.scenario_dir, "answer_score_issue.json")
-        answer_score_state_json = self.load_json(self.scenario_dir, "answer_score_state.json")
-        state_issue_score_json = self.load_json(self.election_dir, "state_issue_score.json")
-        issues_json = self.load_json(self.election_dir, "issues.json")
+        candidate_issue_score_json = self.file_manager.load_json(self.election_dir, "candidate_issue_score.json")
+        answers_historical = self.file_manager.load_json(self.scenario_dir, "answer_historical.json")
+        answer_score_global_json = self.file_manager.load_json(self.scenario_dir, "answer_score_global.json")
+        answer_score_issue_json = self.file_manager.load_json(self.scenario_dir, "answer_score_issue.json")
+        answer_score_state_json = self.file_manager.load_json(self.scenario_dir, "answer_score_state.json")
+        state_issue_score_json = self.file_manager.load_json(self.election_dir, "state_issue_score.json")
+        issues_json = self.file_manager.load_json(self.election_dir, "issues.json")
         
         issues = []
         issue_scores = {}
