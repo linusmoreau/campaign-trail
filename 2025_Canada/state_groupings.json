@@ -1,0 +1,27 @@
+[
+    {
+        "name": "NDP incumbents",
+        "states":  [
+            "Edmonton Strathcona",
+            "Rosemont--La Petite-Patrie",
+            "Vancouver East",
+            "Courtenay--Alberni",
+            "Winnipeg Centre",
+            "Vancouver Kingsway",
+            "Nunavut",
+            "Elmwood--Transcona",
+            "New Westminster--Burnaby--Maillardville",
+            "Cowichan--Malahat--Langford",
+            "Victoria",
+            "Skeena--Bulkley Valley",
+            "Edmonton Griesbach",
+            "Hamilton Centre",
+            "London--Fanshawe",
+            "Windsor West",
+            "Nanaimo Ladysmith",
+            "Port Moody--Coquitlam",
+            "Burnaby Central",
+            "Churchill--Keewatinook Aski"
+        ]
+    }
+]
