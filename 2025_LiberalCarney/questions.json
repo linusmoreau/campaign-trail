@@ -1,10 +1,316 @@
 [
     {
         "model": "campaign_trail.question",
-        "pk": 44052,
+        "pk": 4010,
         "fields": {
             "priority": 0,
-            "description": "Do you run for Liberal leadership?",
+            "description": "[December 2024] Chrystia Freeland, the Minister of Finance, has resigned. She publishes her resignation letter which is harshly critical of Prime Minister Trudeau. Her resignation was prompted by an upcoming cabinet reshuffle in which Trudeau intended to install you as the new Finance Minister. The offer remains open. Do you accept Trudeau's offer and join his cabinet?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 4020,
+        "fields": {
+            "priority": 0,
+            "description": "[January 2025] Justin Trudeau has announced his resignation as Prime Minister and Liberal leader in the face of ever mounting pressure. You will run for leadership of the Liberal Party, but most Canadians are unfamiliar with you. How will you introduce yourself to Canadians?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 4030,
+        "fields": {
+            "priority": 0,
+            "description": "[January 2025] United States President Donald Trump has floated the idea of Canada becoming the 51st American state. What do you make of it?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 4040,
+        "fields": {
+            "priority": 0,
+            "description": "[February 2025] President Trump has announced 25% tariffs on all Canadian products, which he justifies by claiming Canadian border enforcement is allowing \"mass numbers of people to come in and fentanyl to come in\". How do you respond?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 4050,
+        "fields": {
+            "priority": 0,
+            "description": "[February 2025] Brookfield Asset Management has decided to move its headquarters from Toronto to New York. You were chairman of the board for Brookfield. What was your involvement in this decision?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 4060,
+        "fields": {
+            "priority": 0,
+            "description": "[March 2025] What leverage does Canada have against the US for the upcoming trade war and negotiations?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 4070,
+        "fields": {
+            "priority": 0,
+            "description": "[March 2025] As the Liberal leadership election nears its conclusion, what is your primary message to Liberal members?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 4080,
+        "fields": {
+            "priority": 0,
+            "description": "[March 2025] Congratulations! You have been sworn in as the 24th Prime Minister of Canada. Your party is experiencing a rebound in the polls from the lows of the political crisis in December. You will call a snap election to capitalize on your fresh image and legitimize your position. However, you have a chance to enact some policies before heading into the election.",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 4090,
+        "fields": {
+            "priority": 0,
+            "description": "[March 2025] With the federal election kicking off, what will be the main theme of your campaign?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 4100,
+        "fields": {
+            "priority": 0,
+            "description": "[March 2025] Where will you focus your effort as the campaign begins?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 4110,
+        "fields": {
+            "priority": 0,
+            "description": "[March 2025] The Conservatives, led by Pierre Poilievre, have maintained a commanding lead in the polls for over a year. What will be your main angle of attack on the Conservative leader?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 4120,
+        "fields": {
+            "priority": 0,
+            "description": "[March 2025] As Canada is a bilingual country with a significant French-speaking minority, political leaders are expected to campaign in both official languages. However, your own French is rusty. To what extent will you campaign in French?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 4130,
+        "fields": {
+            "priority": 0,
+            "description": "[March 2025] The NDP, Bloc, and Greens compete with you for progressive voters. How will you deal with them?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 4140,
+        "fields": {
+            "priority": 0,
+            "description": "[March 2025] How will you distinguish yourself from former Prime Minister Justin Trudeau?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 4150,
+        "fields": {
+            "priority": 0,
+            "description": "[March 2025] What will be your approach to media appearances?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 4160,
+        "fields": {
+            "priority": 0,
+            "description": "[March 2025] You have recruited a number of \"star\" candidates to run under the Liberal banner. Is there any candidate you would like to highlight?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 4170,
+        "fields": {
+            "priority": 0,
+            "description": "[March 2025] Aside from the official debates, TVA runs a French leaders' debate every election. Will you attend?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 4180,
+        "fields": {
+            "priority": 0,
+            "description": "[March 2025] Reporting is coming out that Paul Chiang, the Liberal MP and candidate for Markham-Unionville, made a joke that suggested turning in a Conservative candidate over to the Chinese consulate in exchange for a bounty. He has apologized for the comment, calling it \"deplorable\". How will you handle this situation?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 4190,
+        "fields": {
+            "priority": 0,
+            "description": "[April 2025] The economy is a major theme of this election. What will be your main economic message?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 4200,
+        "fields": {
+            "priority": 0,
+            "description": "[April 2025] While you were at Brookfield, most of the funds you managed were registered to a Bermuda address allowing the company to avoid $5.3 billion in taxes. Is this use of tax havens ethical?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 4210,
+        "fields": {
+            "priority": 0,
+            "description": "[April 2025] Healthcare is always an important issue in Canadian elections. How will you manage healthcare if elected?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 4220,
+        "fields": {
+            "priority": 0,
+            "description": "[April 2025] Crime is on the minds of many voters, with some losing faith in the justice system. What will you emphasize?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 4230,
+        "fields": {
+            "priority": 0,
+            "description": "[April 2025] As the campaign approaches its midpoint, where will you focus your efforts?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 4240,
+        "fields": {
+            "priority": 0,
+            "description": "[April 2025] Canada has welcomed a record number of immigrants in recent years. What will be your immigration policy?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 4250,
+        "fields": {
+            "priority": 0,
+            "description": "[April 2025] Voters always like a good tax cut. Do you have any plans for tax cuts?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 4260,
+        "fields": {
+            "priority": 0,
+            "description": "[April 2025] Housing has become increasingly expensive and is now out of reach for average Canadians. What is your approach to housing?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 4270,
+        "fields": {
+            "priority": 0,
+            "description": "[April 2025] Many are concerned with the size of the federal government debt. What will be your fiscal approach?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 4280,
+        "fields": {
+            "priority": 0,
+            "description": "[April 2025] Israel and Palestine continue to show up in headlines. What will you say on the issue?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 4290,
+        "fields": {
+            "priority": 0,
+            "description": "[April 2025] Oil is a major Canadian export and a major industry in the Western provinces. Would you support the construction of additional pipelines?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 4300,
+        "fields": {
+            "priority": 0,
+            "description": "[April 2025] What is your plan for the Canadian Armed Forces?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 4310,
+        "fields": {
+            "priority": 0,
+            "description": "[April 2025] The public service has grown substantially over recent years and has been targeted by the Conservatives. How will you address this?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 4320,
+        "fields": {
+            "priority": 0,
+            "description": "[April 2025] Two official leaders' debates are held, one in French and one in English. What is your strategy going into the debates?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 4330,
+        "fields": {
+            "priority": 0,
+            "description": "[April 2025] As the election nears its conclusion, where will you focus your campaign appearances?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 4340,
+        "fields": {
+            "priority": 0,
+            "description": "[April 2025] It's two days before election day, and a deadly attack on a Filipino street festival in Vancouver has left 11 dead and dozens injured. How do you react?",
+            "likelihood": 1
+        }
+    },
+    {
+        "model": "campaign_trail.question",
+        "pk": 4350,
+        "fields": {
+            "priority": 0,
+            "description": "[April 2025] It is the day before the election. What is your final message to Canadians?",
             "likelihood": 1
         }
     }
