@@ -103,17 +103,37 @@ class Code2Generator:
         df = df[["name", "party", "share", "votes"]]
         return df
     
-    def check_ridings_match(self, results, geometry):
+    def extract_groupings(self) -> pd.DataFrame:
+        states = pd.read_csv(os.path.join(self.election_dir, "constituencies.csv"))
+        states["name"] = states["Constituency"].apply(lambda constituency: constituency.replace("—", "--"))
+        states = states.rename(columns={"Province / Territory": "grouping"})
+        states = states[["name", "grouping"]]
+        
+        i = len(states)
+        groupings = self.file_manager.load_json(self.election_dir, "state_groupings.json")
+        for grouping in groupings:
+            name = grouping["name"]
+            for state in grouping["states"]:
+                states.loc[i] = [state, name]
+                i += 1
+        return states
+    
+    def check_ridings_match(self, results, geometry, groupings):
         results_ridings = set(results["name"])
         geometry_ridings = set(geometry["name"])
+        grouping_ridings = set(groupings["name"])
         mismatch = results_ridings.union(geometry_ridings).difference(results_ridings.intersection(geometry_ridings))
         if len(mismatch) > 0:
             print("Warning: mismatch in ridings named in election results and map:", mismatch)
+        mismatch = grouping_ridings.difference(results_ridings)
+        if len(mismatch) > 0:
+            print("Warning: riding name found in grouping but not in election results:", mismatch)
     
     def process_riding_data(self):
         results = self.extract_historical_results()
         geometry = self.extract_geometry()
-        self.check_ridings_match(results, geometry)
+        groupings = self.extract_groupings()
+        self.check_ridings_match(results, geometry, groupings)
         vote_totals = results.groupby(["name"])["votes"].first()
         df = geometry.join(vote_totals, "name")
         df["state_pk"] = df.index + 343000
