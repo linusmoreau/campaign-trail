@@ -25,7 +25,7 @@ class Transcriber:
         ]
         self.file_manager.dump_json(self.scenario_dir, "question_details.json", details)
     
-    def to_game_format(self):
+    def to_game_format(self, state_name_to_pk: dict[str, int], state_groupings: dict[str, list[int]]):
         config = self.file_manager.load_json(self.scenario_dir, "config.json")
         candidate = config["candidate"]
         score_multiplier = config["score_multiplier"]
@@ -108,16 +108,27 @@ class Transcriber:
                             "pk": score_pk,
                             "fields": {
                                 "answer": answer_pk,
-                                "state": score_state["state"],
+                                "state": state_name_to_pk[score_state["state"]] if type(score_state["state"]) is str else score_state["state"],
                                 "candidate": candidate,
                                 "affected_candidate": score_state.get("affected_candidate", candidate),
-                                "state_multiplier": score_state["state"] * score_multiplier
+                                "state_multiplier": score_state["state_multiplier"] * score_multiplier
                             }
                         }
                     )
                     score_pk += 1
-    
-
-if __name__ == "__main__":
-    transcriber = Transcriber("2025_LiberalCarney")
-    transcriber.to_game_format()
+                for score_group in answer_detail.get("score_group", ()):
+                    states = state_groupings[score_group["group"]]
+                    for state in states:
+                        answer_score_state.append(
+                            {
+                                "model": "campaign_trail.answer_score_state",
+                                "pk": score_pk,
+                                "fields": {
+                                    "answer": answer_pk,
+                                    "state": state,
+                                    "candidate": candidate,
+                                    "affected_candidate": score_group.get("affected_candidate", candidate),
+                                    "state_multiplier": score_group["state_multiplier"] * score_multiplier
+                                }
+                            }
+                        )
