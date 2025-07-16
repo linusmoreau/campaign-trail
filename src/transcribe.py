@@ -19,14 +19,103 @@ class Transcriber:
         details = [
             {
                 "question": question["fields"]["description"],
-                "answers": [{"answer": answer, "feedback": ""} for answer in answers_by_question[question["pk"]]]
+                "answers": [{"answer": answer} for answer in answers_by_question[question["pk"]]]
             }
             for question in questions
         ]
         self.file_manager.dump_json(self.scenario_dir, "question_details.json", details)
     
     def to_game_format(self):
-        pass
+        config = self.file_manager.load_json(self.scenario_dir, "config.json")
+        candidate = config["candidate"]
+        score_multiplier = config["score_multiplier"]
+        question_details = self.file_manager.load_json(self.scenario_dir, "question_details.json")
+        questions = []
+        answers = []
+        answer_feedback = []
+        answer_score_global = []
+        answer_score_issue = []
+        answer_score_state = []
+        score_pk = 10000
+        for i, question_detail in enumerate(question_details):
+            question_pk = 4000+(10*i)
+            questions.append(
+                {
+                    "model": "campaign_trail.question",
+                    "pk": question_pk,
+                    "fields": {
+                        "priority": 0,
+                        "description": question_detail["question"],
+                        "likelihood": 1
+                    }
+                }
+            )
+            for j, answer_detail in enumerate(question_detail["answers"]):
+                answer_pk = question_pk + j
+                answers.append(
+                    {
+                        "model": "campaign_trail.answer",
+                        "pk": answer_pk,
+                        "fields": {
+                            "question": question_pk,
+                            "description": answer_detail["answer"]
+                        }
+                    }
+                )
+                answer_feedback.append(
+                    {
+                        "model": "campaign_trail.answer_feedback",
+                        "pk": answer_pk + 1000,
+                        "fields": {
+                            "answer": answer_pk,
+                            "candidate": candidate,
+                            "answer_feedback": answer_detail["feedback"]
+                        }
+                    }
+                )
+                for score_global in answer_detail.get("score_global", ()):
+                    answer_score_global.append(
+                        {
+                            "model": "campaign_trail.answer_score_global",
+                            "pk": score_pk,
+                            "fields": {
+                                "answer": answer_pk,
+                                "candidate": candidate,
+                                "affected_candidate": score_global.get("affected_candidate", candidate),
+                                "global_multiplier": score_global["multiplier"] * score_multiplier
+                            }
+                        }
+                    )
+                    score_pk += 1
+                for score_issue in answer_detail.get("score_issue", ()):
+                    answer_score_issue.append(
+                        {
+                            "model": "campaign_trail.answer_score_issue",
+                            "pk": score_pk,
+                            "fields": {
+                                "answer": answer_pk,
+                                "issue": score_issue["issue"],
+                                "issue_score": score_issue["issue_score"],
+                                "issue_importance": score_issue["issue_importance"]
+                            }
+                        }
+                    )
+                    score_pk += 1
+                for score_state in answer_detail.get("score_state", ()):
+                    answer_score_state.append(
+                        {
+                            "model": "campaign_trail.answer_score_state",
+                            "pk": score_pk,
+                            "fields": {
+                                "answer": answer_pk,
+                                "state": score_state["state"],
+                                "candidate": candidate,
+                                "affected_candidate": score_state.get("affected_candidate", candidate),
+                                "state_multiplier": score_state["state"] * score_multiplier
+                            }
+                        }
+                    )
+                    score_pk += 1
     
 
 if __name__ == "__main__":
