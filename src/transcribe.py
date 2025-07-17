@@ -8,6 +8,7 @@ class Transcriber:
         self.file_manager = FileManager()
         
     def to_user_format(self):
+        """Only partially implemented to extract questions and answers without any scoring or feedback"""
         answers = self.file_manager.load_json(self.scenario_dir, "answers.json")
         questions = self.file_manager.load_json(self.scenario_dir, "questions.json")
         
@@ -38,7 +39,7 @@ class Transcriber:
         answer_score_state = []
         score_pk = 10000
         for i, question_detail in enumerate(question_details):
-            question_pk = 4000+(10*i)
+            question_pk = 4000+(10*(i+1))
             questions.append(
                 {
                     "model": "campaign_trail.question",
@@ -51,7 +52,7 @@ class Transcriber:
                 }
             )
             for j, answer_detail in enumerate(question_detail["answers"]):
-                answer_pk = question_pk + j
+                answer_pk = question_pk + j + 1
                 answers.append(
                     {
                         "model": "campaign_trail.answer",
@@ -62,17 +63,21 @@ class Transcriber:
                         }
                     }
                 )
-                answer_feedback.append(
-                    {
-                        "model": "campaign_trail.answer_feedback",
-                        "pk": answer_pk + 1000,
-                        "fields": {
-                            "answer": answer_pk,
-                            "candidate": candidate,
-                            "answer_feedback": answer_detail["feedback"]
+                try:
+                    answer_feedback.append(
+                        {
+                            "model": "campaign_trail.answer_feedback",
+                            "pk": answer_pk + 1000,
+                            "fields": {
+                                "answer": answer_pk,
+                                "candidate": candidate,
+                                "answer_feedback": answer_detail["feedback"]
+                            }
                         }
-                    }
-                )
+                    )
+                except KeyError:
+                    # No feedback included
+                    pass
                 for score_global in answer_detail.get("score_global", ()):
                     answer_score_global.append(
                         {
@@ -132,3 +137,11 @@ class Transcriber:
                                 }
                             }
                         )
+                        score_pk += 1
+        
+        self.file_manager.dump_json(self.scenario_dir, "questions.json", questions)
+        self.file_manager.dump_json(self.scenario_dir, "answers.json", answers)
+        self.file_manager.dump_json(self.scenario_dir, "answer_feedback.json", answer_feedback)
+        self.file_manager.dump_json(self.scenario_dir, "answer_score_global.json", answer_score_global)
+        self.file_manager.dump_json(self.scenario_dir, "answer_score_issue.json", answer_score_issue)
+        self.file_manager.dump_json(self.scenario_dir, "answer_score_state.json", answer_score_state)

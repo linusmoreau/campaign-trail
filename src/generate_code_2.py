@@ -6,13 +6,13 @@ from xml.dom import minidom
 import sys
 sys.stdout.reconfigure(encoding='utf-8') # type: ignore
 from file_manager import FileManager
+from transcribe import Transcriber
 
 class Code2Generator:
     ELECTION_VARIABLE_NAMES = (
         "states_json",
         "issues_json",
         "state_issue_score_json",
-        "candidate_state_multiplier_json",
         "candidate_issue_score_json",
         "running_mate_issue_score_json",
     )
@@ -23,6 +23,7 @@ class Code2Generator:
         "answer_score_issue_json",
         "answer_score_state_json",
         "answer_feedback_json",
+        "candidate_state_multiplier_json"
     )
     
     def __init__(self, election_name: str, scenario_name: str):
@@ -56,7 +57,7 @@ class Code2Generator:
         filepath = os.path.join(dir, section_filename)
         declaration = "campaignTrail_temp." + section + " = "
         try:
-            with open(filepath, "r") as f:
+            with open(filepath, "r", encoding="utf-8") as f:
                 s = declaration + f.read().strip()
         except FileNotFoundError:
             s = declaration + "[]"
@@ -103,11 +104,14 @@ class Code2Generator:
         df = df[["name", "party", "share", "votes"]]
         return df
     
-    def extract_groupings(self) -> pd.DataFrame:
+    def extract_provinces(self) -> pd.DataFrame:
         states = pd.read_csv(os.path.join(self.election_dir, "constituencies.csv"))
         states["name"] = states["Constituency"].apply(lambda constituency: constituency.replace("—", "--"))
-        states = states.rename(columns={"Province / Territory": "grouping"})
-        states = states[["name", "grouping"]]
+        states = states.rename(columns={"Province / Territory": "province"})
+        return states[["name", "province"]]
+    
+    def extract_groupings(self) -> pd.DataFrame:
+        states = self.extract_provinces().rename(columns={"province": "grouping"})
         
         i = len(states)
         groupings = self.file_manager.load_json(self.election_dir, "state_groupings.json")
@@ -148,7 +152,8 @@ class Code2Generator:
                 index.append((state_pk, party["pk"]))
                 
         self.generate_states_json(df)
-        self.generate_state_issue_score_json(df, results, parties)        
+        self.generate_state_issue_score_json(df, results, parties)
+        self.generate_questions_answers_jsons(df, groupings)      
         
         df = df[["name", "state_pk"]]
         df = df.set_index("name")
@@ -156,6 +161,12 @@ class Code2Generator:
         df["party_pk"] = df.apply(lambda row: parties_pks[row["party"]] if row["party"] in parties_pks else parties_pks["Others"], axis=1)
         df = df.groupby(["state_pk", "party_pk"])["share"].sum().reindex(index, fill_value=0).reset_index()
         self.generate_candidate_state_multiplier_json(df)
+        
+    def generate_questions_answers_jsons(self, df: pd.DataFrame, groupings: pd.DataFrame):
+        state_name_to_pk = df.set_index("name").T.to_dict()
+        state_groupings = groupings.groupby("grouping")["name"].apply(list).T.to_dict()
+        transcriber = Transcriber(self.scenario_name)
+        transcriber.to_game_format(state_name_to_pk, state_groupings) # type: ignore as we ensure the types are correct elsewhere
         
     def generate_state_issue_score_json(self, df: pd.DataFrame, results: pd.DataFrame, parties: list):   
         state_issue_scores = []
@@ -216,7 +227,7 @@ class Code2Generator:
             }
             for _, row in df.iterrows()
         ]
-        self.file_manager.dump_json(self.election_dir, "candidate_state_multiplier.json", states)
+        self.file_manager.dump_json(self.scenario_dir, "candidate_state_multiplier.json", states)
 
 
     def calculate_state_multiplier(self, df: pd.DataFrame):
