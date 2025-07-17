@@ -194,6 +194,22 @@ class Code2Generator:
             json.dump(state_issue_scores, f, indent=4, ensure_ascii=False)
         
     def generate_states_json(self, df: pd.DataFrame):
+        POLL_CLOSING_TIMES = {
+            "Newfoundland and Labrador": 10,
+            "New Brunswick": 20,
+            "Nova Scotia": 20,
+            "Prince Edward Island": 20,
+            "Quebec": 40,
+            "Ontario": 40,
+            "Manitoba": 40,
+            "Saskatchewan": 40,
+            "Alberta": 40,
+            "Northwest Territories": 40,
+            "Nunavut": 40,
+            "British Columbia": 50,
+            "Yukon": 50
+        }
+        provinces = self.extract_provinces().set_index("name").T.to_dict()
         states = [
             {
                 "model": "campaign_trail.state",
@@ -203,7 +219,7 @@ class Code2Generator:
                     "abbr": row["name"],
                     "electoral_votes": 1,
                     "popular_votes": int(row["votes"]),
-                    "poll_closing_time": 30,    # TODO: Map ridings to provinces for setting poll closing time
+                    "poll_closing_time": POLL_CLOSING_TIMES[provinces[row["name"]]["province"]],
                     "winner_take_all_flg": 1,
                     "election": 20
                 },
