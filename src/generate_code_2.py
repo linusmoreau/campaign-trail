@@ -46,7 +46,7 @@ class Code2Generator:
         return json.dumps(full_map)
 
     def mapping_code(self) -> str:
-        with open(os.path.join(self.election_dir, "mapping_code.txt"), "r") as f:
+        with open(os.path.join(self.election_dir, "mapping_code.txt"), "r", encoding="utf-8") as f:
             mapping_code_1 = f.readline().strip()
             mapping_code_2 = f.readline().strip()
         return mapping_code_1 + self.complete_map() + mapping_code_2
@@ -70,14 +70,14 @@ class Code2Generator:
         for section in self.SCENARIO_VARIABLE_NAMES:
             sections.append(self.format_section(section, self.scenario_dir))
         end_code_filepath = os.path.join(self.scenario_dir, "end_code.js")
-        with open(end_code_filepath, "r") as f:
+        with open(end_code_filepath, "r", encoding="utf-8") as f:
             sections.append(f.read())
         code2 = "\n\n".join(sections) + "\n"
         return code2
             
     def save_to_file(self, s: str):
         output_filepath = os.path.join(self.scenario_dir, self.scenario_name + ".html")
-        with open(output_filepath, "w") as f:
+        with open(output_filepath, "w", encoding="utf-8") as f:
             f.write(s)
         
     def extract_geometry(self) -> pd.DataFrame:

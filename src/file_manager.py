@@ -7,5 +7,5 @@ class FileManager:
             return json.load(f)
         
     def dump_json(self, dir: str, fname: str, contents):
-        with open(os.path.join(dir, fname), "w+", encoding="utf-8") as f:
+        with open(os.path.join(dir, fname), "w", encoding="utf-8") as f:
             json.dump(contents, f, indent=4, ensure_ascii=False)
