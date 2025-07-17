@@ -247,10 +247,10 @@ class Code2Generator:
 
 
     def calculate_state_multiplier(self, df: pd.DataFrame):
-        # TODO Hard-coded for now. Eventually put in a config and automate Code 1 creation.
-        vote_variable = 1.125
-        player_candidate = 300
-        candidate_issue_weight = 10
+        config = self.file_manager.load_json(self.scenario_dir, "config.json")
+        vote_variable = config["vote_variable"]
+        player_candidate = config["candidate"]
+        candidate_issue_weight = config["candidate_issue_weight"]
         
         candidates = self.file_manager.load_json(self.election_dir, "candidates.json")
         candidates_pks = tuple(map(lambda candidate: candidate["pk"], candidates))
