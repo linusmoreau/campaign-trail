@@ -268,5 +268,50 @@
             "issue": 114,
             "issue_score": 0
         }
+    },
+        {
+        "model": "campaign_trail.candidate_issue_score",
+        "pk": 1130,
+        "fields": {
+            "candidate": 306,
+            "issue": 110,
+            "issue_score": 0.5
+        }
+    },
+    {
+        "model": "campaign_trail.candidate_issue_score",
+        "pk": 1131,
+        "fields": {
+            "candidate": 306,
+            "issue": 111,
+            "issue_score": -1
+        }
+    },
+    {
+        "model": "campaign_trail.candidate_issue_score",
+        "pk": 1132,
+        "fields": {
+            "candidate": 306,
+            "issue": 112,
+            "issue_score": 1
+        }
+    },
+    {
+        "model": "campaign_trail.candidate_issue_score",
+        "pk": 1133,
+        "fields": {
+            "candidate": 306,
+            "issue": 113,
+            "issue_score": 1
+        }
+    },
+    {
+        "model": "campaign_trail.candidate_issue_score",
+        "pk": 1134,
+        "fields": {
+            "candidate": 306,
+            "issue": 114,
+            "issue_score": 1
+        }
     }
 ]

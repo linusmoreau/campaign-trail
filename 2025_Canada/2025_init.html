@@ -255,6 +255,29 @@ campaignTrail_temp.candidate_json = [
     },
     {
         "model": "campaign_trail.candidate",
+        "pk": 306,
+        "fields": {
+            "first_name": "",
+            "last_name": "PPC",
+            "election": 20,
+            "party": "People's Party of Canada",
+            "state": "Canada",
+            "priority": 1,
+            "description": "",
+            "color_hex": "#6F5D9A",
+            "secondary_color_hex": null,
+            "is_active": 0,
+            "image_url": "",
+            "electoral_victory_message": "",
+            "electoral_loss_message": "",
+            "no_electoral_majority_message": "",
+            "description_as_running_mate": null,
+            "candidate_score": 1,
+            "running_mate": false
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
         "pk": 313,
         "fields": {
             "first_name": "Placeholder",
@@ -296,6 +319,26 @@ campaignTrail_temp.candidate_json = [
     {
         "model": "campaign_trail.candidate",
         "pk": 315,
+        "fields": {
+            "first_name": "Placeholder",
+            "last_name": "Placeholder",
+            "election": 20,
+            "party": "Placeholder",
+            "state": "Placeholder",
+            "priority": 1,
+            "description": "",
+            "color_hex": "#808080",
+            "secondary_color_hex": null,
+            "is_active": 0,
+            "image_url": "",
+            "description_as_running_mate": "",
+            "candidate_score": 1,
+            "running_mate": true
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 316,
         "fields": {
             "first_name": "Placeholder",
             "last_name": "Placeholder",
@@ -363,6 +406,14 @@ campaignTrail_temp.running_mate_json = [
             "candidate": 305,
             "running_mate": 315
         }
+    },
+    {
+        "model": "campaign_trail.running_mate",
+        "pk": 172518,
+        "fields": {
+            "candidate": 306,
+            "running_mate": 316
+        }
     }
 ]
 
@@ -375,6 +426,7 @@ campaignTrail_temp.opponents_default_json = [
             302,
             304,
             303,
+            306,
             305
         ]
     }
@@ -404,10 +456,10 @@ document.body.background = "https://i.imgur.com/1Xlpptk.jpeg";
 
 document.head.innerHTML += "<style>#results_container {color:#000000;}</style>";
 
-HistHexcolour = ["#EA6D6A", "#6495ED", "#87CEFA", "#F4A460", "#99C955", "#808080"];
-HistName = [" LPC", " CPC", " BQ", " NDP", " GPC", " Others"];
-HistEV = [169, 144, 22, 7, 1, 0];
-HistPV = ["8,595,488", "8,113,484", "1,236,349", "1,234,673", "238,892", "222,777"];
-HistPVP = ["43.8%", "41.3%", "6.3%", "6.3%", "1.2%", "1.1%"];
+HistHexcolour = ["#EA6D6A", "#6495ED", "#87CEFA", "#F4A460", "#99C955", "#6F5D9A", "#808080"];
+HistName = [" LPC", " CPC", " BQ", " NDP", " GPC", " PPC", " Others"];
+HistEV = [169, 144, 22, 7, 1, 0, 0];
+HistPV = ["8,595,488", "8,113,484", "1,236,349", "1,234,673", "238,892", "136,977", "85,800"];
+HistPVP = ["43.8%", "41.3%", "6.3%", "6.3%", "1.2%", "0.7%", "0.4%"];
 
 //#endcode
