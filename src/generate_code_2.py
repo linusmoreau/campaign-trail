@@ -196,18 +196,18 @@ class Code2Generator:
     def generate_states_json(self, df: pd.DataFrame):
         POLL_CLOSING_TIMES = {
             "Newfoundland and Labrador": 10,
-            "New Brunswick": 20,
-            "Nova Scotia": 20,
-            "Prince Edward Island": 20,
-            "Quebec": 40,
-            "Ontario": 40,
-            "Manitoba": 40,
-            "Saskatchewan": 40,
-            "Alberta": 40,
-            "Northwest Territories": 40,
-            "Nunavut": 40,
-            "British Columbia": 50,
-            "Yukon": 50
+            "New Brunswick": 30,
+            "Nova Scotia": 30,
+            "Prince Edward Island": 30,
+            "Quebec": 70,
+            "Ontario": 70,
+            "Manitoba": 70,
+            "Saskatchewan": 70,
+            "Alberta": 70,
+            "Northwest Territories": 70,
+            "Nunavut": 70,
+            "British Columbia": 90,
+            "Yukon": 90
         }
         provinces = self.extract_provinces().set_index("name").T.to_dict()
         states = [
