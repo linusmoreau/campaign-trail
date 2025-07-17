@@ -1,1 +1,14 @@
 /processed
+*.pyc
+
+*/answers.json
+*/answer_feedback.json
+*/answer_score_global.json
+*/answer_score_issue.json
+*/answer_score_state.json
+*/candidate_state_multiplier.json
+*/state_issue_score.json
+*/states.json
+*/questions.json
+
+!/template
