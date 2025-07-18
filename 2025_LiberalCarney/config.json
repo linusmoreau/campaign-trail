@@ -1,6 +1,7 @@
 {
     "candidate": 300,
     "score_multiplier": 1,
+    "issue_multiplier": 1,
     "vote_variable": 1.125,
     "candidate_issue_weight": 10
 }

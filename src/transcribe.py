@@ -31,6 +31,7 @@ class Transcriber:
         config = self.file_manager.load_json(self.scenario_dir, "config.json")
         candidate = config["candidate"]
         score_multiplier = config["score_multiplier"]
+        issue_multiplier = config["issue_multiplier"]
         question_details = self.file_manager.load_json(self.scenario_dir, "question_details.json")
         questions = []
         answers = []
@@ -82,6 +83,7 @@ class Transcriber:
                 self.add_scores(
                     candidate,
                     score_multiplier,
+                    issue_multiplier,
                     answer_pk,
                     answer_detail,
                     answer_score_global,
@@ -94,6 +96,7 @@ class Transcriber:
                     candidate,
                     score_multiplier,
                     answer_pk,
+                    issue_multiplier,
                     question_detail,
                     answer_score_global,
                     answer_score_issue,
@@ -114,6 +117,7 @@ class Transcriber:
         self,
         candidate,
         score_multiplier,
+        issue_multiplier,
         answer_pk,
         answer_detail,
         answer_score_global,
@@ -144,7 +148,7 @@ class Transcriber:
                     "fields": {
                         "answer": answer_pk,
                         "issue": score_issue["issue"],
-                        "issue_score": score_issue["issue_score"],
+                        "issue_score": score_issue["issue_score"] * issue_multiplier,
                         "issue_importance": score_issue["issue_importance"]
                     }
                 }
