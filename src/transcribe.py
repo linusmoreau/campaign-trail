@@ -6,6 +6,7 @@ class Transcriber:
     def __init__(self, scenario_name):
         self.scenario_dir = os.path.join(os.pardir, scenario_name)
         self.file_manager = FileManager()
+        self.score_pk = 10000
         
     def to_user_format(self):
         """Only partially implemented to extract questions and answers without any scoring or feedback"""
@@ -37,7 +38,7 @@ class Transcriber:
         answer_score_global = []
         answer_score_issue = []
         answer_score_state = []
-        score_pk = 10000
+
         for i, question_detail in enumerate(question_details):
             question_pk = 4000+(10*(i+1))
             questions.append(
@@ -78,66 +79,28 @@ class Transcriber:
                 except KeyError:
                     # No feedback included
                     pass
-                for score_global in answer_detail.get("score_global", ()):
-                    answer_score_global.append(
-                        {
-                            "model": "campaign_trail.answer_score_global",
-                            "pk": score_pk,
-                            "fields": {
-                                "answer": answer_pk,
-                                "candidate": candidate,
-                                "affected_candidate": score_global.get("affected_candidate", candidate),
-                                "global_multiplier": score_global["multiplier"] * score_multiplier
-                            }
-                        }
-                    )
-                    score_pk += 1
-                for score_issue in answer_detail.get("score_issue", ()):
-                    answer_score_issue.append(
-                        {
-                            "model": "campaign_trail.answer_score_issue",
-                            "pk": score_pk,
-                            "fields": {
-                                "answer": answer_pk,
-                                "issue": score_issue["issue"],
-                                "issue_score": score_issue["issue_score"],
-                                "issue_importance": score_issue["issue_importance"]
-                            }
-                        }
-                    )
-                    score_pk += 1
-                for score_state in answer_detail.get("score_state", ()):
-                    answer_score_state.append(
-                        {
-                            "model": "campaign_trail.answer_score_state",
-                            "pk": score_pk,
-                            "fields": {
-                                "answer": answer_pk,
-                                "state": state_name_to_pk[score_state["state"]] if type(score_state["state"]) is str else score_state["state"],
-                                "candidate": candidate,
-                                "affected_candidate": score_state.get("affected_candidate", candidate),
-                                "state_multiplier": score_state["state_multiplier"] * score_multiplier
-                            }
-                        }
-                    )
-                    score_pk += 1
-                for score_group in answer_detail.get("score_group", ()):
-                    states = state_groupings[score_group["group"]]
-                    for state in states:
-                        answer_score_state.append(
-                            {
-                                "model": "campaign_trail.answer_score_state",
-                                "pk": score_pk,
-                                "fields": {
-                                    "answer": answer_pk,
-                                    "state": state,
-                                    "candidate": candidate,
-                                    "affected_candidate": score_group.get("affected_candidate", candidate),
-                                    "state_multiplier": score_group["state_multiplier"] * score_multiplier
-                                }
-                            }
-                        )
-                        score_pk += 1
+                self.add_scores(
+                    candidate,
+                    score_multiplier,
+                    answer_pk,
+                    answer_detail,
+                    answer_score_global,
+                    answer_score_issue,
+                    answer_score_state,
+                    state_name_to_pk,
+                    state_groupings
+                )
+                self.add_scores(
+                    candidate,
+                    score_multiplier,
+                    answer_pk,
+                    question_detail,
+                    answer_score_global,
+                    answer_score_issue,
+                    answer_score_state,
+                    state_name_to_pk,
+                    state_groupings
+                )
         
         self.file_manager.dump_json(self.scenario_dir, "questions.json", questions)
         self.file_manager.dump_json(self.scenario_dir, "answers.json", answers)
@@ -145,3 +108,77 @@ class Transcriber:
         self.file_manager.dump_json(self.scenario_dir, "answer_score_global.json", answer_score_global)
         self.file_manager.dump_json(self.scenario_dir, "answer_score_issue.json", answer_score_issue)
         self.file_manager.dump_json(self.scenario_dir, "answer_score_state.json", answer_score_state)
+        
+        
+    def add_scores(
+        self,
+        candidate,
+        score_multiplier,
+        answer_pk,
+        answer_detail,
+        answer_score_global,
+        answer_score_issue,
+        answer_score_state,
+        state_name_to_pk,
+        state_groupings
+    ):
+        for score_global in answer_detail.get("score_global", ()):
+            answer_score_global.append(
+                {
+                    "model": "campaign_trail.answer_score_global",
+                    "pk": self.score_pk,
+                    "fields": {
+                        "answer": answer_pk,
+                        "candidate": candidate,
+                        "affected_candidate": score_global.get("affected_candidate", candidate),
+                        "global_multiplier": score_global["global_multiplier"] * score_multiplier
+                    }
+                }
+            )
+            self.score_pk += 1
+        for score_issue in answer_detail.get("score_issue", ()):
+            answer_score_issue.append(
+                {
+                    "model": "campaign_trail.answer_score_issue",
+                    "pk": self.score_pk,
+                    "fields": {
+                        "answer": answer_pk,
+                        "issue": score_issue["issue"],
+                        "issue_score": score_issue["issue_score"],
+                        "issue_importance": score_issue["issue_importance"]
+                    }
+                }
+            )
+            self.score_pk += 1
+        for score_state in answer_detail.get("score_state", ()):
+            answer_score_state.append(
+                {
+                    "model": "campaign_trail.answer_score_state",
+                    "pk": self.score_pk,
+                    "fields": {
+                        "answer": answer_pk,
+                        "state": state_name_to_pk[score_state["state"]] if type(score_state["state"]) is str else score_state["state"],
+                        "candidate": candidate,
+                        "affected_candidate": score_state.get("affected_candidate", candidate),
+                        "state_multiplier": score_state["state_multiplier"] * score_multiplier
+                    }
+                }
+            )
+            self.score_pk += 1
+        for score_group in answer_detail.get("score_group", ()):
+            states = state_groupings[score_group["group"]]
+            for state in states:
+                answer_score_state.append(
+                    {
+                        "model": "campaign_trail.answer_score_state",
+                        "pk": self.score_pk,
+                        "fields": {
+                            "answer": answer_pk,
+                            "state": state,
+                            "candidate": candidate,
+                            "affected_candidate": score_group.get("affected_candidate", candidate),
+                            "state_multiplier": score_group["state_multiplier"] * score_multiplier
+                        }
+                    }
+                )
+                self.score_pk += 1
