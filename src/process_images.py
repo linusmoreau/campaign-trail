@@ -10,10 +10,14 @@ if not os.path.exists(PROCESSED_DIR):
     os.makedirs(PROCESSED_DIR)
 
 
-def process(f, crop=False, ratio=7/8):
-    img = Image.open(f) 
+def process(f, crop=False, ratio=7/8, max_height=1200):
+    img = Image.open(f)
+    w, h = img.size
+    if h > max_height:
+        w = round(w * max_height / h)
+        h = max_height
+        img = img.resize((w, h))
     if crop:
-        w, h = img.size
         new_width = h * ratio
         margin = round((w - new_width) / 2)
         left = margin

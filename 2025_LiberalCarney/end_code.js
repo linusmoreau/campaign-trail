@@ -65,14 +65,14 @@ endingPicker = (out, totv, aa, quickstats) => {
         if (winner.electoral_votes >= 172) {
             header = "Conservative Majority Government!";
             description = "TODO";
+            setImage("https://i.imgur.com/0tmKUV5.jpeg")
             setMusic("https://www.youtube-nocookie.com/embed/OSR4WpqyXxs?autoplay=1")
         } else {
             header = "Conservative Plurality!";
             description = "TODO";
+            setImage("https://i.imgur.com/bWPXiN4.jpeg")
             setMusic("https://www.youtube-nocookie.com/embed/t5nJ_mg_yMo?autoplay=1;start=10")
         }
-        // TODO set image
-        
     }
     return `<h2>${header}</h2><p>${description}</p>`
 }
