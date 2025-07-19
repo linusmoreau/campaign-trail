@@ -12,3 +12,6 @@
 */questions.json
 
 !/template
+
+*.html
+!*init.html
