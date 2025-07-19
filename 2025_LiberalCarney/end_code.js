@@ -5,7 +5,7 @@ campaignTrail_temp.running_mate_last_name = "Carney";
 
 let observerRunning = false;
 let processedNodes = new Set();
-const scrollableElementIds = ["overall_result", "state_result", "state_info"];
+const scrollableElementIds = ["overall_result", "state_result", "state_info", "main_content_area"];
 
 async function handleMutations(mutationsList, observer) {
     if (observerRunning) return;
@@ -51,30 +51,55 @@ endingPicker = (out, totv, aa, quickstats) => {
     }
 
     winner = aa[0];
+    runnerUp = aa[1];
     if (winner.candidate == 300) {
-        if (winner.electoral_votes >= 172) {
+        if (winner.electoral_votes >= 172 || (runnerUp.candidate == 300 && runnerUp.electoral_votes == winner.electoral_votes)) {
             header = "Liberal Majority Government!";
-            description = "TODO";
+            description = [
+                "A few months ago, the Liberal Party was down in the dumps, and electoral defeat was all but certain. Despite the herculean task of bringing back a party from death's door, you went for it. With your experienced background and disciplined campaign, you pulled through. Not only did you defeat Poilievre, you won a majority government.",
+                "Your premiership will not be an easy one. You have a trade war to fight against President Trump, a housing crisis to resolve, and a sluggish economy to revive. Canadians have high hopes for you. Don't let them down.",
+                "With a majority in the House of Commons, you will have an easier time passing your reforms and can count on being able to serve out your full four year term. But don't get complacent. You still need to collaborate with the provinces, First Nations, and the business community to make your vision reality. One wrong step can bleed your goodwill away.",
+                "But for now, you've won! Tonight you can celebrate, but tomorrow the work begins to build Canada strong."
+            ]
         } else {
+            // This outcome also occurs in the case of a Liberal tie for first
             header = "Liberal Minority Government!";
-            description = "TODO";
+            description = [
+                "A few months ago, the Liberal Party was down in the dumps, and electoral defeat was all but certain. Despite the herculean task of bringing back a party from death's door, you went for it. With your experienced background and disciplined campaign, you pulled through. Though a few Liberals are disappointed that you didn't win a majority government, most are jubilant to have won at all.",
+                "Your premiership will not be an easy one. You have a trade war to fight against President Trump, a housing crisis to resolve, and a sluggish economy to revive. Canadians have high hopes for you. Don't let them down.",
+                "Without a majority in the House of Commons, you will need to work with the opposition parties to pass your reforms. With the average lifespan of a minority government at two years, you have your work cut out for you to maintain parliamentary confidence and avoid an early end to your governance.",
+                "But for now, you've won! Tonight you can celebrate, but tomorrow the work begins to build Canada strong."
+            ];
         }
         setImage("https://i.imgur.com/MVBYnzH.jpeg")
         setMusic("https://www.youtube-nocookie.com/embed/71S9ou2gcqE?autoplay=1")
     } else if (winner.candidate == 301) {
         if (winner.electoral_votes >= 172) {
             header = "Conservative Majority Government!";
-            description = "TODO";
+            description = [
+                "You lost. Pierre Poilievre will be the 25th Prime Minister of Canada. Seeing where your Liberal party was a few months ago, perhaps this result was inevitable. That doesn't stop many Liberal partisans feeling like you fumbled the ball. Nevertheless, you could try to stay on as Liberal leader. Who knows, you might do better next time around.",
+                "With the Conservative back in power, you can only hope that Poilievre refrains from doing the worst that he is accused of sympathising with. All you can do is watch as he seeks to negotiate a new trade agreement with President Trump and implements his own solutions for housing and the economy.",
+                "Moving forward, your options are open. You could stay on and keep Poilievre accountable from the opposition benches, or you could quit politics altogether and return to the private sector. The choice is yours."
+            ];
             setImage("https://i.imgur.com/0tmKUV5.jpeg")
             setMusic("https://www.youtube-nocookie.com/embed/OSR4WpqyXxs?autoplay=1")
         } else {
             header = "Conservative Plurality!";
-            description = "TODO";
+            description = [
+                "A few months ago, the Liberal Party was down in the dumps, and electoral defeat was all but certain. Despite the herculean task of bringing back a party from death's door, you went for it. Despite failing to win a plurality of seats, you managed to hold back the Conservatives from winning a majority government. Though some Liberal partisans are disappointed that you didn't win the election outright, most are relieved that you have prevented Conservative majority rule.",
+                "You have a few options. As the incumbent Prime Minister, you could try to stay on with the tolerance of the smaller parties. This could inflame public sentiment as it would appear to be ignoring the will of the voters. It would also be precarious as your parliamentary allies could pull the plug at any moment.",
+                "Alternatively, you could resign and allow Pierre Poilievre to become the 25th Prime Minister of Canada. With the Conservatives lacking a majority government, you could hold them to account, prevent the most harmful policies from becoming law, and strike at an opportune moment to send the Conservatives back into Opposition.",
+                "The choice is yours. But whichever you choose, you will have to maneuver carefully to stay at the pinnacle of Canadian politics."
+            ];
             setImage("https://i.imgur.com/bWPXiN4.jpeg")
-            setMusic("https://www.youtube-nocookie.com/embed/t5nJ_mg_yMo?autoplay=1;start=10")
+            setMusic("https://www.youtube-nocookie.com/embed/t5nJ_mg_yMo?autoplay=1&start=10")
         }
     }
-    return `<h2>${header}</h2><p>${description}</p>`
+    s = `<h2>${header}</h2>`
+    for (desc of description) {
+        s += `<p>${desc}</p>`
+    }
+    return s
 }
 
 musicPlaying = false;
