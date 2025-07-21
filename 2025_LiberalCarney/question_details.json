@@ -10,6 +10,11 @@
                         "issue": 111,
                         "issue_score": 0.5
                     }
+                ],
+                "score_global": [
+                    {
+                        "global_multiplier": -0.02
+                    }
                 ]
             },
             {
@@ -22,6 +27,11 @@
                     }
                 ]
             }
+        ],
+        "score_global": [
+            {
+                "global_multiplier": 0.1
+            }
         ]
     },
     {
@@ -29,19 +39,39 @@
         "answers": [
             {
                 "answer": "If we are to win against Poilievre's Conservatives, we need to reach out and grow our tent. I will appear on Juno News and make my case to their conservative audience.",
-                "feedback": "The interview is extremely hostile. There's no way you got any positive impression among their audience."
+                "feedback": "The interview is extremely hostile. There's no way you got any positive impression among their audience.",
+                "score_global": [
+                    {
+                        "global_multiplier": -0.03
+                    }
+                ]
             },
             {
                 "answer": "Canadians want a serious leader. That's why I will first be appearing in a CBC interview with Rosemary Barton. My command of the issues and policy will demonstrate that I am the most qualified person to be Prime Minister.",
-                "feedback": "The interview goes fairly well, but Barton is adversarial and does not give you an easy time."
+                "feedback": "The interview goes fairly well, but Barton is adversarial and does not give you an easy time.",
+                "score_global": [
+                    {
+                        "global_multiplier": -0.015
+                    }
+                ]
             },
             {
                 "answer": "I want to make clear my commitment to French Canadians by first appearing in an interview with Patrice Roy on Radio-Canada.",
-                "feedback": "Quebec appreciates you putting them first, but your weak French impedes your ability to communicate clearly."
+                "feedback": "Quebec appreciates you putting them first, but your weak French impedes your ability to communicate clearly.",
+                "score_global": [
+                    {
+                        "global_multiplier": -0.015
+                    }
+                ]
             },
             {
                 "answer": "I'm going to try something different. Instead of a political interview, I'll go on the Daily Show with Jon Stewart.",
                 "feedback": "Going on an American show nets you some derision, but many Canadians watch more American TV than Canadian, and this allows you to reach them."
+            }
+        ],
+        "score_global": [
+            {
+                "global_multiplier": 0.1
             }
         ]
     },
@@ -66,11 +96,25 @@
                         "issue": 110,
                         "issue_score": 0.5
                     }
+                ],
+                "score_global": [
+                    {
+                        "global_multiplier": -0.1
+                    },
+                    {
+                        "affected_candidate": 302,
+                        "global_multiplier": 0.1
+                    }
                 ]
             },
             {
                 "answer": "Mr. Trump often says outlandish things. They don't deserve a response.",
-                "feedback": "Trump continues to bring up the idea, and your supporters demand a strong response."
+                "feedback": "Trump continues to bring up the idea, and your supporters demand a strong response.",
+                "score_global": [
+                    {
+                        "global_multiplier": -0.05
+                    }
+                ]
             },
             {
                 "answer": "Trump is threatening our sovereignty as an independent nation. We cannot let it stand. If he continues on this path, we should reconsider our military cooperation and seek other allies.",
@@ -82,6 +126,19 @@
                     }
                 ]
             }
+        ],
+        "score_global": [
+            {
+                "global_multiplier": 0.1
+            },
+            {
+                "affected_candidate": 302,
+                "global_multiplier": -0.1
+            },
+            {
+                "affected_candidate": 303,
+                "global_multiplier": -0.1
+            }
         ]
     },
     {
@@ -89,19 +146,60 @@
         "answers": [
             {
                 "answer": "These tariffs are a tax on American importers. That means American consumers will pay more for their food, their electricity, their gas, and other necessities. We should let Trump shoot himself in the foot.",
-                "feedback": "Workers in export industries are fearful of losing their jobs, and this does nothing to alleviate their fears."
+                "feedback": "Workers in export industries are fearful of losing their jobs, and this does nothing to alleviate their fears.",
+                "score_global": [
+                    {
+                        "global_multiplier": -0.03
+                    }
+                ]
             },
             {
                 "answer": "We need to retaliate with dollar-for-dollar, targeted counter-tariffs. Trump is a bully, and we can't give him an inch otherwise he will come back asking for more.",
-                "feedback": "This helps you ride the wave of Canadian patriotism sweeping through the country."
+                "feedback": "This helps you ride the wave of Canadian patriotism sweeping through the country.",
+                "score_issue": [
+                    {
+                        "issue": 110,
+                        "issue_score": -0.8
+                    }
+                ]
             },
             {
                 "answer": "This is an urgent threat to our economy. We need to do everything to address this issue, including targeted counter-tariffs, stronger border enforcement, and diversifying our trade partners.",
-                "feedback": "Canadians are happy to see you give this issue your full attention."
+                "feedback": "Canadians are happy to see you give this issue your full attention.",
+                "score_issue": [
+                    {
+                        "issue": 110,
+                        "issue_score": -0.5
+                    }
+                ]
             },
             {
                 "answer": "These tariffs would destroy our economy. We need to show Trump we are willing to work with him on the border and other issues.",
-                "feedback": "Caving to Trump makes you look weak, and tariffs end up going into effect anyway."
+                "feedback": "Caving to Trump makes you look weak, and tariffs end up going into effect anyway.",
+                "score_issue": [
+                    {
+                        "issue": 110,
+                        "issue_score": 0
+                    }
+                ],
+                "score_global": [
+                    {
+                        "global_multiplier": -0.05
+                    }
+                ]
+            }
+        ],
+        "score_global": [
+            {
+                "global_multiplier": 0.1
+            },
+            {
+                "affected_candidate": 302,
+                "global_multiplier": -0.1
+            },
+            {
+                "affected_candidate": 303,
+                "global_multiplier": -0.1
             }
         ]
     },
@@ -114,11 +212,22 @@
             },
             {
                 "answer": "We need a distraction from this. I'll put out some attacks on Poilievre for his lack of economic experience and his ties to elite circles.",
-                "feedback": "You're dragging this race into the mud."
+                "feedback": "You're dragging this race into the mud.",
+                "score_global": [
+                    {
+                        "affected_candidate": 301,
+                        "global_multiplier": -0.01
+                    }
+                ]
             },
             {
                 "answer": "The changes reported are technical in nature, and with respect to jobs, Brookfield has clearly stated that Canadian operations were not impacted. This is a non-issue.",
-                "feedback": "Nevertheless, this still leaves Canadians feeling concerned."
+                "feedback": "Nevertheless, this still leaves Canadians feeling concerned.",
+                "score_global": [
+                    {
+                        "global_multiplier": 0.03
+                    }
+                ]
             }
         ]
     },
@@ -131,15 +240,30 @@
             },
             {
                 "answer": "We're their biggest supplier of electricity, biggest supplier of fertilizer, biggest supplier of aluminium. They are dependent on us for trade, and we could consider putting some export restrictions.",
-                "feedback": "Aluminium and fertilizer producers are worried that they will pay the price for the trade war. However, this stance does make you look strong."
+                "feedback": "Aluminium and fertilizer producers are worried that they will pay the price for the trade war. However, this stance does make you look strong.",
+                "score_global": [
+                    {
+                        "global_multiplier": 0.02
+                    }
+                ]
             },
             {
                 "answer": "Trump always chickens out. We need to hold firm on our counter-tariffs, and he will come to the table. Just as he did in his first administration.",
-                "feedback": "This is a sensible response, but some are worried that this time is different."
+                "feedback": "This is a sensible response, but some are worried that this time is different.",
+                "score_global": [
+                    {
+                        "global_multiplier": 0.01
+                    }
+                ]
             },
             {
                 "answer": "We own a large amount of American treasury bonds. Hypothetically, if we were to sell them off, the American dollar could take a lot of damage.",
-                "feedback": "The insinuation appeals to your background as a banker."
+                "feedback": "The insinuation appeals to your background as a banker.",
+                "score_global": [
+                    {
+                        "global_multiplier": 0.015
+                    }
+                ]
             }
         ],
         "score_issue": [
@@ -195,6 +319,19 @@
                     }
                 ]
             }
+        ],
+        "score_global": [
+            {
+                "global_multiplier": 0.1
+            },
+            {
+                "affected_candidate": 302,
+                "global_multiplier": -0.1
+            },
+            {
+                "affected_candidate": 303,
+                "global_multiplier": -0.1
+            }
         ]
     },
     {
@@ -202,7 +339,13 @@
         "answers": [
             {
                 "answer": "We don't have time for this. I will call the election immediately and hit the campaign trail. We have to strike while the iron is hot.",
-                "feedback": "Rushing into the election helps limit how much the Conservatives can spend out of their massive warchest as election spending limits kick in."
+                "feedback": "Rushing into the election helps limit how much the Conservatives can spend out of their massive warchest as election spending limits kick in.",
+                "score_global": [
+                    {
+                        "affected_candidate": 301,
+                        "global_multiplier": -0.005
+                    }
+                ]
             },
             {
                 "answer": "I will reverse the increase in the capital gains tax and abolish the consumer carbon tax.",
@@ -230,6 +373,11 @@
                         "issue": 112,
                         "issue_score": -0.2
                     }
+                ],
+                "score_global": [
+                    {
+                        "global_multiplier": -0.02
+                    }
                 ]
             },
             {
@@ -242,6 +390,19 @@
                     }
                 ]
             }
+        ],
+        "score_global": [
+            {
+                "global_multiplier": 0.1
+            },
+            {
+                "affected_candidate": 302,
+                "global_multiplier": -0.1
+            },
+            {
+                "affected_candidate": 303,
+                "global_multiplier": -0.1
+            }
         ]
     },
     {
@@ -253,7 +414,18 @@
                 "score_issue": [
                     {
                         "issue": 110,
-                        "issue_score": -0.8
+                        "issue_score": -0.8,
+                        "issue_importance": 3
+                    }
+                ],
+                "score_global": [
+                    {
+                        "affected_candidate": 302,
+                        "global_multiplier": -0.1
+                    },
+                    {
+                        "affected_candidate": 303,
+                        "global_multiplier": -0.1
                     }
                 ]
             },
@@ -264,6 +436,12 @@
                     {
                         "issue": 112,
                         "issue_score": -0.3
+                    }
+                ],
+                "score_global": [
+                    {
+                        "affected_candidate": 301,
+                        "global_multiplier": -0.01
                     }
                 ]
             },
@@ -287,9 +465,20 @@
                 "score_issue": [
                     {
                         "issue": 112,
-                        "issue_score": 0.8
+                        "issue_score": 0.8,
+                        "issue_importance": 3
+                    }
+                ],
+                "score_global": [
+                    {
+                        "global_multiplier": -0.01
                     }
                 ]
+            }
+        ],
+        "score_global": [
+            {
+                "global_multiplier": 0.1
             }
         ]
     },
@@ -315,7 +504,16 @@
         "answers": [
             {
                 "answer": "Pierre Poilievre is the type of politician who is a life long politician, worships the market, and sees opportunity in tragedy to push an agenda of cutting taxes and taking away the social safety net.",
-                "feedback": "This line of attack contrasts Poilievre's experience (or lack thereof) with your own impressive qualifications."
+                "feedback": "This line of attack contrasts Poilievre's experience (or lack thereof) with your own impressive qualifications.",
+                "score_global": [
+                    {
+                        "global_multiplier": 0.01
+                    },
+                    {
+                        "affected_candidate": 301,
+                        "global_multiplier": -0.005
+                    }
+                ]
             },
             {
                 "answer": "I'm going to run a positive campaign and avoid mentioning Poilievre.",
@@ -323,11 +521,22 @@
             },
             {
                 "answer": "Mr. Poilievre is running on the same playbook as President Trump. You can't stand up to someone if you're using their playbook. Simple as that.",
-                "feedback": "Tying Poilievre with Trump is a good way of hurting his image."
+                "feedback": "Tying Poilievre with Trump is a good way of hurting his image.",
+                "score_global": [
+                    {
+                        "affected_candidate": 301,
+                        "global_multiplier": -0.01
+                    }
+                ]
             },
             {
                 "answer": "Pierre Poilievre is weird. He refuses to get security clearance, shills for bitcoin, and disrespects political norms. And what's with all those three word slogans?",
-                "feedback": "This line of attack might play well on social media, but it doesn't seem to move the needle on voting intentions. Meanwhile, Poilievre goes after your party over the cost-of-living."
+                "feedback": "This line of attack might play well on social media, but it doesn't seem to move the needle on voting intentions. Meanwhile, Poilievre goes after your party over the cost-of-living.",
+                "score_global": [
+                    {
+                        "global_multiplier": -0.02
+                    }
+                ]
             }
         ]
     },
@@ -336,11 +545,23 @@
         "answers": [
             {
                 "answer": "I will have all my campaign materials translated into French, but I will avoid speaking French any more than necessary.",
-                "feedback": "French Canadians feel snubbed that their language is not being accorded the equality supposedly enshrined by your party and the country."
+                "feedback": "French Canadians feel snubbed that their language is not being accorded the equality supposedly enshrined by your party and the country.",
+                "score_global": [
+                    {
+                        "affected_candidate": 304,
+                        "global_multiplier": 0.1
+                    }
+                ]
             },
             {
                 "answer": "I will put every effort into making my campaign bilingual. I will not hold back from speaking in French at rallies, even in English Canada. I will give as many French interviews as possible.",
-                "feedback": "French Canadians are glad you are making an effort. This does alienate some Anglophones though."
+                "feedback": "French Canadians are glad you are making an effort. This does alienate some Anglophones though.",
+                "score_global": [
+                    {
+                        "affected_candidate": 304,
+                        "global_multiplier": -0.1
+                    }
+                ]
             },
             {
                 "answer": "I will prioritize making myself understood. That means speaking French and English in the respective communities. I will not hesitate to switch to English when I have difficulty expressing myself.",
@@ -377,11 +598,30 @@
                         "issue": 110,
                         "issue_score": -0.8
                     }
+                ],
+                "score_global": [
+                    {
+                        "affected_candidate": 301,
+                        "global_multiplier": -0.01
+                    },
+                    {
+                        "affected_candidate": 302,
+                        "global_multiplier": -0.1
+                    },
+                    {
+                        "affected_candidate": 303,
+                        "global_multiplier": -0.1
+                    }
                 ]
             },
             {
                 "answer": "I will eviscerate these so-called \"progressive\" parties for splitting the vote.",
-                "feedback": "This negativity turns many progressives away from considering your candidacy and gives more attention to the parties to your left."
+                "feedback": "This negativity turns many progressives away from considering your candidacy and gives more attention to the parties to your left.",
+                "score_global": [
+                    {
+                        "global_multiplier": -0.1
+                    }
+                ]
             },
             {
                 "answer": "We need to focus on winning over conservatives. I will criticize the class warfare type language prominent in much of progressive politics and avoid any discussion of inequality.",
@@ -391,7 +631,17 @@
                         "issue": 112,
                         "issue_score": 0.8
                     }
+                ],
+                "score_global": [
+                    {
+                        "global_multiplier": -0.03
+                    }
                 ]
+            }
+        ],
+        "score_global": [
+            {
+                "global_multiplier": 0.1
             }
         ]
     },
@@ -410,6 +660,11 @@
                         "issue": 113,
                         "issue_score": 0.6
                     }
+                ],
+                "score_global": [
+                    {
+                        "global_multiplier": -0.05
+                    }
                 ]
             },
             {
@@ -423,6 +678,11 @@
                     {
                         "issue": 112,
                         "issue_score": 0.6
+                    }
+                ],
+                "score_global": [
+                    {
+                        "global_multiplier": -0.03
                     }
                 ]
             },
@@ -452,7 +712,21 @@
                         "issue": 112,
                         "issue_score": 0.2
                     }
+                ],
+                "score_global": [
+                    {
+                        "global_multiplier": -0.06
+                    }
                 ]
+            }
+        ],
+        "score_global": [
+            {
+                "global_multiplier": 0.1
+            },
+            {
+                "affected_candidate": 302,
+                "global_multiplier": -0.08
             }
         ]
     },
@@ -461,7 +735,12 @@
         "answers": [
             {
                 "answer": "I will go on any popular program that will have me. As a new face in politics, I need to introduce myself to as wide a range of people as possible.",
-                "feedback": "Some programs are virulently opposed to you and take the opportunity to dig into you. Additionally, some people criticize you for legitimizing outlets that are politically fringe despite their large audiences."
+                "feedback": "Some programs are virulently opposed to you and take the opportunity to dig into you. Additionally, some people criticize you for legitimizing outlets that are politically fringe despite their large audiences.",
+                "score_global": [
+                    {
+                        "global_multiplier": -0.05
+                    }
+                ]
             },
             {
                 "answer": "I will give all the usual interviews with the press. I'll also go on business-oriented podcasts and cultural media to make a wide appeal.",
@@ -469,11 +748,21 @@
             },
             {
                 "answer": "Canadians want a serious leader. I will only take interviews from established, journalistic, media organizations.",
-                "feedback": "Journalists are happy to be given somewhat exclusive access to you. However, you don't reach audiences of alternative media."
+                "feedback": "Journalists are happy to be given somewhat exclusive access to you. However, you don't reach audiences of alternative media.",
+                "score_global": [
+                    {
+                        "global_multiplier": -0.03
+                    }
+                ]
             },
             {
                 "answer": "I want to limit my media exposure. I will focus on campaigning and sticking to my rehearsed message.",
-                "feedback": "This is a safe approach, but you may be leaving something on the table."
+                "feedback": "This is a safe approach, but you may be leaving something on the table.",
+                "score_global": [
+                    {
+                        "global_multiplier": -0.06
+                    }
+                ]
             }
         ]
     },
@@ -498,6 +787,11 @@
                         "issue": 112,
                         "issue_score": 0.5
                     }
+                ],
+                "score_global": [
+                    {
+                        "global_multiplier": -0.02
+                    }
                 ]
             },
             {
@@ -512,6 +806,11 @@
                         "issue": 114,
                         "issue_score": -0.5,
                         "issue_importance": 0.5
+                    }
+                ],
+                "score_global": [
+                    {
+                        "global_multiplier": 0.02
                     }
                 ]
             },
@@ -534,6 +833,11 @@
                         "issue_score": 0.5,
                         "issue_importance": 0.5
                     }
+                ],
+                "score_global": [
+                    {
+                        "global_multiplier": 0.02
+                    }
                 ]
             }
         ]
@@ -543,7 +847,16 @@
         "answers": [
             {
                 "answer": "Why not? I will attend to show I do not fear confrontation.",
-                "feedback": "The pace and language of the debate leave you appearing out of your depth. Blanchet wins the debate and Poilievre has a strong performance."
+                "feedback": "The pace and language of the debate leave you appearing out of your depth. Blanchet wins the debate and Poilievre has a strong performance.",
+                "score_global": [
+                    {
+                        "global_multiplier": -0.02
+                    },
+                    {
+                        "affected_candidate": 304,
+                        "global_multiplier": 0.05
+                    }
+                ]
             },
             {
                 "answer": "I will refuse on the grounds that Pedneault, the Green party leader, was not invited.",
@@ -558,7 +871,12 @@
             },
             {
                 "answer": "The network is charging $75,000 for my attendance. My campaign can easily pay for this, but I will refuse to attend on principle. Debates and media appearances should not be bought and sold, period.",
-                "feedback": "This makes sense seeing as this is the first time a network has charged the candidates to debate."
+                "feedback": "This makes sense seeing as this is the first time a network has charged the candidates to debate.",
+                "score_global": [
+                    {
+                        "global_multiplier": 0.01
+                    }
+                ]
             }
         ]
     },
@@ -571,11 +889,21 @@
             },
             {
                 "answer": "I can't allow this to derail the campaign. I will quickly drop his candidacy for Markham-Unionville and nominate Peter Yuen instead.",
-                "feedback": "Paul Chiang understands and bows out gracefully. However, the media needle Peter Yuen for his ties to Chinese community organizations linked with the Chinese government."
+                "feedback": "Paul Chiang understands and bows out gracefully. However, the media needle Peter Yuen for his ties to Chinese community organizations linked with the Chinese government.",
+                "score_global": [
+                    {
+                        "global_multiplier": 0.01
+                    }
+                ]
             },
             {
                 "answer": "I will defend Paul Chiang and argue that his joke, while of bad taste, has no bearing on his qualifications as an MP. He is an excellent legislator and representative for his community, and I stand by his candidacy.",
-                "feedback": "The RCMP open an investigation into the event, and Paul Chiang chooses to resign his candidacy. Furthermore, your lack of clear condemnation for his comment infuriates Hong Kong diaspora groups."
+                "feedback": "The RCMP open an investigation into the event, and Paul Chiang chooses to resign his candidacy. Furthermore, your lack of clear condemnation for his comment infuriates Hong Kong diaspora groups.",
+                "score_global": [
+                    {
+                        "global_multiplier": -0.02
+                    }
+                ]
             }
         ]
     },
@@ -584,7 +912,12 @@
         "answers": [
             {
                 "answer": "I have the experience it takes to make the right decisions on the economy. I will have a relentless focus on the economy and delivering for Canadians.",
-                "feedback": "Nice sentiment, but a little light on details. Voters want to know that you have a concrete plan."
+                "feedback": "Nice sentiment, but a little light on details. Voters want to know that you have a concrete plan.",
+                "score_global": [
+                    {
+                        "global_multiplier": -0.03
+                    }
+                ]
             },
             {
                 "answer": "We are masters in our own home. I have a plan for free trade within Canada and expediting major economic projects. I will also use public investments to catalyze private investment into building Canada strong.",
@@ -604,6 +937,11 @@
                         "issue": 112,
                         "issue_score": 1
                     }
+                ],
+                "score_global": [
+                    {
+                        "global_multiplier": -0.02
+                    }
                 ]
             },
             {
@@ -614,7 +952,17 @@
                         "issue": 112,
                         "issue_score": 0
                     }
+                ],
+                "score_global": [
+                    {
+                        "global_multiplier": -0.04
+                    }
                 ]
+            }
+        ],
+        "score_global": [
+            {
+                "global_multiplier": 0.1
             }
         ]
     },
@@ -623,15 +971,30 @@
         "answers": [
             {
                 "answer": "I'm no longer with Brookfield and the company followed all the rules. Next question.",
-                "feedback": "Way to dodge the question."
+                "feedback": "Way to dodge the question.",
+                "score_global": [
+                    {
+                        "global_multiplier": -0.03
+                    }
+                ]
             },
             {
                 "answer": "I know how the world works. That gives me the ability to put in place all of the necessary rules to ensure that the appropriate taxes are paid here in Canada.",
-                "feedback": "You're alluding to tax reform but without any details. Maybe hoping that Canadians trust you is your best option."
+                "feedback": "You're alluding to tax reform but without any details. Maybe hoping that Canadians trust you is your best option.",
+                "score_global": [
+                    {
+                        "global_multiplier": -0.02
+                    }
+                ]
             },
             {
                 "answer": "The structure was to make sure that Canadian pensioners could get the most benefit.",
-                "feedback": "This response leaves people scratching their heads."
+                "feedback": "This response leaves people scratching their heads.",
+                "score_global": [
+                    {
+                        "global_multiplier": -0.04
+                    }
+                ]
             },
             {
                 "answer": "I will be releasing a detailed plan on how we will close tax loopholes and ensure everyone pays their fair share.",
@@ -654,15 +1017,30 @@
             },
             {
                 "answer": "The cost of healthcare is increasing at an unsustainable rate. We need to come up with innovative solutions to bring down costs, including digitization and AI doctors.",
-                "feedback": "Canadians are worried that these solutions may compromise quality of care."
+                "feedback": "Canadians are worried that these solutions may compromise quality of care.",
+                "score_global": [
+                    {
+                        "global_multiplier": -0.04
+                    }
+                ]
             },
             {
                 "answer": "We need to invest more into our healthcare system. Procedure wait times are unacceptably high, and I will be laser focused on bringing them down.",
-                "feedback": "This garners some support, but others are worried about how this will be paid for."
+                "feedback": "This garners some support, but others are worried about how this will be paid for.",
+                "score_global": [
+                    {
+                        "global_multiplier": -0.05
+                    }
+                ]
             },
             {
                 "answer": "Healthcare is a provincial issue, and I will respect their jurisdiction. I will maintain provincial health transfers and work collaboratively with the premiers to find improvements.",
-                "feedback": "This is a moderate position, though it draws some criticism for its passiveness."
+                "feedback": "This is a moderate position, though it draws some criticism for its passiveness.",
+                "score_global": [
+                    {
+                        "global_multiplier": -0.03
+                    }
+                ]
             }
         ]
     },
@@ -671,7 +1049,12 @@
         "answers": [
             {
                 "answer": "I will cite the statistics that indicate that crime rates are low compared to the historic average. We remain a safe country.",
-                "feedback": "Dismissing the concerns of voters won't get them to vote for you."
+                "feedback": "Dismissing the concerns of voters won't get them to vote for you.",
+                "score_global": [
+                    {
+                        "global_multiplier": -0.04
+                    }
+                ]
             },
             {
                 "answer": "We need to expand police powers to crack down on crime. For example, police should be authorized to search mail with a general warrant. We should also increase penalties for some crimes.",
@@ -680,6 +1063,11 @@
                     {
                         "issue": 113,
                         "issue_score": 0.3
+                    }
+                ],
+                "score_global": [
+                    {
+                        "global_multiplier": -0.02
                     }
                 ]
             },
@@ -691,6 +1079,11 @@
                         "issue": 113,
                         "issue_score": -0.4
                     }
+                ],
+                "score_global": [
+                    {
+                        "global_multiplier": -0.01
+                    }
                 ]
             },
             {
@@ -700,6 +1093,11 @@
                     {
                         "issue": 112,
                         "issue_score": -0.5
+                    }
+                ],
+                "score_global": [
+                    {
+                        "global_multiplier": -0.01
                     }
                 ]
             }
@@ -733,6 +1131,11 @@
                         "issue": 113,
                         "issue_score": -0.5
                     }
+                ],
+                "score_global": [
+                    {
+                        "global_multiplier": -0.06
+                    }
                 ]
             },
             {
@@ -742,6 +1145,11 @@
                     {
                         "issue": 113,
                         "issue_score": -1
+                    }
+                ],
+                "score_global": [
+                    {
+                        "global_multiplier": -0.05
                     }
                 ]
             },
@@ -756,6 +1164,11 @@
                     {
                         "issue": 112,
                         "issue_score": 0.6
+                    }
+                ],
+                "score_global": [
+                    {
+                        "global_multiplier": -0.03
                     }
                 ]
             }
@@ -782,6 +1195,11 @@
                         "issue": 112,
                         "issue_score": 1
                     }
+                ],
+                "score_global": [
+                    {
+                        "global_multiplier": -0.02
+                    }
                 ]
             },
             {
@@ -791,6 +1209,11 @@
                     {
                         "issue": 112,
                         "issue_score": -0.2
+                    }
+                ],
+                "score_global": [
+                    {
+                        "global_multiplier": -0.02
                     }
                 ]
             },
@@ -805,7 +1228,12 @@
         "answers": [
             {
                 "answer": "Housing is a provincial responsibility. I am calling on the Premiers to step up and find solutions on this issue.",
-                "feedback": "Offering no solutions to a leading issue wins you no favours."
+                "feedback": "Offering no solutions to a leading issue wins you no favours.",
+                "score_global": [
+                    {
+                        "global_multiplier": -0.06
+                    }
+                ]
             },
             {
                 "answer": "We have a massive housing shortage. We need to throw everything we can at this issue, including working with municipalities to relax zoning bylaws, investing to catalyze the private sector into action, exploring ways to increase construction productivity such as modular housing, and cutting the tax burden on home builders.",
@@ -825,6 +1253,11 @@
                         "issue": 112,
                         "issue_score": 1
                     }
+                ],
+                "score_global": [
+                    {
+                        "global_multiplier": -0.02
+                    }
                 ]
             },
             {
@@ -834,6 +1267,11 @@
                     {
                         "issue": 112,
                         "issue_score": -0.3
+                    }
+                ],
+                "score_global": [
+                    {
+                        "global_multiplier": -0.02
                     }
                 ]
             }
@@ -848,11 +1286,21 @@
             },
             {
                 "answer": "I will balance the operating budget by the end of the first year in office without any new taxes by making the government more efficient.",
-                "feedback": "Analysts lambast your plans as infeasible. Voters are worried that this will require extensive cuts to public services."
+                "feedback": "Analysts lambast your plans as infeasible. Voters are worried that this will require extensive cuts to public services.",
+                "score_global": [
+                    {
+                        "global_multiplier": -0.06
+                    }
+                ]
             },
             {
                 "answer": "I will focus on making investments that will grow the economy, allowing us to balance the budget without service cuts.",
-                "feedback": "The media point out that this sounds awfully similar to the infamous Trudeau line that \"the budget will balance itself\"."
+                "feedback": "The media point out that this sounds awfully similar to the infamous Trudeau line that \"the budget will balance itself\".",
+                "score_global": [
+                    {
+                        "global_multiplier": -0.03
+                    }
+                ]
             },
             {
                 "answer": "I will both balance the budget and protect the funding of our public services. This will be made possible by a wealth tax on the ultra-wealthy, increased taxes on the profits of large corporations, and cracking down on tax evasion.",
@@ -861,6 +1309,11 @@
                     {
                         "issue": 112,
                         "issue_score": -0.6
+                    }
+                ],
+                "score_global": [
+                    {
+                        "global_multiplier": -0.02
                     }
                 ]
             }
@@ -877,6 +1330,11 @@
                         "issue": 113,
                         "issue_score": -1
                     }
+                ],
+                "score_global": [
+                    {
+                        "global_multiplier": -0.02
+                    }
                 ]
             },
             {
@@ -891,7 +1349,12 @@
             },
             {
                 "answer": "This is a far away issue that should not be of interest to Canadians. We have far more important issues to focus on, such as affordability and the economy.",
-                "feedback": "This angers those who believe the events in Gaza constitute genocide."
+                "feedback": "This angers those who believe the events in Gaza constitute genocide.",
+                "score_global": [
+                    {
+                        "global_multiplier": -0.04
+                    }
+                ]
             },
             {
                 "answer": "Israel has a right to defend itself. As the only democracy in the Middle East, its neighbours are a constant threat to it. To the Israeli people, I stand with you.",
@@ -900,6 +1363,11 @@
                     {
                         "issue": 113,
                         "issue_score": 0.5
+                    }
+                ],
+                "score_global": [
+                    {
+                        "global_multiplier": -0.06
                     }
                 ]
             }
@@ -934,6 +1402,11 @@
                         "issue": 114,
                         "issue_score": 0.2
                     }
+                ],
+                "score_global": [
+                    {
+                        "global_multiplier": -0.02
+                    }
                 ]
             },
             {
@@ -943,6 +1416,11 @@
                     {
                         "issue": 114,
                         "issue_score": -1
+                    }
+                ],
+                "score_global": [
+                    {
+                        "global_multiplier": -0.06
                     }
                 ]
             },
@@ -957,6 +1435,11 @@
                     {
                         "issue": 114,
                         "issue_score": 1
+                    }
+                ],
+                "score_global": [
+                    {
+                        "global_multiplier": -0.02
                     }
                 ]
             }
@@ -973,6 +1456,11 @@
                         "issue": 112,
                         "issue_score": 0.5
                     }
+                ],
+                "score_global": [
+                    {
+                        "global_multiplier": -0.02
+                    }
                 ]
             },
             {
@@ -981,7 +1469,12 @@
             },
             {
                 "answer": "We live in an increasingly dangerous world. We need large investments into the military, including 3.5% of GDP for personnel and procurement and an additional 1.5% of GDP for building infrastructure to support our troops from coast to coast to coast.",
-                "feedback": "It's good to be ambitious, but this represents tripling the military budget which goes a little far for some."
+                "feedback": "It's good to be ambitious, but this represents tripling the military budget which goes a little far for some.",
+                "score_global": [
+                    {
+                        "global_multiplier": -0.04
+                    }
+                ]
             },
             {
                 "answer": "With the threats from down south, it has become clear that we must become more self-reliant for our defence. I will cancel our participation in the F-35 program and launch a review of all procurement agreements with the US. We will aim to maximize domestic procurement and cooperate with the ReArm Europe plan.",
@@ -1014,6 +1507,11 @@
                         "issue": 112,
                         "issue_score": -0.2
                     }
+                ],
+                "score_global": [
+                    {
+                        "global_multiplier": -0.04
+                    }
                 ]
             },
             {
@@ -1024,6 +1522,15 @@
                         "issue": 112,
                         "issue_score": 1
                     }
+                ],
+                "score_global": [
+                    {
+                        "global_multiplier": -0.02
+                    },
+                    {
+                        "affected_candidate": 302,
+                        "global_multiplier": 0.05
+                    }
                 ]
             }
         ]
@@ -1033,7 +1540,12 @@
         "answers": [
             {
                 "answer": "I'll take the fight to Poilievre. I will hammer him on his populist approach to politics and compare him with Donald Trump.",
-                "feedback": "Poilievre outmaneuvers you and hammers the rise in cost-of-living during the last decade of Liberal governance."
+                "feedback": "Poilievre outmaneuvers you and hammers the rise in cost-of-living during the last decade of Liberal governance.",
+                "score_global": [
+                    {
+                        "global_multiplier": -0.04
+                    }
+                ]
             },
             {
                 "answer": "I will stay cool and collected, focusing on fending off attacks from my opponents.",
@@ -1041,7 +1553,12 @@
             },
             {
                 "answer": "I will use the debate as a platform to communicate my economic plan. I don't just talk; I have a strong record for managing economies.",
-                "feedback": "Your long detailed answers delivered in your monotone voice fail to capture the imagination of Canadians."
+                "feedback": "Your long detailed answers delivered in your monotone voice fail to capture the imagination of Canadians.",
+                "score_global": [
+                    {
+                        "global_multiplier": -0.02
+                    }
+                ]
             },
             {
                 "answer": "I will make a full-throated defense of our valued social programs. From childcare, to dentalcare, to pharmacare, we Liberals have built a more equal and fair society.",
@@ -1050,6 +1567,11 @@
                     {
                         "issue": 112,
                         "issue_score": -0.4
+                    }
+                ],
+                "score_global": [
+                    {
+                        "global_multiplier": -0.02
                     }
                 ]
             }
@@ -1081,15 +1603,30 @@
             },
             {
                 "answer": "I will call for stronger gun control to prevent attacks like these. If even one such event can be prevented, we have a responsibility to act.",
-                "feedback": "It was a vehicle-ramming attack, not a shooting. You are criticized for blatantly politicizing the situation."
+                "feedback": "It was a vehicle-ramming attack, not a shooting. You are criticized for blatantly politicizing the situation.",
+                "score_global": [
+                    {
+                        "global_multiplier": -0.06
+                    }
+                ]
             },
             {
                 "answer": "We need more funds for mental health care to prevent tragedies like this from occurring.",
-                "feedback": "The culprit was already under mental health supervision with no indication of being a public safety risk."
+                "feedback": "The culprit was already under mental health supervision with no indication of being a public safety risk.",
+                "score_global": [
+                    {
+                        "global_multiplier": -0.02
+                    }
+                ]
             },
             {
                 "answer": "The culprit was known to police. He should have been locked up before he could cause so much harm.",
-                "feedback": "He was also never previously charged with any crime. Your comment draws the ire of civil rights groups."
+                "feedback": "He was also never previously charged with any crime. Your comment draws the ire of civil rights groups.",
+                "score_global": [
+                    {
+                        "global_multiplier": -0.04
+                    }
+                ]
             }
         ]
     },
@@ -1106,7 +1643,12 @@
             },
             {
                 "answer": "Pierre Poilievre's war on \"woke\" is dangerous and has no place in Canada. He is stoking fears and resentment, entrenching division, and legitimizing extreme positions. We need to send a clear message that this divisive American approach is not welcome here.",
-                "feedback": "Hopefully these attacks on Poilievre bear fruit. Good luck tomorrow."
+                "feedback": "Hopefully these attacks on Poilievre bear fruit. Good luck tomorrow.",
+                "score_global": [
+                    {
+                        "global_multiplier": -0.02
+                    }
+                ]
             },
             {
                 "answer": "Your dreams are the same as mine. A country that is safe, where people are kind to each other and get along, where everyone has a place to call home, and people can be who they want to be. Our children should be able to dream about a positive future, not worry about an economic crisis. With everyone pulling together, we will emerge stronger.",
