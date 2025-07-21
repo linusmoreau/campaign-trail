@@ -112,6 +112,9 @@ class Code2Generator:
     
     def extract_groupings(self) -> pd.DataFrame:
         states = self.extract_provinces().rename(columns={"province": "grouping"})
+        all_group = states.copy()
+        all_group = all_group.assign(grouping="all")
+        states = pd.concat((all_group, states))
         
         i = len(states)
         groupings = self.file_manager.load_json(self.election_dir, "state_groupings.json")
@@ -163,7 +166,7 @@ class Code2Generator:
         self.generate_candidate_state_multiplier_json(df)
         
     def generate_questions_answers_jsons(self, df: pd.DataFrame, groupings: pd.DataFrame):
-        state_name_to_pk = df.set_index("name").T.to_dict()
+        state_name_to_pk = df.set_index("name").to_dict()["state_pk"]
         state_groupings = groupings.groupby("grouping")["name"].apply(list).T.to_dict()
         transcriber = Transcriber(self.scenario_name)
         transcriber.to_game_format(state_name_to_pk, state_groupings) # type: ignore as we ensure the types are correct elsewhere
@@ -218,7 +221,7 @@ class Code2Generator:
                     "name": row["name"].replace("--", "—"),
                     "abbr": row["name"],
                     "electoral_votes": 1,
-                    "popular_votes": int(row["votes"]),
+                    "popular_votes": int(row["votes"]) - 500,
                     "poll_closing_time": POLL_CLOSING_TIMES[provinces[row["name"]]["province"]],
                     "winner_take_all_flg": 1,
                     "election": 20
@@ -247,6 +250,7 @@ class Code2Generator:
 
 
     def calculate_state_multiplier(self, df: pd.DataFrame):
+        PLAYER_ADJUSTMENT = 0.97
         config = self.file_manager.load_json(self.scenario_dir, "config.json")
         vote_variable = config["vote_variable"]
         player_candidate = config["candidate"]
@@ -322,7 +326,10 @@ class Code2Generator:
             global_multiplier = global_multipliers[candidate]
             answer_state_multiplier = state_multipliers.get((candidate, state), 0)
             issue_state_multiplier = issue_state_multipliers[(candidate, state)]
-            return (share / issue_state_multiplier - answer_state_multiplier) / global_multiplier
+            multiplier = (share / issue_state_multiplier - answer_state_multiplier) / global_multiplier
+            if candidate == player_candidate:
+                multiplier /= PLAYER_ADJUSTMENT
+            return multiplier
 
         df["state_multiplier"] = df.apply(lambda row: state_multiplier_formula(row), axis=1)
         return df

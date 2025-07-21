@@ -4,16 +4,28 @@
         "answers": [
             {
                 "answer": "I will accept the position of Finance Minister. Our country is facing one of the most severe crises of its history. To get through it, we will need big changes. I can bring that change. It is my solemn duty to help Canada get through this crisis.",
-                "feedback": "Your addition to the cabinet rejuvenates the party but is unable to save Trudeau's reputation. He resigns, and you are slightly tarnished for being in government with him for the short stint."
+                "feedback": "Your addition to the cabinet rejuvenates the party but is unable to save Trudeau's reputation. He resigns, and you are slightly tarnished for being in government with him for the short stint.",
+                "score_issue": [
+                    {
+                        "issue": 111,
+                        "issue_score": 0.5
+                    }
+                ]
             },
             {
                 "answer": "I will not join the Trudeau Cabinet. The Prime Minister is currently fighting through a political firestorm, and I can't risk getting caught up in it.",
-                "feedback": "Good call. The pressure on Trudeau continues to build, and he announces his resignation in the New Year."
+                "feedback": "Good call. The pressure on Trudeau continues to build, and he announces his resignation in the New Year.",
+                "score_issue": [
+                    {
+                        "issue": 111,
+                        "issue_score": -0.5
+                    }
+                ]
             }
         ]
     },
     {
-        "question": "[January 2025] Justin Trudeau has announced his resignation as Prime Minister and Liberal leader in the face of ever mounting pressure. You will run for leadership of the Liberal Party, but most Canadians are unfamiliar with you. How will you introduce yourself to Canadians?",
+        "question": "[January 2025] Justin Trudeau has announced his resignation as Prime Minister and Liberal leader in the face of ever mounting pressure. This is your chance to run for leadership of the Liberal Party, but most Canadians are unfamiliar with you. How will you introduce yourself to Canadians?",
         "answers": [
             {
                 "answer": "If we are to win against Poilievre's Conservatives, we need to reach out and grow our tent. I will appear on Juno News and make my case to their conservative audience.",
@@ -38,11 +50,23 @@
         "answers": [
             {
                 "answer": "The bottom line is that it's not going to happen. We can cooperate on trade or on defence, but we do things differently here.",
-                "feedback": "This balances the need for a clear dismissal of the idea without further damaging Canada-US relations."
+                "feedback": "This balances the need for a clear dismissal of the idea without further damaging Canada-US relations.",
+                "score_issue": [
+                    {
+                        "issue": 110,
+                        "issue_score": -0.5
+                    }
+                ]
             },
             {
                 "answer": "I support anything that promotes Canadian prosperity. Closer integration with the United States could benefit both our countries, and I would be interested in exploring that.",
-                "feedback": "This may appeal to some in your globalist bubble, but your supporters are outraged at the idea of integration with the Trumpian United States."
+                "feedback": "This may appeal to some in your globalist bubble, but your supporters are outraged at the idea of integration with the Trumpian United States.",
+                "score_issue": [
+                    {
+                        "issue": 110,
+                        "issue_score": 0.5
+                    }
+                ]
             },
             {
                 "answer": "Mr. Trump often says outlandish things. They don't deserve a response.",
@@ -50,7 +74,13 @@
             },
             {
                 "answer": "Trump is threatening our sovereignty as an independent nation. We cannot let it stand. If he continues on this path, we should reconsider our military cooperation and seek other allies.",
-                "feedback": "This is a strong answer, but risks escalating the situation."
+                "feedback": "This is a strong answer, but risks escalating the situation.",
+                "score_issue": [
+                    {
+                        "issue": 110,
+                        "issue_score": -1
+                    }
+                ]
             }
         ]
     },
@@ -111,6 +141,12 @@
                 "answer": "We own a large amount of American treasury bonds. Hypothetically, if we were to sell them off, the American dollar could take a lot of damage.",
                 "feedback": "The insinuation appeals to your background as a banker."
             }
+        ],
+        "score_issue": [
+            {
+                "issue": 110,
+                "issue_score": -0.8
+            }
         ]
     },
     {
@@ -122,15 +158,42 @@
             },
             {
                 "answer": "I'll emphasize change. I will make clear that I want to turn the country around, distancing myself from Trudeau and his record.",
-                "feedback": "You're leaning into an outsider image. This is refreshing to many, but may disappoint those who supported many of Trudeau's reforms."
+                "feedback": "You're leaning into an outsider image. This is refreshing to many, but may disappoint those who supported many of Trudeau's reforms.",
+                "score_issue": [
+                    {
+                        "issue": 111,
+                        "issue_score": -0.5
+                    }
+                ]
             },
             {
                 "answer": "Laser focus on the economy. I will talk extensively about my detailed proposals for free trade within Canada, efficiency in the public service, and tax cuts for the middle class.",
-                "feedback": "Your focus on the economy synergizes with professional experience."
+                "feedback": "Your focus on the economy synergizes with professional experience.",
+                "score_issue": [
+                    {
+                        "issue": 112,
+                        "issue_score": 0.8
+                    }
+                ]
             },
             {
                 "answer": "I will talk about the Liberal values that unite us. These values drive us to work toward social progress, to protect the environment, and to support each other. I will carry this Liberal torch to make Canada a shining example, from coast to coast to coast.",
-                "feedback": "This message has you leaning into a more progressive image."
+                "feedback": "This message has you leaning into a more progressive image.",
+                "score_issue": [
+                    {
+                        "issue": 112,
+                        "issue_score": -0.4,
+                        "issue_importance": 0.5
+                    },
+                    {
+                        "issue": 113,
+                        "issue_score": -0.6
+                    },
+                    {
+                        "issue": 114,
+                        "issue_score": -0.6
+                    }
+                ]
             }
         ]
     },
@@ -143,15 +206,41 @@
             },
             {
                 "answer": "I will reverse the increase in the capital gains tax and abolish the consumer carbon tax.",
-                "feedback": "This ends two flagship policies of the Trudeau administration and undermines the Conservatives' messaging against you."
+                "feedback": "This ends two flagship policies of the Trudeau administration and undermines the Conservatives' messaging against you.",
+                "score_issue": [
+                    {
+                        "issue": 111,
+                        "issue_score": -0.6
+                    },
+                    {
+                        "issue": 112,
+                        "issue_score": 1
+                    },
+                    {
+                        "issue": 114,
+                        "issue_score": 0.6
+                    }
+                ]
             },
             {
                 "answer": "I will call Parliament back into session to send out $400 cheques to every Canadian to support families through the affordability crisis.",
-                "feedback": "Trudeau tried a similar policy a few months ago which contributed to the collapse of his government. Let's hope Canadians appreciate this small financial help."
+                "feedback": "Trudeau tried a similar policy a few months ago which contributed to the collapse of his government. Let's hope Canadians appreciate this small financial help.",
+                "score_issue": [
+                    {
+                        "issue": 112,
+                        "issue_score": -0.2
+                    }
+                ]
             },
             {
                 "answer": "I will call Parliament back into session to approve funds to support workers who may lose their jobs because of the American tariffs.",
-                "feedback": "This move underscores your focus on trade issues."
+                "feedback": "This move underscores your focus on trade issues.",
+                "score_issue": [
+                    {
+                        "issue": 112,
+                        "issue_score": -0.2
+                    }
+                ]
             }
         ]
     },
@@ -160,19 +249,47 @@
         "answers": [
             {
                 "answer": "Elbows up! Canada never, ever, will be part of America in any way, shape or form. Trump is trying to break us, so America can own us. But this is Canada. We decide what happens here. Never 51!",
-                "feedback": "This is a strong message that can help rally voters under your banner as Canadians become increasingly wary of the American threat."
+                "feedback": "This is a strong message that can help rally voters under your banner as Canadians become increasingly wary of the American threat.",
+                "score_issue": [
+                    {
+                        "issue": 110,
+                        "issue_score": -0.8
+                    }
+                ]
             },
             {
                 "answer": "Canada is not broken. But it does need experienced leadership and a real plan to ensure all Canadians benefit in an increasingly dangerous world. I've worked under Liberal and Conservative governments to deliver for Canadians, and I got the job done. Pierre Poilievre has been a politician his entire life and in that entire time, he hasn't fixed a thing.",
-                "feedback": "This does a good job of pitting your experience against that of Poilievre."
+                "feedback": "This does a good job of pitting your experience against that of Poilievre.",
+                "score_issue": [
+                    {
+                        "issue": 112,
+                        "issue_score": -0.3
+                    }
+                ]
             },
             {
                 "answer": "We need to lead with our values. That means protecting our system of universal healthcare. Protecting $10-a-day childcare. Protecting our pensions. Protecting the right to abortion.",
-                "feedback": "This appeals to your supporters, but don't forget to also broaden your appeal."
+                "feedback": "This appeals to your supporters, but don't forget to also broaden your appeal.",
+                "score_issue": [
+                    {
+                        "issue": 112,
+                        "issue_score": -0.3
+                    },
+                    {
+                        "issue": 113,
+                        "issue_score": -0.5
+                    }
+                ]
             },
             {
                 "answer": "I will focus on my plan for the economy. The Trudeau government did not put enough focus on the economy, and I will be different.",
-                "feedback": "You work tirelessly to renew voters' trust of the Liberal Party on the economy."
+                "feedback": "You work tirelessly to renew voters' trust of the Liberal Party on the economy.",
+                "score_issue": [
+                    {
+                        "issue": 112,
+                        "issue_score": 0.8
+                    }
+                ]
             }
         ]
     },
@@ -223,7 +340,7 @@
             },
             {
                 "answer": "I will put every effort into making my campaign bilingual. I will not hold back from speaking in French at rallies, even in English Canada. I will give as many French interviews as possible.",
-                "feedback": "French Canadians are glad you are making an effort. This does alienate some Anglos though."
+                "feedback": "French Canadians are glad you are making an effort. This does alienate some Anglophones though."
             },
             {
                 "answer": "I will prioritize making myself understood. That means speaking French and English in the respective communities. I will not hesitate to switch to English when I have difficulty expressing myself.",
@@ -236,11 +353,31 @@
         "answers": [
             {
                 "answer": "I will ignore them as much as possible and run my own campaign. However, I will emphasize my progressive policies to draw their support.",
-                "feedback": "Some progressive voters are attracted by this, but you shed some moderates to the Conservatives."
+                "feedback": "Some progressive voters are attracted by this, but you shed some moderates to the Conservatives.",
+                "score_issue": [
+                    {
+                        "issue": 112,
+                        "issue_score": -0.3
+                    },
+                    {
+                        "issue": 113,
+                        "issue_score": -0.3
+                    },
+                    {
+                        "issue": 114,
+                        "issue_score": -0.3
+                    }
+                ]
             },
             {
                 "answer": "I will make this election a personality battle between myself and Poilievre. I will hammer that Poilievre cannot be trusted to stand up to Trump. Our very sovereignty is at stake.",
-                "feedback": "Progressive voters flock to you driven by their fear of Trump."
+                "feedback": "Progressive voters flock to you driven by their fear of Trump.",
+                "score_issue": [
+                    {
+                        "issue": 110,
+                        "issue_score": -0.8
+                    }
+                ]
             },
             {
                 "answer": "I will eviscerate these so-called \"progressive\" parties for splitting the vote.",
@@ -248,7 +385,13 @@
             },
             {
                 "answer": "We need to focus on winning over conservatives. I will criticize the class warfare type language prominent in much of progressive politics and avoid any discussion of inequality.",
-                "feedback": "Fair. Socialist-leaning voters are not pleased, but you don't need them anyway."
+                "feedback": "Fair. Socialist-leaning voters are not pleased, but you don't need them anyway.",
+                "score_issue": [
+                    {
+                        "issue": 112,
+                        "issue_score": 0.8
+                    }
+                ]
             }
         ]
     },
@@ -257,19 +400,59 @@
         "answers": [
             {
                 "answer": "I will distance myself from his social progressivism. I will abolish the ministerial post for Women and Equality, affirm that there are two genders and that only biological women should have access to women-only spaces, and criticize budgetary spending on progressive social causes.",
-                "feedback": "Your base is disappointed, and your own non-binary child is not happy with you."
+                "feedback": "Your base is disappointed, and your own non-binary child is not happy with you.",
+                "score_issue": [
+                    {
+                        "issue": 110,
+                        "issue_score": -0.6
+                    },
+                    {
+                        "issue": 113,
+                        "issue_score": 0.6
+                    }
+                ]
             },
             {
                 "answer": "I will criticize his administration wholesale to make clear our differences. His failed governance has given us a weak economy, soaring cost-of-living, and unsustainable immigration.",
-                "feedback": "This appeals to some but with criticisms this harsh, why were you his economic advisor?"
+                "feedback": "This appeals to some but with criticisms this harsh, why were you his economic advisor?",
+                "score_issue": [
+                    {
+                        "issue": 111,
+                        "issue_score": -1
+                    },
+                    {
+                        "issue": 112,
+                        "issue_score": 0.6
+                    }
+                ]
             },
             {
                 "answer": "We share values. But as Liberals, we must focus on both economic growth and fairness. Trudeau focused too much on one side of that equation. I will be different and will bring a laser focus on the economy.",
-                "feedback": "This balances distancing yourself from Trudeau on the main issue concerning Canadians while assuring the base you are still aligned with them."
+                "feedback": "This balances distancing yourself from Trudeau on the main issue concerning Canadians while assuring the base you are still aligned with them.",
+                "score_issue": [
+                    {
+                        "issue": 111,
+                        "issue_score": -0.2
+                    },
+                    {
+                        "issue": 112,
+                        "issue_score": 0.4
+                    }
+                ]
             },
             {
                 "answer": "There's not much I would have done differently. Of course, we're different people so I will bring certain sensibilities about the economy that Trudeau didn't have.",
-                "feedback": "This answer makes it easy for your opponents to criticize you as a continuation of the Trudeau government."
+                "feedback": "This answer makes it easy for your opponents to criticize you as a continuation of the Trudeau government.",
+                "score_issue": [
+                    {
+                        "issue": 110,
+                        "issue_score": 0.8
+                    },
+                    {
+                        "issue": 112,
+                        "issue_score": 0.2
+                    }
+                ]
             }
         ]
     },
@@ -299,19 +482,59 @@
         "answers": [
             {
                 "answer": "You want defenders of social justice like Nathalie Pronovost. Out of the tragedy of the shootings at Concordia, she became an activist and now she's running for us.",
-                "feedback": "She is a great candidate to highlight, but her name is Provost (not Pronovost), and she is a survivor of the Polytechnique massacre (not Concordia)."
+                "feedback": "She is a great candidate to highlight, but her name is Provost (not Pronovost), and she is a survivor of the Polytechnique massacre (not Concordia).",
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": -0.5
+                    }
+                ]
             },
             {
                 "answer": "I will recruit Christy Clark to run in Fleetwood-Port Kells. She is a former Liberal premier from British Columbia, and as premier she embodied fiscal responsibility and pragmatic governance with five balanced budgets and strong economic growth.",
-                "feedback": "Her premiership was also characterized by rapidly rising inequality and cost-of-living. She remains fairly unpopular in much of BC, though her high-profile candidacy may help in Fleetwood-Port Kells."
+                "feedback": "Her premiership was also characterized by rapidly rising inequality and cost-of-living. She remains fairly unpopular in much of BC, though her high-profile candidacy may help in Fleetwood-Port Kells.",
+                "score_issue": [
+                    {
+                        "issue": 112,
+                        "issue_score": 0.5
+                    }
+                ]
             },
             {
                 "answer": "I will highlight Gregor Robertson, a man with significant executive experience and vision. He was mayor of Vancouver for 10 years, served provincially in the BC NDP, and co-founded Happy Planet, an organic foods company. By the end of his mayoralty, Vancouver had the lowest unemployment in Canada, the most extensive bike network in North America, and became among the most livable cities in the world.",
-                "feedback": "Impressive as his record is, Robertson is also blamed by many for the exceedingly high housing costs in Vancouver which increased 150% during his tenure."
+                "feedback": "Impressive as his record is, Robertson is also blamed by many for the exceedingly high housing costs in Vancouver which increased 150% during his tenure.",
+                "score_issue": [
+                    {
+                        "issue": 112,
+                        "issue_score": 0.3
+                    },
+                    {
+                        "issue": 114,
+                        "issue_score": -0.5,
+                        "issue_importance": 0.5
+                    }
+                ]
             },
             {
                 "answer": "I will talk about Priti Obhrai-Martin, our candidate for Calgary East. She is the daughter of Deepak Obhrai, a life-long Conservative who held the riding for nearly 20 years. Our campaign is bringing people together and uniting our country. Together, we will build Canada strong.",
-                "feedback": "Calgary has been a Conservative stronghold forever. Hopefully she can make that change."
+                "feedback": "Calgary has been a Conservative stronghold forever. Hopefully she can make that change.",
+                "score_issue": [
+                    {
+                        "issue": 112,
+                        "issue_score": 0.5,
+                        "issue_importance": 0.5
+                    },
+                    {
+                        "issue": 113,
+                        "issue_score": 0,
+                        "issue_importance": 0.5
+                    },
+                    {
+                        "issue": 114,
+                        "issue_score": 0.5,
+                        "issue_importance": 0.5
+                    }
+                ]
             }
         ]
     },
@@ -324,7 +547,14 @@
             },
             {
                 "answer": "I will refuse on the grounds that Pedneault, the Green party leader, was not invited.",
-                "feedback": "This is an odd reason seeing as the Greens are polling below 2%."
+                "feedback": "This is an odd reason seeing as the Greens are polling below 2%.",
+                "issue_score": [
+                    {
+                        "issue": 114,
+                        "issue_score": -1,
+                        "issue_importance": 0.25
+                    }
+                ]
             },
             {
                 "answer": "The network is charging $75,000 for my attendance. My campaign can easily pay for this, but I will refuse to attend on principle. Debates and media appearances should not be bought and sold, period.",
@@ -358,15 +588,33 @@
             },
             {
                 "answer": "We are masters in our own home. I have a plan for free trade within Canada and expediting major economic projects. I will also use public investments to catalyze private investment into building Canada strong.",
-                "feedback": "In these economically challenging times, this is what Canadians want to hear."
+                "feedback": "In these economically challenging times, this is what Canadians want to hear.",
+                "issue_score": [
+                    {
+                        "issue": 112,
+                        "issue_score": 0.6
+                    }
+                ]
             },
             {
                 "answer": "I will restore investor confidence in our economy. Regulations have grown too burdensome and taxes are too high. I will move quickly to simplify our regulatory regime and reduce taxes on business. I want investors everywhere to see Canada as the most attractive option.",
-                "feedback": "Your supporters are concerned about potential side effects and lost revenue. This boosts your image on Bay Street, however."
+                "feedback": "Your supporters are concerned about potential side effects and lost revenue. This boosts your image on Bay Street, however.",
+                "issue_score": [
+                    {
+                        "issue": 112,
+                        "issue_score": 1
+                    }
+                ]
             },
             {
                 "answer": "We need to invest in Canadians. The best way to boost productivity is by giving people the tools they need. By increasing funding for trade schools and universities, ensuring families have access to affordable childcare, and investing into transit, we can build a more prosperous Canada.",
-                "feedback": "This was Trudeau's brand, and voters are tired of it."
+                "feedback": "This was Trudeau's brand, and voters are looking for a new approach.",
+                "issue_score": [
+                    {
+                        "issue": 112,
+                        "issue_score": 0
+                    }
+                ]
             }
         ]
     },
@@ -387,7 +635,13 @@
             },
             {
                 "answer": "I will be releasing a detailed plan on how we will close tax loopholes and ensure everyone pays their fair share.",
-                "feedback": "This concrete response helps lessen the blow."
+                "feedback": "This concrete response helps lessen the blow.",
+                "issue_score": [
+                    {
+                        "issue": 112,
+                        "issue_score": -0.3
+                    }
+                ]
             }
         ]
     },
@@ -421,15 +675,33 @@
             },
             {
                 "answer": "We need to expand police powers to crack down on crime. For example, police should be authorized to search mail with a general warrant. We should also increase penalties for some crimes.",
-                "feedback": "This pleases some tough-on-crime voters, but most of them are looking for a much tougher crackdown."
+                "feedback": "This pleases some tough-on-crime voters, but most of them are looking for a much tougher crackdown.",
+                "issue_score": [
+                    {
+                        "issue": 113,
+                        "issue_score": 0.3
+                    }
+                ]
             },
             {
                 "answer": "You can't be tough on crime if you're not tough on guns. We need to continue with the gun buyback program and strengthen border enforcement to prevent guns from entering our country.",
-                "feedback": "By shifting the discussion to gun control, you contrast yourself favourably against the Conservatives. However, some policy wonks do criticize the buyback program as ineffective."
+                "feedback": "By shifting the discussion to gun control, you contrast yourself favourably against the Conservatives. However, some policy wonks do criticize the buyback program as ineffective.",
+                "issue_score": [
+                    {
+                        "issue": 113,
+                        "issue_score": -0.4
+                    }
+                ]
             },
             {
                 "answer": "We need to tackle the root causes of crime. The affordability crisis is hard on everyone, but particularly harms those on the margins of society. We need stronger support for the most vulnerable to prevent them from resorting to crime.",
-                "feedback": "This could be a convincing argument, but many blame the nearly 10 years of Liberal governance for the affordability crisis."
+                "feedback": "This could be a convincing argument, but many blame the nearly 10 years of Liberal governance for the affordability crisis.",
+                "issue_score": [
+                    {
+                        "issue": 112,
+                        "issue_score": -0.5
+                    }
+                ]
             }
         ]
     },
@@ -455,11 +727,23 @@
         "answers": [
             {
                 "answer": "Canada is an immigrant nation. Our diversity is what makes us strong. We should continue welcoming as many new Canadians as possible and invest into resources to help new immigrants integrate into our communities.",
-                "feedback": "Many are concerned immigration levels are too high and draw comparisons between you and Trudeau."
+                "feedback": "Many are concerned immigration levels are too high and draw comparisons between you and Trudeau.",
+                "issue_score": [
+                    {
+                        "issue": 113,
+                        "issue_score": -0.5
+                    }
+                ]
             },
             {
                 "answer": "The rapid growth of the temporary worker program is concerning considering the allegations of abuse and exploitation. We should restrict this program to address these concerns, instead focusing on welcoming refugees and supporting family reunification.",
-                "feedback": "This is a noble stand on humanitarian grounds."
+                "feedback": "This is a noble stand on humanitarian grounds. Hopefully the voters agree.",
+                "issue_score": [
+                    {
+                        "issue": 113,
+                        "issue_score": -1
+                    }
+                ]
             },
             {
                 "answer": "Current immigration levels are unsustainable and have put a strain on housing, infrastructure, and public services. I will place a cap on temporary residents and reduce permanent resident admissions to ease that strain.",
@@ -467,7 +751,13 @@
             },
             {
                 "answer": "We need to reform the system to attract the best talent in the world to build our economy. We should make sure that the immigrants we welcome are net contributors to our society.",
-                "feedback": "This economic-oriented but vague response maintains a broad appeal."
+                "feedback": "This economic-oriented but vague response maintains a broad appeal.",
+                "issue_score": [
+                    {
+                        "issue": 112,
+                        "issue_score": 0.6
+                    }
+                ]
             }
         ]
     },
@@ -476,15 +766,33 @@
         "answers": [
             {
                 "answer": "My plan includes a well-deserved tax cut for the middle class, lowering the bottom tax bracket from 15% to 14%.",
-                "feedback": "This balances cutting taxes with fiscal responsibility."
+                "feedback": "This balances cutting taxes with fiscal responsibility.",
+                "issue_score": [
+                    {
+                        "issue": 112,
+                        "issue_score": 0.5
+                    }
+                ]
             },
             {
                 "answer": "It's time to let Canadians keep more of what they earn. I will drop the bottom tax bracket to 12.75%.",
-                "feedback": "The bigger the tax cut, the better. Right?"
+                "feedback": "The bigger the tax cut, the better. Right?",
+                "issue_score": [
+                    {
+                        "issue": 112,
+                        "issue_score": 1
+                    }
+                ]
             },
             {
                 "answer": "We don't need any tax cuts right now. We're heading into difficult times with the Trump tariffs, and we should use that money to support people who may lose their jobs from the economic disruption.",
-                "feedback": "Workers in threatened industries like aluminium, steel, and forestry are happy with your support, but others are disappointed."
+                "feedback": "Workers in threatened industries like aluminium, steel, and forestry are happy with your support, but others are disappointed.",
+                "issue_score": [
+                    {
+                        "issue": 112,
+                        "issue_score": -0.2
+                    }
+                ]
             },
             {
                 "answer": "I will raise the basic personal allowance to $19,500 and remove GST from essentials like energy bills.",
@@ -501,15 +809,33 @@
             },
             {
                 "answer": "We have a massive housing shortage. We need to throw everything we can at this issue, including working with municipalities to relax zoning bylaws, investing to catalyze the private sector into action, exploring ways to increase construction productivity such as modular housing, and cutting the tax burden on home builders.",
-                "feedback": "These commitments to tackling the housing crisis make many young people give you another look."
+                "feedback": "These commitments to tackling the housing crisis make many young people give you another look.",
+                "issue_score": [
+                    {
+                        "issue": 112,
+                        "issue_score": 0.6
+                    }
+                ]
             },
             {
                 "answer": "The housing market is too distorted to operate efficiently. We need to remove burdensome regulations, speed up approvals, cut taxes on home building, and slash development charges. These reforms will unleash private investment and make the housing market function properly once again.",
-                "feedback": "This market approach appeals to some, but many have lost faith that the market can bring affordability on its own."
+                "feedback": "This market approach appeals to some, but many have lost faith that the market can bring affordability on its own.",
+                "issue_score": [
+                    {
+                        "issue": 112,
+                        "issue_score": 1
+                    }
+                ]
             },
             {
                 "answer": "Building more housing is not enough if the houses are not affordable. We need to lead the charge with large public investments into deeply affordable homes. We need to restrict foreign and corporate ownership of housing and provide stronger support for renters.",
-                "feedback": "This appeals to low-income renters, but middle class families feel overlooked."
+                "feedback": "This appeals to low-income renters, but middle class families feel overlooked.",
+                "issue_score": [
+                    {
+                        "issue": 112,
+                        "issue_score": -0.3
+                    }
+                ]
             }
         ]
     },
@@ -530,7 +856,13 @@
             },
             {
                 "answer": "I will both balance the budget and protect the funding of our public services. This will be made possible by a wealth tax on the ultra-wealthy, increased taxes on the profits of large corporations, and cracking down on tax evasion.",
-                "feedback": "This is a left-wing position that would be more at home in the NDP. It spooks the business community, with some prominent names coming out publicly in opposition to your plans."
+                "feedback": "This is a left-wing position that would be more at home in the NDP. It spooks the business community, with some prominent names coming out publicly in opposition to your plans.",
+                "issue_score": [
+                    {
+                        "issue": 112,
+                        "issue_score": -0.6
+                    }
+                ]
             }
         ]
     },
@@ -539,11 +871,23 @@
         "answers": [
             {
                 "answer": "What Israel is doing in Gaza is a genocide. We should be putting maximum pressure on the Israeli government to reach a permanent ceasefire and end their illegal occupation of Palestinian land.",
-                "feedback": "Pro-Palestine organizations are happy with your support, but you face loud accusations of anti-semitism."
+                "feedback": "Pro-Palestine organizations are happy with your support, but you face loud accusations of anti-semitism.",
+                "issue_score": [
+                    {
+                        "issue": 113,
+                        "issue_score": -1
+                    }
+                ]
             },
             {
                 "answer": "Israel must allow humanitarian aid to enter Gaza. I support an arms embargo and will work with our international partners to work towards a two-state solution.",
-                "feedback": "This is a standard, moderate response on the issue."
+                "feedback": "This is a standard, moderate response on the issue.",
+                "issue_score": [
+                    {
+                        "issue": 113,
+                        "issue_score": -0.3
+                    }
+                ]
             },
             {
                 "answer": "This is a far away issue that should not be of interest to Canadians. We have far more important issues to focus on, such as affordability and the economy.",
@@ -551,7 +895,13 @@
             },
             {
                 "answer": "Israel has a right to defend itself. As the only democracy in the Middle East, its neighbours are a constant threat to it. To the Israeli people, I stand with you.",
-                "feedback": "Israel has become increasingly unpopular among Canadians. Standing with them makes you seem out of touch."
+                "feedback": "Israel has become increasingly unpopular among Canadians. Standing with them makes you seem out of touch.",
+                "issue_score": [
+                    {
+                        "issue": 113,
+                        "issue_score": 0.5
+                    }
+                ]
             }
         ]
     },
@@ -560,19 +910,55 @@
         "answers": [
             {
                 "answer": "Yes. I will work with the provinces and First Nations to simplify the approval process and use emergency powers to streamline the federal side of that equation.",
-                "feedback": "This satisfies both jurisdictional concerns and oil-producing regions' desire to expand their exports."
+                "feedback": "This satisfies both jurisdictional concerns and oil-producing regions' desire to expand their exports.",
+                "issue_score": [
+                    {
+                        "issue": 112,
+                        "issue_score": -0.5
+                    },
+                    {
+                        "issue": 114,
+                        "issue_score": 0.5
+                    }
+                ]
             },
             {
                 "answer": "We need to focus on building up our LNG infrastructure, and that includes gas pipelines. LNG poses no spill risk and burns clean.",
-                "feedback": "This satisfies some, but the lack of mention of heavy oil makes others doubt your commitment to the energy sector."
+                "feedback": "This satisfies some, but the lack of mention of heavy oil makes others doubt your commitment to the energy sector.",
+                "issue_score": [
+                    {
+                        "issue": 112,
+                        "issue_score": -0.5
+                    },
+                    {
+                        "issue": 114,
+                        "issue_score": 0.2
+                    }
+                ]
             },
             {
                 "answer": "I do not support new pipelines. The Trans Mountain pipeline remains below capacity. The world is shifting away from oil and gas, making a new pipeline an imprudent investment. We should be focusing on becoming a clean energy superpower.",
-                "feedback": "Environmentalists are ecstatic. Oil workers and dependent communities are furious."
+                "feedback": "Environmentalists are ecstatic. Oil workers and dependent communities are furious.",
+                "issue_score": [
+                    {
+                        "issue": 114,
+                        "issue_score": -1
+                    }
+                ]
             },
             {
                 "answer": "We need to do everything we can to expand the market access for our oil. This is an urgent matter of national and economic security. I will do everything in my power to get these projects moving immediately.",
-                "feedback": "This satisfies oil-producing regions but raises concerns for some that a pipeline will be forced through their communities."
+                "feedback": "This satisfies oil-producing regions but raises concerns for some that a pipeline will be forced through their communities.",
+                "issue_score": [
+                    {
+                        "issue": 112,
+                        "issue_score": 1
+                    },
+                    {
+                        "issue": 114,
+                        "issue_score": 1
+                    }
+                ]
             }
         ]
     },
@@ -581,7 +967,13 @@
         "answers": [
             {
                 "answer": "Every dollar spent on weapons is a dollar not spent to invest into our economy. I will ensure the military has the necessary capabilities for our defence but no more.",
-                "feedback": "With escalating global tensions, Canadians want to see more investment in the military."
+                "feedback": "With escalating global tensions, Canadians want to see more investment in the military.",
+                "issue_score": [
+                    {
+                        "issue": 112,
+                        "issue_score": 0.5
+                    }
+                ]
             },
             {
                 "answer": "I will fund investments into our armed forces, including raising soldiers' pay and securing the Arctic. This will grow the military budget to 2% of GDP by 2030.",
@@ -593,7 +985,13 @@
             },
             {
                 "answer": "With the threats from down south, it has become clear that we must become more self-reliant for our defence. I will cancel our participation in the F-35 program and launch a review of all procurement agreements with the US. We will aim to maximize domestic procurement and cooperate with the ReArm Europe plan.",
-                "feedback": "This ruffles some feathers in the US and triggers a Trump rant. This move helps bolster your anti-American credentials."
+                "feedback": "This ruffles some feathers in the US and triggers a Trump rant. This move helps bolster your anti-American credentials.",
+                "issue_score": [
+                    {
+                        "issue": 110,
+                        "issue_score": -1
+                    }
+                ]
             }
         ]
     },
@@ -610,11 +1008,23 @@
             },
             {
                 "answer": "I will defend the public service. These are hard-working men and women who help deliver the programs that millions of Canadians depend upon. Instead of outsourcing work to contractors, I will shift the work back to our civil servants. Let there be no doubt that the Conservatives will worsen service and cut essential programs.",
-                "feedback": "Public servants are happy with your support, but many Canadians do think the public service has grown too large and costly."
+                "feedback": "Public servants are happy with your support, but many Canadians do think the public service has grown too large and costly.",
+                "issue_score": [
+                    {
+                        "issue": 112,
+                        "issue_score": -0.2
+                    }
+                ]
             },
             {
                 "answer": "We need to spend less and invest more. I will introduce large cuts to the government bureaucracy, freeing up funds to catalyze private investment and economic growth.",
-                "feedback": "Your position is similar to that of the Conservatives. The NDP attacks both of you harshly, and public servants give them another look."
+                "feedback": "Your position is similar to that of the Conservatives. The NDP attacks both of you harshly, and public servants give them another look.",
+                "issue_score": [
+                    {
+                        "issue": 112,
+                        "issue_score": 1
+                    }
+                ]
             }
         ]
     },
@@ -635,7 +1045,13 @@
             },
             {
                 "answer": "I will make a full-throated defense of our valued social programs. From childcare, to dentalcare, to pharmacare, we Liberals have built a more equal and fair society.",
-                "feedback": "Poilievre ties you with the Trudeau government, he is considered to have won the debates."
+                "feedback": "Poilievre ties you with the Trudeau government, he is considered to have won the debates.",
+                "issue_score": [
+                    {
+                        "issue": 112,
+                        "issue_score": -0.4
+                    }
+                ]
             }
         ]
     },
@@ -681,16 +1097,20 @@
         "question": "[April 2025] It is the day before the election. What is your final message to Canadians?",
         "answers": [
             {
-                "answer": "This election is a decision between unity and division. Between hope and fear. Between building up and tearing down. The future of Canada is at stake."
+                "answer": "My friends, love is better than anger. Hope is better than fear. Optimism is better than despair. So let us be loving, hopeful and optimistic. And we'll change the world.",
+                "feedback": "A touching homage to the late Jack Layton's last letter to Canadians. Good luck tomorrow."
             },
             {
-                "answer": "We don't need chaos, we need calm. We don't need anger, we need an adult, and we need action. Because we need to fight, we need to protect, and we need to build. Elbows up!"
+                "answer": "We don't need chaos, we need calm. We don't need anger, we need an adult, and we need action. Because we need to fight, we need to protect, and we need to build. Elbows up!",
+                "feedback": "That's right! Good luck tomorrow!"
             },
             {
-                "answer": "Pierre Poilievre's war on \"woke\" is dangerous and has no place in Canada. He is stoking fears and resentment, entrenching division, and legitimizing extreme positions. We need to send a message that this divisive American messaging is not welcome here."
+                "answer": "Pierre Poilievre's war on \"woke\" is dangerous and has no place in Canada. He is stoking fears and resentment, entrenching division, and legitimizing extreme positions. We need to send a clear message that this divisive American approach is not welcome here.",
+                "feedback": "Hopefully these attacks on Poilievre bear fruit. Good luck tomorrow."
             },
             {
-                "answer": "Your dreams are the same as mine. A country that is safe, where people are kind to each other and get along, where everyone has a place to call home, and people can be who they want to be. Our children should be able to dream about a positive future, not worry about an economic crisis. With everyone pulling together, we will emerge stronger."
+                "answer": "Your dreams are the same as mine. A country that is safe, where people are kind to each other and get along, where everyone has a place to call home, and people can be who they want to be. Our children should be able to dream about a positive future, not worry about an economic crisis. With everyone pulling together, we will emerge stronger.",
+                "feedback": "What an optimistic message! Good luck tomorrow!"
             }
         ]
     }
