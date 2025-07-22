@@ -1029,7 +1029,7 @@
                 "feedback": "This garners some support, but others are worried about how this will be paid for.",
                 "score_global": [
                     {
-                        "global_multiplier": -0.05
+                        "global_multiplier": -0.03
                     }
                 ]
             },
@@ -1440,6 +1440,10 @@
                 "score_global": [
                     {
                         "global_multiplier": -0.02
+                    },
+                    {
+                        "affected_candidate": 303,
+                        "global_multiplier": 0.2
                     }
                 ]
             }
