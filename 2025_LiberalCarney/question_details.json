@@ -486,16 +486,104 @@
         "question": "[March 2025] Where will you focus your effort as the campaign begins?",
         "answers": [
             {
-                "answer": "I will campaign in Ottawa and Montreal. These are must-win regions that we need to secure."
+                "answer": "I will campaign in Ottawa and Montreal. These are must-win regions that we need to secure.",
+                "score_state": [
+                    {
+                        "state": "Mount Royal",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "La Pointe-de-l'Île",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Hochelaga--Rosemont-Est",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Carleton",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Nepean",
+                        "state_multiplier": 0.3
+                    }
+                ]
             },
             {
-                "answer": "I'm heading to Vancouver. We can make some gains from the NDP there and lock down Surrey."
+                "answer": "I'm heading to Vancouver. We can make some gains from the NDP there and lock down Surrey.",
+                "score_state": [
+                    {
+                        "state": "Surrey Centre",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Surrey Newton",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "New Westminster--Burnaby--Maillardville",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "South Surrey--White Rock",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Burnaby Central",
+                        "state_multiplier": 0.3
+                    }
+                ]
             },
             {
-                "answer": "I'll go to Alberta and Saskatchewan to show them I'm serious about national unity."
+                "answer": "I'll go to Alberta to show them I'm serious about national unity.",
+                "score_state": [
+                    {
+                        "state": "Edmonton Centre",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Calgary Confederation",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Calgary Centre",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Calgary McKnight",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Edmonton Riverbend",
+                        "state_multiplier": 0.3
+                    }
+                ]
             },
             {
-                "answer": "I'm going to the Maritimes to win them back for the Liberal Party."
+                "answer": "I'm going to the Maritimes to win them back for the Liberal Party.",
+                "score_state": [
+                    {
+                        "state": "Cape Breton--Canso--Antigonish",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Central Nova",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Acadie--Annapolis",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Miramichi--Grand Lake",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Cumberland--Colchester",
+                        "state_multiplier": 0.3
+                    }
+                ]
             }
         ]
     },
@@ -777,6 +865,12 @@
                         "issue": 113,
                         "issue_score": -0.5
                     }
+                ],
+                "score_state": [
+                    {
+                        "state": "Châteauguay--Les Jardins-de-Napierville",
+                        "state_multiplier": 0.3
+                    }
                 ]
             },
             {
@@ -791,6 +885,12 @@
                 "score_global": [
                     {
                         "global_multiplier": -0.02
+                    }
+                ],
+                "score_state": [
+                    {
+                        "state": "Fleetwood--Port Kells",
+                        "state_multiplier": 0.6
                     }
                 ]
             },
@@ -811,6 +911,12 @@
                 "score_global": [
                     {
                         "global_multiplier": 0.02
+                    }
+                ],
+                "score_state": [
+                    {
+                        "state": "Vancouver Fraserview--South Burnaby",
+                        "state_multiplier": 0.3
                     }
                 ]
             },
@@ -837,6 +943,12 @@
                 "score_global": [
                     {
                         "global_multiplier": 0.02
+                    }
+                ],
+                "score_state": [
+                    {
+                        "state": "Calgary East",
+                        "state_multiplier": 0.3
                     }
                 ]
             }
@@ -1107,16 +1219,96 @@
         "question": "[April 2025] As the campaign approaches its midpoint, where will you focus your efforts?",
         "answers": [
             {
-                "answer": "Victoria. I will meet with Premier Eby and speak about our shared priorities."
+                "answer": "Victoria. I will meet with Premier Eby and speak about our shared priorities.",
+                "score_state": [
+                    {
+                        "state": "Victoria",
+                        "state_multiplier": 0.5
+                    },
+                    {
+                        "state": "Esquimalt--Saanich--Sooke",
+                        "state_multiplier": 0.5
+                    },
+                    {
+                        "state": "Saanich--Gulf Islands",
+                        "state_multiplier": 0.5
+                    }
+                ]
             },
             {
-                "answer": "Hamilton and Niagara Falls. I will speak about how I will protect their manufacturing industries."
+                "answer": "Hamilton and Niagara Falls. I will speak about how I will protect their manufacturing industries.",
+                "score_state": [
+                    {
+                        "state": "Niagara Falls--Niagara-on-the-Lake",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Niagara South",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "St. Catharines",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Hamilton Centre",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Hamilton East--Stoney Creek",
+                        "state_multiplier": 0.3
+                    }
+                ]
             },
             {
-                "answer": "Quebec City. I will reiterate my respect for provincial jurisdiction."
+                "answer": "Quebec City. I will reiterate my respect for provincial jurisdiction.",
+                "score_state": [
+                    {
+                        "state": "Québec Centre",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Beauport--Limoilou",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Charlesbourg--Haute-Saint-Charles",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Louis-Saint-Laurent--Akiawenhrahk",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Montmorency--Charlevoix",
+                        "state_multiplier": 0.3
+                    }
+                ]
             },
             {
-                "answer": "Brampton and Scarborough. I will speak to their concerns about crime."
+                "answer": "Brampton and Scarborough. I will speak to their concerns about crime.",
+                "score_state": [
+                    {
+                        "state": "Brampton Centre",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Brampton--Chinguacousy Park",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Brampton South",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Scarborough Centre--Don Valley East",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Scarborough--Agincourt",
+                        "state_multiplier": 0.3
+                    }
+                ]
             }
         ]
     },
@@ -1335,6 +1527,12 @@
                     {
                         "global_multiplier": -0.02
                     }
+                ],
+                "score_state": [
+                    {
+                        "state": "Mount Royal",
+                        "state_multiplier": -1
+                    }
                 ]
             },
             {
@@ -1344,6 +1542,12 @@
                     {
                         "issue": 113,
                         "issue_score": -0.3
+                    }
+                ],
+                "score_state": [
+                    {
+                        "state": "Mount Royal",
+                        "state_multiplier": -0.5
                     }
                 ]
             },
@@ -1368,6 +1572,12 @@
                 "score_global": [
                     {
                         "global_multiplier": -0.06
+                    }
+                ],
+                "score_state": [
+                    {
+                        "state": "Mount Royal",
+                        "state_multiplier": 0.5
                     }
                 ]
             }
@@ -1497,7 +1707,45 @@
         "answers": [
             {
                 "answer": "I will attack the Conservatives for their plans to cut the public service while quietly including similar cuts in my fiscal plan.",
-                "feedback": "Your gambit works. Public servants flock to your campaign as they fear a Poilievre government, and the size of the cuts in your own plans go unquestioned."
+                "feedback": "Your gambit works. Public servants flock to your campaign as they fear a Poilievre government, and the size of the cuts in your own plans go unquestioned.",
+                "score_state": [
+                    {
+                        "state": "Carleton",
+                        "state_multiplier": 0.5
+                    },
+                    {
+                        "state": "Nepean",
+                        "state_multiplier": 0.5
+                    },
+                    {
+                        "state": "Kanata",
+                        "state_multiplier": 0.5
+                    },
+                    {
+                        "state": "Ottawa South",
+                        "state_multiplier": 0.5
+                    },
+                    {
+                        "state": "Ottawa--Vanier--Gloucester",
+                        "state_multiplier": 0.5
+                    },
+                    {
+                        "state": "Gatineau",
+                        "state_multiplier": 0.5
+                    },
+                    {
+                        "state": "Hull--Aylmer",
+                        "state_multiplier": 0.5
+                    },
+                    {
+                        "state": "Ottawa West--Nepean",
+                        "state_multiplier": 0.5
+                    },
+                    {
+                        "state": "Orléans",
+                        "state_multiplier": 0.5
+                    }
+                ]
             },
             {
                 "answer": "The public service has been growing too quickly. I will slow the growth of the public sector, and improve productivity through the use of AI.",
@@ -1515,6 +1763,44 @@
                 "score_global": [
                     {
                         "global_multiplier": -0.04
+                    }
+                ],
+                "score_state": [
+                    {
+                        "state": "Carleton",
+                        "state_multiplier": 1
+                    },
+                    {
+                        "state": "Nepean",
+                        "state_multiplier": 1
+                    },
+                    {
+                        "state": "Kanata",
+                        "state_multiplier": 1
+                    },
+                    {
+                        "state": "Ottawa South",
+                        "state_multiplier": 1
+                    },
+                    {
+                        "state": "Ottawa--Vanier--Gloucester",
+                        "state_multiplier": 1
+                    },
+                    {
+                        "state": "Gatineau",
+                        "state_multiplier": 1
+                    },
+                    {
+                        "state": "Hull--Aylmer",
+                        "state_multiplier": 1
+                    },
+                    {
+                        "state": "Ottawa West--Nepean",
+                        "state_multiplier": 1
+                    },
+                    {
+                        "state": "Orléans",
+                        "state_multiplier": 1
                     }
                 ]
             },
@@ -1534,6 +1820,44 @@
                     {
                         "affected_candidate": 302,
                         "global_multiplier": 0.05
+                    }
+                ],
+                "score_state": [
+                    {
+                        "state": "Carleton",
+                        "state_multiplier": -1
+                    },
+                    {
+                        "state": "Nepean",
+                        "state_multiplier": -1
+                    },
+                    {
+                        "state": "Kanata",
+                        "state_multiplier": -1
+                    },
+                    {
+                        "state": "Ottawa South",
+                        "state_multiplier": -1
+                    },
+                    {
+                        "state": "Ottawa--Vanier--Gloucester",
+                        "state_multiplier": -1
+                    },
+                    {
+                        "state": "Gatineau",
+                        "state_multiplier": -1
+                    },
+                    {
+                        "state": "Hull--Aylmer",
+                        "state_multiplier": -1
+                    },
+                    {
+                        "state": "Ottawa West--Nepean",
+                        "state_multiplier": -1
+                    },
+                    {
+                        "state": "Orléans",
+                        "state_multiplier": -1
                     }
                 ]
             }
@@ -1585,16 +1909,115 @@
         "question": "[April 2025] As the election nears its conclusion, where will you focus your campaign appearances?",
         "answers": [
             {
-                "answer": "I will focus my efforts broadly across the country."
+                "answer": "I will focus my efforts broadly across the country.",
+                "score_global": [
+                    {
+                        "global_multiplier": 0.01
+                    }
+                ]
             },
             {
-                "answer": "I will campaign in Edmonton, Calgary, and Saskatoon. Alberta and Saskatchewan may be conservative provinces, but we have a chance for a breakthrough in the cities."
+                "answer": "I will campaign in Edmonton, Calgary, and Saskatoon. Alberta and Saskatchewan may be conservative provinces, but we have a chance for a breakthrough in the cities.",
+                "score_state": [
+                    {
+                        "state": "Edmonton Centre",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Calgary Confederation",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Calgary Centre",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Calgary McKnight",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Edmonton Riverbend",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Saskatoon South",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Saskatoon--University",
+                        "state_multiplier": 0.3
+                    }
+                ]
             },
             {
-                "answer": "I will campaign in the Maritimes. This region is rich in seats for its population, and we need to lock them down."
+                "answer": "I will campaign in the Maritimes. This region is rich in seats for its population, and we need to lock them down.",
+                "score_state": [
+                    {
+                        "state": "Cape Breton--Canso--Antigonish",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Central Nova",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Acadie--Annapolis",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Miramichi--Grand Lake",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Cumberland--Colchester",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Egmont",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "South Shore--St. Margarets",
+                        "state_multiplier": 0.3
+                    }
+                ]
             },
             {
-                "answer": "The Greater Toronto Area. The suburbs are always in contention."
+                "answer": "The Greater Toronto Area. The suburbs are always in contention.",
+                "score_state": [
+                    {
+                        "state": "Brampton Centre",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Brampton--Chinguacousy Park",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Brampton South",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Scarborough--Agincourt",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Brampton East",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Willowdale",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Markham--Stouffville",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Markham--Unionville",
+                        "state_multiplier": 0.3
+                    }
+                ]
             }
         ]
     },
@@ -1639,7 +2062,13 @@
         "answers": [
             {
                 "answer": "My friends, love is better than anger. Hope is better than fear. Optimism is better than despair. So let us be loving, hopeful and optimistic. And we'll change the world.",
-                "feedback": "A touching homage to the late Jack Layton's last letter to Canadians. Good luck tomorrow."
+                "feedback": "A touching homage to the late Jack Layton's last letter to Canadians. Good luck tomorrow.",
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": -0.5
+                    }
+                ]
             },
             {
                 "answer": "We don't need chaos, we need calm. We don't need anger, we need an adult, and we need action. Because we need to fight, we need to protect, and we need to build. Elbows up!",
@@ -1656,7 +2085,13 @@
             },
             {
                 "answer": "Your dreams are the same as mine. A country that is safe, where people are kind to each other and get along, where everyone has a place to call home, and people can be who they want to be. Our children should be able to dream about a positive future, not worry about an economic crisis. With everyone pulling together, we will emerge stronger.",
-                "feedback": "What an optimistic message! Good luck tomorrow!"
+                "feedback": "What an optimistic message! Good luck tomorrow!",
+                "score_issue": [
+                    {
+                        "issue": 112,
+                        "issue_score": -0.2
+                    }
+                ]
             }
         ]
     }
