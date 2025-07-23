@@ -80,7 +80,7 @@ def compress_svg_file(f_in: str, f_out: str | None = None, first: int = 0, count
         fname, ext = os.path.splitext(f_in)
         f_out = fname + "_compressed" + ext
     with open(f_out, "w", encoding="utf-8") as f:
-        doc.writexml(f, encoding="utf-8")
+        doc.writexml(f, encoding="utf-8", addindent=" "*4, newl="\n", standalone=True)
 
 if __name__ == "__main__":
     compress_svg_file("../2025_Canada/election_map.svg", count=343, epsilon=0.2, scale_epsilon=True, min_length=4)
