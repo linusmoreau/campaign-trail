@@ -134,10 +134,6 @@
             {
                 "affected_candidate": 302,
                 "global_multiplier": -0.1
-            },
-            {
-                "affected_candidate": 303,
-                "global_multiplier": -0.1
             }
         ]
     },
@@ -195,10 +191,6 @@
             },
             {
                 "affected_candidate": 302,
-                "global_multiplier": -0.1
-            },
-            {
-                "affected_candidate": 303,
                 "global_multiplier": -0.1
             }
         ]
@@ -319,23 +311,188 @@
                     }
                 ]
             }
-        ],
-        "score_global": [
+        ]
+    },
+    {
+        "question": "Congratulations! You have won the leadership of the Liberal Party! You will soon be sworn in as the 24th Prime Minister of Canada. Your party is experiencing a rebound in the polls from the lows of the political crisis in December. Progressives and disaffected liberals are rallying behind your campaign as you are now the only hope for Canada to avoid Conservative rule. Even Conservative-leaning voters are giving your Liberals a second look.",
+        "answers": [
             {
-                "global_multiplier": 0.1
-            },
-            {
-                "affected_candidate": 302,
-                "global_multiplier": -0.1
-            },
-            {
-                "affected_candidate": 303,
-                "global_multiplier": -0.1
+                "answer": "It's time to build!",
+                "score_global": [
+                    {
+                        "global_multiplier": 0.3
+                    },
+                    {
+                        "affected_candidate": 302,
+                        "global_multiplier": -0.45
+                    },
+                    {
+                        "affected_candidate": 303,
+                        "global_multiplier": -0.45
+                    }
+                ],
+                "score_state": [
+                    {
+                        "state": "New Westminster--Burnaby--Maillardville",
+                        "affected_candidate": 302,
+                        "state_multiplier": 5
+                    },
+                    {
+                        "state": "Nunavut",
+                        "affected_candidate": 302,
+                        "state_multiplier": 6
+                    },
+                    {
+                        "state": "Skeena--Bulkley Valley",
+                        "affected_candidate": 302,
+                        "state_multiplier": 1.5
+                    },
+                    {
+                        "state": "Vancouver East",
+                        "affected_candidate": 302,
+                        "state_multiplier": 6
+                    },
+                    {
+                        "state": "Vancouver Kingsway",
+                        "affected_candidate": 302,
+                        "state_multiplier": 6
+                    },
+                    {
+                        "state": "Burnaby Central",
+                        "affected_candidate": 302,
+                        "state_multiplier": 1
+                    },
+                    {
+                        "state": "Victoria",
+                        "affected_candidate": 302,
+                        "state_multiplier": 3
+                    },
+                    {
+                        "state": "Skeena--Bulkley Valley",
+                        "affected_candidate": 302,
+                        "state_multiplier": 6
+                    },
+                    {
+                        "state": "Rosemont--La Petite-Patrie",
+                        "affected_candidate": 302,
+                        "state_multiplier": 6
+                    },
+                    {
+                        "state": "Berthier--Maskinongé",
+                        "affected_candidate": 302,
+                        "state_multiplier": 2
+                    },
+                    {
+                        "state": "Edmonton Strathcona",
+                        "affected_candidate": 302,
+                        "state_multiplier": 6
+                    },
+                    {
+                        "state": "Similkameen--South Okanagan--West Kootenay",
+                        "affected_candidate": 302,
+                        "state_multiplier": 2
+                    },
+                    {
+                        "state": "Courtenay--Alberni",
+                        "affected_candidate": 302,
+                        "state_multiplier": 6
+                    },
+                    {
+                        "state": "Cowichan--Malahat--Langford",
+                        "affected_candidate": 302,
+                        "state_multiplier": 5
+                    },
+                    {
+                        "state": "Elmwood--Transcona",
+                        "affected_candidate": 302,
+                        "state_multiplier": 5
+                    },
+                    {
+                        "state": "Edmonton Griesbach",
+                        "affected_candidate": 302,
+                        "state_multiplier": 5
+                    },
+                    {
+                        "state": "Churchill--Keewatinook Aski",
+                        "affected_candidate": 302,
+                        "state_multiplier": 5
+                    },
+                    {
+                        "state": "Esquimalt--Saanich--Sooke",
+                        "affected_candidate": 302,
+                        "state_multiplier": 2
+                    },
+                    {
+                        "state": "North Island--Powell River",
+                        "affected_candidate": 302,
+                        "state_multiplier": 5
+                    },
+                    {
+                        "state": "London--Fanshawe",
+                        "affected_candidate": 302,
+                        "state_multiplier": 3
+                    },
+                    {
+                        "state": "Hamilton Centre",
+                        "affected_candidate": 302,
+                        "state_multiplier": 3
+                    },
+                    {
+                        "state": "Windsor West",
+                        "affected_candidate": 302,
+                        "state_multiplier": 3
+                    },
+                    {
+                        "state": "Winnipeg Centre",
+                        "affected_candidate": 302,
+                        "state_multiplier": 6
+                    },
+                    {
+                        "state": "Columbia--Kootenay--Southern Rockies",
+                        "affected_candidate": 302,
+                        "state_multiplier": 2
+                    },
+                    {
+                        "state": "Ottawa Centre",
+                        "affected_candidate": 302,
+                        "state_multiplier": 2
+                    },
+                    {
+                        "state": "Taiaiako'n--Parkdale--High Park",
+                        "affected_candidate": 302,
+                        "state_multiplier": 3
+                    },
+                    {
+                        "state": "Davenport",
+                        "affected_candidate": 302,
+                        "state_multiplier": 1
+                    },
+                    {
+                        "state": "Halifax",
+                        "affected_candidate": 302,
+                        "state_multiplier": 1
+                    },
+                    {
+                        "state": "Saskatoon West",
+                        "affected_candidate": 302,
+                        "state_multiplier": 1
+                    },
+                    {
+                        "state": "Saanich--Gulf Islands",
+                        "affected_candidate": 303,
+                        "state_multiplier": 4
+                    },
+                    {
+                        "state": "Kitchener Centre",
+                        "affected_candidate": 303,
+                        "state_multiplier": 2
+                    }
+                ]
             }
         ]
     },
     {
-        "question": "[March 2025] Congratulations! You have been sworn in as the 24th Prime Minister of Canada. Your party is experiencing a rebound in the polls from the lows of the political crisis in December. You will call a snap election to capitalize on your fresh image and legitimize your position. However, you have a chance to enact some policies before heading into the election.",
+        "question": "[March 2025] Before calling a snap election to capitalize on your fresh image and legitimize your position, you have a chance to enact some policies before heading into the election.",
         "answers": [
             {
                 "answer": "We don't have time for this. I will call the election immediately and hit the campaign trail. We have to strike while the iron is hot.",
@@ -394,14 +551,6 @@
         "score_global": [
             {
                 "global_multiplier": 0.1
-            },
-            {
-                "affected_candidate": 302,
-                "global_multiplier": -0.1
-            },
-            {
-                "affected_candidate": 303,
-                "global_multiplier": -0.1
             }
         ]
     },
@@ -420,12 +569,7 @@
                 ],
                 "score_global": [
                     {
-                        "affected_candidate": 302,
-                        "global_multiplier": -0.1
-                    },
-                    {
-                        "affected_candidate": 303,
-                        "global_multiplier": -0.1
+                        "global_multiplier": 0.02
                     }
                 ]
             },
@@ -478,7 +622,7 @@
         ],
         "score_global": [
             {
-                "global_multiplier": 0.1
+                "global_multiplier": 0.05
             }
         ]
     },
@@ -584,6 +728,12 @@
                         "state_multiplier": 0.3
                     }
                 ]
+            }
+        ],
+        "score_global": [
+            {
+                "affected_candidate": 301,
+                "global_multiplier": 0.03
             }
         ]
     },
@@ -694,11 +844,11 @@
                     },
                     {
                         "affected_candidate": 302,
-                        "global_multiplier": -0.1
+                        "global_multiplier": -0.04
                     },
                     {
                         "affected_candidate": 303,
-                        "global_multiplier": -0.1
+                        "global_multiplier": -0.04
                     }
                 ]
             },
@@ -811,10 +961,6 @@
         "score_global": [
             {
                 "global_multiplier": 0.1
-            },
-            {
-                "affected_candidate": 302,
-                "global_multiplier": -0.08
             }
         ]
     },
@@ -962,7 +1108,7 @@
                 "feedback": "The pace and language of the debate leave you appearing out of your depth. Blanchet wins the debate and Poilievre has a strong performance.",
                 "score_global": [
                     {
-                        "global_multiplier": -0.02
+                        "global_multiplier": -0.04
                     },
                     {
                         "affected_candidate": 304,
@@ -979,16 +1125,16 @@
                         "issue_score": -1,
                         "issue_importance": 0.25
                     }
+                ],
+                "score_global": [
+                    {
+                        "global_multiplier": -0.01
+                    }
                 ]
             },
             {
                 "answer": "The network is charging $75,000 for my attendance. My campaign can easily pay for this, but I will refuse to attend on principle. Debates and media appearances should not be bought and sold, period.",
-                "feedback": "This makes sense seeing as this is the first time a network has charged the candidates to debate.",
-                "score_global": [
-                    {
-                        "global_multiplier": 0.01
-                    }
-                ]
+                "feedback": "This makes sense seeing as this is the first time a network has charged the candidates to debate."
             }
         ]
     },
@@ -997,23 +1143,23 @@
         "answers": [
             {
                 "answer": "This was a terrible lapse of judgement on the part of Mr. Chiang. However, he has apologized, and I will take this as a teachable moment for him. He is a person of integrity with a quarter-century of service in his community, and I stand by his candidacy.",
-                "feedback": "The RCMP open an investigation into the event, and Paul Chiang chooses to resign his candidacy. Furthermore, Hong Kong diaspora groups are incensed by your defence of him."
+                "feedback": "The RCMP open an investigation into the event, and Paul Chiang chooses to resign his candidacy. Furthermore, Hong Kong diaspora groups are incensed by your defence of him.",
+                "score_global": [
+                    {
+                        "global_multiplier": -0.03
+                    }
+                ]
             },
             {
                 "answer": "I can't allow this to derail the campaign. I will quickly drop his candidacy for Markham-Unionville and nominate Peter Yuen instead.",
-                "feedback": "Paul Chiang understands and bows out gracefully. However, the media needle Peter Yuen for his ties to Chinese community organizations linked with the Chinese government.",
-                "score_global": [
-                    {
-                        "global_multiplier": 0.01
-                    }
-                ]
+                "feedback": "Paul Chiang understands and bows out gracefully. However, the media needle Peter Yuen for his ties to Chinese community organizations linked with the Chinese government."
             },
             {
                 "answer": "I will defend Paul Chiang and argue that his joke, while of bad taste, has no bearing on his qualifications as an MP. He is an excellent legislator and representative for his community, and I stand by his candidacy.",
                 "feedback": "The RCMP open an investigation into the event, and Paul Chiang chooses to resign his candidacy. Furthermore, your lack of clear condemnation for his comment infuriates Hong Kong diaspora groups.",
                 "score_global": [
                     {
-                        "global_multiplier": -0.02
+                        "global_multiplier": -0.04
                     }
                 ]
             }
@@ -1309,6 +1455,12 @@
                         "state_multiplier": 0.3
                     }
                 ]
+            }
+        ],
+        "score_global": [
+            {
+                "affected_candidate": 301,
+                "global_multiplier": 0.03
             }
         ]
     },
@@ -1903,6 +2055,12 @@
                     }
                 ]
             }
+        ],
+        "score_global": [
+            {
+                "affected_candidate": 301,
+                "global_multiplier": 0.03
+            }
         ]
     },
     {
@@ -2054,6 +2212,12 @@
                         "global_multiplier": -0.04
                     }
                 ]
+            }
+        ],
+        "score_global": [
+            {
+                "affected_candidate": 301,
+                "global_multiplier": 0.03
             }
         ]
     },
