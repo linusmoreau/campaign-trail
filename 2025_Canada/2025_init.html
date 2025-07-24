@@ -432,6 +432,81 @@ campaignTrail_temp.opponents_default_json = [
     }
 ]
 
+function addDynamicCSS() {
+    var css = `
+        .inner_window_question h3 .mytooltip{
+            background-color: #f2a5a5;
+        }
+
+        .mytooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            background-color: #f2a5a5;
+        }
+
+        .mytooltip .mytooltiptext {
+            width: 240px;
+            background-color: #f2a5a5;
+            color: black;
+            text-align: center;
+            border-radius: 6px;
+            padding: 10px;
+            position: absolute;
+            z-index: 99;
+            bottom: 20%;
+            left: 20%;
+            margin-left: -90px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            border: 1px solid black;
+            pointer-events: none;
+            font-size: 13px !important;
+            line-height: 1.5em !important;
+            font-weight: normal !important;
+            font-style: normal !important;
+        }
+
+        .mytooltip .mytooltiptext img {
+            max-width: 240px;
+            height: auto;
+        }
+
+        .mytooltip:hover .mytooltiptext {
+            opacity: 1;
+            transition-delay: 0.5s;
+        }
+    `;
+
+    var styleElem = document.createElement('style');
+    styleElem.type = 'text/css';
+    
+    styleElem.appendChild(document.createTextNode(css));
+    
+    document.head.appendChild(styleElem);
+}
+
+addDynamicCSS();
+
+tooltipList = [
+    {searchString: "Chrystia Freeland", explanationText: "The Liberal Finance Minister and Deputy Prime Minister. She was also responsible for US trade negotiations during Trump's first term and was dubbed \"Minister of Everything\" by the media."},
+    {searchString: "CBC", explanationText: "The Canadian Broadcasting Corporation. It is the English branch of the Canadian national broadcaster which receives federal funding to support independent journalism. Generally considered to be liberal-leaning."},
+    {searchString: "Radio-Canada", explanationText: "The French branch of the Canadian national broadcaster which receives federal funding to support independent journalism."},
+    {searchString: "Daily Show", explanationText: "An American late-night comedy show running on Comedy Central."},
+    {searchString: "Juno News", explanationText: "A conservative media outlet that was founded by the same people as True North, they portray themselves as opposing the \"lying\" legacy media and Laurentian elite."},
+    {searchString: "coast to coast to coast", explanationText: "Refers to the Atlantic, Pacific, and Arctic oceans."},
+    {searchString: "capital gains tax", explanationText: "A tax on profits gained from selling assets. The tax was half as much as taxes on regular income but was recently increased to two-thirds for large gains and businesses."},
+    {searchString: "consumer carbon tax", explanationText: "A carbon pricing scheme that introduces an additional cost to activities causing greenhouse gas emissions. The funds raised are used to fund a rebate."},
+    {searchString: "Elbows up!", explanationText: "A defence mechanism when playing hockey."},
+    {searchString: "TVA", explanationText: "A major Quebec-based, French-language television broadcast network."},
+    {searchString: "GST", explanationText: "The Goods and Services Tax, a 5% sales tax levied by the federal government."},
+    {searchString: "basic personal allowance", explanationText: "Threshold beneath which workers pay no federal income tax."},
+    {searchString: "bottom tax bracket", explanationText: "A 15% income tax rate applies on annual incomes below $57,375."},
+    {searchString: "LNG", explanationText: "Liquefied Natural Gas"},
+    {searchString: "First Nations", explanationText: "The largest of the three groupings of Indigenous people in Canada. Along with the Metis and Inuit, they represent 5% of the country's population."},
+    {searchString: "Trans Mountain", explanationText: "Major oil pipeline built from Edmonton to the Pacific Coast, owned and operated by the federal government. A major expansion, tripling the system's capacity, cost the government $53 billion."}
+]
+
 //#startcode
 
 document.getElementsByClassName("game_header")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_title;
