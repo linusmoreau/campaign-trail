@@ -480,12 +480,12 @@
                     {
                         "state": "Saanich--Gulf Islands",
                         "affected_candidate": 303,
-                        "state_multiplier": 4
+                        "state_multiplier": 6
                     },
                     {
                         "state": "Kitchener Centre",
                         "affected_candidate": 303,
-                        "state_multiplier": 2
+                        "state_multiplier": 4
                     }
                 ]
             }
@@ -734,6 +734,14 @@
             {
                 "affected_candidate": 301,
                 "global_multiplier": 0.03
+            },
+            {
+                "affected_candidate": 306,
+                "global_multiplier": -0.2
+            },
+            {
+                "affected_candidate": 303,
+                "global_multiplier": -0.05
             }
         ]
     },
@@ -1461,6 +1469,14 @@
             {
                 "affected_candidate": 301,
                 "global_multiplier": 0.03
+            },
+            {
+                "affected_candidate": 306,
+                "global_multiplier": -0.2
+            },
+            {
+                "affected_candidate": 304,
+                "global_multiplier": -0.05
             }
         ]
     },
@@ -2218,6 +2234,14 @@
             {
                 "affected_candidate": 301,
                 "global_multiplier": 0.03
+            },
+            {
+                "affected_candidate": 306,
+                "global_multiplier": -0.2
+            },
+            {
+                "affected_candidate": 303,
+                "global_multiplier": -0.05
             }
         ]
     },
