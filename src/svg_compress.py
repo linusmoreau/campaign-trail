@@ -11,13 +11,14 @@ def to_complex(n: tuple[float, float]):
 def to_tuple(n: complex):
     return (n.real, n.imag)
 
-def parse_path(d: str):
+def parse_path(d: str, strict=False):
     path = svg.parse_path(d)
     section_indices = []
     section_start = 0
     for i, segment in enumerate(path):
         if type(segment) not in (svg.Move, svg.Line, svg.Close):
-            raise TypeError("Segment is not a polyline")
+            if strict:
+                raise TypeError("Segment is not a polyline")
         if type(segment) is svg.Close:
             section_indices.append((section_start, i))
             section_start = i + 1
@@ -25,9 +26,15 @@ def parse_path(d: str):
     sections = map(lambda ends: map(lambda segment: to_tuple(segment.end), path[ends[0]:ends[1]+1]), section_indices)
     return sections, lengths
 
+def append_section_to_path(path, section):
+    path.append(svg.Move(to_complex(section[0])))
+    for j in range(len(section) - 2):
+        path.append(svg.Line(to_complex(section[j]), to_complex(section[j+1])))
+    path.append(svg.Close(to_complex(section[-2]), to_complex(section[-1])))
+
 def compress_svg_path(d: str, method: str = "vw", epsilon: float = 0, scale_epsilon: bool = False, min_length: float = 0) -> str:
     try:
-        sections, lengths = parse_path(d)
+        sections, lengths = parse_path(d, strict=True)
     except TypeError:
         return d
     new_path = svg.Path()
@@ -47,10 +54,7 @@ def compress_svg_path(d: str, method: str = "vw", epsilon: float = 0, scale_epsi
         else:
             raise NotImplementedError('method must be one of "vw" or "rdp"')
         print(f"Compressed line of {len(path_section)} points to {len(compressed)} points.")
-        new_path.append(svg.Move(to_complex(compressed[0])))
-        for j in range(len(compressed) - 2):
-            new_path.append(svg.Line(to_complex(compressed[j]), to_complex(compressed[j+1])))
-        new_path.append(svg.Close(to_complex(compressed[-2]), to_complex(compressed[-1])))
+        append_section_to_path(new_path, compressed)
     return new_path.d()
 
 

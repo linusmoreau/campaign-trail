@@ -81,7 +81,7 @@ class Code2Generator:
             f.write(s)
         
     def extract_geometry(self) -> pd.DataFrame:
-        doc = minidom.parse(os.path.join(self.election_dir, "election_map_compressed.svg"))
+        doc = minidom.parse(os.path.join(self.election_dir, "election_map_compressed_rearranged.svg"))
         path_geometries = [
             (
                 path.getAttribute("inkscape:label"),
@@ -89,6 +89,28 @@ class Code2Generator:
             )
             for path in doc.getElementsByTagName('path')[:343]
         ]
+        return pd.DataFrame(path_geometries, columns=("name", "d"))
+    
+    def extract_geometry_yapms(self) -> pd.DataFrame:
+        doc = minidom.parse(os.path.join(self.election_dir, "yapms_map.svg"))
+        path_geometries = []
+        for group in doc.getElementsByTagName("g"):
+            # Ridings described with multiple paths
+            s = group.getAttribute("long-name").replace("—", "--").replace("’", "'")
+            if s == "":
+                continue
+            d = ""
+            for path in group.getElementsByTagName("path"):
+                d += " M 0,0 " + path.getAttribute("d")
+            d = d.strip()
+            path_geometries.append((s, d))
+        for path in doc.getElementsByTagName("path"):
+            # Ridings described with a single path
+            s = path.getAttribute("long-name").replace("—", "--").replace("’", "'")
+            if s == "":
+                continue
+            path_geometries.append((s, path.getAttribute("d")))
+            
         return pd.DataFrame(path_geometries, columns=("name", "d"))
     
     def extract_historical_results(self) -> pd.DataFrame:
