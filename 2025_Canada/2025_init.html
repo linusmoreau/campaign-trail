@@ -108,7 +108,7 @@ campaignTrail_temp.candidate_json = [
             "party": "Conservative",
             "state": "Canada",
             "priority": 1,
-            "description": "<p>[NOT CURRENTLY PLAYABLE]</p><p>Formed as a merger between the Progressive Conservative Party and the Reform Party in 2003, the Conservative Party is the main party occupying the right wing of the Canadian political spectrum.</p><p>After holding power for 9 years under the leadership of Stephen Harper, the Conservative Party has been relegated as the Official Opposition for the last 9 years, the last two of which were under the leadership of Pierre Poilievre.</p><p>As the 2025 election approaches, the Conservative Party holds a commanding lead in the polls. Can the party maintain its advantage on election day?</p>",
+            "description": "<p>[NOT CURRENTLY PLAYABLE]</p><p>Formed as a merger between the Progressive Conservative Party and the Reform Party in 2003, the Conservative Party is the main party occupying the right wing of the Canadian political spectrum.</p><p>After holding power for 9 years under the leadership of Stephen Harper, the Conservative Party has been relegated to the Official Opposition for the last 9 years, the last two of which were under the leadership of Pierre Poilievre.</p><p>As the 2025 election approaches, the Conservative Party holds a commanding lead in the polls. Can the party maintain its advantage on election day?</p>",
             "color_hex": "#6495ED",
             "secondary_color_hex": null,
             "is_active": 1,
@@ -504,7 +504,8 @@ tooltipList = [
     {searchString: "bottom tax bracket", explanationText: "A 15% income tax rate applies on annual incomes below $57,375."},
     {searchString: "LNG", explanationText: "Liquefied Natural Gas"},
     {searchString: "First Nations", explanationText: "The largest of the three groupings of Indigenous people in Canada. Along with the Metis and Inuit, they represent 5% of the country's population."},
-    {searchString: "Trans Mountain", explanationText: "Major oil pipeline built from Edmonton to the Pacific Coast, owned and operated by the federal government. A major expansion, tripling the system's capacity, cost the government $53 billion."}
+    {searchString: "Trans Mountain", explanationText: "Major oil pipeline built from Edmonton to the Pacific Coast, owned and operated by the federal government. A recent expansion that tripled the system's capacity cost the government $53 billion."},
+    {searchString: "Brookfield", "explanationText": "A Canadian multinational alternative asset management company with over $1 trillion in managed assets, making it one of the largest investment companies in the world. Its board was chaired by Mark Carney until he stepped down to run for the Liberal leadership."}
 ]
 
 //#startcode
@@ -545,7 +546,7 @@ quotes = [
 customquote = quotes[Math.floor((Math.random() * quotes.length))]
 corrr="\n<h2>THE CAMPAIGN TRAIL</h2><font id='wittyquote' size='4' color='white'><em>" + customquote + "</em></font>"
 
-function updateHeader() {
+function updateElements() {
     var gameHeader = document.getElementsByClassName("game_header")[0];
 
     if (gameHeader.getAttribute("id") !== "modifiedHeader") {
@@ -553,9 +554,16 @@ function updateHeader() {
         gameHeader.style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_title;
         gameHeader.setAttribute("id", "modifiedHeader");
     }
+
+    // Remove "continue" buttons for non-playable characters
+    const running_mate_id = document.getElementById("running_mate_id")
+    const continue_button = document.getElementById("running_mate_id_button")
+    if (running_mate_id && continue_button && running_mate_id.value != "310") {
+        continue_button.parentElement.removeChild(continue_button)
+    }
 }
 
-var headerobserver = new MutationObserver(updateHeader);
-headerobserver.observe(document.documentElement, { childList: true, subtree: true });
+var mutationObserver = new MutationObserver(updateElements);
+mutationObserver.observe(document.documentElement, { childList: true, subtree: true });
 
 //#endcode

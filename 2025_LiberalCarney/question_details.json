@@ -196,11 +196,11 @@
         ]
     },
     {
-        "question": "[February 2025] Brookfield Asset Management has decided to move its headquarters from Toronto to New York. You were chairman of the board for Brookfield. What was your involvement in this decision?",
+        "question": "[February 2025] Brookfield Asset Management has decided to move its headquarters from Toronto to New York. What was your involvement in this decision?",
         "answers": [
             {
                 "answer": "The decision was made after I quit my position as chair of the board to run for leadership. I no longer have any connection with Brookfield.",
-                "feedback": "Journalists retrieve company documents that show the decision was approved in October, long before you left the company. And you still own $1.7 million in Brookfield stock options."
+                "feedback": "Journalists retrieve company documents that show the decision was approved in October, long before you left the company."
             },
             {
                 "answer": "We need a distraction from this. I'll put out some attacks on Poilievre for his lack of economic experience and his ties to elite circles.",
