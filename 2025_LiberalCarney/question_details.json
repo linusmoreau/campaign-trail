@@ -266,11 +266,16 @@
         ]
     },
     {
-        "question": "[March 2025] As the Liberal leadership election nears its conclusion, what is your primary message to Liberal members?",
+        "question": "[March 2025] As the Liberal leadership election nears its conclusion, what is your primary message to Liberal members as you compete with the other Liberal leadership contenders?",
         "answers": [
             {
                 "answer": "I'll focus on my biography. I have managed economic crises, built strong economies, and run tough negotiations. I have the experience to lead in this crucial time.",
-                "feedback": "Your experience in both the public and private sectors sets you apart from your rivals."
+                "feedback": "Your experience in both the public and private sectors sets you apart from your rivals.",
+                "score_global": [
+                    {
+                        "global_multiplier": 0.02
+                    }
+                ]
             },
             {
                 "answer": "I'll emphasize change. I will make clear that I want to turn the country around, distancing myself from Trudeau and his record.",
@@ -1049,8 +1054,8 @@
                 ]
             },
             {
-                "answer": "I will highlight Gregor Robertson, a man with significant executive experience and vision. He was mayor of Vancouver for 10 years, served provincially in the BC NDP, and co-founded Happy Planet, an organic foods company. By the end of his mayoralty, Vancouver had the lowest unemployment in Canada, the most extensive bike network in North America, and became among the most livable cities in the world.",
-                "feedback": "Impressive as his record is, Robertson is also blamed by many for the exceedingly high housing costs in Vancouver which increased 150% during his tenure.",
+                "answer": "I will highlight Gregor Robertson, a man with significant executive experience and vision. He was mayor of the City of Vancouver for 10 years, served provincially in the BC NDP, and co-founded Happy Planet, an organic foods company. By the end of his mayoralty, the city had the lowest unemployment in Canada, the most extensive bike network in North America, and became among the most livable cities in the world.",
+                "feedback": "Impressive as his record is, Robertson is also blamed by many for the exceedingly high housing costs in Vancouver which increased rapidly during his tenure.",
                 "score_issue": [
                     {
                         "issue": 112,
