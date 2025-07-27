@@ -88,4 +88,4 @@ if __name__ == "__main__":
         [[2350, 1200, 2530, 1400], [250, -950], 2],         # Halifax
         [[2350, 980, 2530, 1200], [330, -1020], 1.5]        # St. John's
     ]
-    svg_rearrange("../2025_Canada/election_map_compressed.svg", new_size=(w, size[1]))
+    svg_rearrange("../2025Canada/election_map_compressed.svg", new_size=(w, size[1]))

@@ -10,19 +10,30 @@ if not os.path.exists(PROCESSED_DIR):
     os.makedirs(PROCESSED_DIR)
 
 
-def process(f, crop=False, ratio=7/8, max_height=1200):
+def process(f, crop=False, ratio=7/8, max_width=1200, max_height=1200):
     img = Image.open(f)
     w, h = img.size
     if h > max_height:
         w = round(w * max_height / h)
         h = max_height
+    if w > max_width:
+        h = round(h * max_width / w)
+        w = max_width
+    if (w, h) != img.size:
         img = img.resize((w, h))
     if crop:
-        new_width = h * ratio
-        margin = round((w - new_width) / 2)
-        left = margin
-        right = w - margin
-        img = img.crop((left, 0, right, h))
+        if w/h > ratio:
+            new_width = h * ratio
+            margin = round((w - new_width) / 2)
+            left = margin
+            right = w - margin
+            img = img.crop((left, 0, right, h))
+        else:
+            new_height = w * ratio
+            margin = round((h - new_height) / 2)
+            top = margin
+            bottom = h - margin
+            img = img.crop((0, top, w, bottom))
     if img.mode != "RGB":
         img = img.convert("RGBA")
         canvas = Image.new("RGBA", img.size, "WHITE")
@@ -30,10 +41,11 @@ def process(f, crop=False, ratio=7/8, max_height=1200):
         img = canvas.convert("RGB") 
     return img
     
-def process_and_save(f, crop=False, ratio=7/8):
+def process_and_save(f: str, f_out: str | None = None, crop=False, ratio=7/8):
     img = process(f, crop, ratio)
-    jpg = os.path.splitext(os.path.split(f)[-1])[0] + ".jpg"
-    img.save(os.path.join(PROCESSED_DIR, jpg))
+    if f_out is None:
+        f_out = os.path.splitext(os.path.split(f)[-1])[0] + ".jpg"
+    img.save(os.path.join(PROCESSED_DIR, f_out))
 
 def process_all():
     for f in os.listdir(PORTRAITS_DIR):
@@ -54,3 +66,6 @@ def process_all():
 
 if __name__ == "__main__":
     process_all()
+    process_and_save(os.path.join(PORTRAITS_DIR, "carney.avif"), crop=True, ratio=1)
+    process_and_save(os.path.join(IMAGES_DIR, "nct_logo.png"), "election_image.jpg", crop=True, ratio=15/8)
+    process_and_save(os.path.join(IMAGES_DIR, "nct_logo.png"), crop=True, ratio=9/5)

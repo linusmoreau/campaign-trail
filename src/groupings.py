@@ -11,4 +11,4 @@ def generate_groupings(election_name):
     
 
 if __name__ == "__main__":
-    generate_groupings("2025_Canada")
+    generate_groupings("2025Canada")
