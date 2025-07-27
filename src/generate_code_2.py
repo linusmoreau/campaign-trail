@@ -360,6 +360,6 @@ class Code2Generator:
 
 if __name__ == "__main__":
     election_name = "2025Canada"
-    scenario_name = "2025Canada_LiberalCarney"
+    scenario_name = "2025Canada_LPCCarney"
     generator = Code2Generator(election_name, scenario_name)
     generator.generate()
