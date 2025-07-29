@@ -79,29 +79,58 @@ class Transcriber:
                 except KeyError:
                     # No feedback included
                     pass
-                self.add_scores(
+                answer_global_scores, answer_issue_scores, answer_state_scores = self.get_scores(
                     candidate,
                     score_multiplier,
                     answer_pk,
                     answer_detail,
-                    answer_score_global,
-                    answer_score_issue,
-                    answer_score_state,
                     state_name_to_pk,
                     state_groupings
                 )
-                self.add_scores(
+                question_global_scores, question_issue_scores, question_state_scores = self.get_scores(
                     candidate,
                     score_multiplier,
                     answer_pk,
                     question_detail,
-                    answer_score_global,
-                    answer_score_issue,
-                    answer_score_state,
                     state_name_to_pk,
                     state_groupings
                 )
-        
+            
+                def score_global_merge(score, other_score):
+                    new_score = score.copy()
+                    new_score["fields"]["global_multiplier"] += other_score["fields"]["global_multiplier"]
+                    return new_score
+                    
+                def score_issue_merge(score, other_score):
+                    new_score = score.copy()
+                    new_score["fields"]["issue_score"] = score["fields"]["issue_score"] * score["fields"]["issue_importance"] + other_score["fields"]["issue_score"] * other_score["fields"]["issue_importance"]
+                    new_score["fields"]["issue_importance"] += other_score["fields"]["issue_importance"]
+                    return new_score
+                    
+                def score_state_merge(score, other_score):
+                    new_score = score.copy()
+                    new_score["fields"]["state_multiplier"] += other_score["fields"]["state_multiplier"]
+                    return new_score
+
+                answer_score_global += self.merge_scores(
+                    answer_global_scores, 
+                    question_global_scores, 
+                    ("answer", "affected_candidate"),
+                    score_global_merge
+                )
+                answer_score_issue += self.merge_scores(
+                    answer_issue_scores, 
+                    question_issue_scores, 
+                    ("answer", "issue"),
+                    score_issue_merge
+                )
+                answer_score_state += self.merge_scores(
+                    answer_state_scores,
+                    question_state_scores,
+                    ("answer", "state", "affected_candidate"),
+                    score_state_merge
+                )
+                
         self.file_manager.dump_json(self.scenario_dir, "questions.json", questions)
         self.file_manager.dump_json(self.scenario_dir, "answers.json", answers)
         self.file_manager.dump_json(self.scenario_dir, "answer_feedback.json", answer_feedback)
@@ -110,18 +139,40 @@ class Transcriber:
         self.file_manager.dump_json(self.scenario_dir, "answer_score_state.json", answer_score_state)
         
         
-    def add_scores(
+    def merge_scores(self, scores, other_scores, merge_on, func):
+        new_scores = []
+        score_merged = set()
+        other_score_merged = set()
+        for i, score in enumerate(scores):
+            for j, other_score in enumerate(other_scores):
+                for key in merge_on:
+                    if score["fields"][key] != other_score["fields"][key]:
+                        break
+                else:
+                    new_scores.append(func(score, other_score))
+                    score_merged.add(i)
+                    other_score_merged.add(j)
+        for i, score in enumerate(scores):
+            if i not in score_merged:
+                new_scores.append(score)
+        for j, score in enumerate(other_scores):
+            if j not in other_score_merged:
+                new_scores.append(score)
+        return new_scores
+        
+        
+    def get_scores(
         self,
         candidate,
         score_multiplier,
         answer_pk,
         answer_detail,
-        answer_score_global,
-        answer_score_issue,
-        answer_score_state,
         state_name_to_pk,
         state_groupings
     ):
+        answer_score_global = []
+        answer_score_issue = []
+        answer_score_state = []
         for score_global in answer_detail.get("score_global", ()):
             answer_score_global.append(
                 {
@@ -182,3 +233,5 @@ class Transcriber:
                     }
                 )
                 self.score_pk += 1
+        return answer_score_global, answer_score_issue, answer_score_state
+    

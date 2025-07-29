@@ -365,7 +365,7 @@
                     {
                         "state": "Burnaby Central",
                         "affected_candidate": 302,
-                        "state_multiplier": 1
+                        "state_multiplier": 2
                     },
                     {
                         "state": "Victoria",
@@ -479,6 +479,21 @@
                     },
                     {
                         "state": "Saskatoon West",
+                        "affected_candidate": 302,
+                        "state_multiplier": 2
+                    },
+                    {
+                        "state": "Brandon--Souris",
+                        "affected_candidate": 302,
+                        "state_multiplier": 1
+                    },
+                    {
+                        "state": "Kenora--Kiiwetinoong",
+                        "affected_candidate": 302,
+                        "state_multiplier": 1
+                    },
+                    {
+                        "state": "Port Moody--Coquitlam",
                         "affected_candidate": 302,
                         "state_multiplier": 1
                     },
