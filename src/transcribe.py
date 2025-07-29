@@ -38,6 +38,7 @@ class Transcriber:
         answer_score_global = []
         answer_score_issue = []
         answer_score_state = []
+        answer_historical = []
 
         for i, question_detail in enumerate(question_details):
             question_pk = 4000+(10*(i+1))
@@ -64,6 +65,8 @@ class Transcriber:
                         }
                     }
                 )
+                if answer_detail.get("historical", False):
+                    answer_historical.append(answer_pk)
                 try:
                     answer_feedback.append(
                         {
@@ -137,6 +140,7 @@ class Transcriber:
         self.file_manager.dump_json(self.scenario_dir, "answer_score_global.json", answer_score_global)
         self.file_manager.dump_json(self.scenario_dir, "answer_score_issue.json", answer_score_issue)
         self.file_manager.dump_json(self.scenario_dir, "answer_score_state.json", answer_score_state)
+        self.file_manager.dump_json(self.scenario_dir, "answer_historical.json", answer_historical)
         
         
     def merge_scores(self, scores, other_scores, merge_on, func):
