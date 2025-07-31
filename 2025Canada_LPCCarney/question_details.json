@@ -8,12 +8,7 @@
                 "score_issue": [
                     {
                         "issue": 111,
-                        "issue_score": 0.5
-                    }
-                ],
-                "score_global": [
-                    {
-                        "global_multiplier": -0.02
+                        "issue_score": 1
                     }
                 ]
             },
@@ -185,6 +180,10 @@
                 "score_global": [
                     {
                         "global_multiplier": -0.05
+                    },
+                    {
+                        "affected_candidate": 302,
+                        "global_multiplier": 0.1
                     }
                 ]
             }
@@ -524,12 +523,21 @@
         "question": "[March 2025] Before calling a snap election to capitalize on your fresh image and legitimize your position, you have a chance to enact some policies before heading into the election.",
         "answers": [
             {
-                "answer": "We don't have time for this. I will call the election immediately and hit the campaign trail. We have to strike while the iron is hot.",
-                "feedback": "Rushing into the election helps limit how much the Conservatives can spend out of their massive warchest as election spending limits kick in.",
-                "score_global": [
+                "answer": "I will reverse the increase in the capital gains tax. At this moment of economic uncertainty, we need to do everything to encourage private investment into our economy.",
+                "feedback": "The wealthy and business owners are satisfied, but others also want action on the carbon tax.",
+                "score_issue": [
                     {
-                        "affected_candidate": 301,
-                        "global_multiplier": -0.005
+                        "issue": 111,
+                        "issue_score": -0.5
+                    },
+                    {
+                        "issue": 112,
+                        "issue_score": 1
+                    },
+                    {
+                        "issue": 114,
+                        "issue_score": -1,
+                        "issue_importance": 2
                     }
                 ]
             },
@@ -540,7 +548,7 @@
                 "score_issue": [
                     {
                         "issue": 111,
-                        "issue_score": -0.6
+                        "issue_score": -1
                     },
                     {
                         "issue": 112,
@@ -548,32 +556,46 @@
                     },
                     {
                         "issue": 114,
-                        "issue_score": 0.6
+                        "issue_score": 0.5,
+                        "issue_importance": 2
                     }
                 ]
             },
             {
-                "answer": "I will call Parliament back into session to send out $400 cheques to every Canadian to support families through the affordability crisis.",
-                "feedback": "Trudeau tried a similar policy a few months ago which contributed to the collapse of his government. Let's hope Canadians appreciate this small financial help.",
+                "answer": "I will abolish the consumer carbon tax. The electorate is simply less accepting of bold climate policies than it used to be.",
+                "feedback": "This undermines a key attack line of the Conservatives, having named you Carbon Tax Carney.",
                 "score_issue": [
                     {
-                        "issue": 112,
-                        "issue_score": -0.2
-                    }
-                ],
-                "score_global": [
+                        "issue": 111,
+                        "issue_score": -0.5
+                    },
                     {
-                        "global_multiplier": -0.02
+                        "issue": 112,
+                        "issue_score": -1
+                    },
+                    {
+                        "issue": 114,
+                        "issue_score": 0.5,
+                        "issue_importance": 2
                     }
                 ]
             },
             {
-                "answer": "I will call Parliament back into session to approve funds to support workers who may lose their jobs because of the American tariffs.",
-                "feedback": "This move underscores your focus on trade issues.",
+                "answer": "I will keep both the capital gains tax increase and the consumer carbon price. We are in a climate crisis and an inequality crisis, and these policies are necessary to fight these crises.",
+                "feedback": "While what you say may be true, this opens you up to the accusation that you are the same as Trudeau.",
                 "score_issue": [
                     {
+                        "issue": 111,
+                        "issue_score": 1
+                    },
+                    {
                         "issue": 112,
-                        "issue_score": -0.2
+                        "issue_score": -1
+                    },
+                    {
+                        "issue": 114,
+                        "issue_score": -1,
+                        "issue_importance": 2
                     }
                 ]
             }
@@ -917,7 +939,7 @@
             },
             {
                 "answer": "We need to focus on winning over conservatives. I will criticize the class warfare type language prominent in much of progressive politics and avoid any discussion of inequality.",
-                "feedback": "Fair. Socialist-leaning voters are not pleased, but you don't need them anyway.",
+                "feedback": "Left wingers are disappointed, but many stick with you anyway as the lesser of two evils.",
                 "score_issue": [
                     {
                         "issue": 112,
@@ -1826,7 +1848,8 @@
                     },
                     {
                         "issue": 114,
-                        "issue_score": 0.5
+                        "issue_score": 0.5,
+                        "issue_importance": 2
                     }
                 ]
             },
@@ -1855,7 +1878,8 @@
                 "score_issue": [
                     {
                         "issue": 114,
-                        "issue_score": -1
+                        "issue_score": -1,
+                        "issue_importance": 2
                     }
                 ],
                 "score_global": [
@@ -1874,7 +1898,8 @@
                     },
                     {
                         "issue": 114,
-                        "issue_score": 1
+                        "issue_score": 1,
+                        "issue_importance": 2
                     }
                 ],
                 "score_global": [

@@ -89,7 +89,7 @@ endingPicker = (out, totv, aa, quickstats) => {
                 "A few months ago, the Liberal Party was down in the dumps, and electoral defeat was all but certain. Despite the herculean task of bringing back a party from death's door, you went for it. Despite failing to win a plurality of seats, you managed to hold back the Conservatives from winning a majority government. Though some Liberal partisans are disappointed that you didn't win the election outright, most are relieved that you have prevented Conservative majority rule.",
                 "You have a few options. As the incumbent Prime Minister, you could try to stay on with the tolerance of the smaller parties. This could inflame public sentiment as it would appear to be ignoring the will of the voters. It would also be precarious as your parliamentary allies could pull the plug at any moment.",
                 "Alternatively, you could resign and allow Pierre Poilievre to become the 25th Prime Minister of Canada. With the Conservatives lacking a majority government, you could hold them to account, prevent the most harmful policies from becoming law, and strike at an opportune moment to send the Conservatives back into Opposition.",
-                "The choice is yours. But whichever you choose, you will have to maneuver carefully to stay at the pinnacle of Canadian politics."
+                "The choice is yours. But whichever you choose, you will have to maneuver carefully to stay ascendant in Canadian politics."
             ];
             setImage("https://i.imgur.com/bWPXiN4.jpeg")
             setMusic("https://www.youtube-nocookie.com/embed/t5nJ_mg_yMo?autoplay=1&start=10")
