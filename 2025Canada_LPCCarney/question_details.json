@@ -1617,7 +1617,7 @@
         "question": "[April 2025] Voters always like a good tax cut. Do you have any plans for tax cuts?",
         "answers": [
             {
-                "answer": "My plan includes a well-deserved tax cut for the middle class, lowering the bottom tax bracket from 15% to 14%.",
+                "answer": "My plan includes a well-deserved tax cut for the middle class, lowering the lowest tax bracket to 14%.",
                 "historical": true,
                 "feedback": "This balances cutting taxes with fiscal responsibility.",
                 "score_issue": [
@@ -1628,7 +1628,7 @@
                 ]
             },
             {
-                "answer": "It's time to let Canadians keep more of what they earn. I will drop the bottom tax bracket to 12.75%.",
+                "answer": "It's time to let Canadians keep more of what they earn. I will drop the lowest tax bracket to 12%.",
                 "feedback": "The bigger the tax cut, the better. Right?",
                 "score_issue": [
                     {

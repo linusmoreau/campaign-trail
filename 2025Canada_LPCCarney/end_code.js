@@ -5,7 +5,7 @@ campaignTrail_temp.running_mate_last_name = "Carney";
 
 let observerRunning = false;
 let processedNodes = new Set();
-const scrollableElementIds = ["overall_result", "state_result", "state_info", "main_content_area"];
+const scrollableElementIds = ["overall_result", "state_result", "state_info", "main_content_area", "final_results_description"];
 
 async function handleMutations(mutationsList, observer) {
     if (observerRunning) return;
@@ -33,6 +33,13 @@ async function handleMutations(mutationsList, observer) {
     observerRunning = false;
 }
 
+function ctsAchievement(achievement, difficultyChecker=true){
+	if ((difficultyChecker && campaignTrail_temp.difficulty_level_multiplier <= 1) || !difficultyChecker)
+		if(campaignTrail_temp.CTS){
+            unlockAchievement(achievement);
+        }
+}
+
 let singleObserver = new MutationObserver(handleMutations);
 singleObserver.observe(document.documentElement, { childList: true, subtree: true });
 
@@ -50,17 +57,30 @@ endingPicker = (out, totv, aa, quickstats) => {
         }, 10);
     }
 
+    // Did Poilievre win Carleton?
+    const carleton = campaignTrail_temp.final_state_results.find(state => {return state.abbr == "Carleton"})
+    const poilievre_won = carleton.result[0].candidate == 301
+
+    // Did Carney win Nepean?
+    const nepean = campaignTrail_temp.final_state_results.find(state => {return state.abbr == "Nepean"})
+    const carney_won = nepean.result[0].candidate == 300
+
     winner = aa[0];
     runnerUp = aa[1];
     if (winner.candidate == 300) {
         if (winner.electoral_votes >= 172 || (runnerUp.candidate == 300 && runnerUp.electoral_votes == winner.electoral_votes)) {
             header = "Liberal Majority Government!";
             description = [
-                "A few months ago, the Liberal Party was down in the dumps, and electoral defeat was all but certain. Despite the herculean task of bringing back a party from death's door, you went for it. With your experienced background and disciplined campaign, you pulled through. Not only did you defeat Poilievre, you won a majority government.",
+                "A few months ago, the Liberal Party was down in the dumps, and electoral defeat was all but certain. Despite the herculean task of bringing back a party from death's door, you went for it. With your experienced background and disciplined campaign, you pulled through.",
                 "Your premiership will not be an easy one. You have a trade war to fight against President Trump, a housing crisis to resolve, and a sluggish economy to revive. Canadians have high hopes for you. Don't let them down.",
                 "With a majority in the House of Commons, you will have an easier time passing your reforms and can count on being able to serve out your full four year term. But don't get complacent. You still need to collaborate with the provinces, First Nations, and the business community to make your vision reality. One wrong step can bleed your goodwill away.",
                 "But for now, you've won! Tonight you can celebrate, but tomorrow the work begins to build Canada strong."
             ]
+            if (poilievre_won) {
+                description[0] += " Not only did you beat Poilievre, you won a majority government."
+            } else {
+                description[0] += " Not only did you beat Poilievre, you defeated him in his own constituency and won a majority government."
+            }
         } else {
             // This outcome also occurs in the case of a Liberal tie for first
             header = "Liberal Minority Government!";
@@ -70,6 +90,9 @@ endingPicker = (out, totv, aa, quickstats) => {
                 "Without a majority in the House of Commons, you will need to work with the opposition parties to pass your reforms. With the average lifespan of a minority government at two years, you have your work cut out for you to maintain parliamentary confidence and avoid an early end to your governance.",
                 "But for now, you've won! Tonight you can celebrate, but tomorrow the work begins to build Canada strong."
             ];
+            if (!poilievre_won) {
+                description[0] += " Not only did you beat Poilievre, you defeated him in his own constituency."
+            }
         }
         setImage("https://i.imgur.com/MVBYnzH.jpeg")
         setMusic("https://www.youtube-nocookie.com/embed/71S9ou2gcqE?autoplay=1")

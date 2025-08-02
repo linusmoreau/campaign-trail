@@ -1,3 +1,7 @@
+document.getElementById("inner_window_1").children[0].innerHTML = `<h3>Do you have what it takes to win a Canadian parliamentary election?</h3>`
+
+document.getElementById("inner_window_1").children[1].innerHTML = `<li>Select a party and a leader to find out.</li><li>You will answer questions about your platform and positions, and also about your campaign strategy.</li><li>The answers will affect your popularity for better or worse, both nationally and in individual ridings.</li><li>Walk the fine line between appealing to your base and winning a majority of the votes.</li>`;
+
 campaignTrail_temp.global_parameter_json = [
     {
         "model": "campaign_trail.global_parameter",
@@ -29,7 +33,7 @@ campaignTrail_temp.election_json = [
         "pk": 20,
         "fields": {
             "year": 2025,
-            "display_year": "2025",
+            "display_year": "2025Canada",
             "summary": "<p>As the 2025 election approaches, the situation appears dire for the Liberal Party of Canada. After 9 years of governance, Prime Minister Justin Trudeau's popularity has waned. Dissatisfaction with the economic condition of the country and Trudeau's scandals has left the Liberal Party polling at half the support of the rival Conservative Party, barely above the left-wing New Democratic Party. Pierre Poilievre, the Conservative leader, appears poised to become the next Prime Minister of Canada.</p><p>However, the winds are changing. Donald Trump's shock election win, combined with his trade policy, puts him on a collision course with the Canadian government. There are rumblings within the Liberal Party to push Trudeau out and seek out a new leader. Will Poilievre and the Conservatives cruise to victory? Or will the Liberals succeed in making a comeback for the ages?</p>",
             "image_url": "https://i.imgur.com/QenEQDJ.jpeg",
             "winning_electoral_vote_number": 172,
@@ -46,7 +50,7 @@ campaignTrail_temp.temp_election_list = [
         "id": 20,
         "year": 2025,
         "is_premium": 0,
-        "display_year": "2025"
+        "display_year": "2025Canada"
     }
 ]
 
@@ -501,7 +505,7 @@ tooltipList = [
     {searchString: "TVA", explanationText: "A major Quebec-based, French-language television broadcast network."},
     {searchString: "GST", explanationText: "The Goods and Services Tax, a 5% sales tax levied by the federal government."},
     {searchString: "basic personal allowance", explanationText: "Threshold beneath which workers pay no federal income tax."},
-    {searchString: "bottom tax bracket", explanationText: "A 15% income tax rate applies on annual incomes below $57,375."},
+    {searchString: "lowest tax bracket", explanationText: "A 15% income tax rate applies on annual incomes below $57,375."},
     {searchString: "LNG", explanationText: "Liquefied Natural Gas"},
     {searchString: "First Nations", explanationText: "The largest of the three groupings of Indigenous people in Canada. Along with the Metis and Inuit, they represent 5% of the country's population. Due to history and treaties, they have some collective rights pertaining to land use."},
     {searchString: "Trans Mountain", explanationText: "Major oil pipeline built from Edmonton to the Pacific Coast, owned and operated by the federal government. A recent expansion that tripled the system's capacity cost the government $53 billion."},
@@ -528,8 +532,6 @@ tooltipList = [
     {searchString: "Liberal leadership contenders", "explanationText": "Includes former Minister of Finance Chrystia Freeland, Government House Leader Karina Gould, and businessman Frank Baylis."},
     {searchString: "three word slogans", "explanationText": "Axe the Tax, Build the Homes, Fix the Budget, Stop the Crime, Bring it Home, etc. Poilievre's campaign has an affinity for verb-the-noun slogans."}
 ]
-
-//#startcode
 
 document.getElementsByClassName("game_header")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_title;
 
@@ -587,4 +589,25 @@ function updateElements() {
 var mutationObserver = new MutationObserver(updateElements);
 mutationObserver.observe(document.documentElement, { childList: true, subtree: true });
 
-//#endcode
+campaignTrail_temp.achievements = {
+    "Carnegeddon": {
+        "image": "TODO",
+        "description": "As Carney, win the most seats in Liberal Party history (at least 192).",
+        "cannotBeCheated": true
+    },
+    "Real Change": {
+        "image": "TODO",
+        "description": "As Carney, criticize Trudeau, purge the civil service, unseat Poilievre, and win a majority.",
+        "cannotBeCheated": true
+    },
+    "Carbon Tax Carney": {
+        "image": "TODO",
+        "description": "As Carney, keep the carbon tax, oppose pipelines, and win.",
+        "cannotBeCheated": true
+    },
+    "Three in a Row": {
+        "image": "TODO",
+        "description": "As Carney, win the most seats but lose the popular vote.",
+        "cannotBeCheated": true
+    }
+}
