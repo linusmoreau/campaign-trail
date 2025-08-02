@@ -23,16 +23,14 @@ def process(f, crop=False, ratio=7/8, max_width=1200, max_height=1200):
         img = img.resize((w, h))
     if crop:
         if w/h > ratio:
-            new_width = h * ratio
-            margin = round((w - new_width) / 2)
-            left = margin
-            right = w - margin
+            new_width = round(h * ratio)
+            left = round((w - new_width) / 2)
+            right = left + new_width
             img = img.crop((left, 0, right, h))
         else:
-            new_height = w * ratio
-            margin = round((h - new_height) / 2)
-            top = margin
-            bottom = h - margin
+            new_height = round(w * ratio)
+            top = round((h - new_height) / 2)
+            bottom = top + new_height
             img = img.crop((0, top, w, bottom))
     if img.mode != "RGB":
         img = img.convert("RGBA")
@@ -67,5 +65,3 @@ def process_all():
 if __name__ == "__main__":
     process_all()
     process_and_save(os.path.join(PORTRAITS_DIR, "carney.avif"), crop=True, ratio=1)
-    process_and_save(os.path.join(IMAGES_DIR, "nct_logo.png"), "election_image.jpg", crop=True, ratio=15/8)
-    process_and_save(os.path.join(IMAGES_DIR, "nct_logo.png"), crop=True, ratio=9/5)
