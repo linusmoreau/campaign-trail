@@ -1778,9 +1778,9 @@
                         "global_multiplier": -0.02
                     }
                 ],
-                "score_state": [
+                "score_group": [
                     {
-                        "state": "Mount Royal",
+                        "group": "Jewish communities",
                         "state_multiplier": -1
                     }
                 ]
@@ -1795,9 +1795,9 @@
                         "issue_score": -0.3
                     }
                 ],
-                "score_state": [
+                "score_group": [
                     {
-                        "state": "Mount Royal",
+                        "group": "Jewish communities",
                         "state_multiplier": -0.5
                     }
                 ]
@@ -1825,9 +1825,9 @@
                         "global_multiplier": -0.06
                     }
                 ],
-                "score_state": [
+                "score_group": [
                     {
-                        "state": "Mount Royal",
+                        "group": "Jewish communities",
                         "state_multiplier": 0.5
                     }
                 ]
@@ -1965,41 +1965,9 @@
                 "answer": "I will attack the Conservatives for their plans to cut the public service while quietly including similar cuts in my fiscal plan.",
                 "historical": true,
                 "feedback": "Your gambit works. Public servants flock to your campaign as they fear a Poilievre government, and the size of the cuts in your own plans go unquestioned.",
-                "score_state": [
+                "score_group": [
                     {
-                        "state": "Carleton",
-                        "state_multiplier": 0.5
-                    },
-                    {
-                        "state": "Nepean",
-                        "state_multiplier": 0.5
-                    },
-                    {
-                        "state": "Kanata",
-                        "state_multiplier": 0.5
-                    },
-                    {
-                        "state": "Ottawa South",
-                        "state_multiplier": 0.5
-                    },
-                    {
-                        "state": "Ottawa--Vanier--Gloucester",
-                        "state_multiplier": 0.5
-                    },
-                    {
-                        "state": "Gatineau",
-                        "state_multiplier": 0.5
-                    },
-                    {
-                        "state": "Hull--Aylmer",
-                        "state_multiplier": 0.5
-                    },
-                    {
-                        "state": "Ottawa West--Nepean",
-                        "state_multiplier": 0.5
-                    },
-                    {
-                        "state": "Orléans",
+                        "group": "Ottawa",
                         "state_multiplier": 0.5
                     }
                 ]
@@ -2022,41 +1990,9 @@
                         "global_multiplier": -0.04
                     }
                 ],
-                "score_state": [
+                "score_group": [
                     {
-                        "state": "Carleton",
-                        "state_multiplier": 1
-                    },
-                    {
-                        "state": "Nepean",
-                        "state_multiplier": 1
-                    },
-                    {
-                        "state": "Kanata",
-                        "state_multiplier": 1
-                    },
-                    {
-                        "state": "Ottawa South",
-                        "state_multiplier": 1
-                    },
-                    {
-                        "state": "Ottawa--Vanier--Gloucester",
-                        "state_multiplier": 1
-                    },
-                    {
-                        "state": "Gatineau",
-                        "state_multiplier": 1
-                    },
-                    {
-                        "state": "Hull--Aylmer",
-                        "state_multiplier": 1
-                    },
-                    {
-                        "state": "Ottawa West--Nepean",
-                        "state_multiplier": 1
-                    },
-                    {
-                        "state": "Orléans",
+                        "group": "Ottawa",
                         "state_multiplier": 1
                     }
                 ]
@@ -2079,41 +2015,9 @@
                         "global_multiplier": 0.05
                     }
                 ],
-                "score_state": [
+                "score_group": [
                     {
-                        "state": "Carleton",
-                        "state_multiplier": -1
-                    },
-                    {
-                        "state": "Nepean",
-                        "state_multiplier": -1
-                    },
-                    {
-                        "state": "Kanata",
-                        "state_multiplier": -1
-                    },
-                    {
-                        "state": "Ottawa South",
-                        "state_multiplier": -1
-                    },
-                    {
-                        "state": "Ottawa--Vanier--Gloucester",
-                        "state_multiplier": -1
-                    },
-                    {
-                        "state": "Gatineau",
-                        "state_multiplier": -1
-                    },
-                    {
-                        "state": "Hull--Aylmer",
-                        "state_multiplier": -1
-                    },
-                    {
-                        "state": "Ottawa West--Nepean",
-                        "state_multiplier": -1
-                    },
-                    {
-                        "state": "Orléans",
+                        "group": "Ottawa",
                         "state_multiplier": -1
                     }
                 ]

@@ -35,7 +35,7 @@ async function handleMutations(mutationsList, observer) {
 
 function ctsAchievement(achievement, difficultyChecker=true){
 	if ((difficultyChecker && campaignTrail_temp.difficulty_level_multiplier <= 1) || !difficultyChecker)
-		if(campaignTrail_temp.CTS){
+		if (campaignTrail_temp.CTS) {
             unlockAchievement(achievement);
         }
 }
@@ -65,10 +65,11 @@ endingPicker = (out, totv, aa, quickstats) => {
     const nepean = campaignTrail_temp.final_state_results.find(state => {return state.abbr == "Nepean"})
     const carney_won = nepean.result[0].candidate == 300
 
+    console.log(aa)
     winner = aa[0];
     runnerUp = aa[1];
-    if (winner.candidate == 300) {
-        if (winner.electoral_votes >= 172 || (runnerUp.candidate == 300 && runnerUp.electoral_votes == winner.electoral_votes)) {
+    if (winner.candidate == 300 || (runnerUp.candidate == 300 && runnerUp.electoral_votes == winner.electoral_votes)) {
+        if (winner.electoral_votes >= 172) {
             header = "Liberal Majority Government!";
             description = [
                 "A few months ago, the Liberal Party was down in the dumps, and electoral defeat was all but certain. Despite the herculean task of bringing back a party from death's door, you went for it. With your experienced background and disciplined campaign, you pulled through.",
@@ -79,7 +80,7 @@ endingPicker = (out, totv, aa, quickstats) => {
             if (poilievre_won) {
                 description[0] += " Not only did you beat Poilievre, you won a majority government."
             } else {
-                description[0] += " Not only did you beat Poilievre, you defeated him in his own constituency and won a majority government."
+                description[0] += " Not only did you beat Poilievre, you defeated him in his own constituency of Carleton and won a majority government."
             }
         } else {
             // This outcome also occurs in the case of a Liberal tie for first
@@ -91,7 +92,7 @@ endingPicker = (out, totv, aa, quickstats) => {
                 "But for now, you've won! Tonight you can celebrate, but tomorrow the work begins to build Canada strong."
             ];
             if (!poilievre_won) {
-                description[0] += " Not only did you beat Poilievre, you defeated him in his own constituency."
+                description[0] += " Not only did you beat Poilievre, you defeated him in his own constituency of Carleton."
             }
         }
         setImage("https://i.imgur.com/MVBYnzH.jpeg")
@@ -104,6 +105,9 @@ endingPicker = (out, totv, aa, quickstats) => {
                 "With the Conservative back in power, you can only hope that Poilievre refrains from doing the worst that he is accused of sympathising with. All you can do is watch as he seeks to negotiate a new trade agreement with President Trump and implements his own solutions for housing and the economy.",
                 "Moving forward, your options are open. You could stay on and keep Poilievre accountable from the opposition benches, or you could quit politics altogether and return to the private sector. The choice is yours."
             ];
+            if (!carney_won) {
+                description[0] += " However, the fact you lost in your own constituency of Nepean doesn't inspire confiedence."
+            }
             setImage("https://i.imgur.com/0tmKUV5.jpeg")
             setMusic("https://www.youtube-nocookie.com/embed/OSR4WpqyXxs?autoplay=1")
         } else {
@@ -114,6 +118,12 @@ endingPicker = (out, totv, aa, quickstats) => {
                 "Alternatively, you could resign and allow Pierre Poilievre to become the 25th Prime Minister of Canada. With the Conservatives lacking a majority government, you could hold them to account, prevent the most harmful policies from becoming law, and strike at an opportune moment to send the Conservatives back into Opposition.",
                 "The choice is yours. But whichever you choose, you will have to maneuver carefully to stay ascendant in Canadian politics."
             ];
+            if (!carney_won) {
+                description[1] += " This will be particularly difficult seeing as you lost in your own constituency of Nepean."
+            }
+            if (!poilievre_won) {
+                description[0] += " Your partisans take a special pleasure that Poilievre was defeated in his own constituency of Carleton."
+            }
             setImage("https://i.imgur.com/bWPXiN4.jpeg")
             setMusic("https://www.youtube-nocookie.com/embed/t5nJ_mg_yMo?autoplay=1&start=10")
         }
@@ -121,6 +131,24 @@ endingPicker = (out, totv, aa, quickstats) => {
     s = `<h2>${header}</h2>`
     for (desc of description) {
         s += `<p>${desc}</p>`
+    }
+
+    if (winner.candidate == 300 && winner.electoral_votes >= 192) {
+        ctsAchievement("Carnegeddon")
+    }
+    if (winner.candidate == 300 && 
+        winner.electoral_votes >= 172 && 
+        campaignTrail_temp.player_answers[14] == 4152 && 
+        campaignTrail_temp.player_answers[31] == 4324) {
+        ctsAchievement("Real Change")
+    }
+    if (winner.candidate == 300 && winner.popular_votes < runnerUp.popular_votes) {
+        ctsAchievement("Three in a Row")
+    }
+    if (winner.candidate == 300 &&
+        campaignTrail_temp.player_answer[8] == 4091 &&
+        campaignTrail_temp.player_answer[29] == 4303) {
+        ctsAchievement("Carbon Tax Carney")
     }
     return s
 }

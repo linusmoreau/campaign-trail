@@ -23,5 +23,28 @@
             "Burnaby Central",
             "Churchill--Keewatinook Aski"
         ]
+    },
+    {
+        "name": "Ottawa",
+        "states": [
+            "Carleton",
+            "Nepean",
+            "Kanata",
+            "Ottawa South",
+            "Ottawa--Vanier--Gloucester",
+            "Gatineau",
+            "Hull--Aylmer",
+            "Ottawa West--Nepean",
+            "Orléans"
+        ]
+    },
+    {
+        "name": "Jewish communities",
+        "states": [
+            "Thornhill",
+            "Mount Royal",
+            "Eglinton--Lawrence",
+            "York Centre"
+        ]
     }
 ]
