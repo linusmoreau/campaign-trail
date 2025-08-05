@@ -2,14 +2,14 @@ from xml.dom import minidom
 import os
 from svg_compress import *
 
-def matching_inset(path_section):
+def matching_inset(path_section, insets):
     for inset in insets:
         for point in path_section:
             if inset[0][0] < point[0] < inset[0][2] and inset[0][1] < point[1] < inset[0][3]:
                 return inset
     return None
 
-def transform_path(d: str) -> str:
+def transform_path(d: str, default, insets) -> str:
     new_path = svg.Path()
     try:
         sections, _ = parse_path(d, strict=False)
@@ -17,7 +17,7 @@ def transform_path(d: str) -> str:
         return d
     for section in sections:
         path_section = list(section)
-        inset = matching_inset(path_section)
+        inset = matching_inset(path_section, insets)
         new_section = []
         if inset is None:
             inset = default
@@ -28,40 +28,38 @@ def transform_path(d: str) -> str:
         append_section_to_path(new_path, new_section)
     return new_path.d()
 
-def transform_paths(paths: list[minidom.Element]):
+def transform_paths(paths: list[minidom.Element], default, insets):
     for path in paths:
-        d = transform_path(path.getAttribute("d"))
+        d = transform_path(path.getAttribute("d"), default, insets)
         path.setAttribute("d", d)
 
-def svg_rearrange(f_in: str, f_out: str | None = None, new_size=None):
+def svg_rearrange(default, insets, f_in: str, f_out: str | None = None, new_size=None, remove_layers=[]):
     doc = minidom.parse(f_in)
     paths = doc.getElementsByTagName("path")
-    transform_paths(paths)
+    transform_paths(paths, default, insets)
     if new_size is not None:
         svg = doc.getElementsByTagName("svg")[0]
         svg.setAttribute("width", str(new_size[0]))
         svg.setAttribute("height", str(new_size[1]))
         svg.setAttribute("viewbox", "0 0 " + str(new_size[0]) + " " + str(new_size[1]))
     groups = doc.getElementsByTagName("g")
-    legend = find_element(groups, "layer4")
-    if legend is not None and legend.parentNode is not None:
-        legend.parentNode.removeChild(legend)
-    insets = find_element(groups, "layer1")
-    if insets is not None and insets.parentNode is not None:
-        insets.parentNode.removeChild(insets)
+    for layer in remove_layers:
+        layer_element = find_element(groups, layer)
+        if layer_element is not None and layer_element.parentNode is not None:
+            layer_element.parentNode.removeChild(layer_element)
     if f_out is None:
         fname, ext = os.path.splitext(f_in)
         f_out = fname + "_rearranged" + ext
     with open(f_out, "w", encoding="utf-8") as f:
-        doc.writexml(f, encoding="utf-8", addindent=" "*4, newl="\n", standalone=False)
+        doc.writexml(f, encoding="utf-8")
         
 def find_element(elements: list[minidom.Element], id: str):
     for element in elements:
         if element.getAttribute("id") == id:
             return element
-
-
-if __name__ == "__main__":
+        
+        
+def canada_2025():
     size = (2550, 1900)
     target = (722.55, 400.133)
     w = target[0] / target[1] * size[1]
@@ -84,8 +82,32 @@ if __name__ == "__main__":
         [[2350, 1400, 2530, 1590], [250, -800], 2],         # Quebec
         [[2230, 1310, 2350, 1430], [430, -1150], 1],        # Charlottetown
         [[2230, 1460, 2350, 1580], [-10, -500], 1.5],       # Trois-Rivieres
-        [[2100, 1460, 2230, 1580], [110, -300], 1.5],        # Moncton
+        [[2100, 1460, 2230, 1580], [110, -300], 1.5],       # Moncton
         [[2350, 1200, 2530, 1400], [250, -950], 2],         # Halifax
         [[2350, 980, 2530, 1200], [330, -1020], 1.5]        # St. John's
     ]
-    svg_rearrange("../2025Canada/election_map_compressed.svg", new_size=(w, size[1]))
+    layers = ["layer1", "layer4"]
+    svg_rearrange(default, insets, "../2025Canada/election_map_compressed.svg", new_size=(w, size[1]), remove_layers=layers)
+    
+
+def canada_2015():
+    size = (1100, 950)
+    target = (722.55, 400.133)
+    w = target[0] / target[1] * size[1]
+    default = ((0, 0, size[0], size[1]), (0, 0), 1)
+    translation = (-5.6350001,-125.29558)
+    insets = [
+        [[0, 720, 170, 850], [-300, -200], 1.3],    # Vancouver
+        [[890, 800, 1090, 930], [200, -100], 2]     # South Quebec
+    ]
+    for inset in insets:
+        inset[0][0] -= translation[0]
+        inset[0][1] -= translation[1]
+        inset[0][2] -= translation[0]
+        inset[0][3] -= translation[1]
+    layers = ["layer1", "layer3", "layer4"]
+    svg_rearrange(default, insets, "../2015Canada/election_map_compressed.svg", new_size=(w, size[1]), remove_layers=layers)
+
+
+if __name__ == "__main__":
+    canada_2015()
