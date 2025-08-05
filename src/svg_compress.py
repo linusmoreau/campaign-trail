@@ -22,6 +22,9 @@ def parse_path(d: str, strict=False):
         if type(segment) is svg.Close:
             section_indices.append((section_start, i))
             section_start = i + 1
+    if len(path) > 0 and (len(section_indices) == 0 or section_indices[-1][1] < len(path) - 1):
+        path.append(svg.Close(path[-1].start, path[-1].end))
+        section_indices.append((section_start, len(path)))
     lengths = [svg.Path(*path[ends[0]:ends[1]+1]).length() for ends in section_indices]
     sections = map(lambda ends: map(lambda segment: to_tuple(segment.end), path[ends[0]:ends[1]+1]), section_indices)
     return sections, lengths
@@ -87,4 +90,4 @@ def compress_svg_file(f_in: str, f_out: str | None = None, first: int = 0, count
         doc.writexml(f, encoding="utf-8", addindent=" "*4, newl="\n", standalone=True)
 
 if __name__ == "__main__":
-    compress_svg_file("../2025Canada/election_map.svg", count=343, epsilon=0.2, scale_epsilon=True, min_length=4)
+    compress_svg_file("../2015Canada/election_map.svg", count=338, epsilon=0.05, scale_epsilon=True, min_length=1)
