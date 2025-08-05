@@ -12,6 +12,7 @@ def to_tuple(n: complex):
     return (n.real, n.imag)
 
 def parse_path(d: str, strict=False):
+    closes = True
     path = svg.parse_path(d)
     section_indices = []
     section_start = 0
@@ -23,11 +24,14 @@ def parse_path(d: str, strict=False):
             section_indices.append((section_start, i))
             section_start = i + 1
     if len(path) > 0 and (len(section_indices) == 0 or section_indices[-1][1] < len(path) - 1):
+        if strict:
+            raise ValueError("Path doesn't close.")
         path.append(svg.Close(path[-1].start, path[-1].end))
-        section_indices.append((section_start, len(path)))
+        section_indices.append((section_start, len(path) - 1))
+        closes = False
     lengths = [svg.Path(*path[ends[0]:ends[1]+1]).length() for ends in section_indices]
     sections = map(lambda ends: map(lambda segment: to_tuple(segment.end), path[ends[0]:ends[1]+1]), section_indices)
-    return sections, lengths
+    return sections, lengths, closes
 
 def append_section_to_path(path, section):
     path.append(svg.Move(to_complex(section[0])))
@@ -37,8 +41,8 @@ def append_section_to_path(path, section):
 
 def compress_svg_path(d: str, method: str = "vw", epsilon: float = 0, scale_epsilon: bool = False, min_length: float = 0) -> str:
     try:
-        sections, lengths = parse_path(d, strict=True)
-    except TypeError:
+        sections, lengths, _ = parse_path(d, strict=True)
+    except (TypeError, ValueError):
         return d
     new_path = svg.Path()
     for i, section in enumerate(sections):
@@ -61,7 +65,13 @@ def compress_svg_path(d: str, method: str = "vw", epsilon: float = 0, scale_epsi
     return new_path.d()
 
 
-def compress_svg_file(f_in: str, f_out: str | None = None, first: int = 0, count: int | None = None, method: str = "vw", epsilon: float = 0, scale_epsilon: bool = False, min_length: float = 0):
+def find_element(elements: list[minidom.Element], id: str):
+    for element in elements:
+        if element.getAttribute("id") == id:
+            return element
+
+
+def compress_svg_file(f_in: str, f_out: str | None = None, first: int = 0, count: int | None = None, method: str = "vw", epsilon: float = 0, scale_epsilon: bool = False, min_length: float = 0, remove_layers: tuple[str, ...] = ()):
     """Compress an SVG file using either the Visvalingam-Whyatt or Ramer-Douglas-Peucker algorithms.
     
     :Keyword Arguments:
@@ -75,6 +85,11 @@ def compress_svg_file(f_in: str, f_out: str | None = None, first: int = 0, count
     :count: number of paths to compress; defaults to compressing to all subsequent paths
     """
     doc = minidom.parse(f_in)
+    groups = doc.getElementsByTagName("g")
+    for layer in remove_layers:
+        layer_element = find_element(groups, layer)
+        if layer_element is not None and layer_element.parentNode is not None:
+            layer_element.parentNode.removeChild(layer_element)
     paths = doc.getElementsByTagName('path')
     paths = paths[first:]
     if count is not None:
@@ -90,4 +105,5 @@ def compress_svg_file(f_in: str, f_out: str | None = None, first: int = 0, count
         doc.writexml(f, encoding="utf-8", addindent=" "*4, newl="\n", standalone=True)
 
 if __name__ == "__main__":
-    compress_svg_file("../2015Canada/election_map.svg", count=338, epsilon=0.05, scale_epsilon=True, min_length=1)
+    layers = ("layer3", "layer4")
+    compress_svg_file("../2015Canada/election_map.svg", epsilon=0.05, scale_epsilon=True, min_length=1, remove_layers=layers)

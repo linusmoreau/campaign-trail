@@ -12,7 +12,7 @@ def matching_inset(path_section, insets):
 def transform_path(d: str, default, insets) -> str:
     new_path = svg.Path()
     try:
-        sections, _ = parse_path(d, strict=False)
+        sections, _, closes = parse_path(d, strict=False)
     except TypeError:
         return d
     for section in sections:
@@ -26,6 +26,8 @@ def transform_path(d: str, default, insets) -> str:
             y = inset[0][1] + ((point[1] - inset[0][1]) * inset[2]) + inset[1][1]
             new_section.append((x, y))
         append_section_to_path(new_path, new_section)
+    if not closes:
+        new_path.pop()
     return new_path.d()
 
 def transform_paths(paths: list[minidom.Element], default, insets):
@@ -33,7 +35,7 @@ def transform_paths(paths: list[minidom.Element], default, insets):
         d = transform_path(path.getAttribute("d"), default, insets)
         path.setAttribute("d", d)
 
-def svg_rearrange(default, insets, f_in: str, f_out: str | None = None, new_size=None, remove_layers=[]):
+def svg_rearrange(default, insets, f_in: str, f_out: str | None = None, new_size=None):
     doc = minidom.parse(f_in)
     paths = doc.getElementsByTagName("path")
     transform_paths(paths, default, insets)
@@ -42,21 +44,11 @@ def svg_rearrange(default, insets, f_in: str, f_out: str | None = None, new_size
         svg.setAttribute("width", str(new_size[0]))
         svg.setAttribute("height", str(new_size[1]))
         svg.setAttribute("viewbox", "0 0 " + str(new_size[0]) + " " + str(new_size[1]))
-    groups = doc.getElementsByTagName("g")
-    for layer in remove_layers:
-        layer_element = find_element(groups, layer)
-        if layer_element is not None and layer_element.parentNode is not None:
-            layer_element.parentNode.removeChild(layer_element)
     if f_out is None:
         fname, ext = os.path.splitext(f_in)
         f_out = fname + "_rearranged" + ext
     with open(f_out, "w", encoding="utf-8") as f:
         doc.writexml(f, encoding="utf-8")
-        
-def find_element(elements: list[minidom.Element], id: str):
-    for element in elements:
-        if element.getAttribute("id") == id:
-            return element
         
         
 def canada_2025():
@@ -86,8 +78,7 @@ def canada_2025():
         [[2350, 1200, 2530, 1400], [250, -950], 2],         # Halifax
         [[2350, 980, 2530, 1200], [330, -1020], 1.5]        # St. John's
     ]
-    layers = ["layer1", "layer4"]
-    svg_rearrange(default, insets, "../2025Canada/election_map_compressed.svg", new_size=(w, size[1]), remove_layers=layers)
+    svg_rearrange(default, insets, "../2025Canada/election_map_compressed.svg", new_size=(w, size[1]))
     
 
 def canada_2015():
@@ -105,8 +96,7 @@ def canada_2015():
         inset[0][1] -= translation[1]
         inset[0][2] -= translation[0]
         inset[0][3] -= translation[1]
-    layers = ["layer1", "layer3", "layer4"]
-    svg_rearrange(default, insets, "../2015Canada/election_map_compressed.svg", new_size=(w, size[1]), remove_layers=layers)
+    svg_rearrange(default, insets, "../2015Canada/election_map_compressed.svg")
 
 
 if __name__ == "__main__":
