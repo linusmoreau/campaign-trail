@@ -371,6 +371,11 @@
                         "state_multiplier": 6
                     },
                     {
+                        "state": "Nanaimo--Ladysmith",
+                        "affected_candidate": 302,
+                        "state_multiplier": 3
+                    },
+                    {
                         "state": "Burnaby Central",
                         "affected_candidate": 302,
                         "state_multiplier": 2
@@ -514,6 +519,11 @@
                         "state": "Kitchener Centre",
                         "affected_candidate": 303,
                         "state_multiplier": 4
+                    },
+                    {
+                        "state": "Nanaimo--Ladysmith",
+                        "affected_candidate": 303,
+                        "state_multiplier": 2
                     }
                 ]
             }
