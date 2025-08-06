@@ -85,18 +85,36 @@ def canada_2015():
     size = (1100, 950)
     target = (722.55, 400.133)
     w = target[0] / target[1] * size[1]
-    default = ((0, 0, size[0], size[1]), (0, 0), 1)
+    default = ((0, 0, size[0], size[1]), (-200, 0), 1)
     translation = (-5.6350001,-125.29558)
     insets = [
-        [[0, 720, 170, 850], [-300, -200], 1.3],    # Vancouver
-        [[890, 800, 1090, 930], [200, -100], 2]     # South Quebec
+        [[0, 720, 170, 850], [-320, -50], 1.5],    # Vancouver
+        [[0, 850, 90, 950], [-320, -300], 1.5],    # Victoria
+        [[170, 750, 250, 850], [-250, 50], 1.5],     # Calgary
+        [[90, 850, 170, 950], [-170, -160], 1.5],     # Edmonton
+        [[250, 770, 330, 850], [-220, -50], 1.5],     # Saskatoon
+        [[340, 770, 390, 850], [-280, 30], 1.5],     # Regina
+        [[170, 850, 250, 950], [-30, -100], 2],     # Winnipeg
+        [[260, 870, 330, 930], [40, -20], 1.5],     # Windsor
+        [[340, 830, 390, 930], [-20, -130], 1.5],     # London
+        [[400, 820, 510, 940], [350, -660], 3.5],     # Golden Horsehshoe
+        [[510, 820, 600, 940], [-50, -960], 4],     # Toronto
+        [[710, 860, 790, 930], [-150, -80], 2.5],     # Ottawa
+        [[790, 850, 890, 930], [290, -500], 3.5],    # Montreal
+        [[890, 800, 1090, 930], [-10, -190], 2.7],    # South Quebec
+        [[950, 650, 1030, 720], [-200, 130], 2],    # Halifax
+        [[950, 730, 1030, 800], [-200, -70], 2],    # Quebec City
+        [[1030, 750, 1090, 800], [-200, -200], 1.5],    # Trois-Rivieres
+        [[1030, 700, 1090, 750], [-120, -150], 1.5],    # Moncton
+        [[1030, 650, 1090, 690], [-40, -100], 1.5],    # Charlottetown
+        [[1030, 570, 1090, 640], [-400, -200], 2],    # St. John's
     ]
     for inset in insets:
         inset[0][0] -= translation[0]
         inset[0][1] -= translation[1]
         inset[0][2] -= translation[0]
         inset[0][3] -= translation[1]
-    svg_rearrange(default, insets, "../2015Canada/election_map_compressed.svg")
+    svg_rearrange(default, insets, "../2015Canada/election_map_compressed.svg", new_size=(w, size[1]))
 
 
 if __name__ == "__main__":
