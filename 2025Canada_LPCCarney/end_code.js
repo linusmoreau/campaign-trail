@@ -65,7 +65,6 @@ endingPicker = (out, totv, aa, quickstats) => {
     const nepean = campaignTrail_temp.final_state_results.find(state => {return state.abbr == "Nepean"})
     const carney_won = nepean.result[0].candidate == 300
 
-    console.log(aa)
     winner = aa[0];
     runnerUp = aa[1];
     if (winner.candidate == 300 || (runnerUp.candidate == 300 && runnerUp.electoral_votes == winner.electoral_votes)) {
@@ -146,8 +145,8 @@ endingPicker = (out, totv, aa, quickstats) => {
         ctsAchievement("Three in a Row")
     }
     if (winner.candidate == 300 &&
-        campaignTrail_temp.player_answer[8] == 4091 &&
-        campaignTrail_temp.player_answer[29] == 4303) {
+        campaignTrail_temp.player_answers[8] == 4091 &&
+        campaignTrail_temp.player_answers[29] == 4303) {
         ctsAchievement("Carbon Tax Carney")
     }
     return s
