@@ -244,7 +244,7 @@ class Code2Generator:
                     "abbr": row["name"],
                     "electoral_votes": 1,
                     "popular_votes": int(row["votes"]) - 500,
-                    "poll_closing_time": POLL_CLOSING_TIMES[provinces[row["name"]]["province"]],
+                    "poll_closing_time": int(POLL_CLOSING_TIMES[provinces[row["name"]]["province"]] + row["votes"] % 40),
                     "winner_take_all_flg": 1,
                     "election": 20
                 },
