@@ -1,10 +1,10 @@
 [
     {
-        "question": "[December 2024] Chrystia Freeland, the Minister of Finance, has resigned. She publishes her resignation letter which is harshly critical of Prime Minister Trudeau. Her resignation was prompted by an upcoming cabinet reshuffle in which Trudeau intended to install you as the new Finance Minister. The offer remains open. Do you accept Trudeau's offer and join his cabinet?",
+        "question": "[December 2024] Chrystia Freeland, the Minister of Finance, has resigned. She publishes her resignation letter which is harshly critical of Prime Minister Trudeau. Her resignation was prompted by an upcoming cabinet reshuffle in which Trudeau intended to install you as the new Finance Minister. The offer remains open. Do you accept Trudeau’s offer and join his cabinet?",
         "answers": [
             {
                 "answer": "I will accept the position of Finance Minister. Our country is facing one of the most severe crises of its history. To get through it, we will need big changes. I can bring that change. It is my solemn duty to help Canada get through this crisis.",
-                "feedback": "Your addition to the cabinet rejuvenates the party but is unable to save Trudeau's reputation. He resigns, and you are slightly tarnished for being in government with him for the short stint.",
+                "feedback": "Your addition to the cabinet rejuvenates the party but is unable to save Trudeau’s reputation. He resigns, and you are slightly tarnished for being in government with him for the short stint.",
                 "score_issue": [
                     {
                         "issue": 111,
@@ -13,7 +13,7 @@
                 ]
             },
             {
-                "answer": "I will not join the Trudeau Cabinet. The Prime Minister is currently fighting through a political firestorm, and I can't risk getting caught up in it.",
+                "answer": "I will not join the Trudeau Cabinet. The Prime Minister is currently fighting through a political firestorm, and I can’t risk getting caught up in it.",
                 "historical": true,
                 "feedback": "Good call. The pressure on Trudeau continues to build, and he announces his resignation in the New Year.",
                 "score_issue": [
@@ -34,8 +34,8 @@
         "question": "[January 2025] Justin Trudeau has announced his resignation as Prime Minister and Liberal leader in the face of ever mounting pressure. This is your chance to run for leadership of the Liberal Party, but most Canadians are unfamiliar with you. How will you introduce yourself to Canadians?",
         "answers": [
             {
-                "answer": "If we are to win against Poilievre's Conservatives, we need to reach out and grow our tent. I will appear on Juno News and make my case to their conservative audience.",
-                "feedback": "The interview is extremely hostile. There's no way you got any positive impression among their audience.",
+                "answer": "If we are to win against Poilievre’s Conservatives, we need to reach out and grow our tent. I will appear on Juno News and make my case to their conservative audience.",
+                "feedback": "The interview is extremely hostile. There’s no way you got any positive impression among their audience.",
                 "score_global": [
                     {
                         "global_multiplier": -0.03
@@ -43,7 +43,7 @@
                 ]
             },
             {
-                "answer": "Canadians want a serious leader. That's why I will first be appearing in a CBC interview with Rosemary Barton. My command of the issues and policy will demonstrate that I am the most qualified person to be Prime Minister.",
+                "answer": "Canadians want a serious leader. That’s why I will first be appearing in a CBC interview with Rosemary Barton. My command of the issues and policy will demonstrate that I am the most qualified person to be Prime Minister.",
                 "feedback": "The interview goes fairly well, but Barton is adversarial and does not give you an easy time.",
                 "score_global": [
                     {
@@ -61,7 +61,7 @@
                 ]
             },
             {
-                "answer": "I'm going to try something different. Instead of a political interview, I'll go on the Daily Show with Jon Stewart.",
+                "answer": "I’m going to try something different. Instead of a political interview, I’ll go on the Daily Show with Jon Stewart.",
                 "historical": true,
                 "feedback": "Going on an American show nets you some derision, but many Canadians watch more American TV than Canadian, and this allows you to reach them."
             }
@@ -76,7 +76,7 @@
         "question": "[January 2025] United States President Donald Trump has floated the idea of Canada becoming the 51st American state. What do you make of it?",
         "answers": [
             {
-                "answer": "The bottom line is that it's not going to happen. We can cooperate on trade or on defence, but we do things differently here.",
+                "answer": "The bottom line is that it’s not going to happen. We can cooperate on trade or on defence, but we do things differently here.",
                 "historical": true,
                 "feedback": "This balances the need for a clear dismissal of the idea without further damaging Canada-US relations.",
                 "score_issue": [
@@ -106,7 +106,7 @@
                 ]
             },
             {
-                "answer": "Mr. Trump often says outlandish things. They don't deserve a response.",
+                "answer": "Mr. Trump often says outlandish things. They don’t deserve a response.",
                 "feedback": "Trump continues to bring up the idea, and your supporters demand a strong response.",
                 "score_global": [
                     {
@@ -136,7 +136,7 @@
         ]
     },
     {
-        "question": "[February 2025] President Trump has announced 25% tariffs on all Canadian products, which he justifies by claiming Canadian border enforcement is allowing \"mass numbers of people to come in and fentanyl to come in\". How do you respond?",
+        "question": "[February 2025] President Trump has announced 25% tariffs on all Canadian products, which he justifies by claiming Canadian border enforcement is allowing “mass numbers of people to come in and fentanyl to come in”. How do you respond?",
         "answers": [
             {
                 "answer": "These tariffs are a tax on American importers. That means American consumers will pay more for their food, their electricity, their gas, and other necessities. We should let Trump shoot himself in the foot.",
@@ -148,7 +148,7 @@
                 ]
             },
             {
-                "answer": "We need to retaliate with dollar-for-dollar, targeted counter-tariffs. Trump is a bully, and we can't give him an inch otherwise he will come back asking for more.",
+                "answer": "We need to retaliate with dollar-for-dollar, targeted counter-tariffs. Trump is a bully, and we can’t give him an inch otherwise he will come back asking for more.",
                 "feedback": "This helps you ride the wave of Canadian patriotism sweeping through the country.",
                 "score_issue": [
                     {
@@ -207,8 +207,8 @@
                 "feedback": "Journalists retrieve company documents that show the decision was approved in October, long before you left the company."
             },
             {
-                "answer": "We need a distraction from this. I'll put out some attacks on Poilievre for his lack of economic experience and his ties to elite circles.",
-                "feedback": "You're dragging this race into the mud.",
+                "answer": "We need a distraction from this. I’ll put out some attacks on Poilievre for his lack of economic experience and his ties to elite circles.",
+                "feedback": "You’re dragging this race into the mud.",
                 "score_global": [
                     {
                         "affected_candidate": 301,
@@ -231,12 +231,12 @@
         "question": "[March 2025] What leverage does Canada have against the US for the upcoming trade war and negotiations?",
         "answers": [
             {
-                "answer": "We're their biggest supplier of semiconductors. We supply almost all their semiconductors. Everybody in the White House is a tech-bro except for Trump — they all need semiconductors, and they all come from Canada. Maybe one day they won't show up, we'll see.",
+                "answer": "We’re their biggest supplier of semiconductors. We supply almost all their semiconductors. Everybody in the White House is a tech-bro except for Trump — they all need semiconductors, and they all come from Canada. Maybe one day they won’t show up, we’ll see.",
                 "historical": true,
                 "feedback": "This would be a solid message, if it were true. Unfortunately, Canada is a relatively small exporter of semiconductors."
             },
             {
-                "answer": "We're their biggest supplier of electricity, biggest supplier of fertilizer, biggest supplier of aluminium. They are dependent on us for trade, and we could consider putting some export restrictions.",
+                "answer": "We’re their biggest supplier of electricity, biggest supplier of fertilizer, biggest supplier of aluminium. They are dependent on us for trade, and we could consider putting some export restrictions.",
                 "feedback": "Aluminium and fertilizer producers are worried that they will pay the price for the trade war. However, this stance does make you look strong.",
                 "score_global": [
                     {
@@ -274,7 +274,7 @@
         "question": "[March 2025] As the Liberal leadership election nears its conclusion, what is your primary message to Liberal members as you compete with the other Liberal leadership contenders?",
         "answers": [
             {
-                "answer": "I'll focus on my biography. I have managed economic crises, built strong economies, and run tough negotiations. I have the experience to lead in this crucial time.",
+                "answer": "I’ll focus on my biography. I have managed economic crises, built strong economies, and run tough negotiations. I have the experience to lead in this crucial time.",
                 "historical": true,
                 "feedback": "Your experience in both the public and private sectors sets you apart from your rivals.",
                 "score_global": [
@@ -284,8 +284,8 @@
                 ]
             },
             {
-                "answer": "I'll emphasize change. I will make clear that I want to turn the country around, distancing myself from Trudeau and his record.",
-                "feedback": "You're leaning into an outsider image. This is refreshing to many, but may disappoint those who supported many of Trudeau's reforms.",
+                "answer": "I’ll emphasize change. I will make clear that I want to turn the country around, distancing myself from Trudeau and his record.",
+                "feedback": "You’re leaning into an outsider image. This is refreshing to many, but may disappoint those who supported many of Trudeau’s reforms.",
                 "score_issue": [
                     {
                         "issue": 111,
@@ -325,12 +325,12 @@
         ]
     },
     {
-        "question": "Congratulations! You have won the leadership of the Liberal Party! You will soon be sworn in as the 24th Prime Minister of Canada. Your party is experiencing a rebound in the polls from the lows of the political crisis in December. Progressives and disaffected liberals are rallying behind your campaign as you are now the only hope for Canada to avoid Conservative rule. Even Conservative-leaning voters are giving your Liberals a second look.",
+        "question": "[March 2025] Congratulations! You have won the leadership of the Liberal Party! You will soon be sworn in as the 24th Prime Minister of Canada. Your party is experiencing a rebound in the polls from the lows of the political crisis in December. Progressives and disaffected liberals are rallying behind your campaign as you are now the only hope for Canada to avoid Conservative rule. Even Conservative-leaning voters are giving your Liberals a second look.",
         "answers": [
             {
-                "answer": "\"I, Mark Carney, do solemnly and sincerely promise and swear that I will truly and faithfully, and to the best of my skill and knowledge, execute the powers and trusts reposed in me as Prime Minister.\"",
+                "answer": "“I, Mark Carney, do solemnly and sincerely promise and swear that I will truly and faithfully, and to the best of my skill and knowledge, execute the powers and trusts reposed in me as Prime Minister.”",
                 "historical": true,
-                "feedback": "It's time to build!",
+                "feedback": "It’s time to build!",
                 "score_global": [
                     {
                         "global_multiplier": 0.3
@@ -553,7 +553,7 @@
             },
             {
                 "answer": "I will reverse the increase in the capital gains tax and abolish the consumer carbon tax.",
-                "feedback": "This ends two flagship policies of the Trudeau administration and undermines the Conservatives' messaging against you.",
+                "feedback": "This ends two flagship policies of the Trudeau administration and undermines the Conservatives’ messaging against you.",
                 "historical": true,
                 "score_issue": [
                     {
@@ -637,7 +637,7 @@
                 ]
             },
             {
-                "answer": "Canada is not broken. But it does need experienced leadership and a real plan to ensure all Canadians benefit in an increasingly dangerous world. I've worked under Liberal and Conservative governments to deliver for Canadians, and I got the job done. Pierre Poilievre has been a politician his entire life and in that entire time, he hasn't fixed a thing.",
+                "answer": "Canada is not broken. But it does need experienced leadership and a real plan to ensure all Canadians benefit in an increasingly dangerous world. I’ve worked under Liberal and Conservative governments to deliver for Canadians, and I got the job done. Pierre Poilievre has been a politician his entire life and in that entire time, he hasn’t fixed a thing.",
                 "feedback": "This does a good job of pitting your experience against that of Poilievre.",
                 "score_issue": [
                     {
@@ -654,7 +654,7 @@
             },
             {
                 "answer": "We need to lead with our values. That means protecting our system of universal healthcare. Protecting $10-a-day childcare. Protecting our pensions. Protecting the right to abortion.",
-                "feedback": "This appeals to your supporters, but don't forget to also broaden your appeal.",
+                "feedback": "This appeals to your supporters, but don’t forget to also broaden your appeal.",
                 "score_issue": [
                     {
                         "issue": 112,
@@ -668,7 +668,7 @@
             },
             {
                 "answer": "I will focus on my plan for the economy. The Trudeau government did not put enough focus on the economy, and I will be different.",
-                "feedback": "You work tirelessly to renew voters' trust of the Liberal Party on the economy.",
+                "feedback": "You work tirelessly to renew voters’ trust of the Liberal Party on the economy.",
                 "score_issue": [
                     {
                         "issue": 112,
@@ -719,7 +719,7 @@
                 ]
             },
             {
-                "answer": "I'm heading to Vancouver. We can make some gains from the NDP there and lock down Surrey.",
+                "answer": "I’m heading to Vancouver. We can make some gains from the NDP there and lock down Surrey.",
                 "score_state": [
                     {
                         "state": "Surrey Centre",
@@ -744,7 +744,7 @@
                 ]
             },
             {
-                "answer": "I'll go to Alberta to show them I'm serious about national unity.",
+                "answer": "I’ll go to Alberta to show them I’m serious about national unity.",
                 "score_state": [
                     {
                         "state": "Edmonton Centre",
@@ -769,7 +769,7 @@
                 ]
             },
             {
-                "answer": "I'm going to the Maritimes to win them back for the Liberal Party.",
+                "answer": "I’m going to the Maritimes to win them back for the Liberal Party.",
                 "score_state": [
                     {
                         "state": "Cape Breton--Canso--Antigonish",
@@ -815,7 +815,7 @@
             {
                 "answer": "Pierre Poilievre is the type of politician who is a life long politician, worships the market, and sees opportunity in tragedy to push an agenda of cutting taxes and taking away the social safety net.",
                 "historical": true,
-                "feedback": "This line of attack contrasts Poilievre's experience (or lack thereof) with your own impressive qualifications.",
+                "feedback": "This line of attack contrasts Poilievre’s experience (or lack thereof) with your own impressive qualifications.",
                 "score_global": [
                     {
                         "global_multiplier": 0.01
@@ -827,11 +827,11 @@
                 ]
             },
             {
-                "answer": "I'm going to run a positive campaign and avoid mentioning Poilievre.",
-                "feedback": "Your advisors feel like you're leaving something on the table."
+                "answer": "I’m going to run a positive campaign and avoid mentioning Poilievre.",
+                "feedback": "Your advisors feel like you’re leaving something on the table."
             },
             {
-                "answer": "Mr. Poilievre is running on the same playbook as President Trump. You can't stand up to someone if you're using their playbook. Simple as that.",
+                "answer": "Mr. Poilievre is running on the same playbook as President Trump. You can’t stand up to someone if you’re using their playbook. Simple as that.",
                 "feedback": "Tying Poilievre with Trump is a good way of hurting his image.",
                 "score_global": [
                     {
@@ -841,8 +841,8 @@
                 ]
             },
             {
-                "answer": "Pierre Poilievre is weird. He refuses to get security clearance, shills for bitcoin, and disrespects political norms. And what's with all those three word slogans?",
-                "feedback": "This line of attack might play well on social media, but it doesn't seem to move the needle on voting intentions. Meanwhile, Poilievre goes after your party over the cost-of-living.",
+                "answer": "Pierre Poilievre is weird. He refuses to get security clearance, shills for bitcoin, and disrespects political norms. And what’s with all those three word slogans?",
+                "feedback": "This line of attack might play well on social media, but it doesn’t seem to move the needle on voting intentions. Meanwhile, Poilievre goes after your party over the cost-of-living.",
                 "score_global": [
                     {
                         "global_multiplier": -0.02
@@ -939,7 +939,7 @@
                 ]
             },
             {
-                "answer": "I will eviscerate these so-called \"progressive\" parties for splitting the vote.",
+                "answer": "I will eviscerate these so-called “progressive” parties for splitting the vote.",
                 "feedback": "This negativity turns many progressives away from considering your candidacy and gives more attention to the parties to your left.",
                 "score_global": [
                     {
@@ -1026,7 +1026,7 @@
                 ]
             },
             {
-                "answer": "There's not much I would have done differently. Of course, we're different people so I will bring certain sensibilities about the economy that Trudeau didn't have.",
+                "answer": "There’s not much I would have done differently. Of course, we’re different people so I will bring certain sensibilities about the economy that Trudeau didn’t have.",
                 "feedback": "This answer makes it easy for your opponents to criticize you as a continuation of the Trudeau government.",
                 "score_issue": [
                     {
@@ -1064,13 +1064,13 @@
                 ]
             },
             {
-                "answer": "I will give all the usual interviews with the press. I'll also go on business-oriented podcasts and cultural media to make a wide appeal.",
+                "answer": "I will give all the usual interviews with the press. I’ll also go on business-oriented podcasts and cultural media to make a wide appeal.",
                 "historical": true,
-                "feedback": "This successfully gets your message to the usual crowds as well as reaching people who wouldn't normally hear your message."
+                "feedback": "This successfully gets your message to the usual crowds as well as reaching people who wouldn’t normally hear your message."
             },
             {
                 "answer": "Canadians want a serious leader. I will only take interviews from established, journalistic, media organizations.",
-                "feedback": "Journalists are happy to be given somewhat exclusive access to you. However, you don't reach audiences of alternative media.",
+                "feedback": "Journalists are happy to be given somewhat exclusive access to you. However, you don’t reach audiences of alternative media.",
                 "score_global": [
                     {
                         "global_multiplier": -0.03
@@ -1089,10 +1089,10 @@
         ]
     },
     {
-        "question": "[March 2025] You have recruited a number of \"star\" candidates to run under the Liberal banner. Is there any candidate you would like to highlight?",
+        "question": "[March 2025] You have recruited a number of “star” candidates to run under the Liberal banner. Is there any candidate you would like to highlight?",
         "answers": [
             {
-                "answer": "You want defenders of social justice like Nathalie Pronovost. Out of the tragedy of the shootings at Concordia, she became an activist and now she's running for us.",
+                "answer": "You want defenders of social justice like Nathalie Pronovost. Out of the tragedy of the shootings at Concordia, she became an activist and now she’s running for us.",
                 "historical": true,
                 "feedback": "She is a great candidate to highlight, but her name is Provost (not Pronovost), and she is a survivor of the Polytechnique massacre (not Concordia).",
                 "score_issue": [
@@ -1190,7 +1190,7 @@
         ]
     },
     {
-        "question": "[March 2025] Aside from the official debates, TVA runs a French leaders' debate every election. Will you attend?",
+        "question": "[March 2025] Aside from the official debates, TVA runs a French leaders’ debate every election. Will you attend?",
         "answers": [
             {
                 "answer": "Why not? I will attend to show I do not fear confrontation.",
@@ -1229,7 +1229,7 @@
         ]
     },
     {
-        "question": "[March 2025] Reporting is coming out that Paul Chiang, the Liberal MP and candidate for Markham-Unionville, made a joke that suggested turning in a Conservative candidate over to the Chinese consulate in exchange for a bounty. He has apologized for the comment, calling it \"deplorable\". How will you handle this situation?",
+        "question": "[March 2025] Reporting is coming out that Paul Chiang, the Liberal MP and candidate for Markham-Unionville, made a joke that suggested turning in a Conservative candidate over to the Chinese consulate in exchange for a bounty. He has apologized for the comment, calling it “deplorable”. How will you handle this situation?",
         "answers": [
             {
                 "answer": "This was a terrible lapse of judgement on the part of Mr. Chiang. However, he has apologized, and I will take this as a teachable moment for him. He is a person of integrity with a quarter-century of service in his community, and I stand by his candidacy.",
@@ -1242,7 +1242,7 @@
                 ]
             },
             {
-                "answer": "I can't allow this to derail the campaign. I will quickly drop his candidacy for Markham-Unionville and nominate Peter Yuen instead.",
+                "answer": "I can’t allow this to derail the campaign. I will quickly drop his candidacy for Markham-Unionville and nominate Peter Yuen instead.",
                 "feedback": "Paul Chiang understands and bows out gracefully. However, the media needle Peter Yuen for his ties to Chinese community organizations linked with the Chinese government."
             },
             {
@@ -1296,7 +1296,7 @@
             },
             {
                 "answer": "We need to invest in Canadians. The best way to boost productivity is by giving people the tools they need. By increasing funding for trade schools and universities, ensuring families have access to affordable childcare, and investing into transit, we can build a more prosperous Canada.",
-                "feedback": "This was Trudeau's brand, and voters are looking for a new approach.",
+                "feedback": "This was Trudeau’s brand, and voters are looking for a new approach.",
                 "score_issue": [
                     {
                         "issue": 112,
@@ -1320,7 +1320,7 @@
         "question": "[April 2025] While you were at Brookfield, most of the funds you managed were registered to a Bermuda address allowing the company to avoid $5.3 billion in taxes. Is this use of tax havens ethical?",
         "answers": [
             {
-                "answer": "I'm no longer with Brookfield and the company followed all the rules. Next question.",
+                "answer": "I’m no longer with Brookfield and the company followed all the rules. Next question.",
                 "feedback": "Way to dodge the question.",
                 "score_global": [
                     {
@@ -1330,7 +1330,7 @@
             },
             {
                 "answer": "I know how the world works. That gives me the ability to put in place all of the necessary rules to ensure that the appropriate taxes are paid here in Canada.",
-                "feedback": "You're alluding to tax reform but without any details. Maybe hoping that Canadians trust you is your best option.",
+                "feedback": "You’re alluding to tax reform but without any details. Maybe hoping that Canadians trust you is your best option.",
                 "score_global": [
                     {
                         "global_multiplier": -0.02
@@ -1401,7 +1401,7 @@
         "answers": [
             {
                 "answer": "I will cite the statistics that indicate that crime rates are low compared to the historic average. We remain a safe country.",
-                "feedback": "Dismissing the concerns of voters won't get them to vote for you.",
+                "feedback": "Dismissing the concerns of voters won’t get them to vote for you.",
                 "score_global": [
                     {
                         "global_multiplier": -0.04
@@ -1424,7 +1424,7 @@
                 ]
             },
             {
-                "answer": "You can't be tough on crime if you're not tough on guns. We need to continue with the gun buyback program and strengthen border enforcement to prevent guns from entering our country.",
+                "answer": "You can’t be tough on crime if you’re not tough on guns. We need to continue with the gun buyback program and strengthen border enforcement to prevent guns from entering our country.",
                 "historical": true,
                 "feedback": "By shifting the discussion to gun control, you contrast yourself favourably against the Conservatives. However, some policy wonks do criticize the buyback program as ineffective.",
                 "score_issue": [
@@ -1638,7 +1638,7 @@
                 ]
             },
             {
-                "answer": "It's time to let Canadians keep more of what they earn. I will drop the lowest tax bracket to 12%.",
+                "answer": "It’s time to let Canadians keep more of what they earn. I will drop the lowest tax bracket to 12%.",
                 "feedback": "The bigger the tax cut, the better. Right?",
                 "score_issue": [
                     {
@@ -1653,7 +1653,7 @@
                 ]
             },
             {
-                "answer": "We don't need any tax cuts right now. We're heading into difficult times with the Trump tariffs, and we should use that money to support people who may lose their jobs from the economic disruption.",
+                "answer": "We don’t need any tax cuts right now. We’re heading into difficult times with the Trump tariffs, and we should use that money to support people who may lose their jobs from the economic disruption.",
                 "feedback": "Workers in threatened industries like aluminium, steel, and forestry are happy with your support, but others are disappointed.",
                 "score_issue": [
                     {
@@ -1747,7 +1747,7 @@
             },
             {
                 "answer": "I will focus on making investments that will grow the economy, allowing us to balance the budget without service cuts.",
-                "feedback": "The media point out that this sounds awfully similar to the infamous Trudeau line that \"the budget will balance itself\".",
+                "feedback": "The media point out that this sounds awfully similar to the infamous Trudeau line that “the budget will balance itself”.",
                 "score_global": [
                     {
                         "global_multiplier": -0.03
@@ -1850,7 +1850,7 @@
             {
                 "answer": "Yes. I will work with the provinces and First Nations to simplify the approval process and use emergency powers to streamline the federal side of that equation.",
                 "historical": true,
-                "feedback": "This satisfies both jurisdictional concerns and oil-producing regions' desire to expand their exports.",
+                "feedback": "This satisfies both jurisdictional concerns and oil-producing regions’ desire to expand their exports.",
                 "score_issue": [
                     {
                         "issue": 112,
@@ -1943,13 +1943,13 @@
                 ]
             },
             {
-                "answer": "I will fund investments into our armed forces, including raising soldiers' pay and securing the Arctic. This will grow the military budget to meet our NATO commitments of 2% of GDP by 2030.",
+                "answer": "I will fund investments into our armed forces, including raising soldiers’ pay and securing the Arctic. This will grow the military budget to meet our NATO commitments of 2% of GDP by 2030.",
                 "historical": true,
                 "feedback": "This is a sensible plan and one that Canadians support."
             },
             {
                 "answer": "We live in an increasingly dangerous world. We need large investments into the military, including 3.5% of GDP for personnel and procurement and an additional 1.5% of GDP for building infrastructure to support our troops from coast to coast to coast.",
-                "feedback": "It's good to be ambitious, but this represents tripling the military budget which goes a little far for some.",
+                "feedback": "It’s good to be ambitious, but this represents tripling the military budget which goes a little far for some.",
                 "score_global": [
                     {
                         "global_multiplier": -0.04
@@ -2035,10 +2035,10 @@
         ]
     },
     {
-        "question": "[April 2025] Two official leaders' debates are held, one in French and one in English. What is your strategy going into the debates?",
+        "question": "[April 2025] Two official leaders’ debates are held, one in French and one in English. What is your strategy going into the debates?",
         "answers": [
             {
-                "answer": "I'll take the fight to Poilievre. I will hammer him on his populist approach to politics and compare him with Donald Trump.",
+                "answer": "I’ll take the fight to Poilievre. I will hammer him on his populist approach to politics and compare him with Donald Trump.",
                 "feedback": "Poilievre outmaneuvers you and hammers the rise in cost-of-living during the last decade of Liberal governance.",
                 "score_global": [
                     {
@@ -2052,7 +2052,7 @@
                 "feedback": "You start off a little nervous, but you manage to hold your own."
             },
             {
-                "answer": "I will use the debate as a platform to communicate my economic plan. I don't just talk; I have a strong record for managing economies.",
+                "answer": "I will use the debate as a platform to communicate my economic plan. I don’t just talk; I have a strong record for managing economies.",
                 "feedback": "Your long detailed answers delivered in your monotone voice fail to capture the imagination of Canadians.",
                 "score_global": [
                     {
@@ -2215,7 +2215,7 @@
         ]
     },
     {
-        "question": "[April 2025] It's two days before election day, and a deadly attack on a Filipino street festival in Vancouver has left 11 dead and dozens injured. How do you react?",
+        "question": "[April 2025] It’s two days before election day, and a deadly attack on a Filipino street festival in Vancouver has left 11 dead and dozens injured. How do you react?",
         "answers": [
             {
                 "answer": "I will cancel my campaign events and fly to Vancouver to offer my condolences to the victims and their families.",
@@ -2255,8 +2255,8 @@
         "question": "[April 2025] It is the day before the election. What is your final message to Canadians?",
         "answers": [
             {
-                "answer": "My friends, love is better than anger. Hope is better than fear. Optimism is better than despair. So let us be loving, hopeful and optimistic. And we'll change the world.",
-                "feedback": "A touching homage to the late Jack Layton's last letter to Canadians. Good luck tomorrow.",
+                "answer": "My friends, love is better than anger. Hope is better than fear. Optimism is better than despair. So let us be loving, hopeful and optimistic. And we’ll change the world.",
+                "feedback": "A touching homage to the late Jack Layton’s last letter to Canadians. Good luck tomorrow.",
                 "score_issue": [
                     {
                         "issue": 113,
@@ -2265,12 +2265,12 @@
                 ]
             },
             {
-                "answer": "We don't need chaos, we need calm. We don't need anger, we need an adult, and we need action. Because we need to fight, we need to protect, and we need to build. Elbows up!",
+                "answer": "We don’t need chaos, we need calm. We don’t need anger, we need an adult, and we need action. Because we need to fight, we need to protect, and we need to build. Elbows up!",
                 "historical": true,
-                "feedback": "You're pitching yourself as the statesman that Canada needs. Good luck tomorrow!"
+                "feedback": "You’re pitching yourself as the statesman that Canada needs. Good luck tomorrow!"
             },
             {
-                "answer": "Pierre Poilievre's war on \"woke\" is dangerous and has no place in Canada. He is stoking fears and resentment, entrenching division, and legitimizing extreme positions. We need to send a clear message that this divisive American approach is not welcome here.",
+                "answer": "Pierre Poilievre’s war on “woke” is dangerous and has no place in Canada. He is stoking fears and resentment, entrenching division, and legitimizing extreme positions. We need to send a clear message that this divisive American approach is not welcome here.",
                 "feedback": "Hopefully these attacks on Poilievre bear fruit. Good luck tomorrow.",
                 "score_global": [
                     {
