@@ -53,7 +53,7 @@
             },
             {
                 "answer": "I want to make clear my commitment to French Canadians by first appearing in an interview with Patrice Roy on Radio-Canada.",
-                "feedback": "Quebec appreciates you putting them first, but your weak French impedes your ability to communicate clearly.",
+                "feedback": "Québec appreciates you putting them first, but your weak French impedes your ability to communicate clearly.",
                 "score_global": [
                     {
                         "global_multiplier": -0.015
@@ -1503,7 +1503,7 @@
                 ]
             },
             {
-                "answer": "Quebec City. I will reiterate my respect for provincial jurisdiction.",
+                "answer": "Québec City. I will reiterate my respect for provincial jurisdiction.",
                 "score_state": [
                     {
                         "state": "Québec Centre",
