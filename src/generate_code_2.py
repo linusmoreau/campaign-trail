@@ -72,6 +72,8 @@ class Code2Generator:
         end_code_filepath = os.path.join(self.scenario_dir, "end_code.js")
         with open(end_code_filepath, "r", encoding="utf-8") as f:
             sections.append(f.read())
+        with open("shared_scenario_code.js", "r", encoding="utf-8") as f:
+            sections.append(f.read())
         code2 = "\n\n".join(sections) + "\n"
         return code2
             
