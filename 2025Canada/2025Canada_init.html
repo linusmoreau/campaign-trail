@@ -1,6 +1,6 @@
 document.getElementById("inner_window_1").children[0].innerHTML = `<h3>Do you have what it takes to win a Canadian parliamentary election?</h3>`
 
-document.getElementById("inner_window_1").children[1].innerHTML = `<li>Select a party and a leader to find out.</li><li>You will answer questions about your platform and positions, and also about your campaign strategy.</li><li>The answers will affect your popularity for better or worse, both nationally and in individual ridings.</li><li>Walk the fine line between appealing to your base and winning a majority of the votes.</li>`;
+document.getElementById("inner_window_1").children[1].innerHTML = `<li>Select a party and a leader to find out.</li><li>You will answer questions about your platform and positions, and also about your campaign strategy.</li><li>The answers will affect your popularity for better or worse, both nationally and in individual ridings.</li><li>Walk the fine line between appealing to your base and winning a majority of the votes.</li><li>Context details are included for <span class='mytooltip'>highlighted<span class='mytooltiptext'>This is a context detail.</span></span> text.</li>`;
 
 campaignTrail_temp.global_parameter_json = [
     {
@@ -439,19 +439,19 @@ campaignTrail_temp.opponents_default_json = [
 function addDynamicCSS() {
     var css = `
         .inner_window_question h3 .mytooltip{
-            background-color: #f2a5a5;
+            background-color: #f9d8d8;
         }
 
         .mytooltip {
             position: relative;
             display: inline-block;
             cursor: pointer;
-            background-color: #f2a5a5;
+            background-color: #f9d8d8;
         }
 
         .mytooltip .mytooltiptext {
             width: 240px;
-            background-color: #f2a5a5;
+            background-color: #f9d8d8;
             color: black;
             text-align: center;
             border-radius: 6px;
