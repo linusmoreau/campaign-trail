@@ -10,7 +10,9 @@ if not os.path.exists(PROCESSED_DIR):
     os.makedirs(PROCESSED_DIR)
 
 
-def process(f, crop=False, ratio=7/8, max_width=1200, max_height=1200):
+def process(f, crop=False, scale=False, ratio=7/8, max_width=1200, max_height=1200):
+    if crop and scale:
+        raise ValueError("Cannot both crop and scale.")
     img = Image.open(f)
     w, h = img.size
     if h > max_height:
@@ -32,6 +34,13 @@ def process(f, crop=False, ratio=7/8, max_width=1200, max_height=1200):
             top = round((h - new_height) / 2)
             bottom = top + new_height
             img = img.crop((0, top, w, bottom))
+    if scale:
+        if w/h > ratio:
+            new_width = round(h * ratio)
+            img = img.resize((new_width, h))
+        else:
+            new_height = round(w * ratio)
+            img = img.resize((w, new_height))
     if img.mode != "RGB":
         img = img.convert("RGBA")
         canvas = Image.new("RGBA", img.size, "WHITE")
@@ -39,8 +48,8 @@ def process(f, crop=False, ratio=7/8, max_width=1200, max_height=1200):
         img = canvas.convert("RGB") 
     return img
     
-def process_and_save(f: str, f_out: str | None = None, crop=False, ratio=7/8):
-    img = process(f, crop, ratio)
+def process_and_save(f: str, f_out: str | None = None, crop=False, scale=False, ratio=7/8):
+    img = process(f, crop, scale, ratio)
     if f_out is None:
         f_out = os.path.splitext(os.path.split(f)[-1])[0] + ".jpg"
     img.save(os.path.join(PROCESSED_DIR, f_out))
@@ -65,3 +74,4 @@ def process_all():
 if __name__ == "__main__":
     process_all()
     process_and_save(os.path.join(PORTRAITS_DIR, "carney.avif"), crop=True, ratio=1)
+    process_and_save(os.path.join(PORTRAITS_DIR, "Liberal.jpeg"), scale=True)

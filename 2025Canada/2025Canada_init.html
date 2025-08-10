@@ -73,7 +73,7 @@ campaignTrail_temp.candidate_json = [
             "color_hex": "#EA6D6A",
             "secondary_color_hex": null,
             "is_active": 1,
-            "image_url": "https://i.imgur.com/Fcsxxji.jpeg",
+            "image_url": "https://i.imgur.com/mtNuqWt.jpeg",
             "electoral_victory_message": "",
             "electoral_loss_message": "",
             "no_electoral_majority_message": "",
@@ -112,7 +112,7 @@ campaignTrail_temp.candidate_json = [
             "party": "Conservative",
             "state": "Canada",
             "priority": 1,
-            "description": "<p>[NOT CURRENTLY PLAYABLE]</p><p>Formed as a merger between the Progressive Conservative Party and the Reform Party in 2003, the Conservative Party is the main party occupying the right wing of the Canadian political spectrum.</p><p>After holding power for 9 years under the leadership of Stephen Harper, the Conservative Party has been relegated to the Official Opposition for the last 9 years, the last two of which were under the leadership of Pierre Poilievre.</p><p>As the 2025 election approaches, the Conservative Party holds a commanding lead in the polls. Can the party maintain its advantage on election day?</p>",
+            "description": "<p>Formed as a merger between the Progressive Conservative Party and the Reform Party in 2003, the Conservative Party is the main party occupying the right wing of the Canadian political spectrum.</p><p>After holding power for 9 years under the leadership of Stephen Harper, the Conservative Party has been relegated to the Official Opposition for the last 9 years, the last two of which were under the leadership of Pierre Poilievre.</p><p>As the 2025 election approaches, the Conservative Party holds a commanding lead in the polls. Can the party maintain its advantage on election day?</p>",
             "color_hex": "#6495ED",
             "secondary_color_hex": null,
             "is_active": 1,
@@ -140,7 +140,7 @@ campaignTrail_temp.candidate_json = [
             "secondary_color_hex": null,
             "is_active": 0,
             "image_url": "https://i.imgur.com/jYkYfCa.jpeg",
-            "description_as_running_mate": "<p>[NOT CURRENTLY PLAYABLE]</p><p>Leader of the Conservative Party since 2022, Pierre Poilievre has a long history with the party. He became politically involved in the precursor Reform Party at the young age of 14 years old. His political involvement grew as he did, and he was elected as a Member of Parliament in the 2004 election at only 25 years old. Since then, he has climbed in the party, from backbencher to parliamentary secretary to cabinet minister, and finally to party leadership.</p><p>Under his leadership, the Conservative Party has risen in the polls, gaining from both the Liberal Party on the left and the People's Party on the right. It would appear all but certain that Pierre Poilievre will be the next Prime Minister of Canada.</p>",
+            "description_as_running_mate": "<p>Leader of the Conservative Party since 2022, Pierre Poilievre has a long history with the party. He became politically involved in the precursor Reform Party at the young age of 14 years old. His political involvement grew as he did, and he was elected as a Member of Parliament in the 2004 election at only 25 years old. Since then, he has climbed in the party, from backbencher to parliamentary secretary to cabinet minister, and finally to party leadership.</p><p>Under his leadership, the Conservative Party has risen in the polls, gaining from both the Liberal Party on the left and the People's Party on the right. It would appear all but certain that Pierre Poilievre will be the next Prime Minister of Canada.</p>",
             "candidate_score": 1,
             "running_mate": true
         }
@@ -439,28 +439,28 @@ campaignTrail_temp.opponents_default_json = [
 function addDynamicCSS() {
     var css = `
         .inner_window_question h3 .mytooltip{
-            background-color: #f9d8d8;
+            color: #345beb;
         }
 
         .mytooltip {
             position: relative;
             display: inline-block;
             cursor: pointer;
-            background-color: #f9d8d8;
+            color: #345beb;
         }
 
         .mytooltip .mytooltiptext {
             width: 240px;
-            background-color: #f9d8d8;
+            background-color: #e4ecee;
             color: black;
             text-align: center;
             border-radius: 6px;
             padding: 10px;
             position: absolute;
             z-index: 99;
-            bottom: 20%;
-            left: 20%;
-            margin-left: -90px;
+            bottom: 110%;
+            left: 50%;
+            margin-left: -130px;
             opacity: 0;
             transition: opacity 0.3s;
             border: 1px solid black;
@@ -469,6 +469,17 @@ function addDynamicCSS() {
             line-height: 1.5em !important;
             font-weight: normal !important;
             font-style: normal !important;
+        }
+
+        .mytooltip .mytooltiptext::after {
+            content: " ";
+            position: absolute;
+            top: 100%; /* At the bottom of the tooltip */
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: black transparent transparent transparent;
         }
 
         .mytooltip .mytooltiptext img {
@@ -555,8 +566,8 @@ tooltipList = [
     {searchString: "John A. Macdonald", "explanationText": "The first Canadian Prime Minister, and a driving figure of Canadian Confederation."},
     {searchString: "Bank of Canada", "explanationText": "The central bank of Canada, responsible for managing monetary policy with the aim of keeping inflation and unemployment low."},
     {searchString: "UNRWA", "explanationText": "The United Nations Relief and Works Agency for Palestine Refugees in the Near East, responsible for delivering humanitarian relief to people in Palestine."}, 
-    {searchString: "Notwithstanding clause", "explanationText": "Section 33 of the Canadian Charter of Rights and Freedoms that allows the federal and provincial governments to override fundamental rights, legal rights, and equality rights. It has never been invoked by the federal government."},
-    {searchString: "Equalization payments", "explanationText": "Payments made by the federal government to provinces that have less fiscal capacity than the others. In the last decade, the three Western-most provinces of British Columbia, Alberta, and Saskatchewan have not received any payments while Québec and the Maritimes are the main recipients."},
+    {searchString: "notwithstanding clause", "explanationText": "Section 33 of the Canadian Charter of Rights and Freedoms that allows the federal and provincial governments to override fundamental rights, legal rights, and equality rights. It has never been invoked by the federal government."},
+    {searchString: "equalization payments", "explanationText": "Payments made by the federal government to provinces that have less fiscal capacity than the others. In the last decade, the three Western-most provinces of British Columbia, Alberta, and Saskatchewan have not received any payments while Québec and the Maritimes are the main recipients."},
     {searchString: "Laurentian elite", "explanationText": "The political, academic, cultural, media, and business elites located along the St. Lawrence River such as in Toronto, Ottawa, and Montreal."},
     {searchString: "provincial competencies", "explanationText": "The areas in which constitutional authority rests primarily with the provincial governments, such as health and education."},
     {searchString: "health transfers", "explanationText": "Payments made by the federal government to the provinces to be used for public healthcare. Currently covers 21.5% of public health expenditure."},
@@ -567,7 +578,9 @@ tooltipList = [
     {searchString: "throwing a wrench", "explanationText": "Without your guidance, Danielle Smith would have been tempted to call you \"very much in sync\" with the Trump administration."},
     {searchString: "dentalcare", "explanationText": "The Canadian Dental Care Plan which provides dental insurance to qualifying Canadians."},
     {searchString: "pharmacare", "explanationText": "The National Pharmacare program which seeks to expand pharmaceutial coverage in Canada. The program is currently limited to certain provinces that have signed agreements and only covers some diabetes medications and contraception."},
-    {searchString: "CSIS", "explanationText": "The Canadian Security Intelligence Service, the agency responsible for national security intelligence."}
+    {searchString: "CSIS", "explanationText": "The Canadian Security Intelligence Service, the agency responsible for national security intelligence."},
+    {searchString: "Nanaimo", "explanationText": "A city situated on Vancouver Island in British Columbia, with transit connections to Vancouver serviced by ferry."},
+    {searchString: "right-to-work", "explanationText": "Bans agreements between unions and employers that compel new employees to join the union."}
 ]
 
 document.getElementsByClassName("game_header")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_title;
@@ -589,19 +602,13 @@ HistPV = ["8,595,488", "8,113,484", "1,236,349", "1,234,673", "238,892", "136,97
 HistPVP = ["43.8%", "41.3%", "6.3%", "6.3%", "1.2%", "0.7%", "0.4%"];
 
 quotes = [
-    `Canada is not a country for the cold of heart or the cold of feet`,
-    `The greatest way to defend democracy is to make it work`,
-    `I've always found that you can control people better if you don't see too much of them`,
-    `The Americans are our best friends whether we like it or not`,
-    `If the rising tide fails to lift all boats, resentments will increase`,
-    `A long time ago, in the future`,
-    `I think we already know they're looking to get rid of Fridays`,
-    `What do we do? We spit in our hands and we start over!`,
-    `We are not a small people, we are maybe something of a great people`,
-    `Canada Strong`,
-    `Canada First. For a Change`,
-    `In it for you`,
-    `Made for People. Built for Canada.`
+    `Skate to where the puck is going, not where it has been — Wayne Gretzky`,
+    `Canada is not a country for the cold of heart or the cold of feet — Pierre Trudeau`,
+    `Keep your head up and your stick on the ice — Canadian Proverb`,
+    `The greatest way to defend democracy is to make it work — Tommy Douglas`,
+    `I've always found that you can control people better if you don't see too much of them — William Lyon Mackenzie King`,
+    `The Americans are our best friends whether we like it or not — Robert N. Thompson`,
+    `Qu'est-ce qu'on fait? On se crache dans les mains et on recommence! — Jacques Parizeau`
 ]
 customquote = quotes[Math.floor((Math.random() * quotes.length))]
 corrr="\n<h2>THE CAMPAIGN TRAIL</h2><font id='wittyquote' size='4' color='white'><em>" + customquote + "</em></font>"
@@ -618,7 +625,7 @@ function updateElements() {
     // Remove "continue" buttons for non-playable characters
     const running_mate_id = document.getElementById("running_mate_id")
     const continue_button = document.getElementById("running_mate_id_button")
-    if (running_mate_id && continue_button && running_mate_id.value != "310") {
+    if (running_mate_id && continue_button && running_mate_id.value != 310 && running_mate_id.value != 311) {
         continue_button.parentElement.removeChild(continue_button)
     }
 }
@@ -648,22 +655,22 @@ campaignTrail_temp.achievements = {
         "cannotBeCheated": true
     },
     "Blue Wave": {
-        "image": "",
+        "image": "https://i.imgur.com/bpwGkMz.jpeg",
         "description": "As Poilievre, win a majority government.",
         "cannotBeCheated": true
     },
     "Sniped": {
-        "image": "",
+        "image": "https://i.imgur.com/kjRF3NJ.jpeg",
         "description": "As Poilievre, win the most seats but lose your own.",
         "cannotBeCheated": true
     },
     "They Can’t Keep Getting Away With It": {
-        "image": "",
+        "image": "https://i.imgur.com/NZaCUlk.jpeg",
         "description": "As Poilievre, win the popular vote but lose the election.",
         "cannotBeCheated": true
     },
     "Deal with the Devil": {
-        "image": "",
+        "image": "https://i.imgur.com/GctLzed.jpeg",
         "description": "As Poilievre, become Prime Minister with support from the Bloc Québécois.",
         "cannotBeCheated": true
     }
