@@ -67,7 +67,7 @@ endingPicker = (out, totv, aa, quickstats) => {
             if (!carney_won) {
                 description[0] += " However, the fact you lost in your own constituency of Nepean doesn't inspire confiedence."
             }
-            setImage("https://i.imgur.com/0tmKUV5.jpeg")
+            setImage("https://i.imgur.com/jYkYfCa.jpeg")
             setMusic("https://www.youtube-nocookie.com/embed/OSR4WpqyXxs?autoplay=1")
         } else {
             header = "Conservative Plurality!";
