@@ -2,6 +2,7 @@ campaignTrail_temp.candidate_image_url = "https://i.imgur.com/L8xdBOW.jpeg";
 campaignTrail_temp.running_mate_image_url = "https://i.imgur.com/jYkYfCa.jpeg";
 campaignTrail_temp.candidate_last_name = "Conservative";
 campaignTrail_temp.running_mate_last_name = "Poilievre";
+campaignTrail_temp.election_json[0]["fields"]["advisor_url"] = "https://i.imgur.com/42rHEIO.jpeg";
 
 campaignTrail_temp.multiple_endings = true;
 
@@ -81,6 +82,7 @@ endingPicker = (out, totv, aa, quickstats) => {
                 )
                 setImage("https://i.imgur.com/jYkYfCa.jpeg")
                 setMusic("https://www.youtube-nocookie.com/embed/ChKbip4xHsI?autoplay=1")
+                ctsAchievement("Deal with the Devil")
             } else {
                 description.push(
                     "Whether you will become Prime Minister remains uncertain. Mark Carney can remain Prime Minister as long as he maintains the confidence of Parliament. As it stands, you will need to win over the other opposition parties to force Carney out of office if he doesn’t step down on his own. Failing that, Carney and the Liberals will get to continue governing though their position remains precarious."
@@ -93,6 +95,16 @@ endingPicker = (out, totv, aa, quickstats) => {
     s = `<h2>${header}</h2>`
     for (desc of description) {
         s += `<p>${desc}</p>`
+    }
+
+    if (winner.candidate == 301 && winner.electoral_votes >= 172) {
+        ctsAchievement("Blue Wave")
+    }
+    if (winner.candidate == 301 && runnerUp.electoral_votes < winner.electoral_votes && !poilievre_won) {
+        ctsAchievement("Sniped")
+    }
+    if (winner.candidate == 300 && runnerUp.candidate == 301 && runnerUp.popular_votes > winner.popular_votes) {
+        ctsAchievement("They Can’t Keep Getting Away With It")
     }
     return s
 }
