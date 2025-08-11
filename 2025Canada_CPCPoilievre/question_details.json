@@ -11,6 +11,12 @@
                 "answer": "The Liberals are trying to push Trudeau out not because they disagree with anything he did, but because he is toxic to Canadians. Never forget: these are the same old Liberals who supported Trudeau’s toxic agenda for the last decade. It’s time to turn the page!",
                 "feedback": "You tell them!"
             }
+        ],
+        "score_global": [
+            {
+                "affected_candidate": 300,
+                "global_multiplier": 0.15
+            }
         ]
     },
     {
@@ -26,12 +32,18 @@
                 "feedback": "This attack would be more effective if Carney hadn’t spent a significant part of his career in Canada, from deputy finance minister to central bank head to chairman at Brookfield."
             },
             {
-                "answer": "Carney is in it for himself. When he became adviser to Trudeau, he solicited $10 billion of your taxpayer money to give to Brookfield. He has used his positions of influence to enrich himself at the expense of everyday people.",
-                "feedback": "This both ties Carney to Trudeau and associates him with corruption."
+                "answer": "Carney has had an impressive career, but he has the wrong ideas about what this country needs. He supported the carbon tax, opposed pipelines, and pushed for massive government spending, and then he was surprised when that caused inflation. He should be kept away from the levers of government because he will implement more of these wrongheaded policies.",
+                "feedback": "Seeing as Carney has a good reputation, attacking him on his ideas seems prudent."
             },
             {
-                "answer": "Mark Carney is a creature of the elite. He has close ties with the big banks and the globalist institutions trying to uproot your way of life. He’s looking out for the interests of the rich and powerful, not the little guy.",
+                "answer": "Mark Carney cannot be trusted. He has close ties with the World Economic Forum and the Century Initiative, globalist institutions trying to uproot your way of life. When he became adviser to Trudeau, he solicited $10 billion of your taxpayer money to give to Brookfield. He’s looking out for himself and his rich friends, not the little guy.",
                 "feedback": "The liberal media deride you for your conspiracism, but the common man hears you too!"
+            }
+        ],
+        "score_global": [
+            {
+                "affected_candidate": 300,
+                "global_multiplier": 0.15
             }
         ]
     },
@@ -55,6 +67,20 @@
                 "answer": "The President is just joking around. We need to be focusing on real issues, not fearmongering over imagined threats.",
                 "feedback": "Canadians want a Prime Minister who will stand up for the country."
             }
+        ],
+        "score_global": [
+            {
+                "affected_candidate": 300,
+                "global_multiplier": 0.15
+            },
+            {
+                "affected_candidate": 302,
+                "global_multiplier": -0.1
+            },
+            {
+                "affected_candidate": 304,
+                "global_multiplier": -0.1
+            }
         ]
     },
     {
@@ -72,6 +98,12 @@
             {
                 "answer": "I will accept the offer and gain security clearance. All the other party leaders have already undergone this process. I want Canadians to be confident that I take national security seriously, and that I have nothing to hide.",
                 "feedback": "You are briefed on the Chinese and Indian interference, and you remove a potential avenue on which you could have been attacked."
+            }
+        ],
+        "score_global": [
+            {
+                "affected_candidate": 300,
+                "global_multiplier": 0.15
             }
         ]
     },
@@ -95,6 +127,16 @@
                 "answer": "Trump won’t just be coming after us and Mexico, he will target the whole world. I will lead a coalition of like-minded countries to have a unified response and a strong negotiating position.",
                 "feedback": "This internationalism is appealing to many, but your base wants you to put Canada first."
             }
+        ],
+        "score_global": [
+            {
+                "affected_candidate": 300,
+                "global_multiplier": 0.15
+            },
+            {
+                "affected_candidate": 302,
+                "global_multiplier": -0.1
+            }
         ]
     },
     {
@@ -103,7 +145,207 @@
             {
                 "answer": "The race is on!",
                 "historical": true,
-                "feedback": "Let’s bring it home!"
+                "feedback": "Let’s bring it home!",
+                "score_global": [
+                    {
+                        "affected_candidate": 300,
+                        "global_multiplier": 0.5
+                    },
+                    {
+                        "affected_candidate": 302,
+                        "global_multiplier": -0.5
+                    },
+                    {
+                        "affected_candidate": 303,
+                        "global_multiplier": -0.45
+                    },
+                    {
+                        "affected_candidate": 304,
+                        "global_multiplier": -0.1
+                    }
+                ],
+                "score_state": [
+                    {
+                        "state": "New Westminster--Burnaby--Maillardville",
+                        "affected_candidate": 302,
+                        "state_multiplier": 5
+                    },
+                    {
+                        "state": "Nunavut",
+                        "affected_candidate": 302,
+                        "state_multiplier": 6
+                    },
+                    {
+                        "state": "Skeena--Bulkley Valley",
+                        "affected_candidate": 302,
+                        "state_multiplier": 1.5
+                    },
+                    {
+                        "state": "Vancouver East",
+                        "affected_candidate": 302,
+                        "state_multiplier": 6
+                    },
+                    {
+                        "state": "Vancouver Kingsway",
+                        "affected_candidate": 302,
+                        "state_multiplier": 6
+                    },
+                    {
+                        "state": "Nanaimo--Ladysmith",
+                        "affected_candidate": 302,
+                        "state_multiplier": 3
+                    },
+                    {
+                        "state": "Burnaby Central",
+                        "affected_candidate": 302,
+                        "state_multiplier": 2
+                    },
+                    {
+                        "state": "Victoria",
+                        "affected_candidate": 302,
+                        "state_multiplier": 3
+                    },
+                    {
+                        "state": "Skeena--Bulkley Valley",
+                        "affected_candidate": 302,
+                        "state_multiplier": 6
+                    },
+                    {
+                        "state": "Rosemont--La Petite-Patrie",
+                        "affected_candidate": 302,
+                        "state_multiplier": 6
+                    },
+                    {
+                        "state": "Berthier--Maskinongé",
+                        "affected_candidate": 302,
+                        "state_multiplier": 2
+                    },
+                    {
+                        "state": "Edmonton Strathcona",
+                        "affected_candidate": 302,
+                        "state_multiplier": 6
+                    },
+                    {
+                        "state": "Similkameen--South Okanagan--West Kootenay",
+                        "affected_candidate": 302,
+                        "state_multiplier": 2
+                    },
+                    {
+                        "state": "Courtenay--Alberni",
+                        "affected_candidate": 302,
+                        "state_multiplier": 6
+                    },
+                    {
+                        "state": "Cowichan--Malahat--Langford",
+                        "affected_candidate": 302,
+                        "state_multiplier": 5
+                    },
+                    {
+                        "state": "Elmwood--Transcona",
+                        "affected_candidate": 302,
+                        "state_multiplier": 5
+                    },
+                    {
+                        "state": "Edmonton Griesbach",
+                        "affected_candidate": 302,
+                        "state_multiplier": 5
+                    },
+                    {
+                        "state": "Churchill--Keewatinook Aski",
+                        "affected_candidate": 302,
+                        "state_multiplier": 5
+                    },
+                    {
+                        "state": "Esquimalt--Saanich--Sooke",
+                        "affected_candidate": 302,
+                        "state_multiplier": 2
+                    },
+                    {
+                        "state": "North Island--Powell River",
+                        "affected_candidate": 302,
+                        "state_multiplier": 5
+                    },
+                    {
+                        "state": "London--Fanshawe",
+                        "affected_candidate": 302,
+                        "state_multiplier": 3
+                    },
+                    {
+                        "state": "Hamilton Centre",
+                        "affected_candidate": 302,
+                        "state_multiplier": 3
+                    },
+                    {
+                        "state": "Windsor West",
+                        "affected_candidate": 302,
+                        "state_multiplier": 3
+                    },
+                    {
+                        "state": "Winnipeg Centre",
+                        "affected_candidate": 302,
+                        "state_multiplier": 6
+                    },
+                    {
+                        "state": "Columbia--Kootenay--Southern Rockies",
+                        "affected_candidate": 302,
+                        "state_multiplier": 2
+                    },
+                    {
+                        "state": "Ottawa Centre",
+                        "affected_candidate": 302,
+                        "state_multiplier": 2
+                    },
+                    {
+                        "state": "Taiaiako'n--Parkdale--High Park",
+                        "affected_candidate": 302,
+                        "state_multiplier": 3
+                    },
+                    {
+                        "state": "Davenport",
+                        "affected_candidate": 302,
+                        "state_multiplier": 1
+                    },
+                    {
+                        "state": "Halifax",
+                        "affected_candidate": 302,
+                        "state_multiplier": 1
+                    },
+                    {
+                        "state": "Saskatoon West",
+                        "affected_candidate": 302,
+                        "state_multiplier": 2
+                    },
+                    {
+                        "state": "Brandon--Souris",
+                        "affected_candidate": 302,
+                        "state_multiplier": 1
+                    },
+                    {
+                        "state": "Kenora--Kiiwetinoong",
+                        "affected_candidate": 302,
+                        "state_multiplier": 1
+                    },
+                    {
+                        "state": "Port Moody--Coquitlam",
+                        "affected_candidate": 302,
+                        "state_multiplier": 1
+                    },
+                    {
+                        "state": "Saanich--Gulf Islands",
+                        "affected_candidate": 303,
+                        "state_multiplier": 6
+                    },
+                    {
+                        "state": "Kitchener Centre",
+                        "affected_candidate": 303,
+                        "state_multiplier": 4
+                    },
+                    {
+                        "state": "Nanaimo--Ladysmith",
+                        "affected_candidate": 303,
+                        "state_multiplier": 2
+                    }
+                ]
             }
         ]
     },
@@ -210,6 +452,16 @@
             },
             {
                 "answer": "Northern Ontario. This is a good chance to finally flip some of those remote communities to the Conservative column."
+            }
+        ],
+        "score_global": [
+            {
+                "affected_candidate": 306,
+                "global_multiplier": -0.2
+            },
+            {
+                "affected_candidate": 303,
+                "global_multiplier": -0.05
             }
         ]
     },
@@ -471,6 +723,16 @@
             {
                 "answer": "Vancouver. Breaking through in Richmond and Coquitlam could make the difference."
             }
+        ],
+        "score_global": [
+            {
+                "affected_candidate": 306,
+                "global_multiplier": -0.2
+            },
+            {
+                "affected_candidate": 303,
+                "global_multiplier": -0.05
+            }
         ]
     },
     {
@@ -686,6 +948,16 @@
             },
             {
                 "answer": "Hamilton and Niagara Falls. The Golden Horseshoe will bring it home!"
+            }
+        ],
+        "score_global": [
+            {
+                "affected_candidate": 306,
+                "global_multiplier": -0.2
+            },
+            {
+                "affected_candidate": 303,
+                "global_multiplier": -0.05
             }
         ]
     },
