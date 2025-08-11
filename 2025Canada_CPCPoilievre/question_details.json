@@ -25,7 +25,18 @@
             {
                 "answer": "Carbon Tax Carney, he’s just like Justin. He’s always supported carbon taxes. He even called Trudeau’s carbon tax a model for others. Whatever he says, he will keep making you pay.",
                 "historical": true,
-                "feedback": "Carney ends up ending the consumer carbon tax on April 1st, and Canadians see the prices at the pump drop."
+                "feedback": "Carney ends up ending the consumer carbon tax on April 1st, and Canadians see the prices at the pump drop.",
+                "score_issue": [
+                    {
+                        "issue": 111,
+                        "issue_score": -1,
+                        "issue_importance": 0.5
+                    },
+                    {
+                        "issue": 114,
+                        "issue_score": 1
+                    }
+                ]
             },
             {
                 "answer": "Carney is just visiting. He was in the United States for many years as a banker with Goldman Sachs. Then he went off to England. He even called himself a European! He’s not in it for you.",
@@ -33,11 +44,24 @@
             },
             {
                 "answer": "Carney has had an impressive career, but he has the wrong ideas about what this country needs. He supported the carbon tax, opposed pipelines, and pushed for massive government spending, and then he was surprised when that caused inflation. He should be kept away from the levers of government because he will implement more of these wrongheaded policies.",
-                "feedback": "Seeing as Carney has a good reputation, attacking him on his ideas seems prudent."
+                "feedback": "Seeing as Carney has a good reputation, attacking him on his ideas seems prudent.",
+                "score_issue": [
+                    {
+                        "issue": 114,
+                        "issue_score": 1
+                    }
+                ]
             },
             {
                 "answer": "Mark Carney cannot be trusted. He has close ties with the World Economic Forum and the Century Initiative, globalist institutions trying to uproot your way of life. When he became adviser to Trudeau, he solicited $10 billion of your taxpayer money to give to Brookfield. He’s looking out for himself and his rich friends, not the little guy.",
-                "feedback": "The liberal media deride you for your conspiracism, but the common man hears you too!"
+                "feedback": "The liberal media deride you for your conspiracism, but the common man hears you too!",
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": 1,
+                        "issue_importance": 0.5
+                    }
+                ]
             }
         ],
         "score_global": [
@@ -52,20 +76,44 @@
         "answers": [
             {
                 "answer": "I will take any action and accept any level of damage to preserve our sovereignty.",
-                "feedback": "These are fighting words, and ones that Canadians like."
+                "feedback": "These are fighting words, and ones that Canadians like.",
+                "score_issue": [
+                    {
+                        "issue": 110,
+                        "issue_score": -1
+                    }
+                ]
             },
             {
                 "answer": "Canada will never be the 51st state. Period. We are a great and independent country, and we are their best friend.",
                 "historical": true,
-                "feedback": "This balances being firm and diplomatic."
+                "feedback": "This balances being firm and diplomatic.",
+                "score_issue": [
+                    {
+                        "issue": 110,
+                        "issue_score": -0.5
+                    }
+                ]
             },
             {
                 "answer": "After a lost Liberal decade, Canada is broken. A closer union between the US and Canada would make us both stronger.",
-                "feedback": "Patriotic Canadians are furious that you are unwilling to reject Trump’s suggestions."
+                "feedback": "Patriotic Canadians are furious that you are unwilling to reject Trump’s suggestions.",
+                "score_issue": [
+                    {
+                        "issue": 110,
+                        "issue_score": 1
+                    }
+                ]
             },
             {
                 "answer": "The President is just joking around. We need to be focusing on real issues, not fearmongering over imagined threats.",
-                "feedback": "Canadians want a Prime Minister who will stand up for the country."
+                "feedback": "Canadians want a Prime Minister who will stand up for the country.",
+                "score_issue": [
+                    {
+                        "issue": 110,
+                        "issue_score": 0.5
+                    }
+                ]
             }
         ],
         "score_global": [
@@ -112,20 +160,56 @@
         "answers": [
             {
                 "answer": "These tariffs wouldn’t be happening if not for Trudeau’s mismanagement. We will have a strong border and a strong relationship with the United States.",
-                "feedback": "Trump ends up hitting most of the world with tariffs. Canadians don’t believe his justifications about the border."
+                "feedback": "Trump ends up hitting most of the world with tariffs. Canadians don’t believe his justifications about the border.",
+                "score_issue": [
+                    {
+                        "issue": 110,
+                        "issue_score": 1
+                    },
+                    {
+                        "issue": 111,
+                        "issue_score": -1
+                    }
+                ]
             },
             {
                 "answer": "I will take a Team Canada approach. Whatever our political differences, we must stand together against Trump’s tariffs and threats to our sovereignty, whatever the cost.",
-                "feedback": "This satisfies many who were concerned about your willingness to stand up to Trump."
+                "feedback": "This satisfies many who were concerned about your willingness to stand up to Trump.",
+                "score_issue": [
+                    {
+                        "issue": 110,
+                        "issue_score": -1
+                    },
+                    {
+                        "issue": 111,
+                        "issue_score": 0.5
+                    }
+                ]
             },
             {
                 "answer": "We must address President Trump’s concerns about the border. We need to take back control of our border to tackle illegal immigration and drugs. I will convince Trump that it is in his interest to keep the border open for trade.",
                 "historical": true,
-                "feedback": "Canadians want retaliation for these economic threats."
+                "feedback": "Canadians want retaliation for these economic threats.",
+                "score_issue": [
+                    {
+                        "issue": 110,
+                        "issue_score": 0.5
+                    }
+                ]
             },
             {
                 "answer": "Trump won’t just be coming after us and Mexico, he will target the whole world. I will lead a coalition of like-minded countries to have a unified response and a strong negotiating position.",
-                "feedback": "This internationalism is appealing to many, but your base wants you to put Canada first."
+                "feedback": "This internationalism is appealing to many, but your base wants you to put Canada first.",
+                "score_issue": [
+                    {
+                        "issue": 110,
+                        "issue_score": -1
+                    },
+                    {
+                        "issue": 113,
+                        "issue_score": -1
+                    }
+                ]
             }
         ],
         "score_global": [
@@ -359,7 +443,21 @@
             },
             {
                 "answer": "I need to be seen as a statesman. I will dial back my aggressive tone and let others tear into my opponents.",
-                "feedback": "This may broaden your appeal, but some people notice that you look a bit deflated."
+                "feedback": "This may broaden your appeal, but some people notice that you look a bit deflated.",
+                "score_issue": [
+                    {
+                        "issue": 111,
+                        "issue_score": 0
+                    },
+                    {
+                        "issue": 113,
+                        "issue_score": 0
+                    },
+                    {
+                        "issue": 114,
+                        "issue_score": 0
+                    }
+                ]
             },
             {
                 "answer": "I want to focus on energy and dynamism. I will bring new ideas and a new approach to governance, contrasting with the same old Liberal politics that got us into this mess.",
@@ -376,7 +474,13 @@
         "answers": [
             {
                 "answer": "The woke NDP has abandoned workers in favour of pushing radical gender ideology.",
-                "feedback": "Conservative working class voters cheer you on while the liberal media write op-eds lambasting your anti-woke bent."
+                "feedback": "Conservative working class voters cheer you on while the liberal media write op-eds lambasting your anti-woke bent.",
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": 1
+                    }
+                ]
             },
             {
                 "answer": "I will ignore the NDP. This election is between me and Carney.",
@@ -384,7 +488,18 @@
             },
             {
                 "answer": "At least the NDP tries to appeal to workers. By contrast, Mark Carney is fully a creature of the elites with deep ties to the World Economic Forum and the Century Initiative. Screwing working people comes naturally to him.",
-                "feedback": "You’ve spent so long demonizing the NDP that it takes some convincing to believe Carney is even worse."
+                "feedback": "You’ve spent so long demonizing the NDP that it takes some convincing to believe Carney is even worse.",
+                "score_issue": [
+                    {
+                        "issue": 112,
+                        "issue_score": -0.5
+                    },
+                    {
+                        "issue": 113,
+                        "issue_score": 1,
+                        "issue_importance": 0.25
+                    }
+                ]
             },
             {
                 "answer": "I will attack Jagmeet Singh and the NDP for propping up Justin Trudeau for so long. They are also responsible for the mess Canada is in right now.",
@@ -399,19 +514,46 @@
             {
                 "answer": "After a lost Liberal decade of weak economic growth, unaffordable housing, and rising crime, we need a change. Carney pretends to be an outsider, but he was Trudeau’s economic advisor, and his team is made up of the same people. We cannot afford a fourth term of failed radical Liberal policies.",
                 "historical": true,
-                "feedback": "You campaign for change, and the people hear you."
+                "feedback": "You campaign for change, and the people hear you.",
+                "score_issue": [
+                    {
+                        "issue": 111,
+                        "issue_score": -1
+                    }
+                ]
             },
             {
                 "answer": "I will fight the woke ideology that has infected so much of society including the public service, university research, and the military. The woke agenda has gone too far and must be stopped.",
-                "feedback": "Your supporters cheer you on, but your opponents draw comparisons between you and Donald Trump."
+                "feedback": "Your supporters cheer you on, but your opponents draw comparisons between you and Donald Trump.",
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": 1,
+                        "issue_importance": 2
+                    }
+                ]
             },
             {
                 "answer": "I will stand up to Trump. I stood up to Trudeau when he hurt Canadian jobs, and I will stand up to Trump as he does the same. Meanwhile, Carney was helping Trudeau and moving his company’s headquarters to Trump’s America.",
-                "feedback": "Centering your opposition to Trump gets you some mainstream approval, but your base seems less energized."
+                "feedback": "Centering your opposition to Trump gets you some mainstream approval, but your base seems less energized.",
+                "score_issue": [
+                    {
+                        "issue": 110,
+                        "issue_score": -1,
+                        "issue_importance": 2
+                    }
+                ]
             },
             {
                 "answer": "Everywhere you look, there are gatekeepers standing in the way of hard-working men and women. I will fire the gatekeepers, unleashing Canadian innovation and entrepreneurship to make our country the envy of the world.",
-                "feedback": "This populist appeal rallies your followers to your economic reform agenda."
+                "feedback": "This populist appeal rallies your followers to your economic reform agenda.",
+                "score_issue": [
+                    {
+                        "issue": 112,
+                        "issue_score": 1,
+                        "issue_importance": 2
+                    }
+                ]
             }
         ]
     },
@@ -420,16 +562,35 @@
         "answers": [
             {
                 "answer": "Protect Canada. People are worried about the state of the world and the threats to our country. I will do everything in my power to protect our country.",
-                "feedback": "This reassures those worried about Canadian sovereignty."
+                "feedback": "This reassures those worried about Canadian sovereignty.",
+                "score_issue": [
+                    {
+                        "issue": 110,
+                        "issue_score": -1
+                    }
+                ]
             },
             {
                 "answer": "Canada First. I will be making it clear that I will put our country first for a change.",
                 "historical": true,
-                "feedback": "Your critics go after you for using a slogan that evokes Trump’s own America First messaging."
+                "feedback": "Your critics go after you for using a slogan that evokes Trump’s own America First messaging.",
+                "score_issue": [
+                    {
+                        "issue": 110,
+                        "issue_score": 1,
+                        "issue_importance": 0.25
+                    }
+                ]
             },
             {
                 "answer": "Canada is Broken. After a decade of Liberal weakness, our country is falling apart. I will make us strong again.",
-                "feedback": "This rings true for many Canadians, but isn’t it just a bit too negative?"
+                "feedback": "This rings true for many Canadians, but isn’t it just a bit too negative?",
+                "score_issue": [
+                    {
+                        "issue": 111,
+                        "issue_score": -1
+                    }
+                ]
             },
             {
                 "answer": "Common Sense Change. I will emphasize the need for change, and that my proposals are common sense.",
@@ -479,11 +640,25 @@
             },
             {
                 "answer": "I will appeal to the premiers in private to avoid any statements that could be construed as favouring Trump. We need message discipline if we are to end this disastrous Liberal government.",
-                "feedback": "The premiers more favourable to Trump toe your line and avoid throwing a wrench into your campaign."
+                "feedback": "The premiers more favourable to Trump toe your line and avoid throwing a wrench into your campaign.",
+                "score_issue": [
+                    {
+                        "issue": 110,
+                        "issue_score": -1,
+                        "issue_importance": 0.5
+                    }
+                ]
             },
             {
                 "answer": "I will seek the endorsements of Danielle Smith and Scott Moe, two stalwarts of the West. I will hit the campaign trail with them and rally our supporters.",
-                "feedback": "Your unity with the two Western premiers energizes your base, but be aware they are both less popular than you both nationally and provincially."
+                "feedback": "Your unity with the two Western premiers energizes your base, but be aware they are both less popular than you both nationally and provincially.",
+                "score_issue": [
+                    {
+                        "issue": 110,
+                        "issue_score": 0.5,
+                        "issue_importance": 0.5
+                    }
+                ]
             }
         ]
     },
@@ -501,11 +676,23 @@
             },
             {
                 "answer": "Not only will I protect Québec’s distinct cultural identity, I will bring a similar national pride to the rest of Canada and fight against woke ideology. We should expect immigrants to speak an official language and adopt our values.",
-                "feedback": "Selling your conservative policies as Québec-inspired gives you some inroads among potential supporters in Québec."
+                "feedback": "Selling your conservative policies as Québec-inspired gives you some inroads among potential supporters in Québec.",
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": 0.8
+                    }
+                ]
             },
             {
                 "answer": "Québec is a lost cause. I will pull campaign funds from the province, and I won’t hold back from criticizing equalization payments and pushing for pipelines.",
-                "feedback": "Your Prairie base cheers you on!"
+                "feedback": "Your Prairie base cheers you on!",
+                "score_issue": [
+                    {
+                        "issue": 114,
+                        "issue_score": 1
+                    }
+                ]
             }
         ]
     },
@@ -527,7 +714,13 @@
             },
             {
                 "answer": "I will go on any platform that will have me, except right-wing alternative media outlets. I cannot feed the Liberal narrative that I’m some sort of extremist.",
-                "feedback": "Alternative right-wing media feel slighted, and some in your base fear a pivot."
+                "feedback": "Alternative right-wing media feel slighted, and some in your base fear a pivot.",
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": -1
+                    }
+                ]
             }
         ]
     },
@@ -537,19 +730,43 @@
             {
                 "answer": "I respect the office of the President of the United States, and I believe that we can be both respectful and firm. I will insist he recognize our sovereignty and drop his tariffs.",
                 "historical": true,
-                "feedback": "Canadians want you to take a tougher stance against Trump."
+                "feedback": "Canadians want you to take a tougher stance against Trump.",
+                "score_issue": [
+                    {
+                        "issue": 110,
+                        "issue_score": 0
+                    }
+                ]
             },
             {
                 "answer": "Respect is a two-way street. If Trump continues to disrespect Canada, then he does not deserve our respect. If he gives us the respect we deserve, then we can achieve great things together.",
-                "feedback": "This balances standing up for Canada while remaining cordial with Trump which may be useful in future negotiations."
+                "feedback": "This balances standing up for Canada while remaining cordial with Trump which may be useful in future negotiations.",
+                "score_issue": [
+                    {
+                        "issue": 110,
+                        "issue_score": -0.5
+                    }
+                ]
             },
             {
                 "answer": "Not at all. We’re talking about a man who is threatening the livelihoods of Canadians. I cannot respect that.",
-                "feedback": "You’re standing up to Trump, and Canadians cheer you on. This might complicate trade negotiations, however."
+                "feedback": "You’re standing up to Trump, and Canadians cheer you on. This might complicate trade negotiations, however.",
+                "score_issue": [
+                    {
+                        "issue": 110,
+                        "issue_score": -1
+                    }
+                ]
             },
             {
                 "answer": "I respect Donald Trump as a leader who is doing everything he can to fight for his people. I will fight for Canadians and win us the best deals.",
-                "feedback": "The Trump comparisons don’t stop."
+                "feedback": "The Trump comparisons don’t stop.",
+                "score_issue": [
+                    {
+                        "issue": 110,
+                        "issue_score": 1
+                    }
+                ]
             }
         ]
     },
@@ -563,15 +780,33 @@
             },
             {
                 "answer": "Union bosses are gatekeepers who are preventing people from working. I will introduce right-to-work legislation that will get rid of these gatekeepers.",
-                "feedback": "This would weaken labour unions, and they come out in full force against you. This is popular among your base, however."
+                "feedback": "This would weaken labour unions, and they come out in full force against you. This is popular among your base, however.",
+                "score_issue": [
+                    {
+                        "issue": 112,
+                        "issue_score": 1
+                    }
+                ]
             },
             {
                 "answer": "Public sector unions use economic terrorism to milk you of your tax dollars. I will ban strikes in critical sectors to prevent them from holding the public hostage.",
-                "feedback": "Your harsh language does you no favors with government workers, but your base cheers you on."
+                "feedback": "Your harsh language does you no favors with government workers, but your base cheers you on.",
+                "score_issue": [
+                    {
+                        "issue": 112,
+                        "issue_score": 1
+                    }
+                ]
             },
             {
                 "answer": "I will attack the Liberals and the NDP for their woke ideology. They have abandoned workers, and union workers will see that I’m the only one fighting for them.",
-                "feedback": "This appeals to some, but others want to hear solutions."
+                "feedback": "This appeals to some, but others want to hear solutions.",
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": 1
+                    }
+                ]
             }
         ]
     },
@@ -580,20 +815,44 @@
         "answers": [
             {
                 "answer": "I will clear our streets of the scum destroying our communities. I will bring back the death penalty for serial violent criminals along with tougher sentences across the board. Any foreign citizen convicted of a crime will be deported without exceptions.",
-                "feedback": "The woke mob attacks you for your unconstitutional proposals. But what do they know? The energy at your rallies is palpable."
+                "feedback": "The woke mob attacks you for your unconstitutional proposals. But what do they know? The energy at your rallies is palpable.",
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": 1
+                    }
+                ]
             },
             {
                 "answer": "After a decade of soft on crime, hug-a-thug, catch-and-release policies, we have crime raging out of control. I will keep criminals locked up using the notwithstanding clause if necessary. I say “three strikes and you’re out”: serious repeat offenders are a danger to their communities and must be locked up.",
                 "historical": true,
-                "feedback": "This is what your supporters want to hear."
+                "feedback": "This is what your supporters want to hear.",
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": 0.8
+                    }
+                ]
             },
             {
                 "answer": "We need to clamp down on crime using every tool we have. I will boost funding for police, toughen prison sentences, strengthen border enforcement, and reinforce gun control.",
-                "feedback": "Your base was with you until you mentioned gun control."
+                "feedback": "Your base was with you until you mentioned gun control.",
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": 0
+                    }
+                ]
             },
             {
                 "answer": "I will attack both the perpetrators and the causes of crime. We need stronger law enforcement and longer prison sentences, but also more community organizations to prevent youth from becoming criminals.",
-                "feedback": "You strike a moderate path that, for your base, shows too much sympathy to potential criminals."
+                "feedback": "You strike a moderate path that, for your base, shows too much sympathy to potential criminals.",
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": -0.5
+                    }
+                ]
             }
         ]
     },
@@ -607,11 +866,23 @@
             },
             {
                 "answer": "Government gatekeepers have been stifling innovation in healthcare. I will fire the gatekeepers to make healthcare faster and better for you and your family.",
-                "feedback": "This is light on details, and the Liberals accuse you of wanting to privatize healthcare."
+                "feedback": "This is light on details, and the Liberals accuse you of wanting to privatize healthcare.",
+                "score_issue": [
+                    {
+                        "issue": 112,
+                        "issue_score": 1
+                    }
+                ]
             },
             {
                 "answer": "Trudeau’s mismanagement of healthcare has left the Canadian system in a dire state. I will eliminate his wasteful bureaucratic programs and put the money into ensuring that you can have timely access to a doctor and treatment.",
-                "feedback": "This sounds like you intend on cancelling dentalcare and pharmacare. The millions of Canadians who use these programs are worried about losing their benefits."
+                "feedback": "This sounds like you intend on cancelling dentalcare and pharmacare. The millions of Canadians who use these programs are worried about losing their benefits.",
+                "score_issue": [
+                    {
+                        "issue": 111,
+                        "issue_score": -1
+                    }
+                ]
             },
             {
                 "answer": "I will end the bureaucratic madness that is preventing foreign-trained and interprovincial doctors and nurses from practicing medicine.",
@@ -625,19 +896,43 @@
             {
                 "answer": "The Liberals have gone on a spending spree at the taxpayer’s expense. I will make deep cuts to the bloated government bureaucracy. This can be done by not replacing people who are leaving the public service.",
                 "historical": true,
-                "feedback": "The Liberals fearmonger about your proposed public service cuts. Let them whine!"
+                "feedback": "The Liberals fearmonger about your proposed public service cuts. Let them whine!",
+                "score_issue": [
+                    {
+                        "issue": 112,
+                        "issue_score": 1
+                    }
+                ]
             },
             {
                 "answer": "I will loudly deny that there will be any public service layoffs. My focus will be on putting mechanisms in place to ensure the work gets done, because right now the work isn’t getting done.",
-                "feedback": "Public servants welcome your reassurances, but your base is disappointed."
+                "feedback": "Public servants welcome your reassurances, but your base is disappointed.",
+                "score_issue": [
+                    {
+                        "issue": 112,
+                        "issue_score": 0
+                    }
+                ]
             },
             {
                 "answer": "Worst of all, the Liberals have been handing out contracts to their cronies for exorbitant fees when the work could be done by civil servants already on the government payroll. I will eliminate this wasteful practice.",
-                "feedback": "This worries contractors, but public servants breathe a sign of relief that they are not the first on the chopping block."
+                "feedback": "This worries contractors, but public servants breathe a sign of relief that they are not the first on the chopping block.",
+                "score_issue": [
+                    {
+                        "issue": 112,
+                        "issue_score": -0.5
+                    }
+                ]
             },
             {
                 "answer": "The bureaucracy has grown so much because the Liberals keep adding frivolous programs. I will streamline the government and eliminate unnecessary programs.",
-                "feedback": "The liberal media deride you for your conspiracism, but the common man hears you too!"
+                "feedback": "TThis satisfies concerns that payroll cuts would hurt service levels, though beneficiaries of the programs you are targeting remain worried.",
+                "score_issue": [
+                    {
+                        "issue": 112,
+                        "issue_score": 0.5
+                    }
+                ]
             }
         ]
     },
@@ -646,20 +941,44 @@
         "answers": [
             {
                 "answer": "In light of the tariff threats for the US, we need to spur Canadian investment now more than ever. I will cut taxes on businesses and investments to bring home jobs and innovation.",
-                "feedback": "Economists applaud your sound judgement."
+                "feedback": "Economists applaud your sound judgement.",
+                "score_issue": [
+                    {
+                        "issue": 112,
+                        "issue_score": 0.8
+                    }
+                ]
             },
             {
                 "answer": "We need a massive patriotic tax cut. I will cut income tax by 15% for the average Canadian, dropping the tax rate on the lowest income tax bracket from 15% to 12.75%.",
                 "historical": true,
-                "feedback": "This is what your supporters want to hear."
+                "feedback": "This is what your supporters want to hear.",
+                "score_issue": [
+                    {
+                        "issue": 112,
+                        "issue_score": 0.5
+                    }
+                ]
             },
             {
                 "answer": "Canada is suffering from intolerably high taxes after a decade of failed Liberal government. We need to cut taxes across the board to boost investment and give people a break.",
-                "feedback": "Your supporters and businesses alike are excited by your plans."
+                "feedback": "Your supporters and businesses alike are excited by your plans.",
+                "score_issue": [
+                    {
+                        "issue": 112,
+                        "issue_score": 1
+                    }
+                ]
             },
             {
                 "answer": "Irresponsible Liberal spending has left the budget in a dire state. I can’t promise any tax cuts right now, we need to fix the budget first.",
-                "feedback": "Your supporters are disappointed. Surely you can cut irresponsible spending and return it as tax cuts?"
+                "feedback": "Your supporters are disappointed. Surely you can cut irresponsible spending and return it as tax cuts?",
+                "score_issue": [
+                    {
+                        "issue": 112,
+                        "issue_score": 0
+                    }
+                ]
             }
         ]
     },
@@ -669,19 +988,48 @@
             {
                 "answer": "I will get rid of the gatekeepers that are preventing housing from being built. That means getting rid of the Housing Accelerator Fund, cutting funding to cities that fail to increase building by 15% per year, and selling off public land. Using the savings from these measures, I will remove GST on new homes.",
                 "historical": true,
-                "feedback": "These are concrete measures that draw support. However, some are concerned your reforms will reward municipalities that have so far refused to build anything."
+                "feedback": "These are concrete measures that draw support. However, some are concerned your reforms will reward municipalities that have so far refused to build anything.",
+                "score_issue": [
+                    {
+                        "issue": 112,
+                        "issue_score": 0.8
+                    }
+                ]
             },
             {
                 "answer": "Liberal meddling has made homes unaffordable for you and destroyed communities. I will repeal every single housing-related law they have instituted. They aren’t working.",
-                "feedback": "Many are concerned this will make housing even more expensive. People want to hear solutions."
+                "feedback": "Many are concerned this will make housing even more expensive. People want to hear solutions.",
+                "score_issue": [
+                    {
+                        "issue": 112,
+                        "issue_score": 0
+                    },
+                    {
+                        "issue": 113,
+                        "issue_score": 1,
+                        "issue_importance": 0.5
+                    }
+                ]
             },
             {
                 "answer": "The reason that homes are so expensive is because greedy government bureaucrats have put outrageous taxes on them. I will immediately remove all federal taxes on homes and withhold infrastructure funding from provinces and municipalities that tax homes excessively.",
-                "feedback": "Tax cuts are always popular. However, some people are worried that most of the benefit will go to developers, not home-buyers."
+                "feedback": "Tax cuts are always popular. However, some people are worried that most of the benefit will go to developers, not home-buyers.",
+                "score_issue": [
+                    {
+                        "issue": 112,
+                        "issue_score": 1
+                    }
+                ]
             },
             {
                 "answer": "We need to free the housing market. Government is the problem. Liberal gatekeepers are preventing private capital from making sound investments in housing stock. I will rail against zoning regulations and rent control as they prevent the market from operating efficiently.",
-                "feedback": "Ideological free-marketeers are wholeheartedly behind you. Others see this as a giveaway to developers and harmful to the character of their neighbourhoods."
+                "feedback": "Ideological free-marketeers are wholeheartedly behind you. Others see this as a giveaway to developers and harmful to the character of their neighbourhoods.",
+                "score_issue": [
+                    {
+                        "issue": 112,
+                        "issue_score": 1
+                    }
+                ]
             }
         ]
     },
@@ -691,19 +1039,44 @@
             {
                 "answer": "Our immigration system was the envy of the world before the Liberals broke it. I will fix the system, and get us back to reasonable immigration levels.",
                 "historical": true,
-                "feedback": "Concerns about immigration levels are fairly recent, and this meets people where they’re at."
+                "feedback": "Concerns about immigration levels are fairly recent, and this meets people where they’re at.",
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": 0.3
+                    }
+                ]
             },
             {
                 "answer": "Legal immigrants have nothing to fear from me. I will crack down on illegal immigration and fraudulent asylum seekers. We are a nation of laws, and I will ensure those laws are enforced.",
-                "feedback": "Your supporters want the law enforced, but they want fewer legal immigrants too."
+                "feedback": "Your supporters want the law enforced, but they want fewer legal immigrants too.",
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": 0.2
+                    }
+                ]
             },
             {
                 "answer": "The Liberals are destroying our country with open borders and allowing criminals to roam free. I will take back control of our borders, deport illegals, and halt immigration while we fix the system.",
-                "feedback": "Halting immigration entirely goes a step too far for most. The Trump comparisons continue."
+                "feedback": "Halting immigration entirely goes a step too far for most. The Trump comparisons continue.",
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": 1
+                    }
+                ]
             },
             {
                 "answer": "We need to ensure that immigrants are net contributors to society. I will prioritize bringing in more doctors and engineers while refusing those who are using up our social housing and food banks.",
-                "feedback": "Prioritizing economic migrants over refugees and family reunification is a standard Conservative plank. This does not address the concerns that immigration levels are too high in general, however."
+                "feedback": "Prioritizing economic migrants over refugees and family reunification is a standard Conservative plank. This does not address the concerns that immigration levels are too high in general, however.",
+                "score_issue": [
+                    {
+                        "issue": 112,
+                        "issue_score": 1,
+                        "issue_importance": 0.5
+                    }
+                ]
             }
         ]
     },
@@ -739,21 +1112,54 @@
         "question": "[April 2025] Oil and gas is a major Canadian industry. What are your plans for Canadian oil?",
         "answers": [
             {
-                "answer": "I will focus on expanding oil exports.  We need to reduce our reliance on American importers and focus on building pipelines to the coasts for shipping to international markets.",
-                "feedback": "This is a mainstream answer, but your supporters want more."
+                "answer": "I will focus on expanding oil exports. We need to reduce our reliance on American importers and focus on building pipelines to the coasts for shipping to international markets.",
+                "feedback": "This is a mainstream answer, but your supporters want more.",
+                "score_issue": [
+                    {
+                        "issue": 110,
+                        "issue_score": -1,
+                        "issue_importance": 0.5
+                    },
+                    {
+                        "issue": 114,
+                        "issue_score": 0.5
+                    }
+                ]
             },
             {
                 "answer": "I will immediately repeal Bill C-69, the No New Pipelines Law. I will scrap the energy cap. I will axe the industrial carbon tax. I will slash costly red tape. I will listen to our energy producers and unleash our economy.",
                 "historical": true,
-                "feedback": "This is what your supporters want to hear."
+                "feedback": "This is what your supporters want to hear.",
+                "score_issue": [
+                    {
+                        "issue": 112,
+                        "issue_score": 1
+                    },
+                    {
+                        "issue": 114,
+                        "issue_score": 1
+                    }
+                ]
             },
             {
                 "answer": "The oil industry is highly productive and profitable, but it must stand on its own two feet. I will repeal the Liberals’ stifling regulations and end subsidies. I will criticize the Liberals spending $50 billion on the Trans Mountain pipeline as a poor use of public money.",
-                "feedback": "You’re leaning into a libertarian approach which has very little popular support. Your base wants you to back oil!"
+                "feedback": "You’re leaning into a libertarian approach which has very little popular support. Your base wants you to back oil!",
+                "score_issue": [
+                    {
+                        "issue": 112,
+                        "issue_score": 0
+                    }
+                ]
             },
             {
                 "answer": "We need to balance expanding oil production with environmental responsibility. I will take measures to reduce emissions in the oil sector and provide the world with clean oil.",
-                "feedback": "Your supporters are shocked at your capitulation to the green lobby!"
+                "feedback": "Your supporters are shocked at your capitulation to the green lobby!",
+                "score_issue": [
+                    {
+                        "issue": 114,
+                        "issue_score": -0.5
+                    }
+                ]
             }
         ]
     },
@@ -762,7 +1168,13 @@
         "answers": [
             {
                 "answer": "I will ignore them. For too long, Canadian economic development has been constrained by special interests and gatekeepers. I will get them out of the way, and get Canada building!",
-                "feedback": "Oil workers are glad you stand with them, but Indigenous communities are outraged, and these plans will face legal challenges."
+                "feedback": "Oil workers are glad you stand with them, but Indigenous communities are outraged, and these plans will face legal challenges.",
+                "score_issue": [
+                    {
+                        "issue": 112,
+                        "issue_score": 1
+                    }
+                ]
             },
             {
                 "answer": "Most Indigenous people support these projects because they bring jobs and wealth to their communities. I will put First Nations back in control of their money by allowing a portion of federal corporate taxes to be paid to local First Nations.",
@@ -771,11 +1183,23 @@
             },
             {
                 "answer": "I will respect the rights of Indigenous people. I will respect the duty to consult, and work collaboratively with companies and First Nations to negotiate agreements where everyone wins.",
-                "feedback": "Indigenous people are satisfied with this, but oil producers worry you will allow First Nations to hold them hostage."
+                "feedback": "Indigenous people are satisfied with this, but oil producers worry you will allow First Nations to hold them hostage.",
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": -0.5
+                    }
+                ]
             },
             {
                 "answer": "Indigenous communities are receiving a record amount of subsidies under this irresponsible Liberal government. I will condition that aid on their cooperation on issues of economic development.",
-                "feedback": "You’re picking a fight with First Nations and are denounced by woke elites, but the oil worker is satisfied."
+                "feedback": "You’re picking a fight with First Nations and are denounced by woke elites, but the oil worker is satisfied.",
+                "score_issue": [
+                    {
+                        "issue": 112,
+                        "issue_score": 1
+                    }
+                ]
             }
         ]
     },
@@ -785,19 +1209,43 @@
             {
                 "answer": "A Conservative government will not introduce any legislation on abortion.",
                 "historical": true,
-                "feedback": "You face criticisms from both the Campaign Life Coalition and the Abortion Rights Coalition, but this might be your best option to avoid making it a bigger issue."
+                "feedback": "You face criticisms from both the Campaign Life Coalition and the Abortion Rights Coalition, but this might be your best option to avoid making it a bigger issue.",
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": -0.5
+                    }
+                ]
             },
             {
                 "answer": "I am pro-choice, and I will go further: any Conservative politician who tables a bill against abortion rights will be removed from the party.",
-                "feedback": "This goes a bridge too far for pro-life conservatives. Some jump ship to the People’s Party."
+                "feedback": "This goes a bridge too far for pro-life conservatives. Some jump ship to the People’s Party.",
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": -1
+                    }
+                ]
             },
             {
                 "answer": "Canada has the most radical abortionist policy in the world. I will ban live birth abortions and prevent infanticide.",
-                "feedback": "This makes abortion rights into a central campaign issue, as Canadians worry about American-style abortion bans."
+                "feedback": "This makes abortion rights into a central campaign issue, as Canadians worry about American-style abortion bans.",
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": 1
+                    }
+                ]
             },
             {
                 "answer": "I respect the right to abortion, but taxpayers should not be expected to pay for it. I will end federal funding for abortions.",
-                "feedback": "The Abortion Rights Coalition goes to war with you, and the liberal media needles you endlessly for what they consider an attack on women’s rights."
+                "feedback": "The Abortion Rights Coalition goes to war with you, and the liberal media needles you endlessly for what they consider an attack on women’s rights.",
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": 0.5
+                    }
+                ]
             }
         ]
     },
@@ -806,20 +1254,44 @@
         "answers": [
             {
                 "answer": "I will eliminate the scourge of drugs flooding our streets. We need to be looking to countries like Singapore as an example of what to do with drug users and dealers.",
-                "feedback": "Your base likes your tough stance, but others want a more compassionate approach to addicts."
+                "feedback": "Your base likes your tough stance, but others want a more compassionate approach to addicts.",
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": 1
+                    }
+                ]
             },
             {
                 "answer": "I will end safe supply, impose harsh penalties for drug dealers, and use compassionate intervention to get addicts off drugs.",
                 "historical": true,
-                "feedback": "This is what your supporters want to hear."
+                "feedback": "This is what your supporters want to hear.",
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": 0.5
+                    }
+                ]
             },
             {
                 "answer": "I will fire the gatekeepers that tell people what they can and can’t do with their own bodies. Police should focus on tackling violent crime. We don’t need a nanny state.",
-                "feedback": "This libertarian stance is out-of-touch with the Conservative base."
+                "feedback": "This libertarian stance is out-of-touch with the Conservative base.",
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": -1
+                    }
+                ]
             },
             {
                 "answer": "I will take back control of our borders and prevent hard drugs like fentanyl from entering our country.",
-                "feedback": "Fentanyl is so prevalent because it is easy to smuggle. Your supporters want to hear more about what else you will do."
+                "feedback": "Fentanyl is so prevalent because it is easy to smuggle. Your supporters want to hear more about what else you will do.",
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": 0
+                    }
+                ]
             }
         ]
     },
@@ -829,11 +1301,23 @@
             {
                 "answer": "I will expand the rights of women by tackling the criminality that victimizes women. Too many violent men are released under this Liberal government, allowing them to reoffend and target women. I will keep these men locked up to protect women from violence.",
                 "historical": true,
-                "feedback": "Women worried about violence appreciate your focus on the issue."
+                "feedback": "Women worried about violence appreciate your focus on the issue.",
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": 0.5
+                    }
+                ]
             },
             {
                 "answer": "I will work with the provinces to expand medical coverage to include in-vitro fertilization. Every woman should have the option to have children if she wants them.",
-                "feedback": "This is a concrete measure that prospective parents are glad you’re on board with."
+                "feedback": "This is a concrete measure that prospective parents are glad you’re on board with.",
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": -0.5
+                    }
+                ]
             },
             {
                 "answer": "I will fight against the Liberal runaway housing costs for the couples whose biological clocks are running out faster than they can afford to buy a home and have kids.",
@@ -841,7 +1325,13 @@
             },
             {
                 "answer": "I will make it possible for women to stay home and care for their children instead of needing to put them in childcare to make ends meet. Instead of subsidizing childcare, I will give the money directly to families, providing a refundable tax credit of up to $6000 per child.",
-                "feedback": "Traditionalist conservatives support this push, but this doesn’t help women more concerned with the cost of childcare."
+                "feedback": "Traditionalist conservatives support this push, but this doesn’t help women more concerned with the cost of childcare.",
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": 1
+                    }
+                ]
             }
         ]
     },
@@ -894,20 +1384,44 @@
         "answers": [
             {
                 "answer": "It is outrageous that the Liberal government spends so much money supporting foreign dictators while housing is unaffordable, crime is rampant, and the price of food is skyrocketing. I will eliminate all foreign aid and put Canadians first.",
-                "feedback": "The Laurentian elite throw a fit, but families struggling to pay the bills hear you too."
+                "feedback": "The Laurentian elite throw a fit, but families struggling to pay the bills hear you too.",
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": 1
+                    }
+                ]
             },
             {
                 "answer": "Yes, I will slash foreign aid and use that money to secure the Arctic. It’s time to put Canada first, for a change.",
                 "historical": true,
-                "feedback": "In these dangerous times, cutting aid to fund the military seems sensible to most."
+                "feedback": "In these dangerous times, cutting aid to fund the military seems sensible to most.",
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": 0.8
+                    }
+                ]
             },
             {
                 "answer": "The Liberals have either been corrupt or grossly incompetent in their handling of foreign aid. I will strip out their woke, wasteful programs while preserving aid that actually goes to people in need.",
-                "feedback": "Your supporters cheer on your attacks on government waste."
+                "feedback": "Your supporters cheer on your attacks on government waste.",
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": 0.5
+                    }
+                ]
             },
             {
                 "answer": "In these increasingly dangerous times, Canada has an opportunity to lead the world. I will use foreign aid as a tool to expand our markets and pull countries away from dictatorships like Russia and China.",
-                "feedback": "This is a very ambitious agenda, but most of your supporters want you to bring that money home."
+                "feedback": "This is a very ambitious agenda, but most of your supporters want you to bring that money home.",
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": -1
+                    }
+                ]
             }
         ]
     },
@@ -989,15 +1503,33 @@
             },
             {
                 "answer": "I will call for expanding gun ownership. This tragedy could have been prevented if people were armed to take out the perpetrator.",
-                "feedback": "You’re politicizing a tragedy in support of a policy opposed by most voters. Not a good look."
+                "feedback": "You’re politicizing a tragedy in support of a policy opposed by most voters. Not a good look.",
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": 1
+                    }
+                ]
             },
             {
                 "answer": "This is a symptom of how broken our country has become under this woke Liberal government. They’ve gone soft and cannot protect you and your family.",
-                "feedback": "Politicizing a tragedy like this is not a good look."
+                "feedback": "Politicizing a tragedy like this is not a good look.",
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": 1
+                    }
+                ]
             },
             {
                 "answer": "The culprit was known to police. He should have been locked up to keep our communities safe.",
-                "feedback": "He was also never previously charged with any crime. Your comment draws the ire of civil rights groups."
+                "feedback": "He was also never previously charged with any crime. Your comment draws the ire of civil rights groups.",
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": 0.8
+                    }
+                ]
             }
         ]
     },
@@ -1015,11 +1547,23 @@
             },
             {
                 "answer": "I want to reassure moderates that I am not radical. I will unite the country by bringing back the Canadian promise. It doesn’t matter where you come from, it matters where you’re going. If you work hard, you deserve a great life, whether your family has been here for six generations or you have been here for six weeks.",
-                "feedback": "You’re making a broad, inoffensive appeal without reference to policy details. This might be what you need to win."
+                "feedback": "You’re making a broad, inoffensive appeal without reference to policy details. This might be what you need to win.",
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": 0
+                    }
+                ]
             },
             {
                 "answer": "Carney will keep Canadian oil, minerals, and other resources in the ground, keep the anti-development Bill C-69, and keep Canada hostage to the Americans. He will continue the failed radical policies that have made Canada weak.",
-                "feedback": "You’re ending on a very negative note. Your base is energized for fear of all the things you listed."
+                "feedback": "You’re ending on a very negative note. Your base is energized for fear of all the things you listed.",
+                "score_issue": [
+                    {
+                        "issue": 114,
+                        "issue_score": 1
+                    }
+                ]
             }
         ]
     }
