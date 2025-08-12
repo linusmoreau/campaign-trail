@@ -842,16 +842,104 @@
         "answers": [
             {
                 "answer": "British Columbia. We have a good shot of gaining ground in places like Nanaimo and Surrey.",
-                "historical": true
+                "historical": true,
+                "score_state": [
+                    {
+                        "state": "Nanaimo--Ladysmith",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Saanich--Gulf Islands",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Surrey Centre",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Surrey Newton",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "South Surrey--White Rock",
+                        "state_multiplier": 0.3
+                    }
+                ]
             },
             {
-                "answer": "Nova Scotia. Tim Houston recently won a massive victory there, but our support seems to be slipping there."
+                "answer": "Nova Scotia. Tim Houston recently won a massive victory there, but our support seems to be slipping there.",
+                "score_state": [
+                    {
+                        "state": "Acadie--Annapolis",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Cumberland--Colchester",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "South Shore--St. Margarets",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Cape Breton--Canso--Antigonish",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Central Nova",
+                        "state_multiplier": 0.3
+                    }
+                ]
             },
             {
-                "answer": "Alberta. We need to lock down the big cities and build back some momentum."
+                "answer": "Alberta. We need to lock down the big cities and build back some momentum.",
+                "score_state": [
+                    {
+                        "state": "Edmonton Centre",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Calgary Confederation",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Calgary Centre",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Calgary McKnight",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Edmonton Riverbend",
+                        "state_multiplier": 0.3
+                    }
+                ]
             },
             {
-                "answer": "Northern Ontario. This is a good chance to finally flip some of those remote communities to the Conservative column."
+                "answer": "Northern Ontario. This is a good chance to finally flip some of those remote communities to the Conservative column.",
+                "score_state": [
+                    {
+                        "state": "Edmonton Centre",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Calgary Confederation",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Calgary Centre",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Calgary McKnight",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Edmonton Riverbend",
+                        "state_multiplier": 0.3
+                    }
+                ]
             }
         ],
         "score_global": [
@@ -922,11 +1010,22 @@
                     {
                         "global_multiplier": -0.04
                     }
+                ],
+                "score_group": [
+                    {
+                        "group": "Quebec",
+                        "state_multiplier": 1
+                    }
                 ]
             },
             {
                 "answer": "Not only will I protect Québec’s distinct cultural identity, I will bring a similar national pride to the rest of Canada and fight against woke ideology. We should expect immigrants to speak an official language and adopt our values.",
                 "feedback": "Selling your conservative policies as Québec-inspired gives you some inroads among potential supporters in Québec.",
+                "score_global": [
+                    {
+                        "global_multiplier": 0.01
+                    }
+                ],
                 "score_issue": [
                     {
                         "issue": 113,
@@ -936,7 +1035,7 @@
             },
             {
                 "answer": "Québec is a lost cause. I will pull campaign funds from the province, and I won’t hold back from criticizing equalization payments and pushing for pipelines.",
-                "feedback": "Your Prairie base cheers you on!",
+                "feedback": "Your Prairie base cheers you on! But Québec Conservatives are frustrated that you are leaving them out to dry.",
                 "score_global": [
                     {
                         "global_multiplier": 0.01
@@ -946,6 +1045,12 @@
                     {
                         "issue": 114,
                         "issue_score": 1
+                    }
+                ],
+                "score_group": [
+                    {
+                        "group": "Quebec",
+                        "state_multiplier": -1
                     }
                 ]
             }
@@ -1214,6 +1319,12 @@
                         "issue": 112,
                         "issue_score": 1
                     }
+                ],
+                "score_group": [
+                    {
+                        "group": "Ottawa",
+                        "state_multiplier": -1
+                    }
                 ]
             },
             {
@@ -1229,6 +1340,12 @@
                         "issue": 112,
                         "issue_score": 0
                     }
+                ],
+                "score_group": [
+                    {
+                        "group": "Ottawa",
+                        "state_multiplier": 1
+                    }
                 ]
             },
             {
@@ -1238,6 +1355,12 @@
                     {
                         "issue": 112,
                         "issue_score": -0.5
+                    }
+                ],
+                "score_group": [
+                    {
+                        "group": "Ottawa",
+                        "state_multiplier": 0.5
                     }
                 ]
             },
@@ -1253,6 +1376,12 @@
                     {
                         "issue": 112,
                         "issue_score": 0.5
+                    }
+                ],
+                "score_group": [
+                    {
+                        "group": "Ottawa",
+                        "state_multiplier": -0.5
                     }
                 ]
             }
@@ -1450,17 +1579,105 @@
         "question": "[April 2025] As we pass the midpoint of the election campaign, where will you focus your efforts?",
         "answers": [
             {
-                "answer": "Southwestern Ontario. We can pick up some seats in Windsor and London."
+                "answer": "Southwestern Ontario. We can pick up some seats in Windsor and London.",
+                "score_state": [
+                    {
+                        "state": "Windsor--Tecumseh--Lakeshore",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Windsor West",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "London--Fanshawe",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "London Centre",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "London West",
+                        "state_multiplier": 0.3
+                    }
+                ]
             },
             {
                 "answer": "Ottawa and Kitchener. I will secure my own seat in Carleton and seek to make gains.",
-                "historical": true
+                "historical": true,
+                "score_state": [
+                    {
+                        "state": "Carleton",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Kanata",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Prescott--Russell--Cumberland",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Kitchener Centre",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Kitchener--Conestoga",
+                        "state_multiplier": 0.3
+                    }
+                ]
             },
             {
-                "answer": "Brampton. Making gains here is crucial if we want to form government."
+                "answer": "Brampton. Making gains here is crucial if we want to form government.",
+                "score_state": [
+                    {
+                        "state": "Brampton Centre",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Brampton--Chinguacousy Park",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Brampton South",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Brampton West",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Brampton North--Caledon",
+                        "state_multiplier": 0.3
+                    }
+                ]
             },
             {
-                "answer": "Vancouver. Breaking through in Richmond and Coquitlam could make the difference."
+                "answer": "Vancouver. Breaking through in Richmond and Coquitlam could make the difference.",
+                "score_state": [
+                    {
+                        "state": "Richmond Centre--Marpole",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Richmond East--Steveston",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Port Moody--Coquitlam",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Coquitlam--Port Coquitlam",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Delta",
+                        "state_multiplier": 0.3
+                    }
+                ]
             }
         ],
         "score_global": [
@@ -1762,7 +1979,13 @@
             {
                 "answer": "It is outrageous that the Liberals have provided funding for UNRWA which is full of Hamas terrorists. I will defund UNRWA and lock up and deport all the anti-semitic rioters who are bringing violence to our streets.",
                 "historical": true,
-                "feedback": "The Jewish community is thankful for your support."
+                "feedback": "The Jewish community is thankful for your support.",
+                "score_group": [
+                    {
+                        "group": "Jewish communities",
+                        "state_multiplier": 0.5
+                    }
+                ]
             },
             {
                 "answer": "Israel has a right to defend itself. They are a close Canadian ally, and I will do everything in my power to strengthen that relationship. I will loudly criticize the Liberals for their arms embargo.",
@@ -1770,6 +1993,12 @@
                 "score_global": [
                     {
                         "global_multiplier": -0.005
+                    }
+                ],
+                "score_group": [
+                    {
+                        "group": "Jewish communities",
+                        "state_multiplier": 1
                     }
                 ]
             },
@@ -1780,6 +2009,12 @@
                     {
                         "global_multiplier": -0.01
                     }
+                ],
+                "score_group": [
+                    {
+                        "group": "Jewish communities",
+                        "state_multiplier": -1
+                    }
                 ]
             },
             {
@@ -1788,6 +2023,12 @@
                 "score_global": [
                     {
                         "global_multiplier": -0.005
+                    }
+                ],
+                "score_group": [
+                    {
+                        "group": "Jewish communities",
+                        "state_multiplier": -0.5
                     }
                 ]
             }
@@ -1817,13 +2058,19 @@
                 "feedback": "This middle ground leaves people disappointed on both sides.",
                 "score_global": [
                     {
-                        "global_multiplier": -0.003
+                        "global_multiplier": -0.01
                     }
                 ],
                 "score_issue": [
                     {
                         "issue": 113,
                         "issue_score": 0.2
+                    }
+                ],
+                "score_group": [
+                    {
+                        "group": "Quebec",
+                        "state_multiplier": 0.3
                     }
                 ]
             },
@@ -1969,13 +2216,79 @@
                 ]
             },
             {
-                "answer": "Mississauga. We will be well-positioned if we can flip this part of the Greater Toronto Area."
+                "answer": "Mississauga. We will be well-positioned if we can flip this part of the Greater Toronto Area.",
+                "score_state": [
+                    {
+                        "state": "Mississauga--Malton",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Mississauga Centre",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Mississauga--Streetsville",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Mississauga--Lakeshore",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Mississauga East--Cooksville",
+                        "state_multiplier": 0.3
+                    }
+                ]
             },
             {
-                "answer": "Québec City. I will rally the proud Québécois to my side!"
+                "answer": "Québec City. I will rally the proud Québécois to my side!",
+                "score_state": [
+                    {
+                        "state": "Louis-Saint-Laurent--Akiawenhrahk",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Charlesbourg--Haute-Saint-Charles",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Beauport--Limoilou",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Montmorency--Charlevoix",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Louis-Hébert",
+                        "state_multiplier": 0.3
+                    }
+                ]
             },
             {
-                "answer": "Hamilton and Niagara Falls. The Golden Horseshoe will bring it home!"
+                "answer": "Hamilton and Niagara Falls. The Golden Horseshoe will bring it home!",
+                "score_state": [
+                    {
+                        "state": "Hamilton Centre",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Hamilton Mountain",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Hamilton East--Stoney Creek",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Niagara Falls--Niagara-on-the-Lake",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Niagara South",
+                        "state_multiplier": 0.3
+                    }
+                ]   
             }
         ],
         "score_global": [
