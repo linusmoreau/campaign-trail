@@ -1,4 +1,5 @@
 /processed
+/songs
 *.pyc
 
 */answers.json

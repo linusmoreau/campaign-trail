@@ -108,3 +108,15 @@ endingPicker = (out, totv, aa, quickstats) => {
     }
     return s
 }
+
+replaceMusic({
+    0: {
+        name: "Introduction",
+        tracklist: [
+            {
+                "name": "O Canada",
+                "url": "https://audio.jukehost.co.uk/qsSsnrpKEXnYqVwyXZEESnypocC5XOGU"
+            },
+        ]
+    }
+})

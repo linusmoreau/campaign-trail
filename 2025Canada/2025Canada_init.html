@@ -56,7 +56,7 @@ campaignTrail_temp.temp_election_list = [
 
 campaignTrail_temp.credits = "rbaldwin"
 
-RecReading=true
+RecReading = true
 
 campaignTrail_temp.candidate_json = [
     {
@@ -495,95 +495,95 @@ function addDynamicCSS() {
 
     var styleElem = document.createElement('style');
     styleElem.type = 'text/css';
-    
+
     styleElem.appendChild(document.createTextNode(css));
-    
+
     document.head.appendChild(styleElem);
 }
 
 addDynamicCSS();
 
 tooltipList = [
-    {searchString: "Chrystia Freeland", explanationText: "The Liberal Finance Minister and Deputy Prime Minister. She was also responsible for US trade negotiations during Trump's first term and was dubbed \"Minister of Everything\" by the media."},
-    {searchString: "CBC", explanationText: "The Canadian Broadcasting Corporation. It is the English branch of the Canadian national broadcaster which receives federal funding to support independent journalism. Generally considered to be liberal-leaning."},
-    {searchString: "Radio-Canada", explanationText: "The French branch of the Canadian national broadcaster which receives federal funding to support independent journalism."},
-    {searchString: "Daily Show", explanationText: "An American late-night comedy show running on Comedy Central."},
-    {searchString: "Juno News", explanationText: "A conservative media outlet that was founded by the same people as True North, they portray themselves as opposing the \"lying\" legacy media and Laurentian elite."},
-    {searchString: "coast to coast to coast", explanationText: "Refers to the Atlantic, Pacific, and Arctic oceans."},
-    {searchString: "capital gains tax", explanationText: "A tax on profits gained from selling assets. The tax was half as much as taxes on regular income but was recently increased to two-thirds for large gains and businesses."},
-    {searchString: "consumer carbon tax", explanationText: "A carbon pricing scheme that introduces an additional cost to activities causing greenhouse gas emissions. The funds raised are used to fund a rebate."},
-    {searchString: "Trudeau’s carbon tax", explanationText: "A carbon pricing scheme that introduces an additional cost to activities causing greenhouse gas emissions. The funds raised are used to fund a rebate."},
-    {searchString: "Elbows up!", explanationText: "A defence mechanism when playing hockey."},
-    {searchString: "TVA", explanationText: "A major Québec-based, French-language television broadcast network."},
-    {searchString: "GST", explanationText: "The Goods and Services Tax, a 5% sales tax levied by the federal government."},
-    {searchString: "basic personal allowance", explanationText: "Threshold beneath which workers pay no federal income tax."},
-    {searchString: "lowest tax bracket", explanationText: "A 15% income tax rate applies on annual incomes below $57,375."},
-    {searchString: "LNG", explanationText: "Liquefied Natural Gas"},
-    {searchString: "First Nations", explanationText: "The largest of the three groupings of Indigenous people in Canada. Along with the Metis and Inuit, they represent 5% of the country's population. Due to history and treaties, they have some collective rights pertaining to land use."},
-    {searchString: "Trans Mountain", explanationText: "Major oil pipeline built from Edmonton to the Pacific Coast, owned and operated by the federal government. A recent expansion that tripled the system's capacity cost the government $53 billion."},
-    {searchString: "Brookfield", "explanationText": "A Canadian multinational alternative asset management company with over $1 trillion in managed assets, making it one of the largest investment companies in the world. Its board was chaired by Mark Carney until he stepped down to run for the Liberal leadership."},
-    {searchString: "Jack Layton", "explanationText": "The late leader of the NDP who led the party to Official Opposition for the first time in 2011. He succumbed to cancer shortly thereafter."},
-    {searchString: "Fleetwood-Port Kells", "explanationText": "A marginal LPC-CPC riding situated in the suburbs of Vancouver, covering parts of Surrey."},
-    {searchString: "Surrey", "explanationText": "The second largest municipality (by population) in Metro Vancouver."},
-    {searchString: "Vancouver", "explanationText": "The third largest metropolitan region in Canada, situated on the West Coast. Composed of 23 local authorities, including the City of Vancouver."},
-    {searchString: "Ottawa", "explanationText": "The national capital of Canada, situated on the border between Ontario and Québec."},
-    {searchString: "Montreal", "explanationText": "The largest city in Québec."},
-    {searchString: "Maritimes", "explanationText": "The provinces of Nova Scotia, New Brunswick, and Prince Edward Island, located on the East Coast."},
-    {searchString: "Alberta", "explanationText": "The second Western-most province. Its economy is highly dependent on oil and gas exports."},
-    {searchString: "Victoria", "explanationText": "The capital of British Columbia, located on Vancouver Island off the West Coast."},
-    {searchString: "British Columbia", "explanationText": "The Western-most province located on the West Coast. This is the province in which the federal NDP is strongest, with almost half of their caucus representing the province."},
-    {searchString: "Hamilton", "explanationText": "A city in Ontario known for manufacturing, being dubbed the Steel Capital of Canada."},
-    {searchString: "Niagara Falls", "explanationText": "A city in Ontario known for tourism, but also possessing a significant manufacturing base."},
-    {searchString: "Québec City", "explanationText": "The capital of Québec."},
-    {searchString: "Brampton", "explanationText": "A suburban city in the Greater Toronto Area."},
-    {searchString: "Scarborough", "explanationText": "A suburban district of the City of Toronto."},
-    {searchString: "Saskatchewan", "explanationText": "The third Western-most province with an economy based around agriculture and resource extraction, known as the Bread Basket of Canada."},
-    {searchString: "Nova Scotia", "explanationText": "The most populous of the Maritime provinces, located on the East Coast."},
-    {searchString: "Greater Toronto Area", "explanationText": "Located in Ontario, it includes the City of Toronto and surrounding suburbs, it is home to nearly 20% of Canadians."},
-    {searchString: "Ontario", "explanationText": "Situated on the Great Lakes, it is the most populous province."},
-    {searchString: "Edmonton", "explanationText": "The capital and second-largest city in Alberta."},
-    {searchString: "Saskatoon", "explanationText": "The largest city in Saskatchewan."},
-    {searchString: "Calgary", "explanationText": "The largest city in Alberta, it is home to the headquarters of many oil companies. Of the major cities in Canada, it is the most supportive of the Conservative Party."},
-    {searchString: "Kitchener", "explanationText": "A city in Ontario, it remains a highly industrial city."},
-    {searchString: "Windsor", "explanationText": "A city in Southwestern Ontario, Winsor is located across from Detroit with which it shares the busiest commercial crossing between the US and Canada."},
-    {searchString: "London", "explanationText": "A city on the Thames in Southwestern Ontario, it is situated between the Great Lakes within roughly equal distances of Toronto, Detroit, and Buffalo."},
-    {searchString: "Richmond", "explanationText": "A city in Metro Vancouver, Richmond is home to many successful malls and significant farmland which is protected from development."},
-    {searchString: "Coquitlam", "explanationText": "A bedroom community in Metro Vancouver."},
-    {searchString: "Mississauga", "explanationText": "The second largest city in the Greater Toronto Area, Mississauga is home to the head offices of many large corporations."},
-    {searchString: "Liberal leadership contenders", "explanationText": "Includes former Minister of Finance Chrystia Freeland, Government House Leader Karina Gould, and businessman Frank Baylis."},
-    {searchString: "three word slogans", "explanationText": "Axe the Tax, Build the Homes, Fix the Budget, Stop the Crime, Bring it Home, etc. Poilievre's campaign has an affinity for verb-the-noun slogans."},
-    {searchString: "prorogued", "explanationText": "Termination of parliamentary session and all parliamentary business. As a result, it can be used by the government to delay a vote of no-confidence."},
-    {searchString: "Danielle Smith", "explanationText": "Premier of Alberta and leader of the United Conservative Party of Alberta, formed out of the 2017 merger of the Progressive Conservative Pary and the Wildrose Party."},
-    {searchString: "Scott Moe", "explanationText": "Premier of Saskatchewan and leader of the conservative Saskatchewan Party."},
-    {searchString: "Doug Ford", "explanationText": "Premier of Ontario and leader of the Ontario Progressive Conservative Party. He is considered by many conservatives to be insufficiently conservative."},
-    {searchString: "Tim Houston", "explanationText": "Premier of Nova Scotia and leader of the Nova Scotia Progressive Conservative Party. Considered to be a Red Tory with a more left-leaning policy platform than most conservative parties."},
-    {searchString: "EI", "explanationText": "Employment insurance. A program providing temporary income of unemployed workers."},
-    {searchString: "Housing Accelerator Fund", "explanationText": "A $4.4 billion initiative used to negotiate zoning reforms with municipalities with the aim of spurring more housing construction."},
-    {searchString: "Goldman Sachs", "explanationText": "The second largest investment bank in the world. It is based out of New York City."},
-    {searchString: "Bill C-69", "explanationText": "Dubbed the \"No New Pipelines\" bill by opponents, it requires that resource projects be assessed for environmental, health, social and economic impacts and respect the rights of Indigenous Peoples."},
-    {searchString: "Campaign Life Coalition", "explanationText": "A pro-life organization that aims to pressure Conservative MPs into passing laws against abortion"},
-    {searchString: "Abortion Rights Coalition", "explanationText": "A pro-choice group aiming to defend abortion rights and expand access."},
-    {searchString: "Stephen Harper", "explanationText": "The Conservative Prime Minister of Canada from 2006 to 2015."},
-    {searchString: "John A. Macdonald", "explanationText": "The first Canadian Prime Minister, and a driving figure of Canadian Confederation."},
-    {searchString: "Bank of Canada", "explanationText": "The central bank of Canada, responsible for managing monetary policy with the aim of keeping inflation and unemployment low."},
-    {searchString: "UNRWA", "explanationText": "The United Nations Relief and Works Agency for Palestine Refugees in the Near East, responsible for delivering humanitarian relief to people in Palestine."}, 
-    {searchString: "notwithstanding clause", "explanationText": "Section 33 of the Canadian Charter of Rights and Freedoms that allows the federal and provincial governments to override fundamental rights, legal rights, and equality rights. It has never been invoked by the federal government."},
-    {searchString: "equalization payments", "explanationText": "Payments made by the federal government to provinces that have less fiscal capacity than the others. In the last decade, the three Western-most provinces of British Columbia, Alberta, and Saskatchewan have not received any payments while Québec and the Maritimes are the main recipients."},
-    {searchString: "Laurentian elite", "explanationText": "The political, academic, cultural, media, and business elites located along the St. Lawrence River such as in Toronto, Ottawa, and Montreal."},
-    {searchString: "provincial competencies", "explanationText": "The areas in which constitutional authority rests primarily with the provincial governments, such as health and education."},
-    {searchString: "health transfers", "explanationText": "Payments made by the federal government to the provinces to be used for public healthcare. Currently covers 21.5% of public health expenditure."},
-    {searchString: "energy cap", "explanationText": "A cap on greenhouse gas emissions that may be emitted by the oil and gas sector. Instituted to reduce the emissions intensity of the oil and gas sector."},
-    {searchString: "industrial carbon tax", "explanationText": "A price on carbon pollution where facilities that are less efficient than the standard have to pay while facilities that are more efficient than the standard earn credits that they can sell."},
-    {searchString: "in-vitro fertilization", "explanationText": "A popular but expensive fertility treatment."},
-    {searchString: "safe supply", "explanationText": "A drug harm reduction policy where drug users are provided with safer alternative drugs to protect them from the potentially toxic illegal drug supply."},
-    {searchString: "throwing a wrench", "explanationText": "Without your guidance, Danielle Smith would have been tempted to call you \"very much in sync\" with the Trump administration."},
-    {searchString: "dentalcare", "explanationText": "The Canadian Dental Care Plan which provides dental insurance to qualifying Canadians."},
-    {searchString: "pharmacare", "explanationText": "The National Pharmacare program which seeks to expand pharmaceutial coverage in Canada. The program is currently limited to certain provinces that have signed agreements and only covers some diabetes medications and contraception."},
-    {searchString: "CSIS", "explanationText": "The Canadian Security Intelligence Service, the agency responsible for national security intelligence."},
-    {searchString: "Nanaimo", "explanationText": "A city situated on Vancouver Island in British Columbia, with transit connections to Vancouver serviced by ferry."},
-    {searchString: "right-to-work", "explanationText": "Bans agreements between unions and employers that compel new employees to join the union."},
-    {searchString: "World Economic Forum", "explanationText": "An international advocacy organization founded by Klaus Schwab and funded by its members, including a thousand multinational corporations."},
-    {searchString: "Century Initiative", "explanationText": "A Canadian lobby group aiming to make Canada a more prominent world power by increasing its population to 100 million by 2100."}
+    { searchString: "Chrystia Freeland", explanationText: "The Liberal Finance Minister and Deputy Prime Minister. She was also responsible for US trade negotiations during Trump's first term and was dubbed \"Minister of Everything\" by the media." },
+    { searchString: "CBC", explanationText: "The Canadian Broadcasting Corporation. It is the English branch of the Canadian national broadcaster which receives federal funding to support independent journalism. Generally considered to be liberal-leaning." },
+    { searchString: "Radio-Canada", explanationText: "The French branch of the Canadian national broadcaster which receives federal funding to support independent journalism." },
+    { searchString: "Daily Show", explanationText: "An American late-night comedy show running on Comedy Central." },
+    { searchString: "Juno News", explanationText: "A conservative media outlet that was founded by the same people as True North, they portray themselves as opposing the \"lying\" legacy media and Laurentian elite." },
+    { searchString: "coast to coast to coast", explanationText: "Refers to the Atlantic, Pacific, and Arctic oceans." },
+    { searchString: "capital gains tax", explanationText: "A tax on profits gained from selling assets. The tax was half as much as taxes on regular income but was recently increased to two-thirds for large gains and businesses." },
+    { searchString: "consumer carbon tax", explanationText: "A carbon pricing scheme that introduces an additional cost to activities causing greenhouse gas emissions. The funds raised are used to fund a rebate." },
+    { searchString: "Trudeau’s carbon tax", explanationText: "A carbon pricing scheme that introduces an additional cost to activities causing greenhouse gas emissions. The funds raised are used to fund a rebate." },
+    { searchString: "Elbows up!", explanationText: "A defence mechanism when playing hockey." },
+    { searchString: "TVA", explanationText: "A major Québec-based, French-language television broadcast network." },
+    { searchString: "GST", explanationText: "The Goods and Services Tax, a 5% sales tax levied by the federal government." },
+    { searchString: "basic personal allowance", explanationText: "Threshold beneath which workers pay no federal income tax." },
+    { searchString: "lowest tax bracket", explanationText: "A 15% income tax rate applies on annual incomes below $57,375." },
+    { searchString: "LNG", explanationText: "Liquefied Natural Gas" },
+    { searchString: "First Nations", explanationText: "The largest of the three groupings of Indigenous people in Canada. Along with the Metis and Inuit, they represent 5% of the country's population. Due to history and treaties, they have some collective rights pertaining to land use." },
+    { searchString: "Trans Mountain", explanationText: "Major oil pipeline built from Edmonton to the Pacific Coast, owned and operated by the federal government. A recent expansion that tripled the system's capacity cost the government $53 billion." },
+    { searchString: "Brookfield", "explanationText": "A Canadian multinational alternative asset management company with over $1 trillion in managed assets, making it one of the largest investment companies in the world. Its board was chaired by Mark Carney until he stepped down to run for the Liberal leadership." },
+    { searchString: "Jack Layton", "explanationText": "The late leader of the NDP who led the party to Official Opposition for the first time in 2011. He succumbed to cancer shortly thereafter." },
+    { searchString: "Fleetwood-Port Kells", "explanationText": "A marginal LPC-CPC riding situated in the suburbs of Vancouver, covering parts of Surrey." },
+    { searchString: "Surrey", "explanationText": "The second largest municipality (by population) in Metro Vancouver." },
+    { searchString: "Vancouver", "explanationText": "The third largest metropolitan region in Canada, situated on the West Coast. Composed of 23 local authorities, including the City of Vancouver." },
+    { searchString: "Ottawa", "explanationText": "The national capital of Canada, situated on the border between Ontario and Québec." },
+    { searchString: "Montreal", "explanationText": "The largest city in Québec." },
+    { searchString: "Maritimes", "explanationText": "The provinces of Nova Scotia, New Brunswick, and Prince Edward Island, located on the East Coast." },
+    { searchString: "Alberta", "explanationText": "The second Western-most province. Its economy is highly dependent on oil and gas exports." },
+    { searchString: "Victoria", "explanationText": "The capital of British Columbia, located on Vancouver Island off the West Coast." },
+    { searchString: "British Columbia", "explanationText": "The Western-most province located on the West Coast. This is the province in which the federal NDP is strongest, with almost half of their caucus representing the province." },
+    { searchString: "Hamilton", "explanationText": "A city in Ontario known for manufacturing, being dubbed the Steel Capital of Canada." },
+    { searchString: "Niagara Falls", "explanationText": "A city in Ontario known for tourism, but also possessing a significant manufacturing base." },
+    { searchString: "Québec City", "explanationText": "The capital of Québec." },
+    { searchString: "Brampton", "explanationText": "A suburban city in the Greater Toronto Area." },
+    { searchString: "Scarborough", "explanationText": "A suburban district of the City of Toronto." },
+    { searchString: "Saskatchewan", "explanationText": "The third Western-most province with an economy based around agriculture and resource extraction, known as the Bread Basket of Canada." },
+    { searchString: "Nova Scotia", "explanationText": "The most populous of the Maritime provinces, located on the East Coast." },
+    { searchString: "Greater Toronto Area", "explanationText": "Located in Ontario, it includes the City of Toronto and surrounding suburbs, it is home to nearly 20% of Canadians." },
+    { searchString: "Ontario", "explanationText": "Situated on the Great Lakes, it is the most populous province." },
+    { searchString: "Edmonton", "explanationText": "The capital and second-largest city in Alberta." },
+    { searchString: "Saskatoon", "explanationText": "The largest city in Saskatchewan." },
+    { searchString: "Calgary", "explanationText": "The largest city in Alberta, it is home to the headquarters of many oil companies. Of the major cities in Canada, it is the most supportive of the Conservative Party." },
+    { searchString: "Kitchener", "explanationText": "A city in Ontario, it remains a highly industrial city." },
+    { searchString: "Windsor", "explanationText": "A city in Southwestern Ontario, Winsor is located across from Detroit with which it shares the busiest commercial crossing between the US and Canada." },
+    { searchString: "London", "explanationText": "A city on the Thames in Southwestern Ontario, it is situated between the Great Lakes within roughly equal distances of Toronto, Detroit, and Buffalo." },
+    { searchString: "Richmond", "explanationText": "A city in Metro Vancouver, Richmond is home to many successful malls and significant farmland which is protected from development." },
+    { searchString: "Coquitlam", "explanationText": "A bedroom community in Metro Vancouver." },
+    { searchString: "Mississauga", "explanationText": "The second largest city in the Greater Toronto Area, Mississauga is home to the head offices of many large corporations." },
+    { searchString: "Liberal leadership contenders", "explanationText": "Includes former Minister of Finance Chrystia Freeland, Government House Leader Karina Gould, and businessman Frank Baylis." },
+    { searchString: "three word slogans", "explanationText": "Axe the Tax, Build the Homes, Fix the Budget, Stop the Crime, Bring it Home, etc. Poilievre's campaign has an affinity for verb-the-noun slogans." },
+    { searchString: "prorogued", "explanationText": "Termination of parliamentary session and all parliamentary business. As a result, it can be used by the government to delay a vote of no-confidence." },
+    { searchString: "Danielle Smith", "explanationText": "Premier of Alberta and leader of the United Conservative Party of Alberta, formed out of the 2017 merger of the Progressive Conservative Pary and the Wildrose Party." },
+    { searchString: "Scott Moe", "explanationText": "Premier of Saskatchewan and leader of the conservative Saskatchewan Party." },
+    { searchString: "Doug Ford", "explanationText": "Premier of Ontario and leader of the Ontario Progressive Conservative Party. He is considered by many conservatives to be insufficiently conservative." },
+    { searchString: "Tim Houston", "explanationText": "Premier of Nova Scotia and leader of the Nova Scotia Progressive Conservative Party. Considered to be a Red Tory with a more left-leaning policy platform than most conservative parties." },
+    { searchString: "EI", "explanationText": "Employment insurance. A program providing temporary income of unemployed workers." },
+    { searchString: "Housing Accelerator Fund", "explanationText": "A $4.4 billion initiative used to negotiate zoning reforms with municipalities with the aim of spurring more housing construction." },
+    { searchString: "Goldman Sachs", "explanationText": "The second largest investment bank in the world. It is based out of New York City." },
+    { searchString: "Bill C-69", "explanationText": "Dubbed the \"No New Pipelines\" bill by opponents, it requires that resource projects be assessed for environmental, health, social and economic impacts and respect the rights of Indigenous Peoples." },
+    { searchString: "Campaign Life Coalition", "explanationText": "A pro-life organization that aims to pressure Conservative MPs into passing laws against abortion" },
+    { searchString: "Abortion Rights Coalition", "explanationText": "A pro-choice group aiming to defend abortion rights and expand access." },
+    { searchString: "Stephen Harper", "explanationText": "The Conservative Prime Minister of Canada from 2006 to 2015." },
+    { searchString: "John A. Macdonald", "explanationText": "The first Canadian Prime Minister, and a driving figure of Canadian Confederation." },
+    { searchString: "Bank of Canada", "explanationText": "The central bank of Canada, responsible for managing monetary policy with the aim of keeping inflation and unemployment low." },
+    { searchString: "UNRWA", "explanationText": "The United Nations Relief and Works Agency for Palestine Refugees in the Near East, responsible for delivering humanitarian relief to people in Palestine." },
+    { searchString: "notwithstanding clause", "explanationText": "Section 33 of the Canadian Charter of Rights and Freedoms that allows the federal and provincial governments to override fundamental rights, legal rights, and equality rights. It has never been invoked by the federal government." },
+    { searchString: "equalization payments", "explanationText": "Payments made by the federal government to provinces that have less fiscal capacity than the others. In the last decade, the three Western-most provinces of British Columbia, Alberta, and Saskatchewan have not received any payments while Québec and the Maritimes are the main recipients." },
+    { searchString: "Laurentian elite", "explanationText": "The political, academic, cultural, media, and business elites located along the St. Lawrence River such as in Toronto, Ottawa, and Montreal." },
+    { searchString: "provincial competencies", "explanationText": "The areas in which constitutional authority rests primarily with the provincial governments, such as health and education." },
+    { searchString: "health transfers", "explanationText": "Payments made by the federal government to the provinces to be used for public healthcare. Currently covers 21.5% of public health expenditure." },
+    { searchString: "energy cap", "explanationText": "A cap on greenhouse gas emissions that may be emitted by the oil and gas sector. Instituted to reduce the emissions intensity of the oil and gas sector." },
+    { searchString: "industrial carbon tax", "explanationText": "A price on carbon pollution where facilities that are less efficient than the standard have to pay while facilities that are more efficient than the standard earn credits that they can sell." },
+    { searchString: "in-vitro fertilization", "explanationText": "A popular but expensive fertility treatment." },
+    { searchString: "safe supply", "explanationText": "A drug harm reduction policy where drug users are provided with safer alternative drugs to protect them from the potentially toxic illegal drug supply." },
+    { searchString: "throwing a wrench", "explanationText": "Without your guidance, Danielle Smith would have been tempted to call you \"very much in sync\" with the Trump administration." },
+    { searchString: "dentalcare", "explanationText": "The Canadian Dental Care Plan which provides dental insurance to qualifying Canadians." },
+    { searchString: "pharmacare", "explanationText": "The National Pharmacare program which seeks to expand pharmaceutial coverage in Canada. The program is currently limited to certain provinces that have signed agreements and only covers some diabetes medications and contraception." },
+    { searchString: "CSIS", "explanationText": "The Canadian Security Intelligence Service, the agency responsible for national security intelligence." },
+    { searchString: "Nanaimo", "explanationText": "A city situated on Vancouver Island in British Columbia, with transit connections to Vancouver serviced by ferry." },
+    { searchString: "right-to-work", "explanationText": "Bans agreements between unions and employers that compel new employees to join the union." },
+    { searchString: "World Economic Forum", "explanationText": "An international advocacy organization founded by Klaus Schwab and funded by its members, including a thousand multinational corporations." },
+    { searchString: "Century Initiative", "explanationText": "A Canadian lobby group aiming to make Canada a more prominent world power by increasing its population to 100 million by 2100." }
 ]
 
 document.getElementsByClassName("game_header")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_title;
@@ -614,7 +614,7 @@ quotes = [
     `Qu'est-ce qu'on fait? On se crache dans les mains et on recommence! — Jacques Parizeau`
 ]
 customquote = quotes[Math.floor((Math.random() * quotes.length))]
-corrr="\n<h2>THE CAMPAIGN TRAIL</h2><font id='wittyquote' size='4' color='white'><em>" + customquote + "</em></font>"
+corrr = "\n<h2>THE CAMPAIGN TRAIL</h2><font id='wittyquote' size='4' color='white'><em>" + customquote + "</em></font>"
 
 function updateElements() {
     var gameHeader = document.getElementsByClassName("game_header")[0];
@@ -678,3 +678,233 @@ campaignTrail_temp.achievements = {
         "cannotBeCheated": true
     }
 }
+
+
+// Initialise custom music
+
+$("#music_player")[0].children[0].style.display = "none"
+$("#music_player")[0].children[1].style.display = "none"
+
+document.getElementById("modLoadReveal").style.display = "none"
+document.getElementById("modloaddiv").style.display = "none"
+
+musicBox = document.getElementById("music_player")
+musicBox.style.display = ""
+
+var trackSel;
+e = campaignTrail_temp
+e.selectedSoundtrack = 0
+
+toTime = (seconds) => {
+    var date = new Date(null);
+    date.setSeconds(seconds);
+    return date.toISOString().substr(11, 8);
+}
+
+generateTime = () => {
+    // Get the audio element
+    var audio = document.getElementById("campaigntrailmusic");
+    audio.volume = 0.3
+
+    timeTracker = document.createElement("div");
+    timeTracker.style = `
+      text-align:left;
+      border-style:solid;
+      border-width:3px;
+      height:150px;
+      width:200px;
+      background-color:#999999;
+      float:right;
+      padding: 10px;
+    `
+    $("#trackSelParent")[0].prepend(timeTracker);
+    $("#trackSelParent")[0].prepend(document.createElement("br"));
+
+    // Create a new element to display the current position of the audio
+    var positionDisplay = document.createElement("gg");
+    positionDisplay.id = "position-display";
+
+    // Create a new slider element to change the time
+    var timeSlider = document.createElement("input");
+    timeSlider.type = "range";
+    timeSlider.min = 0;
+    timeSlider.max = 1;
+    timeSlider.step = 0.001;
+    timeSlider.value = 0;
+    timeSlider.style.width = "200px";
+    timeSlider.id = "time-slider";
+
+    var pausePlay = document.createElement("button");
+    pausePlay.id = "position-display";
+    pausePlay.innerHTML = "<b>Pause</b>"
+    pausePlay.style.width = "100%";
+
+
+    pausePlay.addEventListener("click", event => {
+        event.preventDefault();
+        updatePositionDisplay();
+        let audio = document.getElementById("campaigntrailmusic");
+        if (audio.paused) {
+            audio.play();
+            event.target.innerHTML = "<b>Pause</b>";
+            return;
+        }
+        audio.pause();
+        event.target.innerHTML = "<b>Play</b>";
+        return;
+    })
+
+    var volumeLabel = document.createElement("gg");
+    volumeLabel.id = "volume-label";
+    volumeLabel.innerHTML = "<br><b>Volume: </b>"
+
+    var volumeSlider = document.createElement("input");
+    volumeSlider.type = "range";
+    volumeSlider.min = 0;
+    volumeSlider.max = 1;
+    volumeSlider.step = 0.001;
+    volumeSlider.value = 0;
+    volumeSlider.style.width = "200px";
+    volumeSlider.id = "volume-slider";
+
+    volumeSlider.value = audio.volume;
+
+    timeTracker.appendChild(pausePlay);
+    timeTracker.appendChild(document.createElement("br"));
+    timeTracker.appendChild(document.createElement("br"));
+    timeTracker.appendChild(positionDisplay);
+    timeTracker.appendChild(timeSlider);
+    timeTracker.appendChild(volumeLabel);
+    timeTracker.appendChild(volumeSlider);
+
+    updatePositionDisplay();
+
+    //for (let i = 0; i < 10; i++)
+    //timeTracker.append(document.createElement("br"));
+
+
+    // Function to update the position display
+    function updatePositionDisplay() {
+        positionDisplay.innerHTML = "<b>Time:</b> " + toTime(audio.currentTime) + "<br>";
+        timeSlider.value = audio.duration ? audio.currentTime / audio.duration : 0;
+    }
+
+    // Function to change the time of the audio
+    function changeTime() {
+        positionDisplay.innerHTML = "<b>Time:</b> " + toTime(audio.currentTime) + "<br>";
+        audio.currentTime = timeSlider.value * audio.duration;
+    }
+
+    updateVolume = event => {
+        audio.volume = event.target.value;
+    }
+
+    // Update the position display and slider every second
+    setInterval(updatePositionDisplay, 1000);
+
+    // Listen for changes to the time slider and change the time of the audio
+    timeSlider.addEventListener("input", changeTime);
+    volumeSlider.addEventListener("input", updateVolume)
+}
+
+function newMusicPlayer(soundtracks) {
+    trackSel = document.createElement("div");
+    trackSel.id = "trackSelParent"
+    let z = `<br><br><br><br><br><br><br><br><br><br><div id='trackSel' style="text-align:left;border-style:solid;border-width:3px;overflow-y: scroll;overflow-x: hidden;height:200px; width:400px;background-color:#999999;float:right;">`
+    z += `<b><select id='selectSoundtrack'><option value='` + soundtracks[e.selectedSoundtrack].name + `'>` + soundtracks[e.selectedSoundtrack].name + "</option>"
+    for (i in soundtracks) {
+        if (soundtracks[e.selectedSoundtrack] != soundtracks[i]) {
+            z += `<option value='` + soundtracks[i].name + `'>` + soundtracks[i].name + `</option>`
+        }
+    }
+    z += `</select></b><br><br>`
+    // <label><input type="radio" name="option" value="option1">Option 1</label><br>
+    for (i in soundtracks[e.selectedSoundtrack].tracklist) {
+        let a = soundtracks[e.selectedSoundtrack].tracklist[i]
+        let b = `<label><input class="trackSelector" type="radio" name="trackSelector" value="` + i + `">` + a.name + `</label><br>`
+        z += b
+    }
+    z += "</div><br><br>"
+    trackSel.innerHTML = z
+
+    // select correct song
+
+    musicBox.appendChild(trackSel);
+    Array.from(document.getElementById("trackSel").children).filter(f => {
+        return f.tagName == "LABEL"
+    }).map(f => f.children[0])[0].checked = true
+
+    // set soundtrack changer
+
+    soundtrackSelector = document.getElementById("selectSoundtrack")
+    soundtrackSelector.onchange = function () {
+        for (i in soundtracks) {
+            if (soundtracks[i].name == soundtrackSelector.value) {
+                e.selectedSoundtrack = i
+                break
+            }
+        }
+        document.getElementById("trackSelParent").remove()
+        newMusicPlayer(soundtracks)
+    }
+
+    var matches = document.querySelectorAll('.trackSelector');
+
+    for (match in matches) {
+        matches[match].onchange = function () {
+            audio = $("#campaigntrailmusic")[0];
+            audio.src = soundtracks[e.selectedSoundtrack].tracklist[this.value].url
+            audio.currentTime = 0
+        }
+    }
+
+    musicBox.children[2].loop = false
+    musicBox.children[2].src = soundtracks[e.selectedSoundtrack].tracklist[0].url
+
+    musicBox.children[2].onended = function () {
+        console.log("next track")
+        if (soundtracks[e.selectedSoundtrack].tracklist.length == 1) {
+            audio = $("#campaigntrailmusic")[0];
+            audio.currentTime = 0
+            audio.play()
+            return
+        }
+        let selected = Number(document.querySelector('input[name="trackSelector"]:checked').value);
+        let newSel = clamp(selected + 1, soundtracks[e.selectedSoundtrack].tracklist.length - 1, 0)
+        let buttons = Array.from(document.getElementById("trackSel").children).filter(f => {
+            return f.tagName == "LABEL"
+        }).map(f => f.children[0])
+        //let selectedIndex = buttons.map(f=>f.children[0]).map(f=>f.checked)
+        buttons[newSel].click()
+    }
+
+    for (w = 0; w < 7; w++) {
+        document.getElementById("trackSelParent").appendChild(document.createElement("br"))
+    }
+
+    generateTime();
+}
+
+clamp = function (a, max, min, overflow = true) {
+    if (overflow) {
+        return a > max ? min : a < min ? max : a;
+    }
+    return a > max ? max : a < min ? min : a;
+}
+
+
+// Track list for start
+var soundtracks_start = {
+    0: {
+        name: "Introduction",
+        tracklist: [
+            {
+                "name": "O Canada",
+                "url": "https://audio.jukehost.co.uk/qsSsnrpKEXnYqVwyXZEESnypocC5XOGU"
+            },
+        ]
+    }
+}
+
+// Set up new music player
+newMusicPlayer(soundtracks_start)
