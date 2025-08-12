@@ -146,6 +146,11 @@
                 "answer": "Canada will never be the 51st state. Period. We are a great and independent country, and we are their best friend.",
                 "historical": true,
                 "feedback": "This balances being firm and diplomatic.",
+                "score_global": [
+                    {
+                        "global_multiplier": 0.01
+                    }
+                ],
                 "score_issue": [
                     {
                         "issue": 110,
@@ -268,7 +273,7 @@
                 "feedback": "This satisfies many who were concerned about your willingness to stand up to Trump.",
                 "score_global": [
                     {
-                        "global_multiplier": -0.01
+                        "global_multiplier": -0.03
                     },
                     {
                         "affected_candidate": 300,
@@ -316,7 +321,7 @@
                 "feedback": "This internationalism is appealing to many, but your base wants you to put Canada first.",
                 "score_global": [
                     {
-                        "global_multiplier": -0.02
+                        "global_multiplier": -0.05
                     },
                     {
                         "affected_candidate": 300,
@@ -573,14 +578,14 @@
             {
                 "answer": "I will continue with my current approach. Canadians want a fighter who is willing to tell it how it is. I will be that fighter.",
                 "historical": true,
-                "feedback": "It has worked well so far. If it ain’t broke, don’t fix it?"
+                "feedback": "It has worked well so far, but it seems like the winds are changing."
             },
             {
                 "answer": "I need to be seen as a statesman. I will dial back my aggressive tone and let others tear into my opponents.",
                 "feedback": "This may broaden your appeal, but some people notice that you look a bit deflated.",
                 "score_global": [
                     {
-                        "global_multiplier": -0.04
+                        "global_multiplier": -0.05
                     },
                     {
                         "affected_candidate": 300,
@@ -660,7 +665,7 @@
                     },
                     {
                         "affected_candidate": 302,
-                        "global_multiplier": 0.04
+                        "global_multiplier": 0.05
                     }
                 ],
                 "score_issue": [
@@ -728,6 +733,9 @@
                 "feedback": "Centering your opposition to Trump gets you some mainstream approval, but your base seems less energized.",
                 "score_global": [
                     {
+                        "global_multiplier": -0.03
+                    },
+                    {
                         "affected_candidate": 300,
                         "global_multiplier": -0.01
                     },
@@ -780,7 +788,8 @@
                 "score_issue": [
                     {
                         "issue": 110,
-                        "issue_score": -1
+                        "issue_score": -1,
+                        "issue_importance": 0.5
                     }
                 ]
             },
@@ -797,8 +806,8 @@
                 "score_issue": [
                     {
                         "issue": 110,
-                        "issue_score": 1,
-                        "issue_importance": 0.25
+                        "issue_score": 0.5,
+                        "issue_importance": 0.5
                     }
                 ]
             },
@@ -902,7 +911,7 @@
                 "feedback": "You avoid alienating Québec voters, but you still face tough competition from the Liberals and Bloc Québécois.",
                 "score_global": [
                     {
-                        "global_multiplier": 0.01
+                        "global_multiplier": 0.005
                     }
                 ]
             },
@@ -977,6 +986,12 @@
             {
                 "answer": "I will go on any platform that will have me, except right-wing alternative media outlets. I cannot feed the Liberal narrative that I’m some sort of extremist.",
                 "feedback": "Alternative right-wing media feel slighted, and some in your base fear a pivot.",
+                "score_global": [
+                    {
+                        "affected_candidate": 306,
+                        "global_multiplier": 0.2
+                    }
+                ],
                 "score_issue": [
                     {
                         "issue": 113,
@@ -1262,7 +1277,7 @@
                 "feedback": "This is what your supporters want to hear.",
                 "score_global": [
                     {
-                        "global_multiplier": 0.01
+                        "global_multiplier": 0.005
                     }
                 ],
                 "score_issue": [
@@ -1277,7 +1292,7 @@
                 "feedback": "Your supporters and businesses alike are excited by your plans.",
                 "score_global": [
                     {
-                        "global_multiplier": 0.01
+                        "global_multiplier": 0.005
                     }
                 ],
                 "score_issue": [
@@ -1374,7 +1389,7 @@
                 "feedback": "Concerns about immigration levels are fairly recent, and this meets people where they’re at.",
                 "score_global": [
                     {
-                        "global_multiplier": 0.01
+                        "global_multiplier": 0.005
                     }
                 ],
                 "score_issue": [
@@ -1654,12 +1669,12 @@
                 ]
             },
             {
-                "answer": "I will end safe supply, impose harsh penalties for drug dealers, and use compassionate intervention to get addicts off drugs.",
+                "answer": "I will end safe supply, impose harsh penalties for drug dealers, and pursue compassionate intervention to get addicts off drugs.",
                 "historical": true,
                 "feedback": "This is what your supporters want to hear.",
                 "score_global": [
                     {
-                        "global_multiplier": 0.01
+                        "global_multiplier": 0.005
                     }
                 ],
                 "score_issue": [
@@ -1735,7 +1750,7 @@
                 "score_issue": [
                     {
                         "issue": 113,
-                        "issue_score": 1
+                        "issue_score": 0.8
                     }
                 ]
             }
@@ -1788,6 +1803,12 @@
                     {
                         "global_multiplier": -0.005
                     }
+                ],
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": 0.6
+                    }
                 ]
             },
             {
@@ -1796,13 +1817,34 @@
                 "feedback": "This middle ground leaves people disappointed on both sides.",
                 "score_global": [
                     {
-                        "global_multiplier": -0.005
+                        "global_multiplier": -0.003
+                    }
+                ],
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": 0.2
                     }
                 ]
             },
             {
                 "answer": "I will drop my calls to defund the CBC, but the network still needs reform. I will make structural reforms to make it more responsible and impartial.",
-                "feedback": "This is a pivot that disappoints your base, but your new position is more palatable to the average Canadian."
+                "feedback": "This is a pivot that disappoints your base, but your new position is more palatable to the average Canadian.",
+                "score_global": [
+                    {
+                        "global_multiplier": -0.005
+                    },
+                    {
+                        "affected_candidate": 306,
+                        "global_multiplier": 0.2
+                    }
+                ],
+                "score_issue": [
+                    {
+                        "issue": 113,
+                        "issue_score": 0
+                    }
+                ]
             },
             {
                 "answer": "I will defund the biased CBC and use the savings to fund the journalism of real truth-tellers.",
@@ -1814,6 +1856,12 @@
                     {
                         "affected_candidate": 306,
                         "global_multiplier": -0.2
+                    }
+                ],
+                "score_issue": [
+                    {
+                        "issue": 313,
+                        "issue_score": 1
                     }
                 ]
             }
@@ -1913,7 +1961,12 @@
         "answers": [
             {
                 "answer": "Broadly across the country. We can win this!",
-                "historical": true
+                "historical": true,
+                "score_global": [
+                    {
+                        "global_multiplier": 0.005
+                    }
+                ]
             },
             {
                 "answer": "Mississauga. We will be well-positioned if we can flip this part of the Greater Toronto Area."
@@ -2046,11 +2099,6 @@
             {
                 "answer": "I want to reassure moderates that I am not radical. I will unite the country by bringing back the Canadian promise. It doesn’t matter where you come from, it matters where you’re going. If you work hard, you deserve a great life, whether your family has been here for six generations or you have been here for six weeks.",
                 "feedback": "You’re making a broad, inoffensive appeal without reference to policy details. This might be what you need to win.",
-                "score_global": [
-                    {
-                        "global_multiplier": 0.01
-                    }
-                ],
                 "score_issue": [
                     {
                         "issue": 113,
