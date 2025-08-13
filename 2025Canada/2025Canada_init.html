@@ -810,7 +810,7 @@ generateTime = () => {
 function newMusicPlayer(soundtracks) {
     trackSel = document.createElement("div");
     trackSel.id = "trackSelParent"
-    let z = `<br><br><br><br><br><br><br><br><br><br><div id='trackSel' style="text-align:left;border-style:solid;border-width:3px;overflow-y: scroll;overflow-x: hidden;height:200px; width:400px;background-color:#999999;float:right;">`
+    let z = `<br><br><br><br><br><br><br><br><br><br><div id='trackSel' style="text-align:left;border-style:solid;border-width:3px;overflow-y: scroll;overflow-x: hidden;height:200px; width:500px;background-color:#999999;float:right;">`
     z += `<b><select id='selectSoundtrack'><option value='` + soundtracks[e.selectedSoundtrack].name + `'>` + soundtracks[e.selectedSoundtrack].name + "</option>"
     for (i in soundtracks) {
         if (soundtracks[e.selectedSoundtrack] != soundtracks[i]) {
@@ -899,7 +899,7 @@ var soundtracks_start = {
         name: "Introduction",
         tracklist: [
             {
-                "name": "O Canada",
+                "name": "O Canada — Sunday 7pm Choir",
                 "url": "https://audio.jukehost.co.uk/qsSsnrpKEXnYqVwyXZEESnypocC5XOGU"
             },
         ]

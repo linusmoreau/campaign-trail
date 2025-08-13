@@ -38,51 +38,6 @@ function ctsAchievement(achievement, difficultyChecker=true){
         }
 }
 
-musicPlaying = false;
-// Function to create a new YouTube music player
-function setMusic(songChoice, replace=false) {
-    if (musicPlaying && !replace) return;
-
-    // Get the first element with the class "footer"
-    var musicBox = document.getElementsByClassName("footer")[0];
-
-    // Check if the element exists to avoid errors
-    if (!musicBox) {
-        console.error("Element with class 'footer' not found.");
-        return;
-    }
-
-    // Remove any existing YouTube player containers
-    var existingPlayers = musicBox.getElementsByClassName("youtube-player-container");
-    while (existingPlayers.length > 0) {
-        musicBox.removeChild(existingPlayers[0]);
-    }
-
-    // Create a container for the YouTube player
-    var youtubePlayerContainer = document.createElement("div");
-    youtubePlayerContainer.className = "youtube-player-container"; // Add a class for easier selection
-    youtubePlayerContainer.style = "border: none; background: transparent;";
-
-    // Insert the YouTube iframe player
-    var youtubeIframe = document.createElement("iframe");
-    youtubeIframe.width = "352";
-    youtubeIframe.height = "198";
-    youtubeIframe.src = songChoice;
-    youtubeIframe.title = "YouTube video player";
-    youtubeIframe.frameborder = "0";
-    youtubeIframe.style = "position: relative; left: -10px;";
-    youtubeIframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-    youtubeIframe.setAttribute("allowfullscreen", "");
-
-    // Append the iframe to the container
-    youtubePlayerContainer.appendChild(youtubeIframe);
-
-    // Add the YouTube player container to the music box
-    musicBox.appendChild(youtubePlayerContainer);
-
-    musicPlaying = true;
-}
-
 function getTooltips(str) {
     let matches = [];
 
@@ -140,11 +95,6 @@ function applyTooltipsToObject(obj) {
             applyTooltipsToObject(obj[key]); // Recursive call
         }
     }
-}
-
-function replaceMusic(soundtrack) {
-    document.getElementById("trackSelParent").remove()
-    newMusicPlayer(soundtrack)
 }
 
 // Initialise custom music
@@ -277,7 +227,7 @@ generateTime = () => {
 function newMusicPlayer(soundtracks) {
     trackSel = document.createElement("div");
     trackSel.id = "trackSelParent"
-    let z = `<br><br><br><br><br><br><br><br><br><br><div id='trackSel' style="text-align:left;border-style:solid;border-width:3px;overflow-y: scroll;overflow-x: hidden;height:200px; width:400px;background-color:#999999;float:right;">`
+    let z = `<br><br><br><br><br><br><br><br><br><br><div id='trackSel' style="text-align:left;border-style:solid;border-width:3px;overflow-y: scroll;overflow-x: hidden;height:200px; width:500px;background-color:#999999;float:right;">`
     z += `<b><select id='selectSoundtrack'><option value='` + soundtracks[e.selectedSoundtrack].name + `'>` + soundtracks[e.selectedSoundtrack].name + "</option>"
     for (i in soundtracks) {
         if (soundtracks[e.selectedSoundtrack] != soundtracks[i]) {
@@ -357,6 +307,32 @@ clamp = function (a, max, min, overflow = true) {
         return a > max ? min : a < min ? max : a;
     }
     return a > max ? max : a < min ? min : a;
+}
+
+playing_end_music = false
+function replaceMusic(soundtrack, end_music=false) {
+    if (playing_end_music) {
+        return
+    }
+    if (end_music) {
+        playing_end_music = true
+    }
+    document.getElementById("trackSelParent").remove()
+    newMusicPlayer(soundtrack)
+}
+
+function setEndSong(name, title, url) {
+    replaceMusic({
+        0: {
+            name: name,
+            tracklist: [
+                {
+                    name: title,
+                    url: url
+                }
+            ]
+        }
+    }, true)
 }
 
 applyTooltipsToObject(campaignTrail_temp.questions_json);

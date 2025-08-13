@@ -56,7 +56,7 @@ endingPicker = (out, totv, aa, quickstats) => {
             }
         }
         setImage("https://i.imgur.com/MVBYnzH.jpeg")
-        setMusic("https://www.youtube-nocookie.com/embed/JA5LJ7l0g0I?autoplay=1&start=20")
+        setEndSong("Conservative Defeat", "Bittersweet — Paul Brandt", "https://audio.jukehost.co.uk/Mkzf3INXImpdTwBeZ5zbPqvai64FZR8n")
     } else if (winner.candidate == 301) {
         if (winner.electoral_votes >= 172) {
             header = "Conservative Majority Government!";
@@ -66,7 +66,7 @@ endingPicker = (out, totv, aa, quickstats) => {
                 "But for now, it’s time to celebrate! With you at the helm, you can steer the government to finally put Canada first, for a change."
             ];
             setImage("https://i.imgur.com/jYkYfCa.jpeg")
-            setMusic("https://www.youtube-nocookie.com/embed/VXRx1kb6n7g?autoplay=1&start=50")
+            setEndSong("Conservative Majority Victory", "Our Home — Brett Kissel", "https://audio.jukehost.co.uk/LxOr5zGToKiqfQtkEtLF2Gv1lxg9StLy")
         } else {
             header = "Conservative Plurality!";
             description = [
@@ -81,14 +81,14 @@ endingPicker = (out, totv, aa, quickstats) => {
                     "But for now, you can celebrate! With you at the helm, you can steer the government to finally put Canada first, for a change."
                 )
                 setImage("https://i.imgur.com/jYkYfCa.jpeg")
-                setMusic("https://www.youtube-nocookie.com/embed/ChKbip4xHsI?autoplay=1")
+                setEndSong("Conservative Plurality Victory", "Demain nous appartient — Stéphane Venne", "https://audio.jukehost.co.uk/6FumXiGItkJVSRg9ddry7xZtdv56qwVi")
                 ctsAchievement("Deal with the Devil")
             } else {
                 description.push(
                     "Whether you will become Prime Minister remains uncertain. Mark Carney can remain Prime Minister as long as he maintains the confidence of Parliament. As it stands, you will need to win over the other opposition parties to force Carney out of office if he doesn’t step down on his own. Failing that, Carney and the Liberals will get to continue governing though their position remains precarious."
                 )
                 setImage("https://i.imgur.com/bWPXiN4.jpeg")
-                setMusic("https://www.youtube-nocookie.com/embed/f8JPZKvXMQg?autoplay=1")
+                setEndSong("Conservative Plurality Defeat", "I'm an Open Road — Paul Brandt", "https://audio.jukehost.co.uk/cgBqOc5Gn64n76WxVOVoQt4LRffYcO2B", )
             }
         }
     }
@@ -111,12 +111,32 @@ endingPicker = (out, totv, aa, quickstats) => {
 
 replaceMusic({
     0: {
-        name: "Introduction",
+        name: "Conservative Campaign",
         tracklist: [
             {
-                "name": "O Canada",
-                "url": "https://audio.jukehost.co.uk/qsSsnrpKEXnYqVwyXZEESnypocC5XOGU"
+                "name": "The Journey — Paul Brandt",
+                "url": "https://audio.jukehost.co.uk/wIe2OFjOYT26lmJnkzb334IGtSt0wuDN"
             },
+            {
+                "name": "We're Here For A Good Time (Not A Long Time) — Trooper",
+                "url": "https://audio.jukehost.co.uk/Bk48kxZntF2opG0Z2jmz8qXaGqUPFv4b"
+            },
+            {
+                "name": "Compter les corps — Vulgaires Machins",
+                "url": "https://audio.jukehost.co.uk/ypcb3ycVIyIwCUKfMEPqdTm7AcJ7FIPU"
+            },
+            {
+                "name": "Summer Of 69 — Bryan Adams",
+                "url": "https://audio.jukehost.co.uk/cgzN0wgGsc4hQQbO0zYeifsmWKjagK23"
+            },
+            {
+                "name": "Sk8er Boi — Avril Lavigne",
+                "url": "https://audio.jukehost.co.uk/D3Z8ad2FY24ihF3oqJFiMkDUR4MWMutf"
+            },
+            {
+                "name": "Northwest Passage — Stan Rogers",
+                "url": "https://audio.jukehost.co.uk/7GNFJG0qikEq2YkTpJ6lqcjHT4jm9qVy"
+            }
         ]
     }
 })

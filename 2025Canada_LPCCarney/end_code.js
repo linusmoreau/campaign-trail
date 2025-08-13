@@ -55,7 +55,7 @@ endingPicker = (out, totv, aa, quickstats) => {
             }
         }
         setImage("https://i.imgur.com/MVBYnzH.jpeg")
-        setMusic("https://www.youtube-nocookie.com/embed/71S9ou2gcqE?autoplay=1")
+        setEndSong("Liberal Victory", "Whoa Is Me — Down With Webster", "https://audio.jukehost.co.uk/Tb2s6E0SuEuhtfxqMF5F0bmCDj8118Cn")
     } else if (winner.candidate == 301) {
         if (winner.electoral_votes >= 172) {
             header = "Conservative Majority Government!";
@@ -68,7 +68,7 @@ endingPicker = (out, totv, aa, quickstats) => {
                 description[0] += " However, the fact you lost in your own constituency of Nepean doesn't inspire confiedence."
             }
             setImage("https://i.imgur.com/jYkYfCa.jpeg")
-            setMusic("https://www.youtube-nocookie.com/embed/OSR4WpqyXxs?autoplay=1")
+            setEndSong("Liberal Defeat", "So Cold — Down With Webster", "https://audio.jukehost.co.uk/sHbkIeiwLuz8qFE6dlEijUU8qJhSq2xo")
         } else {
             header = "Conservative Plurality!";
             description = [
@@ -84,7 +84,7 @@ endingPicker = (out, totv, aa, quickstats) => {
                 description[0] += " Your partisans take a special pleasure that Poilievre was defeated in his own constituency of Carleton."
             }
             setImage("https://i.imgur.com/bWPXiN4.jpeg")
-            setMusic("https://www.youtube-nocookie.com/embed/t5nJ_mg_yMo?autoplay=1&start=10")
+            setEndSong("Conservative Plurality Indecision", "Feel So Alive — Down With Webster", "https://audio.jukehost.co.uk/acUxI2GlApWBtUU8DNa1Zkiuusq3V29f")
         }
     }
     s = `<h2>${header}</h2>`
@@ -111,3 +111,35 @@ endingPicker = (out, totv, aa, quickstats) => {
     }
     return s
 }
+
+replaceMusic({
+    0: {
+        name: "Liberal Campaign",
+        tracklist: [
+            {
+                "name": "Parade Music — Down With Webster",
+                "url": "https://audio.jukehost.co.uk/iax3ZixXxmRAXsNf4ucQNx3ENsnr30qQ"
+            },
+            {
+                "name": "Time To Win — Down With Webster",
+                "url": "https://audio.jukehost.co.uk/CIH0E2fgnLVXxg5XjciYwUWKCT7U8YU2"
+            },
+            {
+                "name": "Cœur de pirate — Comme Des Enfants",
+                "url": "https://audio.jukehost.co.uk/JTQHt9hkJeL8wqQpGlwRDVRVRyDxtM0K"
+            },
+            {
+                "name": "I Fought the Law — The Clash",
+                "url": "https://audio.jukehost.co.uk/Yyj8yEkEi990lJ4mS2GVvKMotjNlu7Kr"
+            },
+            {
+                "name": "I Love It — Icona Pop + Charli XCX",
+                "url": "https://audio.jukehost.co.uk/8g2NIpqsrDa5prUX4rbV0sFz5tl9VAo4"
+            },
+            {
+                "name": "King Richard! — Horton & Shelley",
+                "url": "https://audio.jukehost.co.uk/L8BbgAgKn9NFaeU4O15xrNL0RJbp0Rba"
+            }
+        ]
+    }
+})
