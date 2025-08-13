@@ -137,7 +137,7 @@ replaceMusic({
                 "url": "https://audio.jukehost.co.uk/8g2NIpqsrDa5prUX4rbV0sFz5tl9VAo4"
             },
             {
-                "name": "King Richard! — Horton & Shelley",
+                "name": "King Richard! — King Richard's Army",
                 "url": "https://audio.jukehost.co.uk/L8BbgAgKn9NFaeU4O15xrNL0RJbp0Rba"
             }
         ]
