@@ -101,9 +101,6 @@ endingPicker = (out, totv, aa, quickstats) => {
         campaignTrail_temp.player_answers[31] == 4324) {
         ctsAchievement("Real Change")
     }
-    if (winner.candidate == 300 && winner.popular_votes < runnerUp.popular_votes) {
-        ctsAchievement("Three in a Row")
-    }
     if (winner.candidate == 300 &&
         campaignTrail_temp.player_answers[8] == 4091 &&
         campaignTrail_temp.player_answers[29] == 4303) {

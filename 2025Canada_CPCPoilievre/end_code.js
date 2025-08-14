@@ -103,9 +103,6 @@ endingPicker = (out, totv, aa, quickstats) => {
     if (winner.candidate == 301 && runnerUp.electoral_votes < winner.electoral_votes && !poilievre_won) {
         ctsAchievement("Sniped")
     }
-    if (winner.candidate == 300 && runnerUp.candidate == 301 && runnerUp.popular_votes > winner.popular_votes) {
-        ctsAchievement("They Can’t Keep Getting Away With It")
-    }
     return s
 }
 
