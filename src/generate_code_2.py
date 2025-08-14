@@ -69,10 +69,10 @@ class Code2Generator:
             sections.append(self.format_section(section, self.election_dir))
         for section in self.SCENARIO_VARIABLE_NAMES:
             sections.append(self.format_section(section, self.scenario_dir))
+        with open("shared_scenario_code.js", "r", encoding="utf-8") as f:
+            sections.append(f.read())
         end_code_filepath = os.path.join(self.scenario_dir, "end_code.js")
         with open(end_code_filepath, "r", encoding="utf-8") as f:
-            sections.append(f.read())
-        with open("shared_scenario_code.js", "r", encoding="utf-8") as f:
             sections.append(f.read())
         code2 = "\n\n".join(sections) + "\n"
         return code2
@@ -363,5 +363,8 @@ class Code2Generator:
 if __name__ == "__main__":
     election_name = "2025Canada"
     scenario_name = "2025Canada_LPCCarney"
+    generator = Code2Generator(election_name, scenario_name)
+    generator.generate()
+    scenario_name = "2025Canada_CPCPoilievre"
     generator = Code2Generator(election_name, scenario_name)
     generator.generate()
