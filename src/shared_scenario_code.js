@@ -118,17 +118,43 @@ toTime = (seconds) => {
     return date.toISOString().substr(11, 8);
 }
 
+function nextTrack() {
+    console.log("next track")
+    e = campaignTrail_temp
+    audio = $("#campaigntrailmusic")[0];
+    tracklist_length = e.soundtracks[e.selectedSoundtrack].tracklist.length;
+    if (tracklist_length == 1) {
+        audio.currentTime = 0
+        audio.play()
+        return
+    }
+    let selected = Number(document.querySelector('input[name="trackSelector"]:checked').value);
+    var newSel;
+    if (audio.shuffle) {
+        newSel = Math.floor(Math.random() * (tracklist_length - 1));
+        if (newSel >= selected) {
+            newSel += 1;
+        }
+    } else {
+        newSel = clamp(selected + 1, tracklist_length - 1, 0);
+    }
+    let buttons = Array.from(document.getElementById("trackSel").children).filter(f => {
+        return f.tagName == "LABEL"
+    }).map(f => f.children[0])
+    buttons[newSel].click()
+}
+
 generateTime = () => {
     // Get the audio element
+    e = campaignTrail_temp
     var audio = document.getElementById("campaigntrailmusic");
-    audio.volume = 0.3
 
     timeTracker = document.createElement("div");
     timeTracker.style = `
       text-align:left;
       border-style:solid;
       border-width:3px;
-      height:150px;
+      height:180px;
       width:200px;
       background-color:#999999;
       float:right;
@@ -155,8 +181,7 @@ generateTime = () => {
     pausePlay.id = "position-display";
     pausePlay.innerHTML = "<b>Pause</b>"
     pausePlay.style.width = "100%";
-
-
+    pausePlay.style.margin = "2px";
     pausePlay.addEventListener("click", event => {
         event.preventDefault();
         updatePositionDisplay();
@@ -170,6 +195,57 @@ generateTime = () => {
         event.target.innerHTML = "<b>Play</b>";
         return;
     })
+
+    var shuffle = document.createElement("button");
+    shuffle.id = "shuffle-button";
+    shuffle.innerHTML = audio.shuffle ? "<b>Unshuffle</b>" : "<b>Shuffle</b>";
+    shuffle.style.width = "100%";
+    shuffle.style.margin = "2px";
+    shuffle.addEventListener("click", event => {
+        event.preventDefault();
+        audio = document.getElementById("campaigntrailmusic");
+        if (audio.shuffle) {
+            audio.shuffle = false;
+            event.target.innerHTML = "<b>Shuffle</b>"
+            return;
+        }
+        audio.shuffle = true;
+        event.target.innerHTML = "<b>Unshuffle</b>"
+    })
+
+    var skipButton = document.createElement("button");
+    skipButton.id = "skip-button";
+    skipButton.innerHTML = "<b>Skip</b>"
+    skipButton.style.width = "50%";
+    skipButton.style.margin = "2px"; // Add margin
+    skipButton.addEventListener("click", event => {
+        event.preventDefault();
+        nextTrack();
+    })
+
+    var loopButton = document.createElement("button");
+    loopButton.id = "loop-button";
+    loopButton.innerHTML = audio.loopEnabled ? "<b>Unloop</b>" : "<b>Loop</b>";  // Check the initial loop state
+    loopButton.style.width = "50%";  // Match the width with skipButton
+    loopButton.style.margin = "2px";
+    loopButton.addEventListener("click", event => {
+        event.preventDefault();
+        audio = document.getElementById("campaigntrailmusic");
+        audio.loopEnabled = !audio.loopEnabled;
+        audio.loop = audio.loopEnabled;  // Set the audio's loop property
+        event.target.innerHTML = audio.loopEnabled ? "<b>Unloop</b>" : "<b>Loop</b>";  // Toggle the button text
+    });
+
+    var buttonContainer = document.createElement("div");
+    buttonContainer.style.display = "flex"; // Makes children inline
+    buttonContainer.style.justifyContent = "space-between";
+    skipButton.style.flex = "1"; // Makes it take up equal space
+    skipButton.style.marginRight = "5px"; // Adds some space between the buttons
+
+    loopButton.style.marginRight = "0px";
+
+    buttonContainer.appendChild(skipButton);
+    buttonContainer.appendChild(loopButton);
 
     var volumeLabel = document.createElement("gg");
     volumeLabel.id = "volume-label";
@@ -187,7 +263,8 @@ generateTime = () => {
     volumeSlider.value = audio.volume;
 
     timeTracker.appendChild(pausePlay);
-    timeTracker.appendChild(document.createElement("br"));
+    timeTracker.appendChild(shuffle);
+    timeTracker.appendChild(buttonContainer);
     timeTracker.appendChild(document.createElement("br"));
     timeTracker.appendChild(positionDisplay);
     timeTracker.appendChild(timeSlider);
@@ -225,9 +302,10 @@ generateTime = () => {
 }
 
 function newMusicPlayer(soundtracks) {
+    campaignTrail_temp.soundtracks = soundtracks;
     trackSel = document.createElement("div");
     trackSel.id = "trackSelParent"
-    let z = `<br><br><br><br><br><br><br><br><br><br><div id='trackSel' style="text-align:left;border-style:solid;border-width:3px;overflow-y: scroll;overflow-x: hidden;height:200px; width:500px;background-color:#999999;float:right;">`
+    let z = `<div id='trackSel' style="text-align:left;border-style:solid;border-width:3px;overflow-y: scroll;overflow-x: hidden;height:200px; width:500px;background-color:#999999;float:right;">`
     z += `<b><select id='selectSoundtrack'><option value='` + soundtracks[e.selectedSoundtrack].name + `'>` + soundtracks[e.selectedSoundtrack].name + "</option>"
     for (i in soundtracks) {
         if (soundtracks[e.selectedSoundtrack] != soundtracks[i]) {
@@ -278,22 +356,7 @@ function newMusicPlayer(soundtracks) {
     musicBox.children[2].loop = false
     musicBox.children[2].src = soundtracks[e.selectedSoundtrack].tracklist[0].url
 
-    musicBox.children[2].onended = function () {
-        console.log("next track")
-        if (soundtracks[e.selectedSoundtrack].tracklist.length == 1) {
-            audio = $("#campaigntrailmusic")[0];
-            audio.currentTime = 0
-            audio.play()
-            return
-        }
-        let selected = Number(document.querySelector('input[name="trackSelector"]:checked').value);
-        let newSel = clamp(selected + 1, soundtracks[e.selectedSoundtrack].tracklist.length - 1, 0)
-        let buttons = Array.from(document.getElementById("trackSel").children).filter(f => {
-            return f.tagName == "LABEL"
-        }).map(f => f.children[0])
-        //let selectedIndex = buttons.map(f=>f.children[0]).map(f=>f.checked)
-        buttons[newSel].click()
-    }
+    musicBox.children[2].onended = nextTrack;
 
     for (w = 0; w < 7; w++) {
         document.getElementById("trackSelParent").appendChild(document.createElement("br"))
