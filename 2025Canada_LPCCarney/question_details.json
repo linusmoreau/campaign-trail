@@ -56,7 +56,13 @@
                 "feedback": "Québec appreciates you putting them first, but your weak French impedes your ability to communicate clearly.",
                 "score_global": [
                     {
-                        "global_multiplier": -0.015
+                        "global_multiplier": -0.025
+                    }
+                ],
+                "score_group": [
+                    {
+                        "group": "Quebec",
+                        "state_multiplier": 0.2
                     }
                 ]
             },
@@ -859,7 +865,7 @@
                 "feedback": "French Canadians feel snubbed that their language is not being accorded the equality supposedly enshrined by your party and the country.",
                 "score_global": [
                     {
-                        "global_multiplier": 0.001
+                        "global_multiplier": 0.01
                     },
                     {
                         "affected_candidate": 304,
@@ -873,11 +879,17 @@
                 "feedback": "French Canadians are glad you are making an effort. This does alienate some Anglophones though.",
                 "score_global": [
                     {
-                        "global_multiplier": -0.001
+                        "global_multiplier": -0.01
                     },
                     {
                         "affected_candidate": 304,
                         "global_multiplier": -0.1
+                    }
+                ],
+                "score_group": [
+                    {
+                        "group": "Quebec",
+                        "state_multiplier": 1
                     }
                 ]
             },
@@ -886,7 +898,7 @@
                 "feedback": "This helps you get your message across, but some French Canadians still feel you could make a better effort.",
                 "score_global": [
                     {
-                        "global_multiplier": 0.002
+                        "global_multiplier": 0.02
                     }
                 ]
             }

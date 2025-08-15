@@ -122,7 +122,7 @@ replaceMusic({
                 "url": "https://audio.jukehost.co.uk/WuY18jSgJhSOCYoP4WEMMcfYLGXSg9r3"
             },
             {
-                "name": "Cœur de pirate — Comme Des Enfants",
+                "name": "Comme des enfants — Cœur de pirate",
                 "url": "https://audio.jukehost.co.uk/oZlSUqO4E6MVdsElT8ms0X5DrdKk9fck"
             },
             {
