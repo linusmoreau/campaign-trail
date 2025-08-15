@@ -26,9 +26,18 @@ endingPicker = (out, totv, aa, quickstats) => {
     const nepean = campaignTrail_temp.final_state_results.find(state => {return state.abbr == "Nepean"})
     const carney_won = nepean.result[0].candidate == 300
 
-    const bloc_support = (
-        campaignTrail_temp.player_answers[12] == 4132   // Promised everything to Quebec
-    )
+    let bloc_support = campaignTrail_temp.player_answers[12] == 4132   // Promised everything to Quebec
+    if (winner.candidate != 301) {
+        bloc_support = false
+    }
+    for (party of aa) {
+        if (party.candidate == 304) {
+            if (party.electoral_votes + winner.electoral_votes < 172) {
+                bloc_support = false
+            }
+            break
+        }
+    }
 
     winner = aa[0];
     runnerUp = aa[1];
