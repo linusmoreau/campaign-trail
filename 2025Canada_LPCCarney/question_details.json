@@ -1332,7 +1332,7 @@
         "question": "[April 2025] While you were at Brookfield, most of the funds you managed were registered to a Bermuda address allowing the company to avoid $5.3 billion in taxes. Is this use of tax havens ethical?",
         "answers": [
             {
-                "answer": "I’m no longer with Brookfield and the company followed all the rules. Next question.",
+                "answer": "I’m no longer with Brookfield and the company followed all the rules, including all the tax rules of this country and other countries.",
                 "feedback": "Way to dodge the question.",
                 "score_global": [
                     {
@@ -1350,7 +1350,7 @@
                 ]
             },
             {
-                "answer": "The structure was to make sure that Canadian pensioners could get the most benefit.",
+                "answer": "The structure follows the rules and is organized so that Canadian pension funds could get the most benefit for pensioners, which are teachers and first responders and public servants.",
                 "historical": true,
                 "feedback": "This response leaves people scratching their heads.",
                 "score_global": [
