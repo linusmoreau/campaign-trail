@@ -18,6 +18,9 @@ endingPicker = (out, totv, aa, quickstats) => {
         }, 10);
     }
 
+    winner = aa[0];
+    runnerUp = aa[1];
+
     // Did Poilievre win Carleton?
     const carleton = campaignTrail_temp.final_state_results.find(state => {return state.abbr == "Carleton"})
     const poilievre_won = carleton.result[0].candidate == 301
@@ -38,9 +41,6 @@ endingPicker = (out, totv, aa, quickstats) => {
             break
         }
     }
-
-    winner = aa[0];
-    runnerUp = aa[1];
     if (winner.candidate == 300 || (runnerUp.candidate == 300 && runnerUp.electoral_votes == winner.electoral_votes)) {
         if (winner.electoral_votes >= 172) {
             header = "Liberal Majority Government!";
