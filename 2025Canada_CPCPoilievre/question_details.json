@@ -54,7 +54,8 @@
                     },
                     {
                         "issue": 114,
-                        "issue_score": 1
+                        "issue_score": 1,
+                        "issue_importance": 0.5
                     }
                 ]
             },
@@ -83,7 +84,8 @@
                 "score_issue": [
                     {
                         "issue": 114,
-                        "issue_score": 1
+                        "issue_score": 1,
+                        "issue_importance": 0.5
                     }
                 ]
             },
@@ -128,11 +130,11 @@
                     },
                     {
                         "affected_candidate": 302,
-                        "global_multiplier": 0.05
+                        "global_multiplier": 0.03
                     },
                     {
                         "affected_candidate": 306,
-                        "global_multiplier": 0.4
+                        "global_multiplier": 0.2
                     }
                 ],
                 "score_issue": [
@@ -273,7 +275,7 @@
                 "feedback": "This satisfies many who were concerned about your willingness to stand up to Trump.",
                 "score_global": [
                     {
-                        "global_multiplier": -0.03
+                        "global_multiplier": -0.01
                     },
                     {
                         "affected_candidate": 300,
@@ -281,11 +283,11 @@
                     },
                     {
                         "affected_candidate": 302,
-                        "global_multiplier": 0.05
+                        "global_multiplier": 0.03
                     },
                     {
                         "affected_candidate": 306,
-                        "global_multiplier": 0.4
+                        "global_multiplier": 0.2
                     }
                 ],
                 "score_issue": [
@@ -321,7 +323,7 @@
                 "feedback": "This internationalism is appealing to many, but your base wants you to put Canada first.",
                 "score_global": [
                     {
-                        "global_multiplier": -0.05
+                        "global_multiplier": -0.03
                     },
                     {
                         "affected_candidate": 300,
@@ -329,11 +331,11 @@
                     },
                     {
                         "affected_candidate": 302,
-                        "global_multiplier": 0.05
+                        "global_multiplier": 0.03
                     },
                     {
                         "affected_candidate": 306,
-                        "global_multiplier": 0.4
+                        "global_multiplier": 0.3
                     }
                 ],
                 "score_issue": [
@@ -585,7 +587,7 @@
                 "feedback": "This may broaden your appeal, but some people notice that you look a bit deflated.",
                 "score_global": [
                     {
-                        "global_multiplier": -0.05
+                        "global_multiplier": -0.01
                     },
                     {
                         "affected_candidate": 300,
@@ -593,11 +595,11 @@
                     },
                     {
                         "affected_candidate": 302,
-                        "global_multiplier": 0.05
+                        "global_multiplier": 0.03
                     },
                     {
                         "affected_candidate": 306,
-                        "global_multiplier": 0.4
+                        "global_multiplier": 0.2
                     }
                 ],
                 "score_issue": [
@@ -665,7 +667,7 @@
                     },
                     {
                         "affected_candidate": 302,
-                        "global_multiplier": 0.05
+                        "global_multiplier": 0.03
                     }
                 ],
                 "score_issue": [
@@ -704,6 +706,11 @@
                 "answer": "After a lost Liberal decade of weak economic growth, unaffordable housing, and rising crime, we need a change. Carney pretends to be an outsider, but he was Trudeau’s economic advisor, and his team is made up of the same people. We cannot afford a fourth term of failed radical Liberal policies.",
                 "historical": true,
                 "feedback": "You campaign for change, and the people hear you.",
+                "score_global": [
+                    {
+                        "global_multiplier": 0.01
+                    }
+                ],
                 "score_issue": [
                     {
                         "issue": 111,
@@ -733,7 +740,7 @@
                 "feedback": "Centering your opposition to Trump gets you some mainstream approval, but your base seems less energized.",
                 "score_global": [
                     {
-                        "global_multiplier": -0.03
+                        "global_multiplier": -0.01
                     },
                     {
                         "affected_candidate": 300,
@@ -741,11 +748,11 @@
                     },
                     {
                         "affected_candidate": 302,
-                        "global_multiplier": 0.05
+                        "global_multiplier": 0.03
                     },
                     {
                         "affected_candidate": 306,
-                        "global_multiplier": 0.4
+                        "global_multiplier": 0.2
                     }
                 ],
                 "score_issue": [
@@ -782,7 +789,7 @@
                     },
                     {
                         "affected_candidate": 302,
-                        "global_multiplier": 0.03
+                        "global_multiplier": 0.02
                     }
                 ],
                 "score_issue": [
@@ -955,7 +962,7 @@
             {
                 "answer": "I am running my own campaign. I will accept any endorsements from current or former Premiers, but I won’t go begging to them.",
                 "historical": true,
-                "feedback": "You get endorsements from Danielle Smith and Scott Moe, but Doug Ford, and Tim Houston hold their silence."
+                "feedback": "You get endorsements from Danielle Smith and Scott Moe, but Doug Ford and Tim Houston hold their silence."
             },
             {
                 "answer": "I will do everything I can to win over Doug Ford, including giving him input on my campaign and public promises of financial support for major projects in Ontario.",
@@ -1014,7 +1021,7 @@
                 "score_group": [
                     {
                         "group": "Quebec",
-                        "state_multiplier": 1
+                        "state_multiplier": 2
                     }
                 ]
             },
@@ -1050,7 +1057,7 @@
                 "score_group": [
                     {
                         "group": "Quebec",
-                        "state_multiplier": -1
+                        "state_multiplier": -2
                     }
                 ]
             }
@@ -1437,6 +1444,10 @@
                 "score_global": [
                     {
                         "global_multiplier": -0.01
+                    },
+                    {
+                        "affected_candidate": 306,
+                        "global_multiplier": 0.2
                     }
                 ],
                 "score_issue": [
@@ -1845,7 +1856,7 @@
                 "feedback": "This makes abortion rights into a central campaign issue, as Canadians worry about American-style abortion bans.",
                 "score_global": [
                     {
-                        "global_multiplier": -0.02
+                        "global_multiplier": -0.03
                     }
                 ],
                 "score_issue": [
@@ -1860,7 +1871,7 @@
                 "feedback": "The Abortion Rights Coalition goes to war with you, and the liberal media needles you endlessly for what they consider an attack on women’s rights.",
                 "score_global": [
                     {
-                        "global_multiplier": -0.01
+                        "global_multiplier": -0.03
                     }
                 ],
                 "score_issue": [
@@ -1983,7 +1994,7 @@
                 "score_group": [
                     {
                         "group": "Jewish communities",
-                        "state_multiplier": 0.5
+                        "state_multiplier": 0.8
                     }
                 ]
             },
@@ -2134,17 +2145,23 @@
                 "score_issue": [
                     {
                         "issue": 113,
-                        "issue_score": 0.8
+                        "issue_score": 0.5
                     }
                 ]
             },
             {
                 "answer": "The Liberals have either been corrupt or grossly incompetent in their handling of foreign aid. I will strip out their woke, wasteful programs while preserving aid that actually goes to people in need.",
                 "feedback": "Your supporters cheer on your attacks on government waste.",
+                "score_global": [
+                    {
+                        "affected_candidate": 300,
+                        "global_multiplier": -0.005
+                    }
+                ],
                 "score_issue": [
                     {
                         "issue": 113,
-                        "issue_score": 0.5
+                        "issue_score": 0.8
                     }
                 ]
             },
@@ -2153,7 +2170,7 @@
                 "feedback": "This is a very ambitious agenda, but most of your supporters want you to bring that money home.",
                 "score_global": [
                     {
-                        "global_multiplier": -0.01
+                        "global_multiplier": -0.02
                     }
                 ],
                 "score_issue": [
@@ -2288,7 +2305,7 @@
                         "state": "Niagara South",
                         "state_multiplier": 0.3
                     }
-                ]   
+                ]
             }
         ],
         "score_global": [
