@@ -927,23 +927,23 @@
                 "answer": "Northern Ontario. This is a good chance to finally flip some of those remote communities to the Conservative column.",
                 "score_state": [
                     {
-                        "state": "Edmonton Centre",
+                        "state": "Thunder Bay--Rainy River",
                         "state_multiplier": 0.3
                     },
                     {
-                        "state": "Calgary Confederation",
+                        "state": "Thunder Bay--Superior North",
                         "state_multiplier": 0.3
                     },
                     {
-                        "state": "Calgary Centre",
+                        "state": "Sault Ste. Marie--Algoma",
                         "state_multiplier": 0.3
                     },
                     {
-                        "state": "Calgary McKnight",
+                        "state": "Kapuskasing--Timmins--Mushkegowuk",
                         "state_multiplier": 0.3
                     },
                     {
-                        "state": "Edmonton Riverbend",
+                        "state": "Nipissing—Timiskaming",
                         "state_multiplier": 0.3
                     }
                 ]
