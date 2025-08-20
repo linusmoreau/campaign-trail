@@ -2,10 +2,12 @@ import os
 from PIL import Image
 import pillow_avif # type: ignore necessary for PIL to handle avif files
 
-PORTRAITS_DIR = os.path.join(os.pardir, "portraits")
-IMAGES_DIR = os.path.join(os.pardir, "images")
-ADVISORS_DIR = os.path.join(os.pardir, "advisors")
-PROCESSED_DIR = os.path.join(os.pardir, "processed")
+ROOT = os.path.dirname(os.path.dirname(__file__))
+LOGOS_DIR = os.path.join(ROOT, "logos")
+PORTRAITS_DIR = os.path.join(ROOT, "portraits")
+IMAGES_DIR = os.path.join(ROOT, "images")
+ADVISORS_DIR = os.path.join(ROOT, "advisors")
+PROCESSED_DIR = os.path.join(ROOT, "processed")
 if not os.path.exists(PROCESSED_DIR):
     os.makedirs(PROCESSED_DIR)
 
@@ -48,13 +50,15 @@ def process(f, crop=False, scale=False, ratio=7/8, max_width=1200, max_height=12
         img = canvas.convert("RGB") 
     return img
     
-def process_and_save(f: str, f_out: str | None = None, crop=False, scale=False, ratio=7/8):
+def process_and_save(f: str, f_out: str | None = None, crop=False, scale=False, ratio=7/8, ext="jpg"):
     img = process(f, crop, scale, ratio)
     if f_out is None:
-        f_out = os.path.splitext(os.path.split(f)[-1])[0] + ".jpg"
+        f_out = os.path.splitext(os.path.split(f)[-1])[0] + "." + ext
     img.save(os.path.join(PROCESSED_DIR, f_out))
 
 def process_all():
+    for f in os.listdir(LOGOS_DIR):
+        process_and_save(os.path.join(LOGOS_DIR, f), crop=True, ratio=7/8, ext="png")
     for f in os.listdir(PORTRAITS_DIR):
         process_and_save(os.path.join(PORTRAITS_DIR, f), crop=True, ratio=7/8)
     for f in os.listdir(IMAGES_DIR):
@@ -74,4 +78,3 @@ def process_all():
 if __name__ == "__main__":
     process_all()
     process_and_save(os.path.join(PORTRAITS_DIR, "carney.avif"), crop=True, ratio=1)
-    process_and_save(os.path.join(PORTRAITS_DIR, "Liberal.jpeg"), scale=True)

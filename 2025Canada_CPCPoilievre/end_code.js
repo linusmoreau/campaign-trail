@@ -1,4 +1,4 @@
-campaignTrail_temp.candidate_image_url = "https://i.imgur.com/L8xdBOW.jpeg";
+campaignTrail_temp.candidate_image_url = "https://i.imgur.com/VnVwBEi.jpeg";
 campaignTrail_temp.running_mate_image_url = "https://i.imgur.com/jYkYfCa.jpeg";
 campaignTrail_temp.candidate_last_name = "Conservative";
 campaignTrail_temp.running_mate_last_name = "Poilievre";
