@@ -29,8 +29,10 @@ class Code2Generator:
     def __init__(self, election_name: str, scenario_name: str):
         self.election_name = election_name
         self.scenario_name = scenario_name
-        self.election_dir = os.path.join(os.pardir, election_name)
-        self.scenario_dir = os.path.join(os.pardir, scenario_name)
+        root = os.path.dirname(os.path.dirname(__file__))
+        self.election_dir = os.path.join(root, election_name)
+        self.scenario_dir = os.path.join(root, scenario_name)
+        self.src_dir = os.path.dirname(__file__)
         self.file_manager = FileManager()
         
     def generate(self):
@@ -72,7 +74,7 @@ class Code2Generator:
             sections.append(self.format_section(section, self.election_dir))
         for section in self.SCENARIO_VARIABLE_NAMES:
             sections.append(self.format_section(section, self.scenario_dir))
-        with open("shared_scenario_code.js", "r", encoding="utf-8") as f:
+        with open(os.path.join(self.src_dir, "shared_scenario_code.js"), "r", encoding="utf-8") as f:
             sections.append(f.read())
         end_code_filepath = os.path.join(self.scenario_dir, "end_code.js")
         with open(end_code_filepath, "r", encoding="utf-8") as f:
@@ -195,7 +197,7 @@ class Code2Generator:
     def generate_questions_answers_jsons(self, df: pd.DataFrame, groupings: pd.DataFrame):
         state_name_to_pk = df.set_index("name").to_dict()["state_pk"]
         state_groupings = groupings.groupby("grouping")["name"].apply(list).T.to_dict()
-        transcriber = Transcriber(self.scenario_name)
+        transcriber = Transcriber(self.scenario_dir)
         transcriber.to_game_format(state_name_to_pk, state_groupings) # type: ignore as we ensure the types are correct elsewhere
         
     def generate_state_issue_score_json(self, df: pd.DataFrame, results: pd.DataFrame, parties: list):   

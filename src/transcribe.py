@@ -3,8 +3,8 @@ from file_manager import FileManager
 
 
 class Transcriber:
-    def __init__(self, scenario_name):
-        self.scenario_dir = os.path.join(os.pardir, scenario_name)
+    def __init__(self, scenario_dir):
+        self.scenario_dir = scenario_dir
         self.file_manager = FileManager()
         self.score_pk = 10000
         
