@@ -65,7 +65,7 @@ class Code2Generator:
 
     def join_sections(self) -> str:
         sections = []
-        with open("licenses.js", "r", encoding="utf-8") as f:
+        with open(os.path.join(self.election_dir, "licenses.js"), "r", encoding="utf-8") as f:
             sections.append(f.read())
         sections.append(self.mapping_code())
         for section in self.ELECTION_VARIABLE_NAMES:
