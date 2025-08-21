@@ -1,0 +1,32 @@
+[
+    {
+        "pk": 300,
+        "name": "Liberal",
+        "short_name": "LPC"
+    },
+    {
+        "pk": 301,
+        "name": "Conservative",
+        "short_name": "CPC"
+    },
+    {
+        "pk": 302,
+        "name": "New Democratic Party",
+        "short_name": "NDP"
+    },
+    {
+        "pk": 303,
+        "name": "Green Party",
+        "short_name": "GPC"
+    },
+    {
+        "pk": 304,
+        "name": "Bloc Québécois",
+        "short_name": "BQ"
+    },
+    {
+        "pk": 305,
+        "name": "Others",
+        "short_name": "Others"
+    }
+]

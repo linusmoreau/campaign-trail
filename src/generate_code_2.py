@@ -1,5 +1,6 @@
 import os
 import json
+import math
 import pandas as pd
 from collections import OrderedDict
 from xml.dom import minidom
@@ -89,13 +90,15 @@ class Code2Generator:
         
     def extract_geometry(self) -> pd.DataFrame:
         doc = minidom.parse(os.path.join(self.election_dir, "election_map_compressed_rearranged.svg"))
-        path_geometries = [
-            (
-                path.getAttribute("inkscape:label"),
+        path_geometries = []
+        for path in doc.getElementsByTagName("path"):
+            label = path.getAttribute("inkscape:label")
+            if label == "":
+                continue
+            path_geometries.append((
+                label.replace("—", "--"),
                 path.getAttribute("d"),
-            )
-            for path in doc.getElementsByTagName('path')[:343]
-        ]
+            ))
         return pd.DataFrame(path_geometries, columns=("name", "d"))
     
     def extract_geometry_yapms(self) -> pd.DataFrame:
@@ -128,7 +131,7 @@ class Code2Generator:
             "Electoral district name": "name",
             "Political affiliation": "party",
             "% Votes obtained - Votes obtenus %": "share",
-            "Total number of ballots cast - Nombre total de votes déposés": "votes",
+            "Votes obtained - Votes obtenus": "votes",
         })
         df = df[["name", "party", "share", "votes"]]
         return df
@@ -146,12 +149,15 @@ class Code2Generator:
         states = pd.concat((all_group, states))
         
         i = len(states)
-        groupings = self.file_manager.load_json(self.election_dir, "state_groupings.json")
-        for grouping in groupings:
-            name = grouping["name"]
-            for state in grouping["states"]:
-                states.loc[i] = [state, name]
-                i += 1
+        try:
+            groupings = self.file_manager.load_json(self.election_dir, "state_groupings.json")
+            for grouping in groupings:
+                name = grouping["name"]
+                for state in grouping["states"]:
+                    states.loc[i] = [state, name]
+                    i += 1
+        except FileNotFoundError:
+            pass
         return states
     
     def check_ridings_match(self, results, geometry, groupings):
@@ -160,7 +166,7 @@ class Code2Generator:
         grouping_ridings = set(groupings["name"])
         mismatch = results_ridings.union(geometry_ridings).difference(results_ridings.intersection(geometry_ridings))
         if len(mismatch) > 0:
-            print("Warning: mismatch in ridings named in election results and map:", mismatch)
+            print("Warning:", len(mismatch), "mismatches in ridings named in election results and map:", mismatch)
         mismatch = grouping_ridings.difference(results_ridings)
         if len(mismatch) > 0:
             print("Warning: riding name found in grouping but not in election results:", mismatch)
@@ -170,9 +176,11 @@ class Code2Generator:
         geometry = self.extract_geometry()
         groupings = self.extract_groupings()
         self.check_ridings_match(results, geometry, groupings)
-        vote_totals = results.groupby(["name"])["votes"].first()
+        vote_totals = results.groupby(["name"])["votes"].sum()
         df = geometry.join(vote_totals, "name")
-        df["state_pk"] = df.index + 343000
+        df["state_pk"] = df.index + len(vote_totals) * 10**math.ceil(math.log10(len(vote_totals) + 1))
+
+        self.generate_states_json(df)
         
         parties = self.file_manager.load_json(self.election_dir, "candidates.json")
         parties_pks = {}
@@ -182,8 +190,7 @@ class Code2Generator:
         for party in parties:
             for state_pk in df["state_pk"]:
                 index.append((state_pk, party["pk"]))
-                
-        self.generate_states_json(df)
+
         self.generate_state_issue_score_json(df, results, parties)
         self.generate_questions_answers_jsons(df, groupings)      
         
@@ -362,14 +369,50 @@ class Code2Generator:
 
         df["state_multiplier"] = df.apply(lambda row: state_multiplier_formula(row), axis=1)
         return df
+    
+
+class Code2Generator2015(Code2Generator):
+    def extract_historical_results(self) -> pd.DataFrame:
+        def get_party(candidate):
+            if "Liberal/Libéral" in candidate:
+                return "Liberal"
+            elif "NDP-New Democratic Party/NPD-Nouveau Parti démocratique" in candidate:
+                return "New Democratic Party"
+            elif "Conservative/Conservateur" in candidate:
+                return "Conservative"
+            elif "Green Party/Parti Vert" in candidate:
+                return "Green Party"
+            elif "Bloc Québécois/Bloc Québécois" in candidate:
+                return "Bloc Québécois"
+            else:
+                return "Others"
+
+        path = os.path.join(self.election_dir, "election_results.csv")
+        df = pd.read_csv(path, sep=',')
+        df["name"] = df["Electoral District Name/Nom de circonscription"].apply(lambda constituency: constituency.replace("—", "--").split("/")[0])
+        df["party"] = df["Candidate/Candidat"].apply(get_party)
+        df["share"] = df["Percentage of Votes Obtained /Pourcentage des votes obtenus"]
+        df["votes"] = df["Votes Obtained/Votes obtenus"]
+        df = df[["name", "party", "share", "votes"]]
+        return df
+    
+    def extract_provinces(self) -> pd.DataFrame:
+        states = pd.read_csv(os.path.join(self.election_dir, "election_results.csv"))
+        states["name"] = states["Electoral District Name/Nom de circonscription"].apply(lambda constituency: constituency.replace("—", "--").split("/")[0])
+        states["province"] = states["Province"].apply(lambda province: province.split("/")[0])
+        return states[["name", "province"]]
         
         
 
 if __name__ == "__main__":
-    election_name = "2025Canada"
-    scenario_name = "2025Canada_LPCCarney"
-    generator = Code2Generator(election_name, scenario_name)
-    generator.generate()
-    scenario_name = "2025Canada_CPCPoilievre"
-    generator = Code2Generator(election_name, scenario_name)
-    generator.generate()
+    # election_name = "2025Canada"
+    # scenario_name = "2025Canada_LPCCarney"
+    # generator = Code2Generator(election_name, scenario_name)
+    # generator.generate()
+    # scenario_name = "2025Canada_CPCPoilievre"
+    # generator = Code2Generator(election_name, scenario_name)
+    # generator.generate()
+
+    election_name = "2015Canada"
+    generator = Code2Generator2015(election_name, "")
+    generator.process_riding_data()

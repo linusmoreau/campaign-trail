@@ -2,6 +2,8 @@ from xml.dom import minidom
 import os
 from svg_compress import *
 
+ROOT = os.path.dirname(os.path.dirname(__file__))
+
 def matching_inset(path_section, insets):
     for inset in insets:
         for point in path_section:
@@ -78,7 +80,7 @@ def canada_2025():
         [[2350, 1200, 2530, 1400], [250, -950], 2],         # Halifax
         [[2350, 980, 2530, 1200], [330, -1020], 1.5]        # St. John's
     ]
-    svg_rearrange(default, insets, "../2025Canada/election_map_compressed.svg", new_size=(w, size[1]))
+    svg_rearrange(default, insets, os.path.join(ROOT, "2025Canada/election_map_compressed.svg"), new_size=(w, size[1]))
     
 
 def canada_2015():
@@ -114,7 +116,7 @@ def canada_2015():
         inset[0][1] -= translation[1]
         inset[0][2] -= translation[0]
         inset[0][3] -= translation[1]
-    svg_rearrange(default, insets, "../2015Canada/election_map_compressed.svg", new_size=(w, size[1]))
+    svg_rearrange(default, insets, os.path.join(ROOT, "2015Canada/election_map_compressed.svg"), new_size=(w, size[1]))
 
 
 if __name__ == "__main__":

@@ -106,4 +106,5 @@ def compress_svg_file(f_in: str, f_out: str | None = None, first: int = 0, count
 
 if __name__ == "__main__":
     layers = ("layer1", "layer3", "layer4")
-    compress_svg_file("../2015Canada/election_map.svg", epsilon=0.05, scale_epsilon=True, min_length=1, remove_layers=layers)
+    root = os.path.dirname(os.path.dirname(__file__))
+    compress_svg_file(os.path.join(root, "2015Canada/election_map.svg"), epsilon=0.05, scale_epsilon=True, min_length=1, remove_layers=layers)
