@@ -5,6 +5,8 @@ import svg.path as svg
 import rdp
 import visvalingamwyatt as vw
 
+root = os.path.dirname(os.path.dirname(__file__))
+
 def to_complex(n: tuple[float, float]):
     return complex(n[0], n[1])
 
@@ -104,7 +106,13 @@ def compress_svg_file(f_in: str, f_out: str | None = None, first: int = 0, count
     with open(f_out, "w", encoding="utf-8") as f:
         doc.writexml(f, encoding="utf-8", addindent=" "*4, newl="\n", standalone=True)
 
-if __name__ == "__main__":
+def compress_2015():
     layers = ("layer1", "layer3", "layer4")
-    root = os.path.dirname(os.path.dirname(__file__))
     compress_svg_file(os.path.join(root, "2015Canada/election_map.svg"), epsilon=0.05, scale_epsilon=True, min_length=1, remove_layers=layers)
+
+def compress_2025():
+    layers = ("layer1", "layer2", "layer4")
+    compress_svg_file(os.path.join(root, "2025Canada/election_map.svg"), epsilon=0.2, scale_epsilon=True, min_length=4, remove_layers=layers)
+
+if __name__ == "__main__":
+    compress_2025()
