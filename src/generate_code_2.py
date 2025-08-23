@@ -11,9 +11,7 @@ from transcribe import Transcriber
 
 class Code2Generator:
     ELECTION_VARIABLE_NAMES = (
-        "states_json",
         "issues_json",
-        "state_issue_score_json",
         "candidate_issue_score_json",
         "running_mate_issue_score_json",
     )
@@ -24,7 +22,9 @@ class Code2Generator:
         "answer_score_issue_json",
         "answer_score_state_json",
         "answer_feedback_json",
-        "candidate_state_multiplier_json"
+        "candidate_state_multiplier_json",
+        "state_issue_score_json",
+        "states_json",
     )
     
     def __init__(self, election_name: str, scenario_name: str):
@@ -42,7 +42,7 @@ class Code2Generator:
         self.save_to_file(code2)
 
     def complete_map(self) -> str:
-        ridings = self.file_manager.load_json(self.election_dir, "states.json")
+        ridings = self.file_manager.load_json(self.scenario_dir, "states.json")
         full_map = OrderedDict()
         for riding in ridings:
             full_map[riding["fields"]["abbr"]] = riding["d"]
@@ -228,7 +228,7 @@ class Code2Generator:
                 for _, row in df.iterrows()
             ])
         results.drop("issue_score", axis=1)
-        path = os.path.join(self.election_dir, "state_issue_score.json")
+        path = os.path.join(self.scenario_dir, "state_issue_score.json")
         with open(path, "w", encoding="utf-8") as f:
             json.dump(state_issue_scores, f, indent=4, ensure_ascii=False)
         
@@ -248,7 +248,7 @@ class Code2Generator:
             "British Columbia": 90,
             "Yukon": 90
         }
-        provinces = self.extract_provinces().set_index("name").T.to_dict()
+        provinces = self.extract_provinces().drop_duplicates("name").set_index("name").T.to_dict()
         states = [
             {
                 "model": "campaign_trail.state",
@@ -266,7 +266,7 @@ class Code2Generator:
             }
             for _, row in df.iterrows()
         ]
-        self.file_manager.dump_json(self.election_dir, "states.json", states)
+        self.file_manager.dump_json(self.scenario_dir, "states.json", states)
             
     def generate_candidate_state_multiplier_json(self, df: pd.DataFrame):
         df = self.calculate_state_multiplier(df)
@@ -299,7 +299,7 @@ class Code2Generator:
         answer_score_global_json = self.file_manager.load_json(self.scenario_dir, "answer_score_global.json")
         answer_score_issue_json = self.file_manager.load_json(self.scenario_dir, "answer_score_issue.json")
         answer_score_state_json = self.file_manager.load_json(self.scenario_dir, "answer_score_state.json")
-        state_issue_score_json = self.file_manager.load_json(self.election_dir, "state_issue_score.json")
+        state_issue_score_json = self.file_manager.load_json(self.scenario_dir, "state_issue_score.json")
         issues_json = self.file_manager.load_json(self.election_dir, "issues.json")
         
         issues = []
@@ -405,14 +405,14 @@ class Code2Generator2015(Code2Generator):
         
 
 if __name__ == "__main__":
-    # election_name = "2025Canada"
-    # scenario_name = "2025Canada_LPCCarney"
-    # generator = Code2Generator(election_name, scenario_name)
-    # generator.generate()
-    # scenario_name = "2025Canada_CPCPoilievre"
-    # generator = Code2Generator(election_name, scenario_name)
-    # generator.generate()
+    election_name = "2025Canada"
+    scenario_name = "2025Canada_LPCCarney"
+    generator = Code2Generator(election_name, scenario_name)
+    generator.generate()
+    scenario_name = "2025Canada_CPCPoilievre"
+    generator = Code2Generator(election_name, scenario_name)
+    generator.generate()
 
     election_name = "2015Canada"
-    generator = Code2Generator2015(election_name, "")
-    generator.process_riding_data()
+    generator = Code2Generator2015(election_name, election_name)
+    generator.generate()
