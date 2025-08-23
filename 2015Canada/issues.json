@@ -1,0 +1,117 @@
+[
+    {
+        "model": "campaign_trail.issue",
+        "pk": 110,
+        "fields": {
+            "name": "Trump",
+            "description": 0,
+            "stance_1": "Strongly Opposes",
+            "stance_desc_1": 0,
+            "stance_2": "Opposes",
+            "stance_desc_2": 0,
+            "stance_3": "Leans Opposes",
+            "stance_desc_3": 0,
+            "stance_4": "Neutral",
+            "stance_desc_4": 0,
+            "stance_5": "Leans Supports",
+            "stance_desc_5": 0,
+            "stance_6": "Supports",
+            "stance_desc_6": 0,
+            "stance_7": "Strongly Supports",
+            "stance_desc_7": 0,
+            "election": 20
+        }
+    },
+    {
+        "model": "campaign_trail.issue",
+        "pk": 111,
+        "fields": {
+            "name": "Trudeau",
+            "description": 0,
+            "stance_1": "Strongly Opposes",
+            "stance_desc_1": 0,
+            "stance_2": "Opposes",
+            "stance_desc_2": 0,
+            "stance_3": "Leans Opposes",
+            "stance_desc_3": 0,
+            "stance_4": "Neutral",
+            "stance_desc_4": 0,
+            "stance_5": "Leans Supports",
+            "stance_desc_5": 0,
+            "stance_6": "Supports",
+            "stance_desc_6": 0,
+            "stance_7": "Strongly Supports",
+            "stance_desc_7": 0,
+            "election": 20
+        }
+    },
+    {
+        "model": "campaign_trail.issue",
+        "pk": 112,
+        "fields": {
+            "name": "Economy",
+            "description": 0,
+            "stance_1": "Equity At All Costs",
+            "stance_desc_1": 0,
+            "stance_2": "Equity-First",
+            "stance_desc_2": 0,
+            "stance_3": "Prioritize Equity",
+            "stance_desc_3": 0,
+            "stance_4": "Balanced",
+            "stance_desc_4": 0,
+            "stance_5": "Prioritize Growth",
+            "stance_desc_5": 0,
+            "stance_6": "Growth-First",
+            "stance_desc_6": 0,
+            "stance_7": "Growth At All Costs",
+            "stance_desc_7": 0,
+            "election": 20
+        }
+    },
+    {
+        "model": "campaign_trail.issue",
+        "pk": 113,
+        "fields": {
+            "name": "Social",
+            "description": 0,
+            "stance_1": "Very Liberal",
+            "stance_desc_1": 0,
+            "stance_2": "Liberal",
+            "stance_desc_2": 0,
+            "stance_3": "Leans Liberal",
+            "stance_desc_3": 0,
+            "stance_4": "Moderate",
+            "stance_desc_4": 0,
+            "stance_5": "Leans Conservative",
+            "stance_desc_5": 0,
+            "stance_6": "Conservative",
+            "stance_desc_6": 0,
+            "stance_7": "Very Conservative",
+            "stance_desc_7": 0,
+            "election": 20
+        }
+    },
+    {
+        "model": "campaign_trail.issue",
+        "pk": 114,
+        "fields": {
+            "name": "Environment",
+            "description": 0,
+            "stance_1": "Most Important",
+            "stance_desc_1": 0,
+            "stance_2": "Very Important",
+            "stance_desc_2": 0,
+            "stance_3": "Important",
+            "stance_desc_3": 0,
+            "stance_4": "Somewhat Important",
+            "stance_desc_4": 0,
+            "stance_5": "Slightly Important",
+            "stance_desc_5": 0,
+            "stance_6": "Not Important",
+            "stance_desc_6": 0,
+            "stance_7": "Irrelevant",
+            "stance_desc_7": 0,
+            "election": 20
+        }
+    }
+]
