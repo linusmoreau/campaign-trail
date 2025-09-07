@@ -20,6 +20,10 @@ document.getElementById("inner_window_1").children[0].innerHTML = `<h3>Do you ha
 
 document.getElementById("inner_window_1").children[1].innerHTML = `<li>Select a party and a leader to find out.</li><li>You will answer questions about your platform and positions, and also about your campaign strategy.</li><li>The answers will affect your popularity for better or worse, both nationally and in individual ridings.</li><li>Walk the fine line between appealing to your base and winning a majority of the votes.</li><li>Context details are included for <span class='mytooltip'>highlighted<span class='mytooltiptext'>This is a context detail.</span></span> text.</li>`;
 
+campaignTrail_temp.CandidText = "Please select your party:"
+campaignTrail_temp.VpText = "Please select your leader:"
+campaignTrail_temp.HomeStateText = "Leader's Riding:"
+
 campaignTrail_temp.modBoxTheme = {
      "header_color": "#d62718",
      "header_text_color": "#ffffff",
@@ -670,6 +674,15 @@ function updateElements() {
     const continue_button = document.getElementById("running_mate_id_button")
     if (running_mate_id && continue_button && running_mate_id.value != 310 && running_mate_id.value != 311) {
         continue_button.parentElement.removeChild(continue_button)
+    }
+
+    // Remove Home State for parties
+    const candidate_summary = document.getElementById("candidate_summary")
+    if (candidate_summary) {
+        const summary_list = candidate_summary.children[0]
+        if (summary_list.children.length > 2) {
+            summary_list.removeChild(summary_list.children[2])
+        }
     }
 }
 
