@@ -4,6 +4,7 @@ campaignTrail_temp.candidate_last_name = "Conservative";
 campaignTrail_temp.running_mate_last_name = "Poilievre";
 campaignTrail_temp.election_json[0]["fields"]["advisor_url"] = "https://i.imgur.com/42rHEIO.jpeg";
 campaignTrail_temp.global_parameter_json[0]["fields"]["candidate_issue_weight"] = 6;
+campaign_sign = "https://i.imgur.com/PtDprh3.png";
 
 campaignTrail_temp.multiple_endings = true;
 

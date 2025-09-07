@@ -2,6 +2,7 @@ campaignTrail_temp.candidate_image_url = "https://i.imgur.com/ly0e79f.jpeg";
 campaignTrail_temp.running_mate_image_url = "https://i.imgur.com/MVBYnzH.jpeg";
 campaignTrail_temp.candidate_last_name = "Liberal";
 campaignTrail_temp.running_mate_last_name = "Carney";
+campaign_sign = "https://i.imgur.com/WbkBokn.png";
 
 campaignTrail_temp.multiple_endings = true;
 

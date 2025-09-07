@@ -1,6 +1,7 @@
 let observerRunning = false;
 let processedNodes = new Set();
 const scrollableElementIds = ["overall_result", "state_result", "state_info", "main_content_area", "final_results_description"];
+let campaign_sign = null;
 
 async function handleMutations(mutationsList, observer) {
     if (observerRunning) return;
@@ -20,6 +21,17 @@ async function handleMutations(mutationsList, observer) {
             };
             buttons.forEach(button => button.addEventListener('click', handleClick));
             processedNodes.add(overallResult);
+        }
+    }
+
+    // change campaign sign
+    if (campaign_sign) {
+        const oldSign = document.getElementById('campaign_sign');
+        if (oldSign) {
+            const newSign = document.createElement('img');
+            newSign.src = campaign_sign;
+            newSign.style.height = "65%";
+            oldSign.replaceWith(newSign)
         }
     }
 
