@@ -35,9 +35,131 @@ async function handleMutations(mutationsList, observer) {
         }
     }
 
+    const replaceUpTo = "Electoral Votes".length;
+
+    // replace "electoral votes" with "seats"
+    const ev_button = document.getElementById("ev_est");
+    const seat_text = "Seat Estimate";
+    if (ev_button && ev_button.textContent !== seat_text) {
+        ev_button.textContent = seat_text;
+    }
+
+    const state_info = document.getElementById("state_info")
+    if (state_info) {
+        const state_info_header = state_info.children[0];
+        if (state_info_header && state_info_header.textContent !== "RIDING SUMMARY") {
+            state_info_header.textContent = "RIDING SUMMARY";
+        }
+
+        const ev_number = state_info.children[3];
+        if (ev_number && ev_number.textContent.slice(0, replaceUpTo) === "Electoral Votes") {
+            ev_number.textContent = "Seats" + ev_number.textContent.slice(replaceUpTo);
+        }
+    }
+
+    const overall_result = document.getElementById("overall_result");
+    if (overall_result) {
+        const overall_result_header = overall_result.children[0];
+        if (overall_result_header && overall_result_header.textContent === "ELECTORAL VOTES") {
+            overall_result_header.textContent = "OVERALL RESULTS";
+        }
+    }
+
+    const state_result = document.getElementById("state_result");
+    if (state_result) {
+        const state_result_header = state_result.children[0];
+        if (state_result_header && state_result_header.textContent !== "RIDING RESULTS") {
+            state_result_header.textContent = "RIDING RESULTS";
+        }
+        const state_result_text = state_result.children[1];
+        if (state_result_text) {
+            if (state_result_text.textContent === "Click on a state to view final results.") {
+                state_result_text.textContent = "Click on a riding to view final results.";
+            } else if (state_result_text.textContent === "Click on a state to view detailed results (once returns for that state arrive).") {
+                state_result_text.textContent = "Click on a riding to view detailed results (once returns for that riding arrive).";
+            } else if (state_result_text.textContent === "Returns for this state are not yet available!") {
+                state_result_text.textContent = "Returns for this riding are not yet available!";
+            }
+        }
+        const state_result_evs = state_result.children[2];
+        if (state_result_evs && state_result_evs.textContent.slice(0, replaceUpTo) === "Electoral Votes") {
+            state_result_evs.textContent = "Seats" + state_result_evs.textContent.slice(replaceUpTo);
+        }
+    }
+
+    const final_results = document.getElementsByClassName("final_results_table");
+    if (final_results && final_results.length > 0) {
+        replaceTableHeaders(final_results[0])
+    }
+
+    const overall_details = document.querySelectorAll("#overall_election_details, #state_result_data_summary");
+    for (const table_container of overall_details) {
+        replaceTableHeaders(table_container.children[1])
+    }
+
+    const state_results_button = document.getElementById("state_results_button");
+    if (state_results_button && state_results_button.textContent === "Results by State") {
+        state_results_button.textContent = "Results by Riding";      
+    }
+
+    const headers = document.getElementsByClassName("title_h3");
+    for (const header of headers) {
+        if (header.textContent === "Election Results and Data by State") {
+            header.textContent = "Election Results and Data by Riding";
+        }
+    }
+
+    const sort_tab = document.getElementById("sort_tab");
+    if (sort_tab && sort_tab.querySelector('option[value="2"]')) {
+        const queryTwo = sort_tab.querySelector('option[value="2"]');
+        if (queryTwo) {
+            queryTwo.remove();
+        }
+    }
+    if (sort_tab && sort_tab.querySelector('option[value="3"]')) {
+        const queryThree = sort_tab.querySelector('option[value="3"]');
+        if (queryThree.textContent === "Closest States") {
+            queryThree.textContent = "Closest Ridings"
+        }
+    }
+
+    const sort_tab_area = document.getElementById("sort_tab_area");
+    if (sort_tab_area) {
+        const sort_text = sort_tab_area.firstElementChild.firstChild;
+        if (sort_text.textContent.startsWith("View states by:")) {
+            sort_text.textContent = "View ridings by:" + sort_text.textContent.slice("View ridings by:".length);
+        }
+    }
+
+    const state_tab_area = document.getElementById("state_tab_area");
+    if (state_tab_area) {
+        const state_text = state_tab_area.firstElementChild.firstChild;
+        if (state_text.textContent.startsWith("Select a state:")) {
+            state_text.textContent = "Select a riding:" + state_text.textContent.slice("Select a riding:".length);
+        }
+    }
+
     // Resume observing
     observer.observe(document.documentElement, { childList: true, subtree: true });
     observerRunning = false;
+}
+
+function replaceTableHeaders(table) {
+    if (table && table.firstElementChild && table.firstElementChild.firstElementChild) {
+        const table_headers_container = table.firstElementChild.firstElementChild;
+        const candidate_header = table_headers_container.children[0];
+        if (candidate_header.textContent === "Candidate") {
+            candidate_header.textContent = "Party";
+        }
+        const ev_header = table_headers_container.children[1];
+        if (ev_header.textContent === "Electoral Votes") {
+            ev_header.textContent = "Seats";
+        }
+        const ev_header_alt = table_headers_container.children[3];
+        if (ev_header_alt.textContent === "Electoral Votes") {
+            ev_header_alt.textContent = "Seats";
+        }
+    }
 }
 
 let singleObserver = new MutationObserver(handleMutations);
