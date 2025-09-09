@@ -558,38 +558,31 @@ function charting(chartIndex=0){
     // Cache the current content of #game_window
     let cachedContent = $('#game_window').html();
   
-    $("#game_window").html('<div class="game_header">\t<h2>NEW CAMPAIGN TRAIL</h2>\t</div>\t<div id="main_content_area">\t<div id="results_container"><br>  <div id="title_container"><button id="backButton">Back</button><h3 class="campaign-title">Election Charts:</h3><button id="nextButton">Next</button></div><br><div id="chartcontainer"><figure class="highcharts-figure"><div id="myChart"></div></figure></div></div></div><div class="buttons"><button id="2025" class="active">2025</button></div><div id="container"></div>');
+    $("#game_window").html('<div class="game_header">\t<h2>NEW CAMPAIGN TRAIL</h2>\t</div>\t<div id="main_content_area">\t<div id="results_container"><br>  <div id="title_container"><h3 class="campaign-title">Election Charts:</h3><button id="voteShareBarChart">Vote Share Bar Chart</button><button id="houseOfCommons">House of Commons</button></div><br><div id="chartcontainer"><figure class="highcharts-figure"><div id="myChart"></div></figure></div></div></div><div id="container"></div>');
 
     $("#game_window").append(mapFooter);
     $('#map_footer button').prop('disabled', false);
 
     var container = document.getElementById("title_container");
-    var backButton = document.getElementById("backButton");
-    var nextButton = document.getElementById("nextButton");
+    var voteShareBarChartButton = document.getElementById("voteShareBarChart");
+    var houseOfCommonsButton = document.getElementById("houseOfCommons");
 
     container.style.display = "flex";
     container.style.alignItems = "center";
     container.style.justifyContent = "center";
 
-    backButton.style.marginRight = "10px";
-    nextButton.style.marginLeft = "10px";
-
-    if (chartIndex === 0){
-        backButton.style.display = 'none';
-    }
-    if (chartIndex === charts.length-1){
-        nextButton.style.display = 'none';
-    }
+    voteShareBarChartButton.style.marginLeft = "10px";
+    houseOfCommonsButton.style.marginLeft = "10px";
 
     $("#map_footer").css({
         position: "relative",
         zIndex: "9999"
     });
-    $("#backButton").click(function() {
-        charting(chartIndex-1)
+    $("#voteShareBarChart").click(function() {
+        charting(0)
     }),
-    $("#nextButton").click(function() {
-        charting(chartIndex+1)
+    $("#houseOfCommons").click(function() {
+        charting(1)
     })
 
     // Add an event listener to all buttons in #map_footer, excluding #chart_button
@@ -854,12 +847,6 @@ function Chartbuilder(type) {
             exporting: {
                 allowHTML: true
             }
-        });
-
-        // Add event listener to NextButton
-        document.getElementById("nextButton").addEventListener("click", function() {
-            var buttonsDiv = document.querySelector(".buttons");
-            buttonsDiv.remove();
         });
     }
     
