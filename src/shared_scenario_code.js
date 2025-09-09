@@ -528,7 +528,6 @@ function setEndSong(name, title, url) {
     }, true)
 }
 
-var charts = ["voteshare", "seats"]
 function addMyButton(){
     buttonobserver.disconnect();
     if (document.getElementById("map_footer") && e.initDC && !document.getElementById("chart_button")){
@@ -539,7 +538,7 @@ function addMyButton(){
         chartButton.id = "chart_button";
         chartButton.class = "final_menu_button"
         chartButton.addEventListener("click", function() {
-            charting(0);
+            charting("voteShareBar");
         });
         buttonrow.insertBefore(chartButton, buttonrow.children[buttonrow.children.length - 1]);
     }
@@ -548,7 +547,7 @@ function addMyButton(){
 const buttonobserver = new MutationObserver(addMyButton);
 buttonobserver.observe(document.documentElement, { childList: true, subtree: true });
 
-function charting(chartIndex=0){
+function charting(chartType){
     // Select the element to keep
     let mapFooter = $('#map_footer');
   
@@ -579,10 +578,10 @@ function charting(chartIndex=0){
         zIndex: "9999"
     });
     $("#voteShareBarChart").click(function() {
-        charting(0)
+        charting("voteShareBar");
     }),
     $("#houseOfCommons").click(function() {
-        charting(1)
+        charting("seating");
     })
 
     // Add an event listener to all buttons in #map_footer, excluding #chart_button
@@ -602,7 +601,7 @@ function charting(chartIndex=0){
         }
     });
 
-    setTimeout(function() { executeWithRetry(Chartbuilder, charts[chartIndex]); }, 100);
+    setTimeout(function() { executeWithRetry(Chartbuilder, chartType); }, 100);
 };
 
 function parliamentChart(seatData) {
@@ -661,8 +660,157 @@ function parliamentChart(seatData) {
     document.querySelector('.highcharts-legend.highcharts-no-tooltip').remove();
 }
 
+const elections = ["2021", "2025"];
+function barChart(election, yAxis) {
+    let title, yTitle, data;
+    prev_election = elections[elections.indexOf(election)-1];
+    if (yAxis === "share") {
+        title = election + " Canadian Federal Election — Parties by Vote Share";
+        yTitle = "Percentage of the Vote";
+        data = getVoteShareData();
+    }
+    else if (yAxis === "seats") {
+        title = election + " Canadian Federal Election — Parties by Seats";
+        yTitle = "Number of Seats";
+        data = getSeatData();
+    }
+    const parties = [
+        {
+            name: "Liberal Party",
+            flag: 'lpc',
+            color: '#EA6D6A'
+        }, 
+        {
+            name: "Conservative Party",
+            flag: 'cpc',
+            color: '#6495ED'
+        }, 
+        {
+            name: "New Democratic Party",
+            flag: 'ndp',
+            color: '#F4A460'
+        }, 
+        {
+            name: "Green Party",
+            flag: 'gpc',
+            color: '#99C955'
+        }, 
+        {
+            name: "Bloc Québécois",
+            flag: 'bq',
+            color: '#87CEFA'
+        }, 
+        {
+            name: "People's Party",
+            flag: 'ppc',
+            color: '#6F5D9A'
+        }, 
+        {
+            name: "Others",
+            flag: 'other',
+            color: '#808080'
+        }
+    ];
+    const getData = data => data.map((country, i) => ({
+        name: country[0],
+        y: country[1],
+        color: parties[i].color
+    }));
+    Highcharts.chart('myChart', {
+        chart: {
+            type: 'column',
+            height: 350
+        },
+        title: {
+            text: title,
+            align: 'left'
+        },
+        subtitle: {
+            text: 'Compared to the previous election',
+            align: 'left'
+        },
+        plotOptions: {
+            series: {
+                grouping: false,
+                borderWidth: 0
+            }
+        },
+        legend: {
+            enabled: false
+        },
+        tooltip: {
+            shared: true,
+            headerFormat: '<span style="font-size: 15px">{point.point.name}</span><br/>',
+            pointFormat: '<span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}%</b><br/>'
+        },
+        xAxis: {
+            type: 'category',
+            accessibility: {
+                description: 'Parties'
+            },
+            max: 6,
+            labels: {
+                useHTML: true,
+                animate: true,
+                formatter: ctx => {
+                    let flag;
+                    parties.forEach(function (country) {
+                        if (country.name === ctx.value) {
+                            flag = country.flag;
+                        }
+                    });
+    
+                    return `${flag.toUpperCase()}<br><span class="f32">
+                        <span class="flag ${flag}"></span>
+                    </span>`;
+                },
+                style: {
+                    textAlign: 'center'
+                }
+            }
+        },
+        yAxis: [{
+            title: {
+                text: yTitle
+            },
+            showFirstLabel: false
+        }],
+        series: [
+            {
+                color: 'rgba(158, 159, 163, 0.5)',
+                pointPlacement: -0.2,
+                linkedTo: 'main',
+                data: data[prev_election].slice(),
+                name: prev_election
+            }, 
+            {
+                name: election,
+                id: 'main',
+                dataSorting: {
+                    enabled: true,
+                    matchByName: true
+                },
+                dataLabels: [{
+                    enabled: false,
+                    inside: true,
+                    style: {
+                        fontSize: '16px'
+                    }
+                }],
+                data: getData(data[election]).slice()
+            }
+        ],
+        exporting: {
+            allowHTML: true
+        }
+    });
+}
+
 function Chartbuilder(type) {
-    if(type === "seats") {
+    const chartButton = document.getElementById("chart_button");
+    chartButton.disabled = true;
+
+    if (type === "seating") {
         var LibSeats = (e.final_overall_results.find((r) => r.candidate === 300));
         var ConSeats = (e.final_overall_results.find((r) => r.candidate === 301));
         var NdpSeats = (e.final_overall_results.find((r) => r.candidate === 302));
@@ -682,172 +830,12 @@ function Chartbuilder(type) {
         ];
         seatData = seatData.filter((entry) => { return entry[1] > 0; });
         parliamentChart(seatData);
-    } else if (type === "voteshare") {
-        var totalPopularVote = 19597674
-        var LibShare = getVoteShare(totalPopularVote, 300);
-        var ConShare = getVoteShare(totalPopularVote, 301);
-        var NdpShare = getVoteShare(totalPopularVote, 302);
-        var GrnShare = getVoteShare(totalPopularVote, 303);
-        var BlcShare = getVoteShare(totalPopularVote, 304);
-        var PpcShare = getVoteShare(totalPopularVote, 306);
-        var OthShare = getVoteShare(totalPopularVote, 305);
-
-        const chartButton = document.getElementById("chart_button");
-        chartButton.disabled = true;
-
-        const data = {
-            2025: [
-                ["Liberal Party", LibShare],
-                ["Conservative Party", ConShare],
-                ["New Democratic Party", NdpShare],
-                ["Green Party", GrnShare],
-                ["Bloc Québécois", BlcShare],
-                ["People's Party", PpcShare],
-                ["Others", OthShare]
-            ],
-            2021: [
-                ["Liberal Party", 32.6],
-                ["Conservative Party", 33.7],
-                ["New Democratic Party", 17.8],
-                ["Green Party", 2.3],
-                ["Bloc Québécois", 7.6],
-                ["People's Party", 4.9],
-                ["Others", 1.1]
-            ]
-        };
-        
-        const countries = [
-            {
-                name: "Liberal Party",
-                flag: 'lpc',
-                color: '#EA6D6A'
-            }, 
-            {
-                name: "Conservative Party",
-                flag: 'cpc',
-                color: '#6495ED'
-            }, 
-            {
-                name: "New Democratic Party",
-                flag: 'ndp',
-                color: '#F4A460'
-            }, 
-            {
-                name: "Green Party",
-                flag: 'gpc',
-                color: '#99C955'
-            }, 
-            {
-                name: "Bloc Québécois",
-                flag: 'bq',
-                color: '#87CEFA'
-            }, 
-            {
-                name: "People's Party",
-                flag: 'ppc',
-                color: '#6F5D9A'
-            }, 
-            {
-                name: "Others",
-                flag: 'other',
-                color: '#808080'
-            }
-        ];
-        
-        const getData = data => data.map((country, i) => ({
-            name: country[0],
-            y: country[1],
-            color: countries[i].color
-        }));
-        
-        Highcharts.chart('myChart', {
-            chart: {
-                type: 'column',
-                height: 350
-            },
-            title: {
-                text: '2025 Canadian Federal Election - Parties by Vote Share',
-                align: 'left'
-            },
-            subtitle: {
-                text: 'Comparing to the previous election.',
-                align: 'left'
-            },
-            plotOptions: {
-                series: {
-                    grouping: false,
-                    borderWidth: 0
-                }
-            },
-            legend: {
-                enabled: false
-            },
-            tooltip: {
-                shared: true,
-                headerFormat: '<span style="font-size: 15px">{point.point.name}</span><br/>',
-                pointFormat: '<span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}%</b><br/>'
-            },
-            xAxis: {
-                type: 'category',
-                accessibility: {
-                    description: 'Countries'
-                },
-                max: 6,
-                labels: {
-                    useHTML: true,
-                    animate: true,
-                    formatter: ctx => {
-                        let flag;
-                        countries.forEach(function (country) {
-                            if (country.name === ctx.value) {
-                                flag = country.flag;
-                            }
-                        });
-        
-                        return `${flag.toUpperCase()}<br><span class="f32">
-                            <span class="flag ${flag}"></span>
-                        </span>`;
-                    },
-                    style: {
-                        textAlign: 'center'
-                    }
-                }
-            },
-            yAxis: [{
-                title: {
-                    text: 'Percentage of the vote'
-                },
-                showFirstLabel: false
-            }],
-            series: [
-                {
-                    color: 'rgba(158, 159, 163, 0.5)',
-                    pointPlacement: -0.2,
-                    linkedTo: 'main',
-                    data: data[2021].slice(),
-                    name: '2021'
-                }, 
-                {
-                    name: '2025',
-                    id: 'main',
-                    dataSorting: {
-                        enabled: true,
-                        matchByName: true
-                    },
-                    dataLabels: [{
-                        enabled: false,
-                        inside: true,
-                        style: {
-                            fontSize: '16px'
-                        }
-                    }],
-                    data: getData(data[2025]).slice()
-                }
-            ],
-            exporting: {
-                allowHTML: true
-            }
-        });
+    } 
+    else if (type === "voteShareBar") {
+        barChart("2025", "share");
+    }
+    else if (type === "seatBar") {
+        barChart("2025", "seats")
     }
     
     var div = document.getElementById('chartcontainer');
@@ -859,6 +847,43 @@ function Chartbuilder(type) {
     if (element) { // Check if element exists before trying to remove it
         element.remove();
     }
+}
+
+function getVoteShareData() {
+    var totalPopularVote = 19597674
+    var LibShare = getVoteShare(totalPopularVote, 300);
+    var ConShare = getVoteShare(totalPopularVote, 301);
+    var NdpShare = getVoteShare(totalPopularVote, 302);
+    var GrnShare = getVoteShare(totalPopularVote, 303);
+    var BlcShare = getVoteShare(totalPopularVote, 304);
+    var PpcShare = getVoteShare(totalPopularVote, 306);
+    var OthShare = getVoteShare(totalPopularVote, 305);
+
+    const data = {
+        "2025": [
+            ["Liberal Party", LibShare],
+            ["Conservative Party", ConShare],
+            ["New Democratic Party", NdpShare],
+            ["Green Party", GrnShare],
+            ["Bloc Québécois", BlcShare],
+            ["People's Party", PpcShare],
+            ["Others", OthShare]
+        ],
+        "2021": [
+            ["Liberal Party", 32.6],
+            ["Conservative Party", 33.7],
+            ["New Democratic Party", 17.8],
+            ["Green Party", 2.3],
+            ["Bloc Québécois", 7.6],
+            ["People's Party", 4.9],
+            ["Others", 1.1]
+        ]
+    };
+    return data;
+}
+
+function getSeatData() {
+    return {};
 }
 
 function loadScript(url, callback) {
