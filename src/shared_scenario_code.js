@@ -622,7 +622,6 @@ function charting(chartIndex=0){
 };
 
 function Chartbuilder(type) {
-    var originalHtml;
     if(type === "seats") {
         var LibSeats = (e.final_overall_results.find((r) => r.candidate === 300));
         var ConSeats = (e.final_overall_results.find((r) => r.candidate === 301));
@@ -696,21 +695,6 @@ function Chartbuilder(type) {
         });
 
         document.querySelector('.highcharts-legend.highcharts-no-tooltip').remove();
-
-        // Add event listener to BackButton
-        document.getElementById("backButton").addEventListener("click", function() {
-            // Add the buttons div back to where it was
-            var container = document.getElementById("container"); // Replace with the id or selector of the element that contained the buttons div
-            container.insertAdjacentHTML('beforebegin', originalHtml);
-        });
-        // Add event listener to NextButton
-        document.getElementById("nextButton").addEventListener("click", function() {
-            // Save the original HTML of the buttons div
-            originalHtml = document.querySelector(".buttons").outerHTML;
-            // Remove the buttons div
-            var buttonsDiv = document.querySelector(".buttons");
-            buttonsDiv.remove();
-        });
     } else if (type === "voteshare") {
         var totalPopularVote = 19597674
         var LibShare = getVoteShare(totalPopularVote, 300);
@@ -880,9 +864,6 @@ function Chartbuilder(type) {
 
         // Add event listener to NextButton
         document.getElementById("nextButton").addEventListener("click", function() {
-            // Save the original HTML of the buttons div
-            originalHtml = document.querySelector(".buttons").outerHTML;
-            // Remove the buttons div
             var buttonsDiv = document.querySelector(".buttons");
             buttonsDiv.remove();
         });
