@@ -532,7 +532,6 @@ var charts = ["voteshare", "seats"]
 function addMyButton(){
     buttonobserver.disconnect();
     if (document.getElementById("map_footer") && e.initDC && !document.getElementById("chart_button")){
-        console.log("Added button back");
         buttonAdded = true;
         const buttonrow = document.getElementById("map_footer");
         const chartButton = document.createElement("button");
