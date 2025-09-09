@@ -9,16 +9,7 @@ campaign_sign = "https://i.imgur.com/PtDprh3.png";
 campaignTrail_temp.multiple_endings = true;
 
 endingPicker = (out, totv, aa, quickstats) => {
-    function setImage(url) {
-        if (url == '' || url == null) return;
-        let interval = setInterval(function() {
-            img = document.getElementsByClassName("person_image")[0];
-            if (img != null) {
-                img.src = url;
-                clearInterval(interval);
-            }
-        }, 10);
-    }
+    loadScripts();
 
     winner = aa[0];
     runnerUp = aa[1];

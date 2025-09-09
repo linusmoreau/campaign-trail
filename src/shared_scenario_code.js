@@ -407,10 +407,6 @@ generateTime = () => {
 
     updatePositionDisplay();
 
-    //for (let i = 0; i < 10; i++)
-    //timeTracker.append(document.createElement("br"));
-
-
     // Function to update the position display
     function updatePositionDisplay() {
         positionDisplay.innerHTML = "<b>Time:</b> " + toTime(audio.currentTime) + "<br>";
@@ -530,6 +526,429 @@ function setEndSong(name, title, url) {
             ]
         }
     }, true)
+}
+
+var charts = ["voteshare", "seats"]
+var buttonAdded = false
+function addMyButton(){
+    if (document.getElementById("map_footer") && e.initDC){
+        if (!buttonAdded) {
+            console.log("Added button back");
+            buttonAdded=true;
+            const buttonrow = document.getElementById("map_footer");
+            const chartButton = document.createElement("button");
+            chartButton.textContent = "Election Charts";
+            chartButton.id = "chart_button";
+            chartButton.class = "final_menu_button"
+            chartButton.addEventListener("click", function() {
+                charting(0);
+            });
+            buttonrow.insertBefore(chartButton, buttonrow.children[buttonrow.children.length - 1]);
+        }
+        else {
+            const chartButton = document.getElementById("chart_button");
+            if (!chartButton){
+                // reconnect the observer
+                buttonAdded=false;
+            }
+        }
+    }
+}
+const buttonobserver = new MutationObserver(addMyButton);
+buttonobserver.observe(document.documentElement, { childList: true, subtree: true });
+
+function charting(chartIndex=0){
+    // Select the element to keep
+    let mapFooter = $('#map_footer');
+  
+    // Temporarily detach the element from DOM (it preserves bound events and data)
+    mapFooter.detach();
+  
+    // Cache the current content of #game_window
+    let cachedContent = $('#game_window').html();
+  
+    $("#game_window").html('<div class="game_header">\t<h2>NEW CAMPAIGN TRAIL</h2>\t</div>\t<div id="main_content_area">\t<div id="results_container"><br>  <div id="title_container"><button id="backButton">Back</button><h3 class="campaign-title">Election Charts:</h3><button id="nextButton">Next</button></div><br><div id="chartcontainer"><figure class="highcharts-figure"><div id="myChart"></div></figure></div></div></div><div class="buttons"><button id="2025" class="active">2025</button></div><div id="container"></div>');
+
+    $("#game_window").append(mapFooter);
+    $('#map_footer button').prop('disabled', false);
+
+    var container = document.getElementById("title_container");
+    var backButton = document.getElementById("backButton");
+    var nextButton = document.getElementById("nextButton");
+
+    container.style.display = "flex";
+    container.style.alignItems = "center";
+    container.style.justifyContent = "center";
+
+    backButton.style.marginRight = "10px";
+    nextButton.style.marginLeft = "10px";
+
+    if (chartIndex === 0){
+        backButton.style.display = 'none';
+    }
+    if (chartIndex === charts.length-1){
+        nextButton.style.display = 'none';
+    }
+
+    $("#map_footer").css({
+        position: "relative",
+        zIndex: "9999"
+    });
+    $("#backButton").click(function() {
+        charting(chartIndex-1)
+    }),
+    $("#nextButton").click(function() {
+        charting(chartIndex+1)
+    })
+
+    // Add an event listener to all buttons in #map_footer, excluding #chart_button
+    $('#map_footer button:not(#chart_button)').on('click', function() {
+        // Check if #chartcontainer exists in the current #game_window
+        if ($('#game_window #chartcontainer').length > 0) {
+            // If it does, restore the cached content
+            let mapFooter = $('#map_footer');
+            mapFooter.detach();
+            $('#game_window').html(cachedContent);
+            $("#game_window").append(mapFooter);
+
+            // Enable all buttons
+            $('#map_footer button').prop('disabled', false);
+
+            $(this).prop('disabled', true);
+        }
+    });
+
+    setTimeout(function() { executeWithRetry(Chartbuilder, charts[chartIndex]); }, 100);
+};
+
+function Chartbuilder(type) {
+    var originalHtml;
+    if(type === "seats") {
+        var LibSeats = (e.final_overall_results.find((r) => r.candidate === 300));
+        var ConSeats = (e.final_overall_results.find((r) => r.candidate === 301));
+        var NdpSeats = (e.final_overall_results.find((r) => r.candidate === 302));
+        var GrnSeats = (e.final_overall_results.find((r) => r.candidate === 303));
+        var BlcSeats = (e.final_overall_results.find((r) => r.candidate === 304));
+        var PpcSeats = (e.final_overall_results.find((r) => r.candidate === 306));
+        var OthSeats = (e.final_overall_results.find((r) => r.candidate === 305));
+
+        var seatData = [
+            ['New Democratic Party', NdpSeats.electoral_votes, '#F4A460', 'NDP'],
+            ['Green Party', GrnSeats.electoral_votes, '#99C955', 'GPC'],
+            ['Liberal Party', LibSeats.electoral_votes, '#EA6D6A', 'LPC'],
+            ['Bloc Québécois', BlcSeats.electoral_votes, '#87CEFA', 'BQ'],
+            ['Others', OthSeats.electoral_votes, '#808080', 'Others'],
+            ['Conservative Party', ConSeats.electoral_votes, '#6495ED', 'CPC'],
+            ['People\'s Party', PpcSeats.electoral_votes, '#6F5D9A', 'PPC']
+        ];
+        seatData = seatData.filter((entry) => { return entry[1] > 0; });
+
+        const chartButton = document.getElementById("chart_button");
+        chartButton.disabled = true;
+
+        var myChart = Highcharts.chart('myChart', {
+            chart: {
+                type: 'item',
+                height: 350
+            },
+            title: {
+                text: 'Canadian House of Commons 2025'
+            },
+            legend: {
+                labelFormat: '{name} <span style="opacity: 0.4">{y}</span>'
+            },
+            series: [
+            {
+                name: 'MPs',
+                keys: ['name', 'y', 'color', 'label'],
+                data: seatData,
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.label}',
+                    style: {
+                        textOutline: '3px contrast'
+                    }
+                },
+                center: ['50%', '110%'], // Adjusted center position
+                size: '210%', // Adjusted size
+                startAngle: -90,
+                endAngle: 90
+            }
+            ],
+            responsive: {
+            rules: [
+                {
+                condition: {
+                    maxWidth: 600
+                },
+                chartOptions: {
+                    series: [
+                        {
+                            dataLabels: {
+                                distance: -30
+                            }
+                        }
+                    ]
+                }
+                }
+            ]
+            }
+        });
+
+        document.querySelector('.highcharts-legend.highcharts-no-tooltip').remove();
+
+        // Add event listener to BackButton
+        document.getElementById("backButton").addEventListener("click", function() {
+            // Add the buttons div back to where it was
+            var container = document.getElementById("container"); // Replace with the id or selector of the element that contained the buttons div
+            container.insertAdjacentHTML('beforebegin', originalHtml);
+        });
+        // Add event listener to NextButton
+        document.getElementById("nextButton").addEventListener("click", function() {
+            // Save the original HTML of the buttons div
+            originalHtml = document.querySelector(".buttons").outerHTML;
+            // Remove the buttons div
+            var buttonsDiv = document.querySelector(".buttons");
+            buttonsDiv.remove();
+        });
+    } else if (type === "voteshare") {
+        var totalPopularVote = 19597674
+        var LibShare = getVoteShare(totalPopularVote, 300);
+        var ConShare = getVoteShare(totalPopularVote, 301);
+        var NdpShare = getVoteShare(totalPopularVote, 302);
+        var GrnShare = getVoteShare(totalPopularVote, 303);
+        var BlcShare = getVoteShare(totalPopularVote, 304);
+        var PpcShare = getVoteShare(totalPopularVote, 306);
+        var OthShare = getVoteShare(totalPopularVote, 305);
+
+        const chartButton = document.getElementById("chart_button");
+        chartButton.disabled = true;
+
+        const data = {
+            2025: [
+                ["Liberal Party", LibShare],
+                ["Conservative Party", ConShare],
+                ["New Democratic Party", NdpShare],
+                ["Green Party", GrnShare],
+                ["Bloc Québécois", BlcShare],
+                ["People's Party", PpcShare],
+                ["Others", OthShare]
+            ],
+            2021: [
+                ["Liberal Party", 32.6],
+                ["Conservative Party", 33.7],
+                ["New Democratic Party", 17.8],
+                ["Green Party", 2.3],
+                ["Bloc Québécois", 7.6],
+                ["People's Party", 4.9],
+                ["Others", 1.1]
+            ]
+        };
+        
+        const countries = [
+            {
+                name: "Liberal Party",
+                flag: 'lpc',
+                color: '#EA6D6A'
+            }, 
+            {
+                name: "Conservative Party",
+                flag: 'cpc',
+                color: '#6495ED'
+            }, 
+            {
+                name: "New Democratic Party",
+                flag: 'ndp',
+                color: '#F4A460'
+            }, 
+            {
+                name: "Green Party",
+                flag: 'gpc',
+                color: '#99C955'
+            }, 
+            {
+                name: "Bloc Québécois",
+                flag: 'bq',
+                color: '#87CEFA'
+            }, 
+            {
+                name: "People's Party",
+                flag: 'ppc',
+                color: '#6F5D9A'
+            }, 
+            {
+                name: "Others",
+                flag: 'other',
+                color: '#808080'
+            }
+        ];
+        
+        const getData = data => data.map((country, i) => ({
+            name: country[0],
+            y: country[1],
+            color: countries[i].color
+        }));
+        
+        const chart = Highcharts.chart('myChart', {
+            chart: {
+                type: 'column',
+                height: 350
+            },
+            title: {
+                text: '2025 Canadian Federal Election - Parties by Vote Share',
+                align: 'left'
+            },
+            subtitle: {
+                text: 'Comparing to the previous election.',
+                align: 'left'
+            },
+            plotOptions: {
+                series: {
+                    grouping: false,
+                    borderWidth: 0
+                }
+            },
+            legend: {
+                enabled: false
+            },
+            tooltip: {
+                shared: true,
+                headerFormat: '<span style="font-size: 15px">{point.point.name}</span><br/>',
+                pointFormat: '<span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}%</b><br/>'
+            },
+            xAxis: {
+                type: 'category',
+                accessibility: {
+                    description: 'Countries'
+                },
+                max: 6,
+                labels: {
+                    useHTML: true,
+                    animate: true,
+                    formatter: ctx => {
+                        let flag;
+                        countries.forEach(function (country) {
+                            if (country.name === ctx.value) {
+                                flag = country.flag;
+                            }
+                        });
+        
+                        return `${flag.toUpperCase()}<br><span class="f32">
+                            <span class="flag ${flag}"></span>
+                        </span>`;
+                    },
+                    style: {
+                        textAlign: 'center'
+                    }
+                }
+            },
+            yAxis: [{
+                title: {
+                    text: 'Percentage of the vote'
+                },
+                showFirstLabel: false
+            }],
+            series: [
+                {
+                    color: 'rgba(158, 159, 163, 0.5)',
+                    pointPlacement: -0.2,
+                    linkedTo: 'main',
+                    data: data[2021].slice(),
+                    name: '2021'
+                }, 
+                {
+                    name: '2025',
+                    id: 'main',
+                    dataSorting: {
+                        enabled: true,
+                        matchByName: true
+                    },
+                    dataLabels: [{
+                        enabled: false,
+                        inside: true,
+                        style: {
+                            fontSize: '16px'
+                        }
+                    }],
+                    data: getData(data[2025]).slice()
+                }
+            ],
+            exporting: {
+                allowHTML: true
+            }
+        });
+
+        // Add event listener to NextButton
+        document.getElementById("nextButton").addEventListener("click", function() {
+            // Save the original HTML of the buttons div
+            originalHtml = document.querySelector(".buttons").outerHTML;
+            // Remove the buttons div
+            var buttonsDiv = document.querySelector(".buttons");
+            buttonsDiv.remove();
+        });
+    }
+    
+    var div = document.getElementById('chartcontainer');
+    div.style.border = 'medium double';
+    div.style.backgroundColor = '#f9f9f9';
+    div.style.borderColor = '#c9c9c9';
+
+    var element = document.querySelector('.highcharts-background');
+    if (element) { // Check if element exists before trying to remove it
+        element.remove();
+    }
+}
+
+function loadScript(url, callback) {
+    var script = document.createElement('script');
+    script.src = url;
+    script.onload = callback;
+  
+    document.head.appendChild(script);
+}
+
+function loadScripts() {
+    if (!e.initDC) {
+        e.initDC = true
+
+        loadScript('https://code.highcharts.com/highcharts.js', function() {
+            loadScript('https://code.highcharts.com/modules/item-series.js', function() {
+                loadScript('https://code.highcharts.com/modules/accessibility.js', function() {});
+            });
+        });
+    }
+}
+
+function getVoteShare(totalPopularVote, party) {
+    return Math.round(((e.final_overall_results.find((r) => r.candidate === party).popular_votes/totalPopularVote))*1000)/10;
+}
+
+function setImage(url) {
+    if (url == '' || url == null) return;
+    let interval = setInterval(function() {
+        img = document.getElementsByClassName("person_image")[0];
+        if (img != null) {
+            img.src = url;
+            clearInterval(interval);
+        }
+    }, 10);
+}
+
+function executeWithRetry(fn, ...args) {
+    const maxRetries = 20;
+    const delayMs = 100;
+
+    for (let retry = 0; retry < maxRetries; retry++) {
+        try {
+            fn(...args);
+            return;
+        } catch (err) {
+            console.log(err);
+            if (retry < maxRetries - 1) {
+            setTimeout(() => {}, delayMs);
+            }
+        }
+    }
 }
 
 applyTooltipsToObject(campaignTrail_temp.questions_json);

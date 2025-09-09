@@ -7,16 +7,7 @@ campaign_sign = "https://i.imgur.com/WbkBokn.png";
 campaignTrail_temp.multiple_endings = true;
 
 endingPicker = (out, totv, aa, quickstats) => {
-    function setImage(url) {
-        if (url == '' || url == null) return;
-        let interval = setInterval(function() {
-            img = document.getElementsByClassName("person_image")[0];
-            if (img != null) {
-                img.src = url;
-                clearInterval(interval);
-            }
-        }, 10);
-    }
+    loadScripts();
 
     // Did Poilievre win Carleton?
     const carleton = campaignTrail_temp.final_state_results.find(state => {return state.abbr == "Carleton"})
