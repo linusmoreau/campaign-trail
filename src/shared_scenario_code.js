@@ -529,30 +529,22 @@ function setEndSong(name, title, url) {
 }
 
 var charts = ["voteshare", "seats"]
-var buttonAdded = false
 function addMyButton(){
-    if (document.getElementById("map_footer") && e.initDC){
-        if (!buttonAdded) {
-            console.log("Added button back");
-            buttonAdded=true;
-            const buttonrow = document.getElementById("map_footer");
-            const chartButton = document.createElement("button");
-            chartButton.textContent = "Election Charts";
-            chartButton.id = "chart_button";
-            chartButton.class = "final_menu_button"
-            chartButton.addEventListener("click", function() {
-                charting(0);
-            });
-            buttonrow.insertBefore(chartButton, buttonrow.children[buttonrow.children.length - 1]);
-        }
-        else {
-            const chartButton = document.getElementById("chart_button");
-            if (!chartButton){
-                // reconnect the observer
-                buttonAdded=false;
-            }
-        }
+    buttonobserver.disconnect();
+    if (document.getElementById("map_footer") && e.initDC && !document.getElementById("chart_button")){
+        console.log("Added button back");
+        buttonAdded = true;
+        const buttonrow = document.getElementById("map_footer");
+        const chartButton = document.createElement("button");
+        chartButton.textContent = "Election Charts";
+        chartButton.id = "chart_button";
+        chartButton.class = "final_menu_button"
+        chartButton.addEventListener("click", function() {
+            charting(0);
+        });
+        buttonrow.insertBefore(chartButton, buttonrow.children[buttonrow.children.length - 1]);
     }
+    buttonobserver.observe(document.documentElement, { childList: true, subtree: true });
 }
 const buttonobserver = new MutationObserver(addMyButton);
 buttonobserver.observe(document.documentElement, { childList: true, subtree: true });
