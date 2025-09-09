@@ -612,6 +612,62 @@ function charting(chartIndex=0){
     setTimeout(function() { executeWithRetry(Chartbuilder, charts[chartIndex]); }, 100);
 };
 
+function parliamentChart(seatData) {
+    const chartButton = document.getElementById("chart_button");
+    chartButton.disabled = true;
+
+    Highcharts.chart('myChart', {
+        chart: {
+            type: 'item',
+            height: 350
+        },
+        title: {
+            text: 'Canadian House of Commons 2025'
+        },
+        legend: {
+            labelFormat: '{name} <span style="opacity: 0.4">{y}</span>'
+        },
+        series: [
+            {
+                name: 'MPs',
+                keys: ['name', 'y', 'color', 'label'],
+                data: seatData,
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.label}',
+                    style: {
+                        textOutline: '3px contrast'
+                    }
+                },
+                center: ['50%', '110%'], // Adjusted center position
+                size: '210%', // Adjusted size
+                startAngle: -90,
+                endAngle: 90
+            }
+        ],
+        responsive: {
+            rules: [
+                {
+                    condition: {
+                        maxWidth: 600
+                    },
+                    chartOptions: {
+                        series: [
+                            {
+                                dataLabels: {
+                                    distance: -30
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    });
+
+    document.querySelector('.highcharts-legend.highcharts-no-tooltip').remove();
+}
+
 function Chartbuilder(type) {
     if(type === "seats") {
         var LibSeats = (e.final_overall_results.find((r) => r.candidate === 300));
@@ -632,60 +688,7 @@ function Chartbuilder(type) {
             ['People\'s Party', PpcSeats.electoral_votes, '#6F5D9A', 'PPC']
         ];
         seatData = seatData.filter((entry) => { return entry[1] > 0; });
-
-        const chartButton = document.getElementById("chart_button");
-        chartButton.disabled = true;
-
-        var myChart = Highcharts.chart('myChart', {
-            chart: {
-                type: 'item',
-                height: 350
-            },
-            title: {
-                text: 'Canadian House of Commons 2025'
-            },
-            legend: {
-                labelFormat: '{name} <span style="opacity: 0.4">{y}</span>'
-            },
-            series: [
-            {
-                name: 'MPs',
-                keys: ['name', 'y', 'color', 'label'],
-                data: seatData,
-                dataLabels: {
-                    enabled: true,
-                    format: '{point.label}',
-                    style: {
-                        textOutline: '3px contrast'
-                    }
-                },
-                center: ['50%', '110%'], // Adjusted center position
-                size: '210%', // Adjusted size
-                startAngle: -90,
-                endAngle: 90
-            }
-            ],
-            responsive: {
-            rules: [
-                {
-                condition: {
-                    maxWidth: 600
-                },
-                chartOptions: {
-                    series: [
-                        {
-                            dataLabels: {
-                                distance: -30
-                            }
-                        }
-                    ]
-                }
-                }
-            ]
-            }
-        });
-
-        document.querySelector('.highcharts-legend.highcharts-no-tooltip').remove();
+        parliamentChart(seatData);
     } else if (type === "voteshare") {
         var totalPopularVote = 19597674
         var LibShare = getVoteShare(totalPopularVote, 300);
@@ -764,7 +767,7 @@ function Chartbuilder(type) {
             color: countries[i].color
         }));
         
-        const chart = Highcharts.chart('myChart', {
+        Highcharts.chart('myChart', {
             chart: {
                 type: 'column',
                 height: 350
