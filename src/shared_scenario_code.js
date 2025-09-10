@@ -557,13 +557,14 @@ function charting(chartType){
     // Cache the current content of #game_window
     let cachedContent = $('#game_window').html();
   
-    $("#game_window").html('<div class="game_header">\t<h2>NEW CAMPAIGN TRAIL</h2>\t</div>\t<div id="main_content_area">\t<div id="results_container"><br>  <div id="title_container"><h3 class="campaign-title">Election Charts:</h3><button id="voteShareBarChart">Vote Share Bar Chart</button><button id="houseOfCommons">House of Commons</button></div><br><div id="chartcontainer"><figure class="highcharts-figure"><div id="myChart"></div></figure></div></div></div><div id="container"></div>');
+    $("#game_window").html('<div class="game_header">\t<h2>NEW CAMPAIGN TRAIL</h2>\t</div>\t<div id="main_content_area">\t<div id="results_container"><br>  <div id="title_container"><h3 class="campaign-title">Election Charts:</h3><button id="voteShareBarChart">Vote Share Bar Chart</button><button id="seatBarChart">Seat Bar Chart</button><button id="houseOfCommons">House of Commons</button></div><br><div id="chartcontainer"><figure class="highcharts-figure"><div id="myChart"></div></figure></div></div></div><div id="container"></div>');
 
     $("#game_window").append(mapFooter);
     $('#map_footer button').prop('disabled', false);
 
     var container = document.getElementById("title_container");
     var voteShareBarChartButton = document.getElementById("voteShareBarChart");
+    var seatBarChartButton = document.getElementById("seatBarChart");
     var houseOfCommonsButton = document.getElementById("houseOfCommons");
 
     container.style.display = "flex";
@@ -571,6 +572,7 @@ function charting(chartType){
     container.style.justifyContent = "center";
 
     voteShareBarChartButton.style.marginLeft = "10px";
+    seatBarChartButton.style.marginLeft = "10px";
     houseOfCommonsButton.style.marginLeft = "10px";
 
     $("#map_footer").css({
@@ -579,10 +581,13 @@ function charting(chartType){
     });
     $("#voteShareBarChart").click(function() {
         charting("voteShareBar");
-    }),
+    });
+    $("#seatBarChart").click(function() {
+        charting("seatBar");
+    });
     $("#houseOfCommons").click(function() {
         charting("seating");
-    })
+    });
 
     // Add an event listener to all buttons in #map_footer, excluding #chart_button
     $('#map_footer button:not(#chart_button)').on('click', function() {
@@ -667,11 +672,13 @@ function barChart(election, yAxis) {
     if (yAxis === "share") {
         title = election + " Canadian Federal Election — Parties by Vote Share";
         yTitle = "Percentage of the Vote";
+        pointFormat = '<span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}%</b><br/>';
         data = getVoteShareData();
     }
     else if (yAxis === "seats") {
         title = election + " Canadian Federal Election — Parties by Seats";
         yTitle = "Number of Seats";
+        pointFormat = '<span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}</b><br/>';
         data = getSeatData();
     }
     const parties = [
@@ -741,7 +748,7 @@ function barChart(election, yAxis) {
         tooltip: {
             shared: true,
             headerFormat: '<span style="font-size: 15px">{point.point.name}</span><br/>',
-            pointFormat: '<span style="color:{point.color}">\u25CF</span> {series.name}: <b>{point.y}%</b><br/>'
+            pointFormat: pointFormat
         },
         xAxis: {
             type: 'category',
@@ -835,7 +842,7 @@ function Chartbuilder(type) {
         barChart("2025", "share");
     }
     else if (type === "seatBar") {
-        barChart("2025", "seats")
+        barChart("2025", "seats");
     }
     
     var div = document.getElementById('chartcontainer');
@@ -883,7 +890,34 @@ function getVoteShareData() {
 }
 
 function getSeatData() {
-    return {};
+    var LibSeats = getSeatNumber(300);
+    var ConSeats = getSeatNumber(301);
+    var NdpSeats = getSeatNumber(302);
+    var GrnSeats = getSeatNumber(303);
+    var BlcSeats = getSeatNumber(304);
+    var PpcSeats = getSeatNumber(306);
+    var OthSeats = getSeatNumber(305);
+    const data = {
+        "2025": [
+            ["Liberal Party", LibSeats],
+            ["Conservative Party", ConSeats],
+            ["New Democratic Party", NdpSeats],
+            ["Green Party", GrnSeats],
+            ["Bloc Québécois", BlcSeats],
+            ["People's Party", PpcSeats],
+            ["Others", OthSeats]
+        ],
+        "2021": [
+            ["Liberal Party", 160],
+            ["Conservative Party", 119],
+            ["New Democratic Party", 25],
+            ["Green Party", 2],
+            ["Bloc Québécois", 32],
+            ["People's Party", 0],
+            ["Others", 0]
+        ]
+    }
+    return data;
 }
 
 function loadScript(url, callback) {
@@ -908,6 +942,10 @@ function loadScripts() {
 
 function getVoteShare(totalPopularVote, party) {
     return Math.round(((e.final_overall_results.find((r) => r.candidate === party).popular_votes/totalPopularVote))*1000)/10;
+}
+
+function getSeatNumber(party) {
+    return (e.final_overall_results.find((r) => r.candidate === party)).electoral_votes;
 }
 
 function setImage(url) {
