@@ -35,6 +35,15 @@ async function handleMutations(mutationsList, observer) {
         }
     }
 
+    const pvswitcher_button = document.getElementById("pvswitcher");
+    if (pvswitcher_button) {
+        if (pvswitcher_button.textContent === "PV Estimate") {
+            pvswitcher_button.textContent = "Popular Vote Estimate";
+        } else if (pvswitcher_button.textContent === "Switch to State Estimate") {
+            pvswitcher_button.textContent = "Riding Estimate";
+        }
+    }
+
     const replaceUpTo = "Electoral Votes".length;
 
     // replace "electoral votes" with "seats"
@@ -574,6 +583,14 @@ function charting(chartType){
     voteShareBarChartButton.style.marginLeft = "10px";
     seatBarChartButton.style.marginLeft = "10px";
     houseOfCommonsButton.style.marginLeft = "10px";
+
+    if (chartType === "voteShareBar") {
+        voteShareBarChartButton.disabled = true;
+    } else if (chartType === "seatBar") {
+        seatBarChartButton.disabled = true;
+    } else if (chartType === "seating") {
+        houseOfCommonsButton.disabled = true;
+    }
 
     $("#map_footer").css({
         position: "relative",
