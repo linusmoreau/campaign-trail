@@ -857,7 +857,7 @@ function Chartbuilder(type) {
 }
 
 function getVoteShareData() {
-    var totalPopularVote = 19597674
+    var totalPopularVote = e.final_overall_results.reduce((acc, results) => acc + results["popular_votes"], 0);
     var LibShare = getVoteShare(totalPopularVote, 300);
     var ConShare = getVoteShare(totalPopularVote, 301);
     var NdpShare = getVoteShare(totalPopularVote, 302);
