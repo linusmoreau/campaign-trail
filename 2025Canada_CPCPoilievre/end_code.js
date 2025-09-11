@@ -93,6 +93,12 @@ endingPicker = (out, totv, aa, quickstats) => {
                 setEndSong("Conservative Plurality Defeat", "I'm an Open Road — Paul Brandt", "https://audio.jukehost.co.uk/zJSjmsFWyG5UDthC6l9gGNaSfUBH45VY", )
             }
         }
+    } else {
+        header = "Pundit Confusion!";
+        description = [
+            "Somehow, a party other than the Liberals or Conservatives won the most seats. Analysts will be scratching their heads for a long time, wondering how this could have happened."
+        ]
+        setImage("https://i.imgur.com/QenEQDJ.jpeg")
     }
     s = `<h2>${header}</h2>`
     for (desc of description) {

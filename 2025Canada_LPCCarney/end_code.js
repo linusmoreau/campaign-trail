@@ -78,6 +78,12 @@ endingPicker = (out, totv, aa, quickstats) => {
             setImage("https://i.imgur.com/bWPXiN4.jpeg")
             setEndSong("Conservative Plurality Indecision", "Feel So Alive — Down With Webster", "https://audio.jukehost.co.uk/QrOsksv3KaRmnFdi3KHMAKlA9J0tlqwd")
         }
+    } else {
+        header = "Pundit Confusion!";
+        description = [
+            "Somehow, a party other than the Liberals or Conservatives won the most seats. Analysts will be scratching their heads for a long time, wondering how this could have happened."
+        ]
+        setImage("https://i.imgur.com/QenEQDJ.jpeg")
     }
     s = `<h2>${header}</h2>`
     for (desc of description) {
