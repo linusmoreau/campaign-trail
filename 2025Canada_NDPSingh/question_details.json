@@ -1,0 +1,533 @@
+[
+    {
+        "question": "[December 2024] Finance Minister Chrystia Freeland has resigned, harshly criticizing Prime Minister Trudeau. Trudeau is facing increasing pressure from within his own party. How do you react?",
+        "answers": [
+            {
+                "answer": "Trudeau must recognize that he has overstayed his welcome. I will threaten a vote of no confidence if he refuses to resign. Canada needs new leadership.",
+                "feedback": "Trudeau announces his resignation on January 6th. Hopefully the next Liberal leader will be better."
+            },
+            {
+                "answer": "Trudeau has to go, but I will stop short of calling for a vote of no confidence. We cannot risk an election now while the Conservatives poll so far ahead.",
+                "historical": true,
+                "feedback": "Over the next few days, you face increasing pressure to commit to a vote of no confidence. You end up committing to bring the government down no matter who is Prime Minister. Trudeau eventually announces his resignation on January 6th."
+            },
+            {
+                "answer": "I will immediately call for a vote of no confidence to give Canadians a chance to vote for a government who will work for them. The Liberals have let people down again and again. No matter who is leading the Liberal Party, this government's time is up.",
+                "feedback": "Over the next few days, you face increasing pressure to commit to a vote of no confidence. You end up committing to bring the government down no matter who is Prime Minister. Trudeau eventually announces his resignation on January 6th."
+            },
+            {
+                "answer": "This is an internal party dispute that I won’t get involved in. Regardless, we will continue to hold the Liberals to account.",
+                "feedback": "Many feel like your NDP is just Liberal-lite as you refuse to call for Trudeau’s resignation even as half his own caucus does."
+            }
+        ]
+    },
+    {
+        "question": "[January 2025] With Trudeau announcing his resignation, how will you talk about the last few years where you cooperated with his government?",
+        "answers": [
+            {
+                "answer": "I’ll talk about the wins our cooperation achieved: we achieved $10-a-day childcare, pharmacare, and dental care. New Democrats get things done.",
+                "historical": true,
+                "feedback": "People are not happy with the direction of the country. Tying yourself to the Trudeau government doesn’t do you any favours."
+            },
+            {
+                "answer": "Trudeau often said the right things, but failed to deliver for people again and again. His inaction and complacency is the reason why life has become unaffordable for so many Canadians.",
+                "feedback": "You come out swinging, but this message would be more effective if you hadn’t been supporting the Trudeau government for the last three years."
+            },
+            {
+                "answer": "We have made some progress on childcare, pharmacare, and dental care, but these programs remain far from complete. I will fight to make these programs comprehensive and universal.",
+                "feedback": "This is realistic, but many want a bolder vision."
+            },
+            {
+                "answer": "We were able to extract concessions to lower the cost of living for millions of Canadians. In the next parliament, a strong NDP will force the government to take action and bring down the cost of housing.",
+                "feedback": "You tout your achievements while highlighting your new priorities. Still, many are frustrated that you’re only bringing the focus to housing now."
+            }
+        ]
+    },
+    {
+        "question": "[February 2025] With Trump taking office as President of the United States, he has repeatedly called for Canada to become the 51st state and has announced 25% tariffs on all Canadian products. What is your response?",
+        "answers": [
+            {
+                "answer": "Free trade with the US was a mistake, and the NDP has been against it all along. The Americans have shown the final proof that they are unreliable partners. We need to be as economically independent from the US as possible, lest our political independence disappear.",
+                "feedback": "Your bold words get you media attention, but many are worried that further economic disruption could threaten their jobs."
+            },
+            {
+                "answer": "Poilievre will sell Canada out. I would ensure that Indigenous rights, Charter rights, French language and labour protections, and environmental safeguards are never sacrificed in trade negotiations.",
+                "historical": true,
+                "feedback": "Your fearmongering against Poilievre drives more people to flock to Carney as the only viable way of stopping him."
+            },
+            {
+                "answer": "I am the only one who will stand up for Canada. Poilievre is unable to contradict Trump. Carney may say tough words, but then he moved Brookfield’s headquarters down south. Mark my words, I am the only one who will stand firm on dollar-for-dollar counter-tariffs and other retaliatory measures.",
+                "feedback": "You come out swinging and some of it sticks. Later on in the campaign, Carney drops his support for dollar-for-dollar counter-tariffs just as you said he would."
+            },
+            {
+                "answer": "I support the measures being put in place to retaliate against the American threat. And I will go further: we should consider dropping the F-35 contract, ending government contracts with American companies, and restricting electricity exports.",
+                "feedback": "These are concrete measures that win you some support, though you have difficulty being heard in the media whirlwind."
+            }
+        ]
+    },
+    {
+        "question": "[March 2025] Mark Carney has won the Liberal leadership and become the 24th Prime Minister of Canada.",
+        "answers": [
+            {
+                "answer": "I want to congratulate Mark Carney. We will disagree on many ideas, priorities and policies — but we should always stand united in protecting our country from the threat posed by Donald Trump."
+            }
+        ]
+    },
+    {
+        "question": "[March 2025] Prime Minister Carney has moved quickly to reverse the increase in the capital gains tax and axe the carbon tax. How do you respond?",
+        "answers": [
+            {
+                "answer": "By cutting the capital gains tax for people making over a million dollars a year, Carney has shown that he believes the ultra-wealthy should be taxed less than ordinary people. He is on the side of the rich, not working people.",
+                "historical": true,
+                "feedback": "Keep attacking Carney for his sympathies to the rich and big business. You can only hope that it sticks."
+            },
+            {
+                "answer": "Carney and the Liberals are showing they lack any commitment to fighting climate change. Only the NDP is willing to fight for our children’s future.",
+                "feedback": "You came out against the consumer carbon tax months ago. What does that say about your commitment to fighting climate change?"
+            },
+            {
+                "answer": "Carney is turning a blind eye to two of the greatest crises of our time: inequality and climate change. He is fighting for the rich and big polluters, not for you.",
+                "feedback": "You stand up as the only one willing to take on these issues. But do Canadians care?"
+            },
+            {
+                "answer": "I won’t comment. These policies underwent a lot of debate when they were put in place under Trudeau, and we need to move on.",
+                "feedback": "You have supported higher capital gains taxes in the past, and your supporters are disappointed that you let Carney cut them without a word of criticism."
+            }
+        ]
+    },
+    {
+        "question": "[March 2025] With the election campaign kicking off, you must decide how many resources the NDP should invest into its campaign. Fundraising numbers are not good, and any significant election spending will likely mean taking on a lot of debt.",
+        "answers": [
+            {
+                "answer": "We cannot afford to be buried by the Liberals and Conservatives. I will be spending the legal limit on this campaign to get our message out there.",
+                "historical": true,
+                "feedback": "This helps you compete, but there are some questions about the financial solvency of the NDP."
+            },
+            {
+                "answer": "I will only take on debt that we can be certain to pay back using campaign reimbursements and existing fundraising.",
+                "feedback": "This limits the scope of your campaign somewhat but may be necessary to keep the party going into the future."
+            },
+            {
+                "answer": "We need to cut our losses. The current environment is tough for our chances anyhow, so I will keep the campaign’s budget under control and avoid taking on any debt.",
+                "feedback": "This significantly restricts your ability to get out your message, but at least the party’s financial situation will be secure."
+            }
+        ]
+    },
+    {
+        "question": "[March 2025] In Canada’s first-past-the-post voting system, local concentrations of support are key to winning Parliamentary representation. Where will you focus your efforts?",
+        "answers": [
+            {
+                "answer": "People are worried about voting NDP because they don’t want to waste their vote. We should focus all our resources on defending our incumbent MPs where voters can feel safe voting for us.",
+                "feedback": "With the collapse in NDP voting intentions, this might be what you need to stay on the map."
+            },
+            {
+                "answer": "The worst possible result for this election would be a Conservative government. I will put our resources into NDP-CPC battlegrounds to prevent this from happening.",
+                "feedback": "Hopefully this works out. Meanwhile, the Liberals give you tough competition in your other ridings."
+            },
+            {
+                "answer": "Rural voters are drifting away from us, regardless of what we do. I will focus on supporting our urban incumbent MPs as their constituents are more receptive to our message.",
+                "feedback": "The NDP’s support has gradually declined among rural voters for decades. Giving up on them doesn’t feel good, but maybe it’s necessary?"
+            },
+            {
+                "answer": "We are a national party, and I will act like it. I will spread our funds across the country to keep our local organizations alive and to rally as many supporters as possible.",
+                "historical": true,
+                "feedback": "You get your message out across the country, but will people listen?"
+            }
+        ]
+    },
+    {
+        "question": "[March 2025] There are rumours that Carney will soon call an early election. Now is the time to prepare some election advertisements. How do you intend on advertising during the campaign?",
+        "answers": [
+            {
+                "answer": "Avoid focusing on me. Instead, we should run a series of issue-focused ads that showcase how the NDP is the only party that will stand up for people.",
+                "feedback": "By focusing on policy differences, you push the national conversation to focus more on your party’s ideas."
+            },
+            {
+                "answer": "I want Canadians to know that I am fighting for them. I will run ads raising my profile and showing people that I am in their corner.",
+                "historical": true,
+                "feedback": "Your personal approval is much lower than it used to be. Hopefully these ads can change that."
+            },
+            {
+                "answer": "We should focus on raising the profile of our incumbent MPs who can win by running a series of targeted biographical ads.",
+                "feedback": "Your MPs are thankful for your support, but this local focus causes your campaign to languish elsewhere."
+            },
+            {
+                "answer": "Let’s focus on getting our message out on social media. I will organize prizes for people who put out the most viral TikToks and Instagram reels pushing our message.",
+                "feedback": "The youth are much more receptive to you than other age groups. Your social media campaign gets some success but Carneymania dampens your reach."
+            }
+        ]
+    },
+    {
+        "question": "[March 2025] Carney has called an election for April 28th. The race is on! What will be your central campaign message?",
+        "answers": [
+            {
+                "answer": "The cost of living is so high because of record high inequality and corporate control. While corporations make record profits and the rich price you out, life has become unaffordable. Meanwhile, Carney and Poilievre refuse to even mention inequality.",
+                "feedback": "You tear into your opponents with a standard left-wing critique. Meanwhile, the media call you economically illiterate or ignore you completely."
+            },
+            {
+                "answer": "We are in this fight for you, not billionaires. This election is a choice between parties who will protect billionaires and big business—or a bold NDP vision to protect what matters most to people and build a fairer future.",
+                "historical": true,
+                "feedback": "You are portraying yourself as the only one fighting for ordinary people. Will they listen?"
+            },
+            {
+                "answer": "Poilievre is an existential threat to Canada as we know it. He is incapable of standing up to Trump, he will privatize our healthcare, and he will attack the rights of minorities. He must be stopped.",
+                "feedback": "This may help you win over some Liberals in NDP-CPC ridings, but elsewhere you bleed support to Carney as he is seen as the only one who can stop Poilievre."
+            },
+            {
+                "answer": "The NDP is the only party that can be trusted to handle Donald Trump. As Prime Minister, I will stand up for Canada and prevent the things you care about most from being sold out.",
+                "feedback": "No one thinks you have a chance to become Prime Minister, and most are happy with how the Liberals have handled Trump so far."
+            }
+        ]
+    },
+    {
+        "question": "[March 2025] Over the last few years, Canada has seen the largest surge in inflation in generations. How will you address the cost-of-living crisis?",
+        "answers": [
+            {
+                "answer": "The main issue is that wages haven’t kept up while corporations soak in record profits. I will push to strengthen unions and provide relief to families paid for by taxing the rich.",
+                "feedback": "The right-wing media say these measures will just cause more inflation. But surely workers will appreciate your message."
+            },
+            {
+                "answer": "I will call for price caps on food staples, an end to the GST on essentials, and measures to stop corporate greed and price gouging. We have a bold plan to bring down costs for families.",
+                "historical": true,
+                "feedback": "The media attack your plans as economically illiterate. Nothing less would be expected considering they are owned by the corporate elite."
+            },
+            {
+                "answer": "The largest part of most people’s budgets is the cost of housing. I will rail against the obscene increases in housing prices under both the Liberals and Conservatives. It’s time to try something different.",
+                "feedback": "Housing is an increasingly salient issue, particularly among young people. It’s good to hit hard here, though some wonder why you haven’t pushed for action earlier."
+            },
+            {
+                "answer": "We have already achieved reductions in the cost of childcare, pharmacare, and dental care. If given the chance, we can achieve similar reductions for food, transit, and housing.",
+                "feedback": "It’s good to talk about your achievements, but your cost reductions were achieved through government subsidies leaving people wondering how you can pay for your plans."
+            }
+        ]
+    },
+    {
+        "question": "[March 2025] The price of housing has rapidly increased over the last decade. What will be your message on restoring housing affordability?",
+        "answers": [
+            {
+                "answer": "We need to tackle rising rents head on. I will push for national rent control and a ban on corporate landlords, as well as build a target of 20% non-market housing in every neighbourhood.",
+                "historical": true,
+                "feedback": "Your plan appeals to long-term renters but contains nothing for those aspiring to home ownership."
+            },
+            {
+                "answer": "Homes are unaffordable because the rich and corporations have priced you out. I will push for a crackdown on foreign buyers and investors to safeguard home ownership for ordinary people.",
+                "feedback": "Those who blame investors for the housing crisis are satisfied, but those concerned about the housing supply are left wanting."
+            },
+            {
+                "answer": "I will present a plan for counter-cyclical public housing construction. This would provide stable employment for workers to keep building during downturns and restore housing affordability.",
+                "feedback": "A Keynesian approach that would involve much more active government involvement in the construction industry. At the very least, construction workers and young people are intrigued."
+            },
+            {
+                "answer": "We need to get more housing built. The best way to do that is to implement a land value tax and reform zoning to ensure investment is used for building not speculation.",
+                "feedback": "Many are suspicious of this plan as just another tax, but your plan gets good reviews from economists."
+            }
+        ]
+    },
+    {
+        "question": "[March 2025] In the eventuality of a minority government, what would it take for the new government to win NDP support in Parliament?",
+        "answers": [
+            {
+                "answer": "Regardless of who becomes Prime Minister, the NDP will choose to support or oppose motions on a case-by-case basis. If the government wishes to pass legislation to aid families, they can expect to see our support. If they want to serve the rich and corporations, then we will stand against them.",
+                "feedback": "This is a standard position for the NDP, preserving flexibility and the chance to win concessions."
+            },
+            {
+                "answer": "I want to emphasize first and foremost that the New Democrats, with myself as leader, will never support Pierre Poilievre.",
+                "historical": true,
+                "feedback": "With this, you are making common cause with the Liberals. This helps in NDP-Liberal marginal ridings, but contributes to your party’s perception of being Liberal-lite."
+            },
+            {
+                "answer": "I will draw a series of red lines. I will condition our support on protection of our social programs, advancement of labour rights, and action on housing. If the government agrees to these terms, we can talk.",
+                "feedback": "Setting these conditions highlights what issues are most important to you."
+            },
+            {
+                "answer": "I won’t presuppose the outcome of the election. I’m in it to win it, and as Prime Minister I will deliver for Canadians.",
+                "feedback": "Virtually no one thinks you will become Prime Minister. This answer makes you seem out of touch."
+            }
+        ]
+    },
+    {
+        "question": "[March 2025] The last few years have seen record levels of immigration and population growth. How will you talk about immigration?",
+        "answers": [
+            {
+                "answer": "We need immigration, it’s fundamentally important to our country. We need an expert panel to determine immigration levels to meet our economic needs.",
+                "historical": true,
+                "feedback": "This vague answer stands in contrast with Carney’s and Poilievre’s clear plans to lower immigration levels."
+            },
+            {
+                "answer": "I will fight for a fairer and more inclusive immigration system where temporary workers are not tied to a single employer, where undocumented migrants have legal protection, and where families are unified more quickly.",
+                "feedback": "You are positioning the NDP as the most pro-immigration party while public sentiment is the most anti-immigration it has been in decades."
+            },
+            {
+                "answer": "I will accuse Poilievre of xenophobia and disrupting the pro-immigration political consensus. This Trump-style brand of politics has no place in Canada.",
+                "feedback": "Poilievre hits back that it is the Liberals’ tripling of immigration rates that is responsible for breaking the consensus on immigration."
+            },
+            {
+                "answer": "The Liberals’ immigration policy is giving big business everything they want, without any consideration for the effects on our communities. I will put an end to the exploitative temporary foreign worker program that corporations are using to undercut wages.",
+                "feedback": "This is an old-school left-wing answer that irks some of your more progressive followers."
+            }
+        ]
+    },
+    {
+        "question": "[March 2025] Healthcare is always an important topic in Canadian elections. What will you emphasize on the issue?",
+        "answers": [
+            {
+                "answer": "We New Democrats have achieved the largest expansion in the Canadian public healthcare system in decades. We will protect these programs and the benefits that millions depend on.",
+                "feedback": "It’s good to talk about your accomplishments, just don’t forget to also talk about your plans."
+            },
+            {
+                "answer": "The state of healthcare is unacceptable in this country. Too many Canadians need to wait hours in the emergency room to get attention, months on a waitlist to get treatment, and years without a family doctor. A strong NDP will ensure our doctors and nurses get the support they need.",
+                "feedback": "Dissatisfaction with the healthcare system is widespread, and this helps talk to those feelings."
+            },
+            {
+                "answer": "The Conservatives are privatizing our healthcare piece by piece, and the Liberals have stood by and done nothing. This cannot be allowed to continue.",
+                "feedback": "Fighting against healthcare privatization is always good for you."
+            },
+            {
+                "answer": "The Liberals and Conservatives are both planning massive cuts that open the door to for-profit American-style healthcare. It's wrong to make Canadians pay for care so the rich and powerful can skip paying their fair share.",
+                "feedback": "Neither party suggests cutting healthcare transfers. Your fearmongering is swatted aside by Carney, who most find more trustworthy than yourself."
+            }
+        ]
+    },
+    {
+        "question": "[April 2025] Labour unions are a traditional constituency of the NDP. However, union worker support for the NDP has been in decline. What will you emphasize to win these voters back?",
+        "answers": [
+            {
+                "answer": "I will harshly attack the Liberals for forcing striking workers back to work. Carney will be more of the same; he even got rid of the post of Labour Minister. A strong NDP is necessary to protect the right to strike.",
+                "feedback": "Seeing Carney’s background, this attack lands."
+            },
+            {
+                "answer": "Unions are under assault by corporations eager to squeeze more profits out of their workers. I will push for a rejuvenation of the labour movement by pushing hard for sectoral bargaining. This would be the largest expansion of workers’ rights in decades.",
+                "historical": true,
+                "feedback": "Labour organizers are glad to see you pushing for sectoral bargaining, but many of the rank-and-file have difficulty imagining what that would imply."
+            },
+            {
+                "answer": "Poilievre may say he supports unions, but look at his record. Poilievre has expressed support for right-to-work legislation in the past, and it is included in the Conservative Policy Book. He also repeatedly supported back-to-work legislation. He cannot be trusted.",
+                "feedback": "The Conservative Party has never been particularly supportive of organized labour. It’s good to remind union workers of that."
+            },
+            {
+                "answer": "We have been fighting for workers. We forced the government to ban scabs and establish two weeks of paid sick leave in federally-regulated workplaces. This is why we have the endorsements of major unions across the country.",
+                "feedback": "It’s good to talk about your accomplishments, but people also want to hear what you will do for unions going forward."
+            }
+        ]
+    },
+    {
+        "question": "[April 2025] Polls show that the prominence of the environment as a political issue has receded amidst the cost-of-living crisis. How will you address Canadians on the environment?",
+        "answers": [
+            {
+                "answer": "Environmental protection is also a matter of social justice. We will pass an Environmental Bill of Rights to address the disproportionate impacts of pollution and loss of biodiversity on Indigenous, Black, and racialized communities.",
+                "feedback": "Your commitment to justice is admirable."
+            },
+            {
+                "answer": "I would punish the big polluters, not the average Canadian. I would do this by eliminating wasteful fossil fuel subsidies and placing a cap on oil and gas emissions.",
+                "historical": true,
+                "feedback": "Some question whether the costs would be passed on to consumers, but overall people are happy to see the big guys targeted."
+            },
+            {
+                "answer": "The Liberals pretend to care about the environment, yet they have abandoned the carbon tax which was the centrepiece of their climate policy. They cannot be trusted to fight climate change.",
+                "feedback": "Environmentalists may be disappointed with the Liberals’ about-face on the carbon tax, but many fear a Conservative government even more."
+            },
+            {
+                "answer": "Our first priority should always be to secure good jobs and better wages for working people. The best thing we can do for the environment is to get major renewable energy projects going as fast as possible, creating good-paying union jobs for Canadians.",
+                "feedback": "You are joining the other parties in prioritizing economic development over environmental protection."
+            }
+        ]
+    },
+    {
+        "question": "[April 2025] Indigenous people remain a disadvantaged minority within Canada. How will you address their concerns?",
+        "answers": [
+            {
+                "answer": "I take Indigenous rights seriously. We would replace mere consultation with a strong standard of free, prior, and informed consent, including for all decisions impacting land rights such as energy project reviews.",
+                "historical": true,
+                "feedback": "Indigenous rights organizations are glad to have your support, but others are worried about granting veto power on economic projects."
+            },
+            {
+                "answer": "I will emphasize advancing reconciliation efforts through the full implementation of the recommendations of the Truth and Reconciliation Commission, and criminalizing denialism of the genocidal nature of the Canadian residential school system.",
+                "feedback": "You are setting up your party as the forefront advocate for Indigenous people."
+            },
+            {
+                "answer": "The Indian Act is an outdated, racist document, and it is a disgrace that it is still the law of the land. I would do away with it and ensure that Indigenous people are afforded the same rights as every other Canadian. One group of Canadians should not be treated any differently from the others.",
+                "feedback": "Indigenous leaders loudly criticize your proposal for failing to recognize the special status of Indigenous people and the promises made to First Nations by the Canadian government."
+            },
+            {
+                "answer": "I will prioritize improving the infrastructure in Indigenous communities. This would include investments into clean water and emergency management.",
+                "feedback": "Focusing on improving material conditions is uncontroversial."
+            }
+        ]
+    },
+    {
+        "question": "[April 2025] Poilievre and the Conservatives have been pushing hard for more oil pipelines to be built, and Carney has got onboard with that agenda. What will you say on the issue?",
+        "answers": [
+            {
+                "answer": "I oppose any attempts to build any more pipelines. They are a catastrophic hazard to our wonderful natural environment and would contribute immensely to accelerating climate change.",
+                "feedback": "Alberta hates you even more now, if that is somehow possible."
+            },
+            {
+                "answer": "I’m not opposed in principle, as long as they meet environmental standards and respect Indigenous rights.",
+                "historical": true,
+                "feedback": "It does seem sensible to see a proposal before passing judgement on it."
+            },
+            {
+                "answer": "The Liberals spend $50 billion on a pipeline when that money could have been used to build up renewable energy. Pipelines simply aren’t a sound investment right now which is why there are no proposals from the private sector.",
+                "feedback": "The Conservatives blame the lack of proposals on stifling regulation. On the other hand, environmentalists like what you’re saying."
+            },
+            {
+                "answer": "I support the Norwegian model to reduce fossil fuel use here in Canada to maximize our exports to our allies until they can be energy self-sufficient. This strategy will require more pipelines to move our oil and gas overseas.",
+                "feedback": "Environmentalists are furious and accuse you of caving to the oil lobby."
+            }
+        ]
+    },
+    {
+        "question": "[April 2025] The NDP has been pushing for electoral reform for a long time. Will you try to make it an issue in this campaign?",
+        "answers": [
+            {
+                "answer": "Some people were worried about losing their local representation under a proportional system. I will spend time to advocate for MMP and make clear that people would still have local representation under such a system.",
+                "feedback": "It’s always good to make your case but will people listen?"
+            },
+            {
+                "answer": "The Liberals’ broken promises on electoral reform is a reason why we’re in this mess. They would prefer to risk a Conservative majority government than work collaboratively to make positive changes in people’s lives.",
+                "feedback": "Trudeau’s broken promise on electoral reform was a sore point for many, but since then the political landscape has changed significantly."
+            },
+            {
+                "answer": "I’ll include a mention in the platform, but I won’t bring it up on the campaign. People are far more concerned with other issues, and we need to meet them where they are.",
+                "historical": true,
+                "feedback": "Inclusion in the platform is enough to satisfy many advocates. But maybe you’re missing a point to help distinguish yourself from your opponents."
+            },
+            {
+                "answer": "Electoral reform is dead. I will not make any mention of it and focus entirely on more pressing issues like the cost of living.",
+                "feedback": "Fair enough."
+            }
+        ]
+    },
+    {
+        "question": "[April 2025] Would you push for any changes to the tax system?",
+        "answers": [
+            {
+                "answer": "I don’t have any plans for major changes in the tax system. In this time of economic uncertainty, we need stability to minimize disruption for businesses and workers.",
+                "feedback": "Going to bat for the status quo won’t do you any good."
+            },
+            {
+                "answer": "Lower taxes for working people, not for billionaires. I will raise the basic personal allowance to $19,500 paid for with taxes on the rich.",
+                "historical": true,
+                "feedback": "Tax cuts are always popular."
+            },
+            {
+                "answer": "We need to be making the corporations and the super-rich pay their fair share by raising their taxes and making sure they pay what they owe. Our plan is the only one that would balance the budget without cuts to public services like healthcare.",
+                "feedback": "Your platform ends up being the most fiscally responsible according to costings by the PBO. But do Canadians really care about that?"
+            },
+            {
+                "answer": "I’ll be pragmatic. Canada needs more investment. I would focus on broadening the tax base to pay for our public services.",
+                "feedback": "Your base is frustrated and some become disillusioned, seeing you as just another neoliberal."
+            }
+        ]
+    },
+    {
+        "question": "[April 2025] The election looks to be shaping up to be a two horse race between Carney’s Liberals and Poilievre’s Conservatives. How will you convince people that it’s worth voting for your New Democrats?",
+        "answers": [
+            {
+                "answer": "Liberals only do the right thing when New Democrats force them to. We need to send enough New Democrats to Ottawa to prevent a Liberal supermajority and fight for people.",
+                "historical": true,
+                "feedback": "Some progressives are swayed, but confidence in Carney remains high which blunts this strategy’s effects."
+            },
+            {
+                "answer": "The Americanization of our politics is dangerous. A two-party system is antithetical to progressive change, and we’re sleepwalking right into it. We must protect our pluralistic politics, as that is in part what makes us Canadian.",
+                "feedback": "These are high-minded criticisms of the way things are going, but can they sway anyone?"
+            },
+            {
+                "answer": "Don’t believe the polls. The only poll that matters is the one on election day, and I can tell you the energy I see talking to people every day is great and we have momentum heading into the end of the campaign.",
+                "feedback": "Denying the polling is reminiscent of a certain man south of the border and makes you sound unserious to many."
+            },
+            {
+                "answer": "I understand people don’t want to feel like they’re wasting their vote. I will highlight the places where we already have NDP MPs, and we have a chance of winning.",
+                "feedback": "Focusing on getting your incumbents re-elected might be the best you can do at this point."
+            }
+        ]
+    },
+    {
+        "question": "[April 2025] Reports indicate that the humanitarian situation in Gaza continues to worsen as Israel continues its military operations there and no ceasefire appears to be in sight. How will you handle the issue on the campaign trail?",
+        "answers": [
+            {
+                "answer": "Israel is committing a genocide in Gaza. I will take aim at Carney for refusing to recognize this reality.",
+                "historical": true,
+                "feedback": "Your pro-Palestine supporters are glad to have your support. However, conservative media paints you as obsessed with Israel instead of issues closer to home like the cost of living."
+            },
+            {
+                "answer": "I will commit to supporting an arms embargo on Israel and sanctions on Israeli hardliners, but otherwise focus on cost-of-living issues.",
+                "feedback": "A mainstream position, but some pro-Palestine activists were looking for more."
+            },
+            {
+                "answer": "I condemn Hamas for their acts of terror. I will call for the hostages to be freed as a condition for a ceasefire.",
+                "feedback": "Many of your supporters are disappointed at your lack of condemnation for Israel’s actions."
+            },
+            {
+                "answer": "I will instruct the party and our candidates to avoid any mention of Palestine. We cannot afford to have the campaign sidetracked from bread-and-butter issues.",
+                "feedback": "Pro-Palestine protestors disrupt your events, and you are forced to pull a candidate for making comments against Israel."
+            }
+        ]
+    },
+    {
+        "question": "[April 2025] With the official debates coming up, this is your chance to reach millions of Canadians and stand on the stage as an equal to Carney and Poilievre. What will be your strategy for the debates?",
+        "answers": [
+            {
+                "answer": "I have to make a splash. I will be aggressive in making my case and won’t shy away from interrupting when I need to get my points in.",
+                "historical": true,
+                "feedback": "People are certainly talking about you after the debate, though mostly not positively. However, you do prevent Poilievre from getting many good clips to motivate his followers."
+            },
+            {
+                "answer": "I will constantly attack Poilievre. His brand of Trump-style politics has no place in Canada.",
+                "feedback": "Your back-and-forth with Poilievre takes the heat off Carney, and he comes out looking like the adult in the room."
+            },
+            {
+                "answer": "I will target Carney relentlessly. I will hit him on Brookfield’s business practices while he led their board, his ties to various billionaires and Goldman Sachs, and his dismissal of inequality as an issue. He’s not in it for you.",
+                "feedback": "Together with Poilievre and Blanchet, you dogpile Carney from all directions, and he has a hard time keeping his cool."
+            },
+            {
+                "answer": "Focus on the issues and how our policy ideas set us apart. If you step back from the rhetoric, Carney and Poilievre have essentially the same vision for the country. The NDP is the only real alternative.",
+                "feedback": "The clashes between Carney and Poilievre serve to set them apart sufficiently for most voters, and you get little attention."
+            }
+        ]
+    },
+    {
+        "question": "[April 2025] Both Carney and Poilievre are saying that the public service has grown too large, though they both refrain from saying there would be any layoffs. What do you say on the issue?",
+        "answers": [
+            {
+                "answer": "Carney is no different than Poilievre on this issue. If you look at their platforms, they’re both promising to cut the public service by $13 billion over the next four years. Only New Democrats can be trusted to defend our public services.",
+                "feedback": "Another issue on which Carney and Poilievre are identical on paper, and you gain for making clear you are the only alternative."
+            },
+            {
+                "answer": "I will vow to oppose any cuts to the public service and go after Poilievre for his heartless cuts.",
+                "historical": true,
+                "feedback": "The accusations of cuts hurt Poilievre’s campaign to the benefit of Carney."
+            },
+            {
+                "answer": "Public service spending has ballooned because of the increasing use of corporate contractors who profit off of government contracts. We should bring this work back inhouse and cut out the middle men.",
+                "feedback": "This is a response that appeals both to the national mood and to your traditional supporters who are suspicious of outsourcing to the private sector."
+            },
+            {
+                "answer": "Every dollar spent on the government bureaucracy is a dollar not spent on people in need. I will push to streamline existing programs to minimize overhead.",
+                "feedback": "You join the political consensus that the public service must be cut, and people move on to other issues."
+            }
+        ]
+    },
+    {
+        "question": "[April 2025] As the campaign nears its end, where will you focus your efforts?",
+        "answers": [
+            {
+                "answer": "I will rally our union supporters in Western Ontario. Brian Masse in Windsor West and Lindsay Mathyssen in London Fanshawe need all the support they can get.",
+                "feedback": "Two days before the election, a deadly attack on a Filipino street festival in Vancouver leaves 11 dead and dozens injured. You take some time out of your campaign to honour the dead."
+            },
+            {
+                "answer": "Pundits are saying I can’t win in Burnaby Central, but I’ll show them. I’m going to pour all our remaining resources there and in the neighbouring Vancouver Kingsway where Don Davies is fighting the good fight.",
+                "historical": true,
+                "feedback": "Two days before the election, a deadly attack on a Filipino street festival in Vancouver leaves 11 dead and dozens injured. You were at the street festival and only left minutes before the attack. As you talk to reporters afterwards, you look visibly shaken."
+            },
+            {
+                "answer": "The NDP brand is doing well in Manitoba under Wab Kinew. Let’s see if we can’t secure Elmwood Transcona and Winnipeg Centre for Leila Dance and Leah Gazan.",
+                "feedback": "Two days before the election, a deadly attack on a Filipino street festival in Vancouver leaves 11 dead and dozens injured. You take some time out of your campaign to honour the dead."
+            },
+            {
+                "answer": "I will head to Vancouver Island. We have shut out the Liberals and Conservatives there for a decade. Let’s keep them out.",
+                "feedback": "Two days before the election, a deadly attack on a Filipino street festival in Vancouver leaves 11 dead and dozens injured. You take some time out of your campaign to honour the dead."
+            }
+        ]
+    }
+]
