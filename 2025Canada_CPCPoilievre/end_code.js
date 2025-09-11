@@ -83,14 +83,23 @@ endingPicker = (out, totv, aa, quickstats) => {
                     "But for now, you can celebrate! With you at the helm, you can steer the government to finally put Canada first, for a change."
                 )
                 setImage("https://i.imgur.com/jYkYfCa.jpeg")
-                setEndSong("Conservative Plurality Victory", "Demain nous appartient — Stéphane Venne", "https://audio.jukehost.co.uk/INJl5Kvx09u6GcR9FD0LBGfzXMdncLdU")
+                setEndSong("Conservative Minority Victory with Bloc Support", "Demain nous appartient — Stéphane Venne", "https://audio.jukehost.co.uk/INJl5Kvx09u6GcR9FD0LBGfzXMdncLdU")
                 ctsAchievement("Deal with the Devil")
             } else {
-                description.push(
-                    "Whether you will become Prime Minister remains uncertain. Mark Carney can remain Prime Minister as long as he maintains the confidence of Parliament. As it stands, you will need to win over the other opposition parties to force Carney out of office if he doesn’t step down on his own. Failing that, Carney and the Liberals will get to continue governing though their position remains precarious."
-                )
-                setImage("https://i.imgur.com/bWPXiN4.jpeg")
-                setEndSong("Conservative Plurality Defeat", "I'm an Open Road — Paul Brandt", "https://audio.jukehost.co.uk/zJSjmsFWyG5UDthC6l9gGNaSfUBH45VY", )
+                if (poilievre_won && winner.electoral_votes - runnerUp.electoral_votes >= 20) {
+                    description.push(
+                        "Despite your lack of majority, you have won significantly more seats than the Liberals, and Carney chooses to resign, allowing you to be sworn in as the 25th Prime Minister of Canada. However, you will need to tread lightly as it is likely that the Opposition will unite to bring down your government at the first politically opportune moment.",
+                        "But for now, you can celebrate! With you at the helm, you can steer the government to finally put Canada first, for a change."
+                    )
+                    setImage("https://i.imgur.com/jYkYfCa.jpeg")
+                    setEndSong("Conservative Minority Victory", "Our Home — Brett Kissel", "https://audio.jukehost.co.uk/BDWXkhGUAm5bIX14tgViDbSAPrYYGolq")
+                } else {
+                    description.push(
+                        "Whether you will become Prime Minister remains uncertain. Mark Carney can remain Prime Minister as long as he maintains the confidence of Parliament. As it stands, you will need to win over the other opposition parties to force Carney out of office if he doesn’t step down on his own. Failing that, Carney and the Liberals will get to continue governing though their position remains precarious."
+                    )
+                    setImage("https://i.imgur.com/bWPXiN4.jpeg")
+                    setEndSong("Conservative Plurality Defeat", "I'm an Open Road — Paul Brandt", "https://audio.jukehost.co.uk/zJSjmsFWyG5UDthC6l9gGNaSfUBH45VY", )
+                }
             }
         }
     } else {
