@@ -6,6 +6,8 @@ campaignTrail_temp.election_json[0]["fields"]["advisor_url"] = "https://i.imgur.
 campaignTrail_temp.global_parameter_json[0]["fields"]["candidate_issue_weight"] = 6;
 campaignTrail_temp.global_parameter_json[0]["fields"]["question_count"] = 25;
 campaign_sign = "https://i.imgur.com/R9TlLQG.png";
+nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = "#F4A460"
+$("#game_window")[0].style.backgroundImage = "url(https://i.imgur.com/9V9nGwl.jpeg)";
 
 campaignTrail_temp.multiple_endings = true;
 

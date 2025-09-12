@@ -5,6 +5,8 @@ campaignTrail_temp.running_mate_last_name = "Poilievre";
 campaignTrail_temp.election_json[0]["fields"]["advisor_url"] = "https://i.imgur.com/42rHEIO.jpeg";
 campaignTrail_temp.global_parameter_json[0]["fields"]["candidate_issue_weight"] = 6;
 campaign_sign = "https://i.imgur.com/PtDprh3.png";
+nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = "#6495ED"
+$("#game_window")[0].style.backgroundImage = "url(https://i.imgur.com/7nX3Ycu.jpeg)";
 
 campaignTrail_temp.multiple_endings = true;
 

@@ -31,7 +31,7 @@ campaignTrail_temp.modBoxTheme = {
      "description_background_color": "#d62718",
      "main_color": "#fafafa",
      "secondary_color": "#d62718",
-     "ui_text_color": "#ffffff" 
+     "ui_text_color": "#ffffff"
 }
 
 campaignTrail_temp.global_parameter_json = [
@@ -639,17 +639,13 @@ tooltipList = [
     { searchString: "Wab Kinew", "explanationText": "<img src=\"https://i.imgur.com/dI4ZiOA.jpeg\">The premier of Manitoba and leader of the Manitoba NDP." }
 ]
 
-document.getElementsByClassName("game_header")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_title;
-
-$("#game_window")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_window;
-
-$(".container")[0].style.backgroundColor = "#FFFFFF";
-
 document.getElementById("header").src = "https://i.imgur.com/HSKf6bQ.jpeg";
-
-document.body.background = "https://i.imgur.com/vAMuvqw.jpeg";
-
-document.head.innerHTML += "<style>#results_container {color:#000000;}</style>";
+$("#game_window")[0].style.backgroundImage = "url(https://i.imgur.com/EPkdtPN.jpeg)";
+nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = "#EA6D6A"
+nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = "#FFFFFF"
+document.getElementsByClassName("game_header")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_title
+$(".container")[0].style.backgroundColor = "#FFFFFF"
+document.body.background = "https://i.imgur.com/vAMuvqw.jpeg"
 
 HistHexcolour = ["#EA6D6A", "#6495ED", "#87CEFA", "#F4A460", "#99C955", "#6F5D9A", "#808080"];
 HistName = [" LPC", " CPC", " BQ", " NDP", " GPC", " PPC", " Others"];
@@ -676,7 +672,6 @@ function updateElements() {
 
     if (gameHeader.getAttribute("id") !== "modifiedHeader") {
         gameHeader.innerHTML = corrr;
-        gameHeader.style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_title;
         gameHeader.setAttribute("id", "modifiedHeader");
     }
 
