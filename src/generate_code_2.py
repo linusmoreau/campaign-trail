@@ -412,6 +412,9 @@ if __name__ == "__main__":
     scenario_name = "2025Canada_CPCPoilievre"
     generator = Code2Generator(election_name, scenario_name)
     generator.generate()
+    scenario_name = "2025Canada_NDPSingh"
+    generator = Code2Generator(election_name, scenario_name)
+    generator.generate()
 
     election_name = "2015Canada"
     generator = Code2Generator2015(election_name, election_name)

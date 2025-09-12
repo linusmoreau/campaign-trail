@@ -72,7 +72,10 @@ def process_and_save(f: str, f_out: str | None = None, crop=False, scale=False, 
 
 def process_all():
     for f in os.listdir(LOGOS_DIR):
-        process_and_save(os.path.join(LOGOS_DIR, f), crop=True, ratio=7/8, ext="png")
+        try:
+            process_and_save(os.path.join(LOGOS_DIR, f), fill=True, ratio=7/8, ext="png")
+        except ValueError as e:
+            print(e)
     for f in os.listdir(PORTRAITS_DIR):
         process_and_save(os.path.join(PORTRAITS_DIR, f), crop=True, ratio=7/8)
     for f in os.listdir(IMAGES_DIR):
@@ -90,8 +93,9 @@ def process_all():
         advisor_img.save(os.path.join(PROCESSED_DIR, dir + "_advisors.jpg"))
 
 if __name__ == "__main__":
-    # process_all()
+    process_all()
     # process_and_save(os.path.join(PORTRAITS_DIR, "carney.avif"), crop=True, ratio=1)
     process_and_save(os.path.join(SIGNS_DIR, "poilievre_logo.png"), fill=True, ratio=2.5, ext="png", background="#003e69")
     process_and_save(os.path.join(SIGNS_DIR, "carney_logo.png"), fill=True, ratio=2.5, ext="png")
     process_and_save(os.path.join(SIGNS_DIR, "singh_logo.png"), fill=True, ratio=2.5, ext="png")
+    # process_and_save(os.path.join(LOGOS_DIR, "NDP_Orange.png"), fill=True, ratio=7/8, ext="png")
