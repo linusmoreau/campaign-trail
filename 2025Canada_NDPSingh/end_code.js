@@ -2,7 +2,7 @@ campaignTrail_temp.candidate_image_url = "https://i.imgur.com/rHeMJfm.png";
 campaignTrail_temp.running_mate_image_url = "https://i.imgur.com/E2vgW9A.png";
 campaignTrail_temp.candidate_last_name = "NDP";
 campaignTrail_temp.running_mate_last_name = "Singh";
-campaignTrail_temp.election_json[0]["fields"]["advisor_url"] = "TODO";
+campaignTrail_temp.election_json[0]["fields"]["advisor_url"] = "https://i.imgur.com/yStADGB.jpeg";
 campaignTrail_temp.global_parameter_json[0]["fields"]["candidate_issue_weight"] = 6;
 campaignTrail_temp.global_parameter_json[0]["fields"]["question_count"] = 25;
 campaign_sign = "https://i.imgur.com/R9TlLQG.png";
@@ -73,7 +73,22 @@ replaceMusic({
     0: {
         name: "NDP Campaign",
         tracklist: [
-            "TODO"
+            {
+                "name": "Differentology (Ready Fi Di Road) — Bunji Garlin",
+                "url": "https://audio.jukehost.co.uk/EM21UL23IZR5BKoncHJecmX3YSbdT9ob"
+            },
+            {
+                "name": "Northern Touch — Rascalz",
+                "url": "https://audio.jukehost.co.uk/jObqRIHopZ7t8LHd1UMjj8bmPp0HAKpD"
+            },
+            {
+                "name": "Supernovas — k-os",
+                "url": "https://audio.jukehost.co.uk/iKAYZWS0OQ3iwq0lylVMGiJJgI3SRCOb"
+            },
+            {
+                "name": "Wavin' Flag — K'NAAN",
+                "url": "https://audio.jukehost.co.uk/4wjrI23PVm6AZ1hZn92IUy5jju6bTh1V"
+            }
         ]
     }
 })
