@@ -87,12 +87,14 @@ endingPicker = (out, totv, aa, quickstats) => {
         } else {
             ndp_performance += " You even lost your own seat in Burnaby Central."
         }
+        setEndSong("NDP Disaster", "Hurt Me Tomorrow — K'NAAN", "https://audio.jukehost.co.uk/xVGcopPeh8KMZYGGVpP4wquA7FuhXPTD")
     } else {
         if (singh_won) {
             ndp_performance += " You will also be personally returning the Parliament, having held on to your own seat in Burnaby Central."
         } else {
             ndp_performance += " Despite this, you still lost your own seat in Burnaby Central."
         }
+        setEndSong("NDP Survival", "Wavin' Flag — Young Artists for Haiti", "https://audio.jukehost.co.uk/xVGcopPeh8KMZYGGVpP4wquA7FuhXPTD")
     }
 
     if (ndp_seats < 25) {
@@ -127,7 +129,7 @@ replaceMusic({
             },
             {
                 "name": "Wavin' Flag — K'NAAN",
-                "url": "https://audio.jukehost.co.uk/4wjrI23PVm6AZ1hZn92IUy5jju6bTh1V"
+                "url": "https://audio.jukehost.co.uk/9ndrE0Szm9LvmxsIbmgYtJGicMyR3iK6"
             }
         ]
     }
