@@ -21,6 +21,70 @@
             "Nanaimo--Ladysmith",
             "Port Moody--Coquitlam",
             "Burnaby Central",
+            "Churchill--Keewatinook Aski",
+            "Burnaby Central"
+        ]
+    },
+    {
+        "name": "NDP rural",
+        "states": [
+            "Courtenay--Alberni",
+            "Nunavut",
+            "Cowichan--Malahat--Langford",
+            "Skeena--Bulkley Valley",
+            "Churchill--Keewatinook Aski",
+            "North Island--Powell River"
+        ]
+    },
+    {
+        "name": "NDP urban",
+        "states": [
+            "Edmonton Strathcona",
+            "Rosemont--La Petite-Patrie",
+            "Vancouver East",
+            "Winnipeg Centre",
+            "Vancouver Kingsway",
+            "Elmwood--Transcona",
+            "Edmonton Griesbach",
+            "New Westminster--Burnaby--Maillardville",
+            "Hamilton Centre",
+            "London--Fanshawe",
+            "Windsor West",
+            "Burnaby Central"
+        ]
+    },
+    {
+        "name": "NDP-CPC",
+        "states": [
+            "Edmonton Strathcona",
+            "Elmwood--Transcona",
+            "Edmonton Griesbach",
+            "Hamilton Centre",
+            "London--Fanshawe",
+            "Windsor West",
+            "Courtenay--Alberni",
+            "Cowichan--Malahat--Langford",
+            "Skeena--Bulkley Valley",
+            "North Island--Powell River"
+        ]
+    },
+    {
+        "name": "NDP-LPC",
+        "states": [
+            "Edmonton Strathcona",
+            "Rosemont--La Petite-Patrie",
+            "Vancouver East",
+            "Winnipeg Centre",
+            "Vancouver Kingsway",
+            "Nunavut",
+            "New Westminster--Burnaby--Maillardville",
+            "Victoria",
+            "Edmonton Griesbach",
+            "Hamilton Centre",
+            "London--Fanshawe",
+            "Windsor West",
+            "Nanaimo--Ladysmith",
+            "Port Moody--Coquitlam",
             "Churchill--Keewatinook Aski"
         ]
     },

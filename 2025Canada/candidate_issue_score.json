@@ -113,7 +113,7 @@
         "fields": {
             "candidate": 302,
             "issue": 112,
-            "issue_score": -0.6
+            "issue_score": -0.4
         }
     },
     {
@@ -131,7 +131,7 @@
         "fields": {
             "candidate": 302,
             "issue": 114,
-            "issue_score": -0.5
+            "issue_score": -0.4
         }
     },
     {
