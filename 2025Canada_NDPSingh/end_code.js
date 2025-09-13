@@ -94,7 +94,7 @@ endingPicker = (out, totv, aa, quickstats) => {
         } else {
             ndp_performance += " Despite this, you still lost your own seat in Burnaby Central."
         }
-        setEndSong("NDP Survival", "Wavin' Flag — Young Artists for Haiti", "https://audio.jukehost.co.uk/xVGcopPeh8KMZYGGVpP4wquA7FuhXPTD")
+        setEndSong("NDP Survival", "Wavin' Flag — Young Artists for Haiti", "https://audio.jukehost.co.uk/tkV5YPNalJ1PBzWrFn0ISmOWY44PXUFu")
     }
 
     if (ndp_seats < 25) {
