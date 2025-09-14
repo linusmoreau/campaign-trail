@@ -237,23 +237,210 @@
                 "score_global": [
                     {
                         "affected_candidate": 301,
-                        "global_multiplier": 1.5
+                        "global_multiplier": 2
                     },
                     {
                         "affected_candidate": 300,
-                        "global_multiplier": 3.5
+                        "global_multiplier": 5
                     },
                     {
                         "affected_candidate": 304,
-                        "global_multiplier": 1
+                        "global_multiplier": 1.5
                     },
                     {
                         "affected_candidate": 305,
-                        "global_multiplier": 0.5
+                        "global_multiplier": 1
                     },
                     {
                         "affected_candidate": 306,
                         "global_multiplier": 1.5
+                    }
+                ],
+                "score_state": [
+                    {
+                        "state": "New Westminster--Burnaby--Maillardville",
+                        "affected_candidate": 302,
+                        "state_multiplier": 5
+                    },
+                    {
+                        "state": "Nunavut",
+                        "affected_candidate": 302,
+                        "state_multiplier": 6
+                    },
+                    {
+                        "state": "Vancouver East",
+                        "affected_candidate": 302,
+                        "state_multiplier": 6
+                    },
+                    {
+                        "state": "Vancouver Kingsway",
+                        "affected_candidate": 302,
+                        "state_multiplier": 6
+                    },
+                    {
+                        "state": "Nanaimo--Ladysmith",
+                        "affected_candidate": 302,
+                        "state_multiplier": 3
+                    },
+                    {
+                        "state": "Burnaby Central",
+                        "affected_candidate": 302,
+                        "state_multiplier": 2
+                    },
+                    {
+                        "state": "Victoria",
+                        "affected_candidate": 302,
+                        "state_multiplier": 3
+                    },
+                    {
+                        "state": "Skeena--Bulkley Valley",
+                        "affected_candidate": 302,
+                        "state_multiplier": 6.5
+                    },
+                    {
+                        "state": "Rosemont--La Petite-Patrie",
+                        "affected_candidate": 302,
+                        "state_multiplier": 6
+                    },
+                    {
+                        "state": "Berthier--Maskinongé",
+                        "affected_candidate": 302,
+                        "state_multiplier": 2
+                    },
+                    {
+                        "state": "Edmonton Strathcona",
+                        "affected_candidate": 302,
+                        "state_multiplier": 6
+                    },
+                    {
+                        "state": "Similkameen--South Okanagan--West Kootenay",
+                        "affected_candidate": 302,
+                        "state_multiplier": 2
+                    },
+                    {
+                        "state": "Courtenay--Alberni",
+                        "affected_candidate": 302,
+                        "state_multiplier": 6
+                    },
+                    {
+                        "state": "Cowichan--Malahat--Langford",
+                        "affected_candidate": 302,
+                        "state_multiplier": 5
+                    },
+                    {
+                        "state": "Elmwood--Transcona",
+                        "affected_candidate": 302,
+                        "state_multiplier": 5
+                    },
+                    {
+                        "state": "Edmonton Griesbach",
+                        "affected_candidate": 302,
+                        "state_multiplier": 5
+                    },
+                    {
+                        "state": "Churchill--Keewatinook Aski",
+                        "affected_candidate": 302,
+                        "state_multiplier": 4
+                    },
+                    {
+                        "state": "Esquimalt--Saanich--Sooke",
+                        "affected_candidate": 302,
+                        "state_multiplier": 2
+                    },
+                    {
+                        "state": "North Island--Powell River",
+                        "affected_candidate": 302,
+                        "state_multiplier": 4.5
+                    },
+                    {
+                        "state": "London--Fanshawe",
+                        "affected_candidate": 302,
+                        "state_multiplier": 3
+                    },
+                    {
+                        "state": "Hamilton Centre",
+                        "affected_candidate": 302,
+                        "state_multiplier": 3
+                    },
+                    {
+                        "state": "Windsor West",
+                        "affected_candidate": 302,
+                        "state_multiplier": 3
+                    },
+                    {
+                        "state": "Winnipeg Centre",
+                        "affected_candidate": 302,
+                        "state_multiplier": 6
+                    },
+                    {
+                        "state": "Columbia--Kootenay--Southern Rockies",
+                        "affected_candidate": 302,
+                        "state_multiplier": 2
+                    },
+                    {
+                        "state": "Ottawa Centre",
+                        "affected_candidate": 302,
+                        "state_multiplier": 2
+                    },
+                    {
+                        "state": "Taiaiako'n--Parkdale--High Park",
+                        "affected_candidate": 302,
+                        "state_multiplier": 3
+                    },
+                    {
+                        "state": "Davenport",
+                        "affected_candidate": 302,
+                        "state_multiplier": 1
+                    },
+                    {
+                        "state": "Halifax",
+                        "affected_candidate": 302,
+                        "state_multiplier": 1
+                    },
+                    {
+                        "state": "Saskatoon West",
+                        "affected_candidate": 302,
+                        "state_multiplier": 2
+                    },
+                    {
+                        "state": "Brandon--Souris",
+                        "affected_candidate": 302,
+                        "state_multiplier": 1
+                    },
+                    {
+                        "state": "Kenora--Kiiwetinoong",
+                        "affected_candidate": 302,
+                        "state_multiplier": 1
+                    },
+                    {
+                        "state": "Port Moody--Coquitlam",
+                        "affected_candidate": 302,
+                        "state_multiplier": 1
+                    },
+                    {
+                        "state": "Papineau",
+                        "affected_candidate": 302,
+                        "state_multiplier": 2
+                    },
+                    {
+                        "state": "Laurier--Sainte-Marie",
+                        "affected_candidate": 302,
+                        "state_multiplier": 2
+                    },
+                    {
+                        "state": "Saanich--Gulf Islands",
+                        "affected_candidate": 303,
+                        "state_multiplier": 6
+                    },
+                    {
+                        "state": "Kitchener Centre",
+                        "affected_candidate": 303,
+                        "state_multiplier": 4
+                    },
+                    {
+                        "state": "Nanaimo--Ladysmith",
+                        "affected_candidate": 303,
+                        "state_multiplier": 2
                     }
                 ]
             }
@@ -372,6 +559,11 @@
                     {
                         "group": "NDP incumbents",
                         "state_multiplier": 0.3
+                    },
+                    {
+                        "group": "NDP incumbents",
+                        "affected_candidate": 300,
+                        "state_multiplier": -0.3
                     }
                 ]
             },
@@ -381,7 +573,12 @@
                 "score_group": [
                     {
                         "group": "NDP-CPC",
-                        "state_multiplier": 0.4
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "group": "NDP-CPC",
+                        "affected_candidate": 300,
+                        "state_multiplier": -0.3
                     }
                 ]
             },
@@ -392,6 +589,11 @@
                     {
                         "group": "NDP urban",
                         "state_multiplier": 0.4
+                    },
+                    {
+                        "group": "NDP urban",
+                        "affected_candidate": 300,
+                        "state_multiplier": -0.3
                     }
                 ]
             },
@@ -401,7 +603,13 @@
                 "feedback": "You get your message out across the country, but will people listen?",
                 "score_global": [
                     {
-                        "global_multiplier": 0.03
+                        "global_multiplier": 0.1
+                    }
+                ],
+                "score_group": [
+                    {
+                        "group": "NDP incumbents",
+                        "state_multiplier": -0.3
                     }
                 ]
             }
@@ -434,7 +642,7 @@
                 "feedback": "Your MPs are thankful for your support, but this local focus causes your campaign to languish elsewhere.",
                 "score_global": [
                     {
-                        "global_multiplier": -0.01
+                        "global_multiplier": -0.02
                     }
                 ],
                 "score_group": [
@@ -498,13 +706,18 @@
                         "global_multiplier": -0.005
                     },
                     {
-                        "global_multiplier": -0.01
+                        "global_multiplier": -0.02
                     }
                 ],
                 "score_group": [
                     {
                         "group": "NDP-CPC",
-                        "state_multiplier": 0.2
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "group": "NDP-CPC",
+                        "affected_candidate": 300,
+                        "state_multiplier": -0.3
                     }
                 ]
             },
@@ -805,9 +1018,6 @@
                 "historical": true,
                 "feedback": "Neither party suggests cutting healthcare transfers. Your fearmongering is swatted aside by Carney, who most find more trustworthy than yourself.",
                 "score_global": [
-                    {
-                        "global_multiplier": -0.01
-                    },
                     {
                         "affected_candidate": 301,
                         "global_multiplier": -0.005
@@ -1211,6 +1421,11 @@
                     }
                 ]
             }
+        ],
+        "score_global": [
+            {
+                "global_multiplier": -0.02
+            }
         ]
     },
     {
@@ -1285,7 +1500,7 @@
                     },
                     {
                         "affected_candidate": 301,
-                        "global_multiplier": -0.005
+                        "global_multiplier": -0.01
                     }
                 ]
             },
@@ -1305,7 +1520,7 @@
                 "score_global": [
                     {
                         "affected_candidate": 300,
-                        "global_multiplier": -0.02
+                        "global_multiplier": -0.01
                     }
                 ]
             },
@@ -1317,6 +1532,12 @@
                         "global_multiplier": -0.01
                     }
                 ]
+            }
+        ],
+        "score_global": [
+            {
+                "affected_candidate": 301,
+                "global_multiplier": 0.01
             }
         ]
     },
@@ -1389,11 +1610,11 @@
                 "score_state": [
                     {
                         "state": "Windsor West",
-                        "state_multiplier": 0.3
+                        "state_multiplier": 0.6
                     },
                     {
                         "state": "London--Fanshawe",
-                        "state_multiplier": 0.3
+                        "state_multiplier": 0.6
                     }
                 ]
             },
@@ -1404,11 +1625,11 @@
                 "score_state": [
                     {
                         "state": "Burnaby Central",
-                        "state_multiplier": 0.3
+                        "state_multiplier": 0.6
                     },
                     {
                         "state": "Vancouver Kingsway",
-                        "state_multiplier": 0.3
+                        "state_multiplier": 0.6
                     }
                 ]
             },
@@ -1418,11 +1639,11 @@
                 "score_state": [
                     {
                         "state": "Elmwood--Transcona",
-                        "state_multiplier": 0.3
+                        "state_multiplier": 0.6
                     },
                     {
                         "state": "Winnipeg Centre",
-                        "state_multiplier": 0.3
+                        "state_multiplier": 0.6
                     }
                 ]
             },
@@ -1447,6 +1668,15 @@
                         "state_multiplier": 0.3
                     }
                 ]
+            }
+        ],
+        "score_global": [
+            {
+                "affected_candidate": 301,
+                "global_multiplier": 0.01
+            },
+            {
+                "global_multiplier": -0.02
             }
         ]
     }
