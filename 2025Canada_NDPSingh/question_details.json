@@ -241,11 +241,11 @@
                     },
                     {
                         "affected_candidate": 300,
-                        "global_multiplier": 5
+                        "global_multiplier": 4
                     },
                     {
                         "affected_candidate": 304,
-                        "global_multiplier": 1.5
+                        "global_multiplier": 1.4
                     },
                     {
                         "affected_candidate": 305,
@@ -253,7 +253,7 @@
                     },
                     {
                         "affected_candidate": 306,
-                        "global_multiplier": 1.5
+                        "global_multiplier": 1
                     }
                 ],
                 "score_state": [
@@ -430,12 +430,12 @@
                     {
                         "state": "Saanich--Gulf Islands",
                         "affected_candidate": 303,
-                        "state_multiplier": 6
+                        "state_multiplier": 6.5
                     },
                     {
                         "state": "Kitchener Centre",
                         "affected_candidate": 303,
-                        "state_multiplier": 4
+                        "state_multiplier": 5
                     },
                     {
                         "state": "Nanaimo--Ladysmith",
@@ -532,12 +532,17 @@
         ]
     },
     {
-        "question": "[March 2025] With the election campaign kicking off, you must decide how many resources the NDP should invest into its campaign. Fundraising numbers are not good, and any significant election spending will likely mean taking on a lot of debt.",
+        "question": "[March 2025] Carney calls a snap election for April 28th in the hopes of capitalizing on his current popularity. With the election campaign kicking off, you must decide how many resources the NDP should invest into its campaign. Fundraising numbers are not good, and any significant election spending will likely mean taking on a lot of debt.",
         "answers": [
             {
                 "answer": "We cannot afford to be buried by the Liberals and Conservatives. I will be spending the legal limit on this campaign to get our message out there.",
                 "historical": true,
-                "feedback": "This helps you compete, but there are some questions about the financial solvency of the NDP."
+                "feedback": "This helps you compete, but there are some questions about the financial solvency of the NDP.",
+                "score_global": [
+                    {
+                        "global_multiplier": 0.01
+                    }
+                ]
             },
             {
                 "answer": "I will only take on debt that we can be certain to pay back using campaign reimbursements and existing fundraising.",
@@ -545,12 +550,17 @@
             },
             {
                 "answer": "We need to cut our losses. The current environment is tough for our chances anyhow, so I will keep the campaign’s budget under control and avoid taking on any debt.",
-                "feedback": "This significantly restricts your ability to get out your message, but at least the party’s financial situation will be secure."
+                "feedback": "This significantly restricts your ability to get out your message, but at least the party’s financial situation will be secure.",
+                "score_global": [
+                    {
+                        "global_multiplier": -0.01
+                    }
+                ]
             }
         ]
     },
     {
-        "question": "[March 2025] In Canada’s first-past-the-post voting system, local concentrations of support are key to winning Parliamentary representation. Where will you focus your efforts?",
+        "question": "[March 2025] In Canada’s first-past-the-post voting system, local concentrations of support are key to winning parliamentary representation. Where will you focus your efforts?",
         "answers": [
             {
                 "answer": "People are worried about voting NDP because they don’t want to waste their vote. We should focus all our resources on defending our incumbent MPs where voters can feel safe voting for us.",
@@ -558,12 +568,12 @@
                 "score_group": [
                     {
                         "group": "NDP incumbents",
-                        "state_multiplier": 0.3
+                        "state_multiplier": 0.4
                     },
                     {
-                        "group": "NDP incumbents",
+                        "group": "NDP-CPC",
                         "affected_candidate": 300,
-                        "state_multiplier": -0.3
+                        "state_multiplier": -0.4
                     }
                 ]
             },
@@ -573,12 +583,12 @@
                 "score_group": [
                     {
                         "group": "NDP-CPC",
-                        "state_multiplier": 0.3
+                        "state_multiplier": 0.8
                     },
                     {
                         "group": "NDP-CPC",
                         "affected_candidate": 300,
-                        "state_multiplier": -0.3
+                        "state_multiplier": -0.8
                     }
                 ]
             },
@@ -588,7 +598,7 @@
                 "score_group": [
                     {
                         "group": "NDP urban",
-                        "state_multiplier": 0.4
+                        "state_multiplier": 0.6
                     },
                     {
                         "group": "NDP urban",
@@ -601,17 +611,18 @@
                 "answer": "We are a national party, and I will act like it. I will spread our funds across the country to keep our local organizations alive and to rally as many supporters as possible.",
                 "historical": true,
                 "feedback": "You get your message out across the country, but will people listen?",
-                "score_global": [
-                    {
-                        "global_multiplier": 0.1
-                    }
-                ],
                 "score_group": [
                     {
-                        "group": "NDP incumbents",
-                        "state_multiplier": -0.3
+                        "group": "all",
+                        "state_multiplier": 0.3
                     }
                 ]
+            }
+        ],
+        "score_group": [
+            {
+                "group": "all",
+                "state_multiplier": -0.3
             }
         ]
     },
@@ -630,10 +641,11 @@
             {
                 "answer": "I want Canadians to know that I am fighting for them. I will run ads raising my profile and showing people that I am in their corner.",
                 "historical": true,
-                "feedback": "Your personal approval is much lower than it used to be. Hopefully these ads can change that.",
-                "score_global": [
+                "feedback": "Your personal approval is much lower than it used to be. People are getting tired of you.",
+                "score_state": [
                     {
-                        "global_multiplier": -0.01
+                        "state": "Burnaby Central",
+                        "state_multiplier": -0.5
                     }
                 ]
             },
@@ -762,7 +774,7 @@
                 "feedback": "The media attack your plans as economically illiterate. Nothing less would be expected considering they are owned by the corporate elite.",
                 "score_global": [
                     {
-                        "global_multiplier": 0.01
+                        "global_multiplier": 0.02
                     }
                 ],
                 "score_issue": [
@@ -951,7 +963,7 @@
             },
             {
                 "answer": "The Liberals’ immigration policy is giving big business everything they want, without any consideration for the effects on our communities. I will put an end to the exploitative temporary foreign worker program that corporations are using to undercut wages.",
-                "feedback": "This is an old-school left-wing answer that irks some of your more progressive followers.",
+                "feedback": "This is an old-school left-wing answer that irks some of your more cosmopolitan followers.",
                 "score_global": [
                     {
                         "global_multiplier": -0.01
@@ -999,7 +1011,7 @@
                 "score_global": [
                     {
                         "affected_candidate": 301,
-                        "global_multiplier": -0.005
+                        "global_multiplier": -0.01
                     },
                     {
                         "affected_candidate": 300,
@@ -1072,14 +1084,19 @@
                         "global_multiplier": -0.01
                     },
                     {
-                        "global_multiplier": 0.01
+                        "global_multiplier": 0.005
                     }
                 ]
             },
             {
                 "answer": "We have been fighting for workers. We forced the government to ban scabs and establish two weeks of paid sick leave in federally-regulated workplaces. This is why we have the endorsements of major unions across the country.",
                 "historical": true,
-                "feedback": "It’s good to talk about your accomplishments, but people also want to hear what you will do for unions going forward."
+                "feedback": "It’s good to talk about your accomplishments, but people also want to hear what you will do for unions going forward.",
+                "score_global": [
+                    {
+                        "global_multiplier": 0.01
+                    }
+                ]
             }
         ]
     },
@@ -1170,7 +1187,7 @@
                 "feedback": "Indigenous leaders loudly criticize your proposal for failing to recognize the special status of Indigenous people and the promises made to First Nations by the Canadian government.",
                 "score_global": [
                     {
-                        "global_multiplier": -0.02
+                        "global_multiplier": -0.03
                     }
                 ],
                 "score_issue": [
@@ -1278,7 +1295,7 @@
                 "score_group": [
                     {
                         "group": "NDP-LPC",
-                        "state_multiplier": 0.3
+                        "state_multiplier": 0.2
                     }
                 ],
                 "score_issue": [
@@ -1425,6 +1442,10 @@
         "score_global": [
             {
                 "global_multiplier": -0.02
+            },
+            {
+                "affected_candidate": 306,
+                "global_multiplier": -0.2
             }
         ]
     },
@@ -1538,6 +1559,10 @@
             {
                 "affected_candidate": 301,
                 "global_multiplier": 0.01
+            },
+            {
+                "affected_candidate": 306,
+                "global_multiplier": -0.2
             }
         ]
     },
@@ -1677,6 +1702,142 @@
             },
             {
                 "global_multiplier": -0.02
+            },
+            {
+                "affected_candidate": 306,
+                "global_multiplier": -0.2
+            }
+        ]
+    },
+    {
+        "question": "[March 2025] In Canada’s first-past-the-post voting system, local concentrations of support are key to winning parliamentary representation. Where will you focus your efforts?",
+        "answers": [
+            {
+                "answer": "People are worried about voting NDP because they don’t want to waste their vote. We should focus all our resources on defending our incumbent MPs where voters can feel safe voting for us.",
+                "feedback": "With the collapse in NDP voting intentions, this might be what you need to stay on the map.",
+                "score_group": [
+                    {
+                        "group": "NDP incumbents",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "group": "NDP-CPC",
+                        "affected_candidate": 300,
+                        "state_multiplier": -0.3
+                    }
+                ]
+            },
+            {
+                "answer": "The worst possible result for this election would be a Conservative government. I will put our resources into NDP-CPC battlegrounds to prevent this from happening.",
+                "feedback": "Hopefully this works out. Meanwhile, the Liberals give you tough competition in your other ridings.",
+                "score_group": [
+                    {
+                        "group": "NDP-CPC",
+                        "state_multiplier": 0.65
+                    },
+                    {
+                        "group": "NDP-CPC",
+                        "affected_candidate": 300,
+                        "state_multiplier": -0.65
+                    }
+                ]
+            },
+            {
+                "answer": "Rural voters are drifting away from us, regardless of what we do. I will focus on supporting our urban incumbent MPs as their constituents are more receptive to our message.",
+                "feedback": "The NDP’s support has gradually declined among rural voters for decades. Giving up on them doesn’t feel good, but maybe it’s necessary?",
+                "score_group": [
+                    {
+                        "group": "NDP urban",
+                        "state_multiplier": 0.45
+                    },
+                    {
+                        "group": "NDP urban",
+                        "affected_candidate": 300,
+                        "state_multiplier": -0.225
+                    }
+                ]
+            },
+            {
+                "answer": "We are a national party, and I will act like it. I will spread our funds across the country to keep our local organizations alive and to rally as many supporters as possible.",
+                "feedback": "With your limited resources, you have more difficulty maintaining your national presence.",
+                "score_group": [
+                    {
+                        "group": "all",
+                        "state_multiplier": 0.2
+                    }
+                ]
+            }
+        ],
+        "score_group": [
+            {
+                "group": "all",
+                "state_multiplier": -0.3
+            }
+        ]
+    },
+    {
+        "question": "[March 2025] In Canada’s first-past-the-post voting system, local concentrations of support are key to winning parliamentary representation. Where will you focus your efforts?",
+        "answers": [
+            {
+                "answer": "People are worried about voting NDP because they don’t want to waste their vote. We should focus all our resources on defending our incumbent MPs where voters can feel safe voting for us.",
+                "feedback": "With the collapse in NDP voting intentions, this might be what you need to stay on the map.",
+                "score_group": [
+                    {
+                        "group": "NDP incumbents",
+                        "state_multiplier": 0.2
+                    },
+                    {
+                        "group": "NDP-CPC",
+                        "affected_candidate": 300,
+                        "state_multiplier": -0.2
+                    }
+                ]
+            },
+            {
+                "answer": "The worst possible result for this election would be a Conservative government. I will put our resources into NDP-CPC battlegrounds to prevent this from happening.",
+                "feedback": "Hopefully this works out. Meanwhile, the Liberals give you tough competition in your other ridings.",
+                "score_group": [
+                    {
+                        "group": "NDP-CPC",
+                        "state_multiplier": 0.5
+                    },
+                    {
+                        "group": "NDP-CPC",
+                        "affected_candidate": 300,
+                        "state_multiplier": -0.5
+                    }
+                ]
+            },
+            {
+                "answer": "Rural voters are drifting away from us, regardless of what we do. I will focus on supporting our urban incumbent MPs as their constituents are more receptive to our message.",
+                "feedback": "The NDP’s support has gradually declined among rural voters for decades. Giving up on them doesn’t feel good, but maybe it’s necessary?",
+                "score_group": [
+                    {
+                        "group": "NDP urban",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "group": "NDP urban",
+                        "affected_candidate": 300,
+                        "state_multiplier": -0.15
+                    }
+                ]
+            },
+            {
+                "answer": "We are a national party, and I will act like it. I will spread our funds across the country to keep our local organizations alive and to rally as many supporters as possible.",
+                "feedback": "With your limited resources, you struggle to maintain your national presence.",
+                "score_group": [
+                    {
+                        "group": "all",
+                        "state_multiplier": 0.1
+                    }
+                ]
+            }
+        ],
+        "score_group": [
+            {
+                "group": "all",
+                "state_multiplier": -0.3
             }
         ]
     }

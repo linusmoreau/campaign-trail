@@ -1,15 +1,36 @@
-campaignTrail_temp.candidate_image_url = "https://i.imgur.com/rHeMJfm.png";
-campaignTrail_temp.running_mate_image_url = "https://i.imgur.com/E2vgW9A.png";
-campaignTrail_temp.candidate_last_name = "NDP";
-campaignTrail_temp.running_mate_last_name = "Singh";
-campaignTrail_temp.election_json[0]["fields"]["advisor_url"] = "https://i.imgur.com/yStADGB.jpeg";
-campaignTrail_temp.global_parameter_json[0]["fields"]["candidate_issue_weight"] = 6;
-campaignTrail_temp.global_parameter_json[0]["fields"]["question_count"] = 25;
+e = campaignTrail_temp;
+e.candidate_image_url = "https://i.imgur.com/rHeMJfm.png";
+e.running_mate_image_url = "https://i.imgur.com/E2vgW9A.png";
+e.candidate_last_name = "NDP";
+e.running_mate_last_name = "Singh";
+e.election_json[0]["fields"]["advisor_url"] = "https://i.imgur.com/yStADGB.jpeg";
+e.global_parameter_json[0]["fields"]["candidate_issue_weight"] = 6;
+e.global_parameter_json[0]["fields"]["question_count"] = 25;
 campaign_sign = "https://i.imgur.com/R9TlLQG.png";
 nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = "#F4A460"
 $("#game_window")[0].style.backgroundImage = "url(https://i.imgur.com/9V9nGwl.jpeg)";
 
-campaignTrail_temp.multiple_endings = true;
+e.multiple_endings = true;
+e.cyoa = true;
+
+getQuestionFromPk = function (pk) {
+    for (question of e.questions_json) {
+        if (question.pk == pk) {
+            return question;
+        }
+    }
+    return null;
+};
+
+cyoAdventure = (_) => {
+    ans = e.player_answers[e.player_answers.length - 1];
+    if (ans == 4062) {
+        e.questions_json.splice(6, 1, getQuestionFromPk(4260))
+    }
+    else if (ans == 4063) {
+        e.questions_json.splice(6, 1, getQuestionFromPk(4270))
+    }
+}
 
 endingPicker = (out, totv, aa, quickstats) => {
     loadScripts();
@@ -17,10 +38,10 @@ endingPicker = (out, totv, aa, quickstats) => {
     winner = aa[0];
     runnerUp = aa[1];
 
-    const carleton = campaignTrail_temp.final_state_results.find(state => {return state.abbr == "Carleton"})
+    const carleton = e.final_state_results.find(state => {return state.abbr == "Carleton"})
     const poilievre_won = carleton.result[0].candidate == 301
 
-    const burnaby_central = campaignTrail_temp.final_state_results.find(state => {return state.abbr == "Burnaby Central"})
+    const burnaby_central = e.final_state_results.find(state => {return state.abbr == "Burnaby Central"})
     const singh_won = burnaby_central.result[0].candidate == 302
 
     const ndp_seats = quickstats[0];
