@@ -354,17 +354,12 @@
                     {
                         "state": "New Westminster--Burnaby--Maillardville",
                         "affected_candidate": 302,
-                        "state_multiplier": 5
+                        "state_multiplier": 4
                     },
                     {
                         "state": "Nunavut",
                         "affected_candidate": 302,
                         "state_multiplier": 6
-                    },
-                    {
-                        "state": "Skeena--Bulkley Valley",
-                        "affected_candidate": 302,
-                        "state_multiplier": 1.5
                     },
                     {
                         "state": "Vancouver East",
@@ -404,7 +399,7 @@
                     {
                         "state": "Berthier--Maskinongé",
                         "affected_candidate": 302,
-                        "state_multiplier": 2
+                        "state_multiplier": 2.5
                     },
                     {
                         "state": "Edmonton Strathcona",
@@ -439,7 +434,7 @@
                     {
                         "state": "Churchill--Keewatinook Aski",
                         "affected_candidate": 302,
-                        "state_multiplier": 5
+                        "state_multiplier": 4
                     },
                     {
                         "state": "Esquimalt--Saanich--Sooke",
@@ -515,6 +510,16 @@
                         "state": "Port Moody--Coquitlam",
                         "affected_candidate": 302,
                         "state_multiplier": 1
+                    },
+                    {
+                        "state": "Papineau",
+                        "affected_candidate": 302,
+                        "state_multiplier": 2
+                    },
+                    {
+                        "state": "Laurier--Sainte-Marie",
+                        "affected_candidate": 302,
+                        "state_multiplier": 2
                     },
                     {
                         "state": "Saanich--Gulf Islands",
