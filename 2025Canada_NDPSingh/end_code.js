@@ -12,6 +12,7 @@ $("#game_window")[0].style.backgroundImage = "url(https://i.imgur.com/9V9nGwl.jp
 
 e.multiple_endings = true;
 e.cyoa = true;
+e.collect_results = true;
 
 getQuestionFromPk = function (pk) {
     for (question of e.questions_json) {
@@ -25,11 +26,16 @@ getQuestionFromPk = function (pk) {
 cyoAdventure = (_) => {
     ans = e.player_answers[e.player_answers.length - 1];
     if (ans == 4062) {
-        e.questions_json.splice(6, 1, getQuestionFromPk(4260))
+        e.questions_json.splice(6, 1, getQuestionFromPk(4260));
     }
     else if (ans == 4063) {
-        e.questions_json.splice(6, 1, getQuestionFromPk(4270))
+        e.questions_json.splice(6, 1, getQuestionFromPk(4270));
     }
+    if (e.player_answers.length == 24) {
+        if (e.current_results[1].find(riding => riding.abbr == "Burnaby Central").result[0].candidate == 302) {
+            e.questions_json.splice(24, 1, getQuestionFromPk(4280));
+        }
+    } 
 }
 
 endingPicker = (out, totv, aa, quickstats) => {
@@ -111,7 +117,7 @@ endingPicker = (out, totv, aa, quickstats) => {
         setEndSong("NDP Disaster", "Hurt Me Tomorrow — K'NAAN", "https://audio.jukehost.co.uk/xVGcopPeh8KMZYGGVpP4wquA7FuhXPTD")
     } else {
         if (singh_won) {
-            ndp_performance += " You will also be personally returning the Parliament, having held on to your own seat in Burnaby Central."
+            ndp_performance += " You will also personally return to Parliament, having held on to your own seat in Burnaby Central."
         } else {
             ndp_performance += " Despite this, you still lost your own seat in Burnaby Central."
         }
@@ -119,7 +125,7 @@ endingPicker = (out, totv, aa, quickstats) => {
     }
 
     if (ndp_seats < 25) {
-        next_steps += "Moving forward, the NDP will need to rebuild and hope to compete in the next election on a stronger footing."
+        next_steps += "Moving forward, the NDP will need to rebuild and hope to compete in the next election on a stronger footing. "
     } else {
         next_steps += "Moving forward, the NDP remains in a good position to compete in future elections. In the meantime, the NDP caucus can continue to carry out its role as the “conscience” of Parliament."
     }

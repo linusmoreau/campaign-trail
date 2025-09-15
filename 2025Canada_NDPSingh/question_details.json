@@ -285,7 +285,7 @@
                     {
                         "state": "Burnaby Central",
                         "affected_candidate": 302,
-                        "state_multiplier": 2
+                        "state_multiplier": 5
                     },
                     {
                         "state": "Victoria",
@@ -583,12 +583,12 @@
                 "score_group": [
                     {
                         "group": "NDP-CPC",
-                        "state_multiplier": 0.8
+                        "state_multiplier": 0.6
                     },
                     {
                         "group": "NDP-CPC",
                         "affected_candidate": 300,
-                        "state_multiplier": -0.8
+                        "state_multiplier": -0.6
                     }
                 ]
             },
@@ -614,7 +614,7 @@
                 "score_group": [
                     {
                         "group": "all",
-                        "state_multiplier": 0.3
+                        "state_multiplier": 0.2
                     }
                 ]
             }
@@ -622,7 +622,7 @@
         "score_group": [
             {
                 "group": "all",
-                "state_multiplier": -0.3
+                "state_multiplier": -0.2
             }
         ]
     },
@@ -645,7 +645,7 @@
                 "score_state": [
                     {
                         "state": "Burnaby Central",
-                        "state_multiplier": -0.5
+                        "state_multiplier": -1
                     }
                 ]
             },
@@ -1650,6 +1650,226 @@
                 "score_state": [
                     {
                         "state": "Burnaby Central",
+                        "state_multiplier": 0.1
+                    },
+                    {
+                        "state": "Vancouver Kingsway",
+                        "state_multiplier": 0.6
+                    }
+                ]
+            },
+            {
+                "answer": "The NDP brand is doing well in Manitoba under Wab Kinew. Let’s see if we can’t secure Elmwood Transcona and Winnipeg Centre for Leila Dance and Leah Gazan.",
+                "feedback": "Two days before the election, a deadly attack on a Filipino street festival in Vancouver leaves 11 dead and dozens injured. You take some time out of your campaign to honour the dead.",
+                "score_state": [
+                    {
+                        "state": "Elmwood--Transcona",
+                        "state_multiplier": 0.6
+                    },
+                    {
+                        "state": "Winnipeg Centre",
+                        "state_multiplier": 0.6
+                    }
+                ]
+            },
+            {
+                "answer": "I will head to Vancouver Island. We have shut out the Liberals and Conservatives there for a decade. Let’s keep them out.",
+                "feedback": "Two days before the election, a deadly attack on a Filipino street festival in Vancouver leaves 11 dead and dozens injured. You take some time out of your campaign to honour the dead.",
+                "score_state": [
+                    {
+                        "state": "Victoria",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "North Island--Powell River",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Courtenay--Alberni",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "state": "Nanaimo--Ladysmith",
+                        "state_multiplier": 0.3
+                    }
+                ]
+            }
+        ],
+        "score_global": [
+            {
+                "affected_candidate": 301,
+                "global_multiplier": 0.01
+            },
+            {
+                "global_multiplier": -0.02
+            },
+            {
+                "affected_candidate": 306,
+                "global_multiplier": -0.2
+            }
+        ],
+        "score_state": [
+            {
+                "state": "Burnaby Central",
+                "state_multiplier": -2
+            }
+        ]
+    },
+    {
+        "question": "[March 2025] In Canada’s first-past-the-post voting system, local concentrations of support are key to winning parliamentary representation. Where will you focus your efforts?",
+        "answers": [
+            {
+                "answer": "People are worried about voting NDP because they don’t want to waste their vote. We should focus all our resources on defending our incumbent MPs where voters can feel safe voting for us.",
+                "feedback": "With the collapse in NDP voting intentions, this might be what you need to stay on the map.",
+                "score_group": [
+                    {
+                        "group": "NDP incumbents",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "group": "NDP-CPC",
+                        "affected_candidate": 300,
+                        "state_multiplier": -0.3
+                    }
+                ]
+            },
+            {
+                "answer": "The worst possible result for this election would be a Conservative government. I will put our resources into NDP-CPC battlegrounds to prevent this from happening.",
+                "feedback": "Hopefully this works out. Meanwhile, the Liberals give you tough competition in your other ridings.",
+                "score_group": [
+                    {
+                        "group": "NDP-CPC",
+                        "state_multiplier": 0.45
+                    },
+                    {
+                        "group": "NDP-CPC",
+                        "affected_candidate": 300,
+                        "state_multiplier": -0.45
+                    }
+                ]
+            },
+            {
+                "answer": "Rural voters are drifting away from us, regardless of what we do. I will focus on supporting our urban incumbent MPs as their constituents are more receptive to our message.",
+                "feedback": "The NDP’s support has gradually declined among rural voters for decades. Giving up on them doesn’t feel good, but maybe it’s necessary?",
+                "score_group": [
+                    {
+                        "group": "NDP urban",
+                        "state_multiplier": 0.45
+                    },
+                    {
+                        "group": "NDP urban",
+                        "affected_candidate": 300,
+                        "state_multiplier": -0.225
+                    }
+                ]
+            },
+            {
+                "answer": "We are a national party, and I will act like it. I will spread our funds across the country to keep our local organizations alive and to rally as many supporters as possible.",
+                "feedback": "With your limited resources, you have more difficulty maintaining your national presence.",
+                "score_group": [
+                    {
+                        "group": "all",
+                        "state_multiplier": 0.14
+                    }
+                ]
+            }
+        ],
+        "score_group": [
+            {
+                "group": "all",
+                "state_multiplier": -0.2
+            }
+        ]
+    },
+    {
+        "question": "[March 2025] In Canada’s first-past-the-post voting system, local concentrations of support are key to winning parliamentary representation. Where will you focus your efforts?",
+        "answers": [
+            {
+                "answer": "People are worried about voting NDP because they don’t want to waste their vote. We should focus all our resources on defending our incumbent MPs where voters can feel safe voting for us.",
+                "feedback": "With the collapse in NDP voting intentions, this might be what you need to stay on the map.",
+                "score_group": [
+                    {
+                        "group": "NDP incumbents",
+                        "state_multiplier": 0.2
+                    },
+                    {
+                        "group": "NDP-CPC",
+                        "affected_candidate": 300,
+                        "state_multiplier": -0.2
+                    }
+                ]
+            },
+            {
+                "answer": "The worst possible result for this election would be a Conservative government. I will put our resources into NDP-CPC battlegrounds to prevent this from happening.",
+                "feedback": "Hopefully this works out. Meanwhile, the Liberals give you tough competition in your other ridings.",
+                "score_group": [
+                    {
+                        "group": "NDP-CPC",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "group": "NDP-CPC",
+                        "affected_candidate": 300,
+                        "state_multiplier": -0.3
+                    }
+                ]
+            },
+            {
+                "answer": "Rural voters are drifting away from us, regardless of what we do. I will focus on supporting our urban incumbent MPs as their constituents are more receptive to our message.",
+                "feedback": "The NDP’s support has gradually declined among rural voters for decades. Giving up on them doesn’t feel good, but maybe it’s necessary?",
+                "score_group": [
+                    {
+                        "group": "NDP urban",
+                        "state_multiplier": 0.3
+                    },
+                    {
+                        "group": "NDP urban",
+                        "affected_candidate": 300,
+                        "state_multiplier": -0.15
+                    }
+                ]
+            },
+            {
+                "answer": "We are a national party, and I will act like it. I will spread our funds across the country to keep our local organizations alive and to rally as many supporters as possible.",
+                "feedback": "With your limited resources, you struggle to maintain your national presence.",
+                "score_group": [
+                    {
+                        "group": "all",
+                        "state_multiplier": 0.05
+                    }
+                ]
+            }
+        ],
+        "score_group": [
+            {
+                "group": "all",
+                "state_multiplier": -0.3
+            }
+        ]
+    },
+    {
+        "question": "[April 2025] As the campaign nears its end, where will you focus your efforts?",
+        "answers": [
+            {
+                "answer": "I will rally our union supporters in Western Ontario. Brian Masse in Windsor West and Lindsay Mathyssen in London Fanshawe need all the support they can get.",
+                "feedback": "Two days before the election, a deadly attack on a Filipino street festival in Vancouver leaves 11 dead and dozens injured. You take some time out of your campaign to honour the dead.",
+                "score_state": [
+                    {
+                        "state": "Windsor West",
+                        "state_multiplier": 0.6
+                    },
+                    {
+                        "state": "London--Fanshawe",
+                        "state_multiplier": 0.6
+                    }
+                ]
+            },
+            {
+                "answer": "Pundits are saying I can’t win in Burnaby Central, but I’ll show them. I’m going to pour all our remaining resources there and in the neighbouring Vancouver Kingsway where Don Davies is fighting the good fight.",
+                "feedback": "Two days before the election, a deadly attack on a Filipino street festival in Vancouver leaves 11 dead and dozens injured. You were at the street festival and only left minutes before the attack. As you talk to reporters afterwards, you look visibly shaken.",
+                "score_state": [
+                    {
+                        "state": "Burnaby Central",
                         "state_multiplier": 0.6
                     },
                     {
@@ -1707,137 +1927,11 @@
                 "affected_candidate": 306,
                 "global_multiplier": -0.2
             }
-        ]
-    },
-    {
-        "question": "[March 2025] In Canada’s first-past-the-post voting system, local concentrations of support are key to winning parliamentary representation. Where will you focus your efforts?",
-        "answers": [
-            {
-                "answer": "People are worried about voting NDP because they don’t want to waste their vote. We should focus all our resources on defending our incumbent MPs where voters can feel safe voting for us.",
-                "feedback": "With the collapse in NDP voting intentions, this might be what you need to stay on the map.",
-                "score_group": [
-                    {
-                        "group": "NDP incumbents",
-                        "state_multiplier": 0.3
-                    },
-                    {
-                        "group": "NDP-CPC",
-                        "affected_candidate": 300,
-                        "state_multiplier": -0.3
-                    }
-                ]
-            },
-            {
-                "answer": "The worst possible result for this election would be a Conservative government. I will put our resources into NDP-CPC battlegrounds to prevent this from happening.",
-                "feedback": "Hopefully this works out. Meanwhile, the Liberals give you tough competition in your other ridings.",
-                "score_group": [
-                    {
-                        "group": "NDP-CPC",
-                        "state_multiplier": 0.65
-                    },
-                    {
-                        "group": "NDP-CPC",
-                        "affected_candidate": 300,
-                        "state_multiplier": -0.65
-                    }
-                ]
-            },
-            {
-                "answer": "Rural voters are drifting away from us, regardless of what we do. I will focus on supporting our urban incumbent MPs as their constituents are more receptive to our message.",
-                "feedback": "The NDP’s support has gradually declined among rural voters for decades. Giving up on them doesn’t feel good, but maybe it’s necessary?",
-                "score_group": [
-                    {
-                        "group": "NDP urban",
-                        "state_multiplier": 0.45
-                    },
-                    {
-                        "group": "NDP urban",
-                        "affected_candidate": 300,
-                        "state_multiplier": -0.225
-                    }
-                ]
-            },
-            {
-                "answer": "We are a national party, and I will act like it. I will spread our funds across the country to keep our local organizations alive and to rally as many supporters as possible.",
-                "feedback": "With your limited resources, you have more difficulty maintaining your national presence.",
-                "score_group": [
-                    {
-                        "group": "all",
-                        "state_multiplier": 0.2
-                    }
-                ]
-            }
         ],
-        "score_group": [
+        "score_state": [
             {
-                "group": "all",
-                "state_multiplier": -0.3
-            }
-        ]
-    },
-    {
-        "question": "[March 2025] In Canada’s first-past-the-post voting system, local concentrations of support are key to winning parliamentary representation. Where will you focus your efforts?",
-        "answers": [
-            {
-                "answer": "People are worried about voting NDP because they don’t want to waste their vote. We should focus all our resources on defending our incumbent MPs where voters can feel safe voting for us.",
-                "feedback": "With the collapse in NDP voting intentions, this might be what you need to stay on the map.",
-                "score_group": [
-                    {
-                        "group": "NDP incumbents",
-                        "state_multiplier": 0.2
-                    },
-                    {
-                        "group": "NDP-CPC",
-                        "affected_candidate": 300,
-                        "state_multiplier": -0.2
-                    }
-                ]
-            },
-            {
-                "answer": "The worst possible result for this election would be a Conservative government. I will put our resources into NDP-CPC battlegrounds to prevent this from happening.",
-                "feedback": "Hopefully this works out. Meanwhile, the Liberals give you tough competition in your other ridings.",
-                "score_group": [
-                    {
-                        "group": "NDP-CPC",
-                        "state_multiplier": 0.5
-                    },
-                    {
-                        "group": "NDP-CPC",
-                        "affected_candidate": 300,
-                        "state_multiplier": -0.5
-                    }
-                ]
-            },
-            {
-                "answer": "Rural voters are drifting away from us, regardless of what we do. I will focus on supporting our urban incumbent MPs as their constituents are more receptive to our message.",
-                "feedback": "The NDP’s support has gradually declined among rural voters for decades. Giving up on them doesn’t feel good, but maybe it’s necessary?",
-                "score_group": [
-                    {
-                        "group": "NDP urban",
-                        "state_multiplier": 0.3
-                    },
-                    {
-                        "group": "NDP urban",
-                        "affected_candidate": 300,
-                        "state_multiplier": -0.15
-                    }
-                ]
-            },
-            {
-                "answer": "We are a national party, and I will act like it. I will spread our funds across the country to keep our local organizations alive and to rally as many supporters as possible.",
-                "feedback": "With your limited resources, you struggle to maintain your national presence.",
-                "score_group": [
-                    {
-                        "group": "all",
-                        "state_multiplier": 0.1
-                    }
-                ]
-            }
-        ],
-        "score_group": [
-            {
-                "group": "all",
-                "state_multiplier": -0.3
+                "state": "Burnaby Central",
+                "state_multiplier": -0.6
             }
         ]
     }
