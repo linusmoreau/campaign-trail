@@ -232,217 +232,253 @@
         "question": "[March 2025] Mark Carney has won the Liberal leadership and become the 24th Prime Minister of Canada.",
         "answers": [
             {
-                "answer": "I want to congratulate Mark Carney. We will disagree on many ideas, priorities and policies — but we should always stand united in protecting our country from the threat posed by Donald Trump.",
+                "answer": "We will disagree on many ideas, priorities and policies — but we should always stand united in protecting our country from the threat posed by Donald Trump.",
                 "historical": true,
-                "score_global": [
+                "feedback": "It’s good to emphasize your willingness to work together to fight Trump.",
+                "score_issue": [
                     {
-                        "affected_candidate": 301,
-                        "global_multiplier": 2
-                    },
-                    {
-                        "affected_candidate": 300,
-                        "global_multiplier": 4
-                    },
-                    {
-                        "affected_candidate": 304,
-                        "global_multiplier": 1.4
-                    },
-                    {
-                        "affected_candidate": 305,
-                        "global_multiplier": 1
-                    },
-                    {
-                        "affected_candidate": 306,
-                        "global_multiplier": 1
-                    }
-                ],
-                "score_state": [
-                    {
-                        "state": "New Westminster--Burnaby--Maillardville",
-                        "affected_candidate": 302,
-                        "state_multiplier": 5
-                    },
-                    {
-                        "state": "Nunavut",
-                        "affected_candidate": 302,
-                        "state_multiplier": 6
-                    },
-                    {
-                        "state": "Vancouver East",
-                        "affected_candidate": 302,
-                        "state_multiplier": 6
-                    },
-                    {
-                        "state": "Vancouver Kingsway",
-                        "affected_candidate": 302,
-                        "state_multiplier": 6
-                    },
-                    {
-                        "state": "Nanaimo--Ladysmith",
-                        "affected_candidate": 302,
-                        "state_multiplier": 3
-                    },
-                    {
-                        "state": "Burnaby Central",
-                        "affected_candidate": 302,
-                        "state_multiplier": 5
-                    },
-                    {
-                        "state": "Victoria",
-                        "affected_candidate": 302,
-                        "state_multiplier": 3
-                    },
-                    {
-                        "state": "Skeena--Bulkley Valley",
-                        "affected_candidate": 302,
-                        "state_multiplier": 6.5
-                    },
-                    {
-                        "state": "Rosemont--La Petite-Patrie",
-                        "affected_candidate": 302,
-                        "state_multiplier": 6
-                    },
-                    {
-                        "state": "Berthier--Maskinongé",
-                        "affected_candidate": 302,
-                        "state_multiplier": 2
-                    },
-                    {
-                        "state": "Edmonton Strathcona",
-                        "affected_candidate": 302,
-                        "state_multiplier": 6
-                    },
-                    {
-                        "state": "Similkameen--South Okanagan--West Kootenay",
-                        "affected_candidate": 302,
-                        "state_multiplier": 2
-                    },
-                    {
-                        "state": "Courtenay--Alberni",
-                        "affected_candidate": 302,
-                        "state_multiplier": 6
-                    },
-                    {
-                        "state": "Cowichan--Malahat--Langford",
-                        "affected_candidate": 302,
-                        "state_multiplier": 5
-                    },
-                    {
-                        "state": "Elmwood--Transcona",
-                        "affected_candidate": 302,
-                        "state_multiplier": 5
-                    },
-                    {
-                        "state": "Edmonton Griesbach",
-                        "affected_candidate": 302,
-                        "state_multiplier": 5
-                    },
-                    {
-                        "state": "Churchill--Keewatinook Aski",
-                        "affected_candidate": 302,
-                        "state_multiplier": 4
-                    },
-                    {
-                        "state": "Esquimalt--Saanich--Sooke",
-                        "affected_candidate": 302,
-                        "state_multiplier": 2
-                    },
-                    {
-                        "state": "North Island--Powell River",
-                        "affected_candidate": 302,
-                        "state_multiplier": 4.5
-                    },
-                    {
-                        "state": "London--Fanshawe",
-                        "affected_candidate": 302,
-                        "state_multiplier": 3
-                    },
-                    {
-                        "state": "Hamilton Centre",
-                        "affected_candidate": 302,
-                        "state_multiplier": 3
-                    },
-                    {
-                        "state": "Windsor West",
-                        "affected_candidate": 302,
-                        "state_multiplier": 3
-                    },
-                    {
-                        "state": "Winnipeg Centre",
-                        "affected_candidate": 302,
-                        "state_multiplier": 6
-                    },
-                    {
-                        "state": "Columbia--Kootenay--Southern Rockies",
-                        "affected_candidate": 302,
-                        "state_multiplier": 2
-                    },
-                    {
-                        "state": "Ottawa Centre",
-                        "affected_candidate": 302,
-                        "state_multiplier": 2
-                    },
-                    {
-                        "state": "Taiaiako'n--Parkdale--High Park",
-                        "affected_candidate": 302,
-                        "state_multiplier": 3
-                    },
-                    {
-                        "state": "Davenport",
-                        "affected_candidate": 302,
-                        "state_multiplier": 1
-                    },
-                    {
-                        "state": "Halifax",
-                        "affected_candidate": 302,
-                        "state_multiplier": 1
-                    },
-                    {
-                        "state": "Saskatoon West",
-                        "affected_candidate": 302,
-                        "state_multiplier": 2
-                    },
-                    {
-                        "state": "Brandon--Souris",
-                        "affected_candidate": 302,
-                        "state_multiplier": 1
-                    },
-                    {
-                        "state": "Kenora--Kiiwetinoong",
-                        "affected_candidate": 302,
-                        "state_multiplier": 1
-                    },
-                    {
-                        "state": "Port Moody--Coquitlam",
-                        "affected_candidate": 302,
-                        "state_multiplier": 1
-                    },
-                    {
-                        "state": "Papineau",
-                        "affected_candidate": 302,
-                        "state_multiplier": 2
-                    },
-                    {
-                        "state": "Laurier--Sainte-Marie",
-                        "affected_candidate": 302,
-                        "state_multiplier": 2
-                    },
-                    {
-                        "state": "Saanich--Gulf Islands",
-                        "affected_candidate": 303,
-                        "state_multiplier": 6.5
-                    },
-                    {
-                        "state": "Kitchener Centre",
-                        "affected_candidate": 303,
-                        "state_multiplier": 5
-                    },
-                    {
-                        "state": "Nanaimo--Ladysmith",
-                        "affected_candidate": 303,
-                        "state_multiplier": 2
+                        "issue": 110,
+                        "issue_score": -1
                     }
                 ]
+            },
+            {
+                "answer": "I hope he will quickly call Parliament back into session so we can get relief to workers impacted by Trump’s tariffs.",
+                "feedback": "Carney opts not to bring Parliament back into session, instead depending on what he can do of his sole authority through Orders in Council in preparation for an election call.",
+                "score_issue": [
+                    {
+                        "issue": 112,
+                        "issue_score": -0.3
+                    }
+                ]
+            },
+            {
+                "answer": "I call on Carney to hold an election. We need a Prime Minister with a mandate from the people to take decisive action on the crises plaguing our country.",
+                "feedback": "Rumours are that Carney will call an election anyway. At least you can claim to welcome it.",
+                "score_global": [
+                    {
+                        "global_multiplier": 0.005
+                    }
+                ]
+            },
+            {
+                "answer": "I hope we can work collaboratively over the coming months to continue delivering for Canadians.",
+                "feedback": "Most people don’t like the direction of the country. Try not to take credit for it.",
+                "score_issue": [
+                    {
+                        "issue": 111,
+                        "issue_score": 0.5
+                    }
+                ]
+            }
+        ],
+        "score_global": [
+            {
+                "affected_candidate": 301,
+                "global_multiplier": 2
+            },
+            {
+                "affected_candidate": 300,
+                "global_multiplier": 4
+            },
+            {
+                "affected_candidate": 304,
+                "global_multiplier": 1.4
+            },
+            {
+                "affected_candidate": 305,
+                "global_multiplier": 1
+            },
+            {
+                "affected_candidate": 306,
+                "global_multiplier": 1
+            }
+        ],
+        "score_state": [
+            {
+                "state": "New Westminster--Burnaby--Maillardville",
+                "affected_candidate": 302,
+                "state_multiplier": 5
+            },
+            {
+                "state": "Nunavut",
+                "affected_candidate": 302,
+                "state_multiplier": 6
+            },
+            {
+                "state": "Vancouver East",
+                "affected_candidate": 302,
+                "state_multiplier": 6
+            },
+            {
+                "state": "Vancouver Kingsway",
+                "affected_candidate": 302,
+                "state_multiplier": 6
+            },
+            {
+                "state": "Nanaimo--Ladysmith",
+                "affected_candidate": 302,
+                "state_multiplier": 3
+            },
+            {
+                "state": "Burnaby Central",
+                "affected_candidate": 302,
+                "state_multiplier": 5
+            },
+            {
+                "state": "Victoria",
+                "affected_candidate": 302,
+                "state_multiplier": 3
+            },
+            {
+                "state": "Skeena--Bulkley Valley",
+                "affected_candidate": 302,
+                "state_multiplier": 6.5
+            },
+            {
+                "state": "Rosemont--La Petite-Patrie",
+                "affected_candidate": 302,
+                "state_multiplier": 6
+            },
+            {
+                "state": "Berthier--Maskinongé",
+                "affected_candidate": 302,
+                "state_multiplier": 2
+            },
+            {
+                "state": "Edmonton Strathcona",
+                "affected_candidate": 302,
+                "state_multiplier": 6
+            },
+            {
+                "state": "Similkameen--South Okanagan--West Kootenay",
+                "affected_candidate": 302,
+                "state_multiplier": 2
+            },
+            {
+                "state": "Courtenay--Alberni",
+                "affected_candidate": 302,
+                "state_multiplier": 6
+            },
+            {
+                "state": "Cowichan--Malahat--Langford",
+                "affected_candidate": 302,
+                "state_multiplier": 5
+            },
+            {
+                "state": "Elmwood--Transcona",
+                "affected_candidate": 302,
+                "state_multiplier": 5
+            },
+            {
+                "state": "Edmonton Griesbach",
+                "affected_candidate": 302,
+                "state_multiplier": 5
+            },
+            {
+                "state": "Churchill--Keewatinook Aski",
+                "affected_candidate": 302,
+                "state_multiplier": 4
+            },
+            {
+                "state": "Esquimalt--Saanich--Sooke",
+                "affected_candidate": 302,
+                "state_multiplier": 2
+            },
+            {
+                "state": "North Island--Powell River",
+                "affected_candidate": 302,
+                "state_multiplier": 4.5
+            },
+            {
+                "state": "London--Fanshawe",
+                "affected_candidate": 302,
+                "state_multiplier": 3
+            },
+            {
+                "state": "Hamilton Centre",
+                "affected_candidate": 302,
+                "state_multiplier": 3
+            },
+            {
+                "state": "Windsor West",
+                "affected_candidate": 302,
+                "state_multiplier": 3
+            },
+            {
+                "state": "Winnipeg Centre",
+                "affected_candidate": 302,
+                "state_multiplier": 6
+            },
+            {
+                "state": "Columbia--Kootenay--Southern Rockies",
+                "affected_candidate": 302,
+                "state_multiplier": 2
+            },
+            {
+                "state": "Ottawa Centre",
+                "affected_candidate": 302,
+                "state_multiplier": 2
+            },
+            {
+                "state": "Taiaiako'n--Parkdale--High Park",
+                "affected_candidate": 302,
+                "state_multiplier": 3
+            },
+            {
+                "state": "Davenport",
+                "affected_candidate": 302,
+                "state_multiplier": 1
+            },
+            {
+                "state": "Halifax",
+                "affected_candidate": 302,
+                "state_multiplier": 1
+            },
+            {
+                "state": "Saskatoon West",
+                "affected_candidate": 302,
+                "state_multiplier": 2
+            },
+            {
+                "state": "Brandon--Souris",
+                "affected_candidate": 302,
+                "state_multiplier": 1
+            },
+            {
+                "state": "Kenora--Kiiwetinoong",
+                "affected_candidate": 302,
+                "state_multiplier": 1
+            },
+            {
+                "state": "Port Moody--Coquitlam",
+                "affected_candidate": 302,
+                "state_multiplier": 1
+            },
+            {
+                "state": "Papineau",
+                "affected_candidate": 302,
+                "state_multiplier": 2
+            },
+            {
+                "state": "Laurier--Sainte-Marie",
+                "affected_candidate": 302,
+                "state_multiplier": 2
+            },
+            {
+                "state": "Saanich--Gulf Islands",
+                "affected_candidate": 303,
+                "state_multiplier": 6.5
+            },
+            {
+                "state": "Kitchener Centre",
+                "affected_candidate": 303,
+                "state_multiplier": 5
+            },
+            {
+                "state": "Nanaimo--Ladysmith",
+                "affected_candidate": 303,
+                "state_multiplier": 2
             }
         ]
     },
