@@ -175,10 +175,11 @@ let singleObserver = new MutationObserver(handleMutations);
 singleObserver.observe(document.documentElement, { childList: true, subtree: true });
 
 function ctsAchievement(achievement, difficultyChecker=true){
-	if ((difficultyChecker && campaignTrail_temp.difficulty_level_multiplier <= 1) || !difficultyChecker)
+	if ((difficultyChecker && campaignTrail_temp.difficulty_level_multiplier <= 1) || !difficultyChecker) {
 		if (campaignTrail_temp.CTS) {
             unlockAchievement(achievement);
         }
+    }
 }
 
 function getTooltips(str) {
