@@ -1448,7 +1448,7 @@
             {
                 "answer": "The Americanization of our politics is dangerous. A two-party system is antithetical to progressive change, and we’re sleepwalking right into it. We must protect our pluralistic politics, as that is in part what makes us Canadian.",
                 "feedback": "These are high-minded criticisms of the way things are going, but can they sway anyone?",
-                "issue_score": [
+                "score_issue": [
                     {
                         "issue": 110,
                         "issue_score": -1
@@ -1501,7 +1501,7 @@
                         "global_multiplier": -0.005
                     }
                 ],
-                "issue_score": [
+                "score_issue": [
                     {
                         "issue": 113,
                         "issue_score": -1
@@ -1511,7 +1511,7 @@
             {
                 "answer": "I will commit to supporting an arms embargo on Israel and sanctions on Israeli hardliners, but otherwise focus on cost-of-living issues.",
                 "feedback": "A mainstream position, but some pro-Palestine activists were looking for more.",
-                "issue_score": [
+                "score_issue": [
                     {
                         "issue": 113,
                         "issue_score": 0
@@ -1526,7 +1526,7 @@
                         "global_multiplier": -0.02
                     }
                 ],
-                "issue_score": [
+                "score_issue": [
                     {
                         "issue": 113,
                         "issue_score": 0.5
